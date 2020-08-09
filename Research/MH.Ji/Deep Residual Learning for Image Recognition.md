@@ -49,8 +49,10 @@
     + low-level vision과 컴퓨터 그래픽에서 편미분 방정식(PDE, Partial Differential Equations)를 해결하기 위해 널리 사용되는 방법은 Multigrid 방법이다. 이 방법은 시스템을 여러 scale의 하위 문제로 재구성한다. 여기서 각 하위 문제는 coarser(거칠다)하고 finer(미세하다)한 scale 사이의 잔차(residual) 해결법에 책임을 지고 있다.
 
 - Shortcut Connections
+    + 초기의 MLP 훈련은 네트워크 안에서부터 밖으로의 선형적인 layer를 추가하는 형태로 실습해왔다. 출력에 대한 입력에서는 몇 개의 중간 layer가 직접적으로 보조 분류기에 연결되어서, gradient의 소실/폭발 문제를 해결한다.
+    + 본 논문에서는 shortcut connection을 실행하여, layer response, gradient 및 propaged errors를 중점적으로 다뤄볼 것이다.
+    + "inception" layer는 shortcut branch와 몇 가지 deeper branch를 구성한다.
     + 
-
 
 ### 3. Deep Residual Learning
 
