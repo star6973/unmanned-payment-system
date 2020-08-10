@@ -63,49 +63,49 @@ According to Tong He et al., [Bag of Tricks for Image Classification with Convol
 <br><br>
 1. Training Refinements
     1. Cosine Learning Rate Decay
-    - learninig rate 조정은 training에 있어서 매우 중요
-    - learining rate warmup(3.1) 이후 논문의 저자는 안정적으로 초기 learninig rate 값을 감소시킨다. 이때 매우 널리 사용되는 방법이 자연대수에 의해 계산되는 *step decay*
-    - step decay : decrease rate at 0.1 per 30 epochs<br><br>
-    - 반면에 cosine 함수에 의한 *cosine decay*도 사용됨<br>수식 : batch = t 일 때, learning rate = 0.5*(1+ cos((t*pi)/T))*learning rate<br>
-    - step decay vs. cosine decay
-        - cosine decay는 초기에 learning rate가 천천히 감소하다가 이후 선형적으로 감소, 이후 다시 천천히 감소
-        - step decay와 비교하면 cosine decay는 처음부터 decay가 되지만 step decay가 감소할 때도 10배 큰 laerning rate를 유지(이는 잠재적으로 training progress 향상시킴)
-        ![Learing_rate_Schedule](file:///C:/Users/%EC%82%AC%EC%9A%A9%EC%9E%90/Pictures/Saved%20Pictures/bag%20of%20tricks%20image02.png)<br>
-        According to Tong He et al., [Bag of Tricks for Image Classification with Convolutional Neural Networks], Amazon Web Services, 2019, p6<br>
+        - learninig rate 조정은 training에 있어서 매우 중요
+        - learining rate warmup(3.1) 이후 논문의 저자는 안정적으로 초기 learninig rate 값을 감소시킨다. 이때 매우 널리 사용되는 방법이 자연대수에 의해 계산되는 *step decay*
+        - step decay : decrease rate at 0.1 per 30 epochs<br><br>
+        - 반면에 cosine 함수에 의한 *cosine decay*도 사용됨<br>수식 : batch = t 일 때, learning rate = 0.5*(1+ cos((t*pi)/T))*learning rate<br>
+        - step decay vs. cosine decay
+            - cosine decay는 초기에 learning rate가 천천히 감소하다가 이후 선형적으로 감소, 이후 다시 천천히 감소
+            - step decay와 비교하면 cosine decay는 처음부터 decay가 되지만 step decay가 감소할 때도 10배 큰 laerning rate를 유지(이는 잠재적으로 training progress 향상시킴)
+            ![Learing_rate_Schedule](file:///C:/Users/%EC%82%AC%EC%9A%A9%EC%9E%90/Pictures/Saved%20Pictures/bag%20of%20tricks%20image02.png)<br>
+            According to Tong He et al., [Bag of Tricks for Image Classification with Convolutional Neural Networks], Amazon Web Services, 2019, p6<br>
 <br><br>
     1. Label smoothing
-    - 분류기 마지막 층은 label의 수(K)와 같은 size를 가지며, predicted confidence score를 출력한다.
-    - 이 점수들은 softmax 함수에 의해서 q로 변환되어 예상 확률값을 나타내고 다음과 같이 계산된다.<br>
-    ![Softmax_function](file:///C:/Users/%EC%82%AC%EC%9A%A9%EC%9E%90/Pictures/Saved%20Pictures/bag%20of%20tricks%20image03.png)<br>
-    - According to Tong He et al., [Bag of Tricks for Image Classification with Convolutional Neural Networks], Amazon Web Services, 2019, p6<br>
-    - Cross Entropy
-        - Entropy : <Br>
-        ![Entropy](file:///C:/Users/%EC%82%AC%EC%9A%A9%EC%9E%90/Pictures/Saved%20Pictures/bag%20of%20tricks%20image04.PNG)
-        <br>
-        - Cross Entropy : <Br>
-        ![CrossEntropy1](file:///C:/Users/%EC%82%AC%EC%9A%A9%EC%9E%90/Pictures/Saved%20Pictures/bag%20of%20tricks%20image05.PNG)
-        <br>
-        ![CrossEntropy2](file:///C:/Users/%EC%82%AC%EC%9A%A9%EC%9E%90/Pictures/Saved%20Pictures/bag%20of%20tricks%20image06.PNG)
-        실제 yc 일 확률분포  
-        ![CrossEntropy3](file:///C:/Users/%EC%82%AC%EC%9A%A9%EC%9E%90/Pictures/Saved%20Pictures/bag%20of%20tricks%20image07.PNG)
-        yc가 yc임을 예측할 확률 분포 <br>
-        - 예측 모형은 실제 분포인 q를 모르고, 모델링을 통해서 q의 분포를 예측하고자 하는 것
-        - 머신러닝을 통한 예측 모형에서 훈련데이터에서는 실제 분포인 q를 알 수 있기 때문에 cross entropy를 계산 가능        
-        - 일반적으로 Cross Entropy > Entropy<br><br>
-        - 논문의 저자는 l(p,q)의 각 parameter p, q가 서로 비슷해지도록 업데이트 한다. 이때 어떻게 ![eq](file:///C:/Users/%EC%82%AC%EC%9A%A9%EC%9E%90/Pictures/Saved%20Pictures/bag%20of%20tricks%20image08.PNG) 를 알 수 있을까?
-        - 최적의 해결은 ![eq](file:///C:/Users/%EC%82%AC%EC%9A%A9%EC%9E%90/Pictures/Saved%20Pictures/bag%20of%20tricks%20image09.PNG) 를 다른것들이 충분히 작을 때는 무한대로 놓는 것이다. 다시 말해서, 잠재적으로 overfitting 될 수 있는 완전히 구별된 score 출력을 권장
-        - 이러한 label smoothing 아이디어는 Inception-V2 모델에서 처음 제안되었다.
-        - 그리고 그때 실제 확률분포 qi= i가 y일 때 1-epsilon, 그렇지 않으면 epsilon/(K-1) 로 정의된다. 다음 식에서 epsilon은 충분히 작은 상수 이다. 
-        ![eq](file:///C:/Users/%EC%82%AC%EC%9A%A9%EC%9E%90/Pictures/Saved%20Pictures/bag%20of%20tricks%20image10.PNG)<br><br>
-        - 그리고 이때의 최적화 솔루션은 ![eq](file:///C:/Users/%EC%82%AC%EC%9A%A9%EC%9E%90/Pictures/Saved%20Pictures/bag%20of%20tricks%20image11.PNG)와 같이 정의된다.
-        - epsilon 이 0이면 log((K-1)(1-)/)+alpha 는 무한대가 되고, 의 증가에 따라서는 값이 감소하게 된다.
-        - 특히 epsilon이 (K-1)/K 의 값을 가지면 i=y일 때 ![eq](file:///C:/Users/%EC%82%AC%EC%9A%A9%EC%9E%90/Pictures/Saved%20Pictures/bag%20of%20tricks%20image12.PNG) = log(1)+alpha 이고, 그 외의 경우에도 alpha 이기 때문에 항등식이 성립한다.
-        - 본 논문의 figure4-(a)는 imagenet data set에서 K=1000일 때  값의 변화에 따른 ![eq](file:///C:/Users/%EC%82%AC%EC%9A%A9%EC%9E%90/Pictures/Saved%20Pictures/bag%20of%20tricks%20image12.PNG)(GAP)의 변화를 보여준다.
-        ![Theoretical_gap](file:///C:/Users/%EC%82%AC%EC%9A%A9%EC%9E%90/Pictures/Saved%20Pictures/bag%20of%20tricks%20image13.PNG)<br>
-        According to Tong He et al., [Bag of Tricks for Image Classification with Convolutional Neural Networks], Amazon Web Services, 2019, p7<br><br>
-        - 본 논문에서는 경험적으로 label smoothing을 한 ResNet50-D 와 하지 않은 ResNet50-D를 비교하여 Gap의 값을 비교하였는데, label smoothing을 한 결과의 center가 figure 4-(a)의 center에 위치하며, 양극단에 있는 값도 더 적다는 것이 확인되었다.        
-        ![Empirical_gap_from_ImageNet_validation_set](file:///C:/Users/%EC%82%AC%EC%9A%A9%EC%9E%90/Pictures/Saved%20Pictures/bag%20of%20tricks%20image14.PNG)<br>
-        According to Tong He et al., [Bag of Tricks for Image Classification with Convolutional Neural Networks], Amazon Web Services, 2019, p7<br><br>           
+        - 분류기 마지막 층은 label의 수(K)와 같은 size를 가지며, predicted confidence score를 출력한다.
+        - 이 점수들은 softmax 함수에 의해서 q로 변환되어 예상 확률값을 나타내고 다음과 같이 계산된다.<br>
+        ![Softmax_function](file:///C:/Users/%EC%82%AC%EC%9A%A9%EC%9E%90/Pictures/Saved%20Pictures/bag%20of%20tricks%20image03.png)<br>
+        - According to Tong He et al., [Bag of Tricks for Image Classification with Convolutional Neural Networks], Amazon Web Services, 2019, p6<br>
+        - Cross Entropy
+            - Entropy : <Br>
+            ![Entropy](file:///C:/Users/%EC%82%AC%EC%9A%A9%EC%9E%90/Pictures/Saved%20Pictures/bag%20of%20tricks%20image04.PNG)
+            <br>
+            - Cross Entropy : <Br>
+            ![CrossEntropy1](file:///C:/Users/%EC%82%AC%EC%9A%A9%EC%9E%90/Pictures/Saved%20Pictures/bag%20of%20tricks%20image05.PNG)
+            <br>
+            ![CrossEntropy2](file:///C:/Users/%EC%82%AC%EC%9A%A9%EC%9E%90/Pictures/Saved%20Pictures/bag%20of%20tricks%20image06.PNG)
+            실제 yc 일 확률분포  
+            ![CrossEntropy3](file:///C:/Users/%EC%82%AC%EC%9A%A9%EC%9E%90/Pictures/Saved%20Pictures/bag%20of%20tricks%20image07.PNG)
+            yc가 yc임을 예측할 확률 분포 <br>
+            - 예측 모형은 실제 분포인 q를 모르고, 모델링을 통해서 q의 분포를 예측하고자 하는 것
+            - 머신러닝을 통한 예측 모형에서 훈련데이터에서는 실제 분포인 q를 알 수 있기 때문에 cross entropy를 계산 가능        
+            - 일반적으로 Cross Entropy > Entropy<br><br>
+            - 논문의 저자는 l(p,q)의 각 parameter p, q가 서로 비슷해지도록 업데이트 한다. 이때 어떻게 ![eq](file:///C:/Users/%EC%82%AC%EC%9A%A9%EC%9E%90/Pictures/Saved%20Pictures/bag%20of%20tricks%20image08.PNG) 를 알 수 있을까?
+            - 최적의 해결은 ![eq](file:///C:/Users/%EC%82%AC%EC%9A%A9%EC%9E%90/Pictures/Saved%20Pictures/bag%20of%20tricks%20image09.PNG) 를 다른것들이 충분히 작을 때는 무한대로 놓는 것이다. 다시 말해서, 잠재적으로 overfitting 될 수 있는 완전히 구별된 score 출력을 권장
+            - 이러한 label smoothing 아이디어는 Inception-V2 모델에서 처음 제안되었다.
+            - 그리고 그때 실제 확률분포 qi= i가 y일 때 1-epsilon, 그렇지 않으면 epsilon/(K-1) 로 정의된다. 다음 식에서 epsilon은 충분히 작은 상수 이다. 
+            ![eq](file:///C:/Users/%EC%82%AC%EC%9A%A9%EC%9E%90/Pictures/Saved%20Pictures/bag%20of%20tricks%20image10.PNG)<br><br>
+            - 그리고 이때의 최적화 솔루션은 ![eq](file:///C:/Users/%EC%82%AC%EC%9A%A9%EC%9E%90/Pictures/Saved%20Pictures/bag%20of%20tricks%20image11.PNG)와 같이 정의된다.
+            - epsilon 이 0이면 log((K-1)(1-)/)+alpha 는 무한대가 되고, 의 증가에 따라서는 값이 감소하게 된다.
+            - 특히 epsilon이 (K-1)/K 의 값을 가지면 i=y일 때 ![eq](file:///C:/Users/%EC%82%AC%EC%9A%A9%EC%9E%90/Pictures/Saved%20Pictures/bag%20of%20tricks%20image12.PNG) = log(1)+alpha 이고, 그 외의 경우에도 alpha 이기 때문에 항등식이 성립한다.
+            - 본 논문의 figure4-(a)는 imagenet data set에서 K=1000일 때  값의 변화에 따른 ![eq](file:///C:/Users/%EC%82%AC%EC%9A%A9%EC%9E%90/Pictures/Saved%20Pictures/bag%20of%20tricks%20image12.PNG)(GAP)의 변화를 보여준다.
+            ![Theoretical_gap](file:///C:/Users/%EC%82%AC%EC%9A%A9%EC%9E%90/Pictures/Saved%20Pictures/bag%20of%20tricks%20image13.PNG)<br>
+            According to Tong He et al., [Bag of Tricks for Image Classification with Convolutional Neural Networks], Amazon Web Services, 2019, p7<br><br>
+            - 본 논문에서는 경험적으로 label smoothing을 한 ResNet50-D 와 하지 않은 ResNet50-D를 비교하여 Gap의 값을 비교하였는데, label smoothing을 한 결과의 center가 figure 4-(a)의 center에 위치하며, 양극단에 있는 값도 더 적다는 것이 확인되었다.        
+            ![Empirical_gap_from_ImageNet_validation_set](file:///C:/Users/%EC%82%AC%EC%9A%A9%EC%9E%90/Pictures/Saved%20Pictures/bag%20of%20tricks%20image14.PNG)<br>
+            According to Tong He et al., [Bag of Tricks for Image Classification with Convolutional Neural Networks], Amazon Web Services, 2019, p7<br><br>           
         
     1. Knowledge Distillation
         - Knowledge Distillation에서 Teacher model 은 현재 model(student model)의 training을 돕기 위해서 사용된다.
