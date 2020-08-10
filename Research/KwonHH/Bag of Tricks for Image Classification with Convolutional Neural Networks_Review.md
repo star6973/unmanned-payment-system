@@ -17,7 +17,7 @@
     - 본 논문에서는 ResNet-50과 트릭들을 적용한 후의 ResNet-50을 비교함
 <br><br>
 1. Training Procedures<br>
-![Training Preprocess](file:///C:/Users/%EC%82%AC%EC%9A%A9%EC%9E%90/Pictures/Saved%20Pictures/bag%20of%20tricks%20image01.png)<br>
+![Training_Preprocess](file:///C:/Users/%EC%82%AC%EC%9A%A9%EC%9E%90/Pictures/Saved%20Pictures/bag%20of%20tricks%20image01.png)<br>
 According to Tong He et al., [Bag of Tricks for Image Classification with Convolutional Neural Networks], Amazon Web Services, 2019, p2  
 - 논문에 제시된 방법으로 전처리를 하고, validation 하는 동안 “이미지의 가로세로 비율을 유지하면서 짧은 가장자리의 크기를 256 픽셀로 조정”하고, “224X224 영역을 찾아 RGB 채절 정규화” 수행
 - 이는 훈련과 유사한 환경에서 진행하기 위해 필요한 과정
@@ -84,28 +84,28 @@ According to Tong He et al., [Bag of Tricks for Image Classification with Convol
         ![Entropy](file:///C:/Users/%EC%82%AC%EC%9A%A9%EC%9E%90/Pictures/Saved%20Pictures/bag%20of%20tricks%20image04.PNG)
         <br>
         - Cross Entropy : <Br>
-        ![Cross Entropy](file:///C:/Users/%EC%82%AC%EC%9A%A9%EC%9E%90/Pictures/Saved%20Pictures/bag%20of%20tricks%20image05.PNG)
+        ![Cross_Entropy](file:///C:/Users/%EC%82%AC%EC%9A%A9%EC%9E%90/Pictures/Saved%20Pictures/bag%20of%20tricks%20image05.PNG)
         <br>
-        ![Cross Entropy](file:///C:/Users/%EC%82%AC%EC%9A%A9%EC%9E%90/Pictures/Saved%20Pictures/bag%20of%20tricks%20image06.PNG)
+        ![Cross_Entropy](file:///C:/Users/%EC%82%AC%EC%9A%A9%EC%9E%90/Pictures/Saved%20Pictures/bag%20of%20tricks%20image06.PNG)
         실제 yc 일 확률분포  
-        ![Cross Entropy](file:///C:/Users/%EC%82%AC%EC%9A%A9%EC%9E%90/Pictures/Saved%20Pictures/bag%20of%20tricks%20image07.PNG)
+        ![Cross_Entropy](file:///C:/Users/%EC%82%AC%EC%9A%A9%EC%9E%90/Pictures/Saved%20Pictures/bag%20of%20tricks%20image07.PNG)
         yc가 yc임을 예측할 확률 분포<br>
         - 예측 모형은 실제 분포인 q를 모르고, 모델링을 통해서 q의 분포를 예측하고자 하는 것
         - 머신러닝을 통한 예측 모형에서 훈련데이터에서는 실제 분포인 q를 알 수 있기 때문에 cross entropy를 계산 가능        
         - 일반적으로 Cross Entropy > Entropy<br><br>
-        - 논문의 저자는 l(p,q)의 각 parameter p, q가 서로 비슷해지도록 업데이트 한다. 이때 어떻게 ![수식](file:///C:/Users/%EC%82%AC%EC%9A%A9%EC%9E%90/Pictures/Saved%20Pictures/bag%20of%20tricks%20image08.PNG) 를 알 수 있을까?
-        - 최적의 해결은 ![수식](file:///C:/Users/%EC%82%AC%EC%9A%A9%EC%9E%90/Pictures/Saved%20Pictures/bag%20of%20tricks%20image09.PNG) 를 다른것들이 충분히 작을 때는 무한대로 놓는 것이다. 다시 말해서, 잠재적으로 overfitting 될 수 있는 완전히 구별된 score 출력을 권장
+        - 논문의 저자는 l(p,q)의 각 parameter p, q가 서로 비슷해지도록 업데이트 한다. 이때 어떻게 ![eq](file:///C:/Users/%EC%82%AC%EC%9A%A9%EC%9E%90/Pictures/Saved%20Pictures/bag%20of%20tricks%20image08.PNG) 를 알 수 있을까?
+        - 최적의 해결은 ![eq](file:///C:/Users/%EC%82%AC%EC%9A%A9%EC%9E%90/Pictures/Saved%20Pictures/bag%20of%20tricks%20image09.PNG) 를 다른것들이 충분히 작을 때는 무한대로 놓는 것이다. 다시 말해서, 잠재적으로 overfitting 될 수 있는 완전히 구별된 score 출력을 권장
         - 이러한 label smoothing 아이디어는 Inception-V2 모델에서 처음 제안되었다.
         - 그리고 그때 실제 확률분포 qi= i가 y일 때 1-epsilon, 그렇지 않으면 epsilon/(K-1) 로 정의된다. 다음 식에서 epsilon은 충분히 작은 상수 이다. 
-        ![수식](file:///C:/Users/%EC%82%AC%EC%9A%A9%EC%9E%90/Pictures/Saved%20Pictures/bag%20of%20tricks%20image10.PNG)<br><br>
-        - 그리고 이때의 최적화 솔루션은 ![수식](file:///C:/Users/%EC%82%AC%EC%9A%A9%EC%9E%90/Pictures/Saved%20Pictures/bag%20of%20tricks%20image11.PNG)와 같이 정의된다.
+        ![eq](file:///C:/Users/%EC%82%AC%EC%9A%A9%EC%9E%90/Pictures/Saved%20Pictures/bag%20of%20tricks%20image10.PNG)<br><br>
+        - 그리고 이때의 최적화 솔루션은 ![eq](file:///C:/Users/%EC%82%AC%EC%9A%A9%EC%9E%90/Pictures/Saved%20Pictures/bag%20of%20tricks%20image11.PNG)와 같이 정의된다.
         - epsilon 이 0이면 log((K-1)(1-)/)+alpha 는 무한대가 되고, 의 증가에 따라서는 값이 감소하게 된다.
-        - 특히 epsilon이 (K-1)/K 의 값을 가지면 i=y일 때 ![수식](file:///C:/Users/%EC%82%AC%EC%9A%A9%EC%9E%90/Pictures/Saved%20Pictures/bag%20of%20tricks%20image12.PNG) = log(1)+alpha 이고, 그 외의 경우에도 alpha 이기 때문에 항등식이 성립한다.
-        - 본 논문의 figure4-(a)는 imagenet data set에서 K=1000일 때  값의 변화에 따른 ![수식](file:///C:/Users/%EC%82%AC%EC%9A%A9%EC%9E%90/Pictures/Saved%20Pictures/bag%20of%20tricks%20image12.PNG)(GAP)의 변화를 보여준다.
-        ![Theoretical gap](file:///C:/Users/%EC%82%AC%EC%9A%A9%EC%9E%90/Pictures/Saved%20Pictures/bag%20of%20tricks%20image13.PNG)<br>
+        - 특히 epsilon이 (K-1)/K 의 값을 가지면 i=y일 때 ![eq](file:///C:/Users/%EC%82%AC%EC%9A%A9%EC%9E%90/Pictures/Saved%20Pictures/bag%20of%20tricks%20image12.PNG) = log(1)+alpha 이고, 그 외의 경우에도 alpha 이기 때문에 항등식이 성립한다.
+        - 본 논문의 figure4-(a)는 imagenet data set에서 K=1000일 때  값의 변화에 따른 ![eq](file:///C:/Users/%EC%82%AC%EC%9A%A9%EC%9E%90/Pictures/Saved%20Pictures/bag%20of%20tricks%20image12.PNG)(GAP)의 변화를 보여준다.
+        ![Theoretical_gap](file:///C:/Users/%EC%82%AC%EC%9A%A9%EC%9E%90/Pictures/Saved%20Pictures/bag%20of%20tricks%20image13.PNG)<br>
         According to Tong He et al., [Bag of Tricks for Image Classification with Convolutional Neural Networks], Amazon Web Services, 2019, p7<br><br>
         - 본 논문에서는 경험적으로 label smoothing을 한 ResNet50-D 와 하지 않은 ResNet50-D를 비교하여 Gap의 값을 비교하였는데, label smoothing을 한 결과의 center가 figure 4-(a)의 center에 위치하며, 양극단에 있는 값도 더 적다는 것이 확인되었다.        
-        ![Empirical gap from ImageNet validation set](file:///C:/Users/%EC%82%AC%EC%9A%A9%EC%9E%90/Pictures/Saved%20Pictures/bag%20of%20tricks%20image14.PNG)<br>
+        ![Empirical_gap_from_ImageNet_validation_set](file:///C:/Users/%EC%82%AC%EC%9A%A9%EC%9E%90/Pictures/Saved%20Pictures/bag%20of%20tricks%20image14.PNG)<br>
         According to Tong He et al., [Bag of Tricks for Image Classification with Convolutional Neural Networks], Amazon Web Services, 2019, p7<br><br>           
         
     1. Knowledge Distillation
@@ -117,13 +117,13 @@ According to Tong He et al., [Bag of Tricks for Image Classification with Convol
         - 입력에 대해서 p를 실제를 추정한 확률분포라고 하고, z 와 r을 각각 student model 과 teacher model의 fully connected layer라고 할 때
         - 이전에 p 와 z 사이의 차를 구하기 위해서 cross entropy loss를 구했던 것처럼 여기서도 같은 방식으로 distillation의 loss를 구한다.
         - 그러므로 loss는 다음과 같이 변화한다.
-        ![수식](file:///C:/Users/%EC%82%AC%EC%9A%A9%EC%9E%90/Pictures/Saved%20Pictures/bag%20of%20tricks%20image15.PNG)
+        ![eq](file:///C:/Users/%EC%82%AC%EC%9A%A9%EC%9E%90/Pictures/Saved%20Pictures/bag%20of%20tricks%20image15.PNG)
         T는 softmax 출력을 smooth하게 하기 위한 parameter. 그러므로 teacher의 prediction으로부터 label 분포에 대한 지식이 서서히 특징을 나타내게 된다.<br><br>
         
     1. Mixup Training
         - 본 논문의 2.1에서 논문 저자들은 어떻게 training 전에 이미지 augmentation을 하는지 묘사했다. 본 장에서는 다른 augmentation 방법을 소개한다 ; Mixup Training.
         - mixup을 위해서 매 시간 (xi, yi) 와 (xj, yj)의 랜덤 샘플을 구한다. 이후 각 샘플에 weighted linear interpolation으로부터 새로운 두 개의 데이터를 만든다.
-        ![수식](file:///C:/Users/%EC%82%AC%EC%9A%A9%EC%9E%90/Pictures/Saved%20Pictures/bag%20of%20tricks%20image16.PNG)
+        ![eq](file:///C:/Users/%EC%82%AC%EC%9A%A9%EC%9E%90/Pictures/Saved%20Pictures/bag%20of%20tricks%20image16.PNG)
         
     1. Experiment Results
         - 실험 조건
@@ -132,11 +132,11 @@ According to Tong He et al., [Bag of Tricks for Image Classification with Convol
             - mixup training 에서 alpha = 0.2, epoch 수를 120에서 200 으로 증가 (mixed 데이터들은 수렴이 잘 되도록 하기 위해서 더 긴 training progress 필요)
             - mixup training 과 distillation 을 결합하기 위해서 teacher model 역시 mixup training 실시함<br><br>
         - 논문 저자들은 이러한 기법들이 imageNet data set 이나 ResNet 구조에만 한정된 것은 아니라고 설명한다. ResNet-50-D, Inception-V3, MobileNet을 ImageNet data set에 각각 기법들을 적용한 결과를 표6에 제시했다.<br>
-        ![표](file:///C:/Users/%EC%82%AC%EC%9A%A9%EC%9E%90/Pictures/Saved%20Pictures/bag%20of%20tricks%20image17.PNG)<br>
+        ![table](file:///C:/Users/%EC%82%AC%EC%9A%A9%EC%9E%90/Pictures/Saved%20Pictures/bag%20of%20tricks%20image17.PNG)<br>
         - 위 표를 보면 distillation이 ResNet에서는 좋은 효과를 보이지만 InceptionV3 와 MobileNet에서는 그렇지 못한 것을 확인할 수 있다. 논문 저자들은 teacher model이 같은 군의 student model이 아니기 때문에 확률 분포가 다르고, 이것이 model에 부정적인 영향을 준 것으로 해석한다.
         - 게다가 저자들은 trainig을 할 때 200epoch mixup을 제외시켰고, 그것이 Top-1 accuracy를 약 0.15% 증가시켰으므로 mixup training은 여전히 중요하다.
         - 본 논문의 기법들을 다른 dataset에도 전이 가능하게 지원하기 위해서 저자들은 ResNet-50-D model에 MIT Place 365 dataset을 정제 없이 훈련시켰다.
         - 그 결과는 table7에 있으며, top5 accuracy를 validation과 test set에서 모두 일관되게 증가하였음을 확인할 수 있다.
-        ![표](file:///C:/Users/%EC%82%AC%EC%9A%A9%EC%9E%90/Pictures/Saved%20Pictures/bag%20of%20tricks%20image18.PNG)<br><br>
+        ![table](file:///C:/Users/%EC%82%AC%EC%9A%A9%EC%9E%90/Pictures/Saved%20Pictures/bag%20of%20tricks%20image18.PNG)<br><br>
 
 
