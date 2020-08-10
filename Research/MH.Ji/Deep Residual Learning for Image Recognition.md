@@ -48,14 +48,21 @@
     
     + low-level vision과 컴퓨터 그래픽에서 편미분 방정식(PDE, Partial Differential Equations)를 해결하기 위해 널리 사용되는 방법은 Multigrid 방법이다. 이 방법은 시스템을 여러 scale의 하위 문제로 재구성한다. 여기서 각 하위 문제는 coarser(거칠다)하고 finer(미세하다)한 scale 사이의 잔차(residual) 해결법에 책임을 지고 있다.
 
-- Shortcut Connections
+- Shortcut Connections(SKip Connections)
+    + 이전까지의 MLP 훈련의 초기 실습은 네트워크의 안에서 밖으로 선형 layer를 계속해서 추가하는 형태이다. 몇 개의 중간 layer들은 보조 분류기에 직접 연결되어 gradient의 소실과 폭발 문제를 해결한다. 즉, 입력(x)을 타겟
+    
+    + 하지만 본 논문에서는 layer의 responses, gradients, 그리고 propagated errors를 중점적으로 shortcut connection을 실습해볼 것이다. "Inception" layer는 shorcut branch와 몇 개의 deeper branch로 구성된다.
+
     + 
 
-
 ### 3. Deep Residual Learning
+- Residual Block
 
 
-### 4. Experiments
+
+- Identity Block
+
+
 
 
 # 새롭게 알게된 내용
@@ -83,5 +90,8 @@
 
 
 # 참고자료
-[ResNet](https://m.blog.naver.com/PostView.nhn?blogId=laonple&logNo=220761052425&proxyReferer=https:%2F%2Fwww.google.com%2F)
-[Jacobi method](https://kor.midasuser.com/nfx/techpaper/keyword_view.asp?pg=&sk=&bid=&nCat=&nIndex=&sHtml=&idx=293)
+- [ResNet](https://m.blog.naver.com/PostView.nhn?blogId=laonple&logNo=220761052425&proxyReferer=https:%2F%2Fwww.google.com%2F)
+- [Jacobi method](https://kor.midasuser.com/nfx/techpaper/keyword_view.asp?pg=&sk=&bid=&nCat=&nIndex=&sHtml=&idx=293)
+<br><br>
+
+## 추후에 학습해야할 것
