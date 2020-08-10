@@ -70,13 +70,13 @@ According to Tong He et al., [Bag of Tricks for Image Classification with Convol
     - step decay vs. cosine decay
         - cosine decay는 초기에 learning rate가 천천히 감소하다가 이후 선형적으로 감소, 이후 다시 천천히 감소
         - step decay와 비교하면 cosine decay는 처음부터 decay가 되지만 step decay가 감소할 때도 10배 큰 laerning rate를 유지(이는 잠재적으로 training progress 향상시킴)
-        ![Learing rate Schedule](file:///C:/Users/%EC%82%AC%EC%9A%A9%EC%9E%90/Pictures/Saved%20Pictures/bag%20of%20tricks%20image02.png)<br>
+        ![Learing_rate_Schedule](file:///C:/Users/%EC%82%AC%EC%9A%A9%EC%9E%90/Pictures/Saved%20Pictures/bag%20of%20tricks%20image02.png)<br>
         According to Tong He et al., [Bag of Tricks for Image Classification with Convolutional Neural Networks], Amazon Web Services, 2019, p6<br>
-<br>
+<br><br>
     1. Label smoothing
     - 분류기 마지막 층은 label의 수(K)와 같은 size를 가지며, predicted confidence score를 출력한다.
     - 이 점수들은 softmax 함수에 의해서 q로 변환되어 예상 확률값을 나타내고 다음과 같이 계산된다.<br>
-    ![Softmax function](file:///C:/Users/%EC%82%AC%EC%9A%A9%EC%9E%90/Pictures/Saved%20Pictures/bag%20of%20tricks%20image03.png)<br>
+    ![Softmax_function](file:///C:/Users/%EC%82%AC%EC%9A%A9%EC%9E%90/Pictures/Saved%20Pictures/bag%20of%20tricks%20image03.png)<br>
     According to Tong He et al., [Bag of Tricks for Image Classification with Convolutional Neural Networks], Amazon Web Services, 2019, p6<br>
     
     - Cross Entropy
