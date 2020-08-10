@@ -77,8 +77,7 @@ According to Tong He et al., [Bag of Tricks for Image Classification with Convol
     - 분류기 마지막 층은 label의 수(K)와 같은 size를 가지며, predicted confidence score를 출력한다.
     - 이 점수들은 softmax 함수에 의해서 q로 변환되어 예상 확률값을 나타내고 다음과 같이 계산된다.<br>
     ![Softmax_function](file:///C:/Users/%EC%82%AC%EC%9A%A9%EC%9E%90/Pictures/Saved%20Pictures/bag%20of%20tricks%20image03.png)<br>
-    According to Tong He et al., [Bag of Tricks for Image Classification with Convolutional Neural Networks], Amazon Web Services, 2019, p6<br>
-    
+    - According to Tong He et al., [Bag of Tricks for Image Classification with Convolutional Neural Networks], Amazon Web Services, 2019, p6<br>
     - Cross Entropy
         - Entropy : <Br>
         ![Entropy](file:///C:/Users/%EC%82%AC%EC%9A%A9%EC%9E%90/Pictures/Saved%20Pictures/bag%20of%20tricks%20image04.PNG)
