@@ -80,10 +80,10 @@ According to Tong He et al., [Bag of Tricks for Image Classification with Convol
     According to Tong He et al., [Bag of Tricks for Image Classification with Convolutional Neural Networks], Amazon Web Services, 2019, p6<br>
     
     - Cross Entropy
-        - Entropy : <Br>
+        - Entropy : <br>
         ![Entropy](file:///C:/Users/%EC%82%AC%EC%9A%A9%EC%9E%90/Pictures/Saved%20Pictures/bag%20of%20tricks%20image04.PNG)
         <br>
-        - Cross Entropy : <Br>
+        - Cross Entropy : <br>
         ![Cross_Entropy](file:///C:/Users/%EC%82%AC%EC%9A%A9%EC%9E%90/Pictures/Saved%20Pictures/bag%20of%20tricks%20image05.PNG)
         <br>
         ![Cross_Entropy](file:///C:/Users/%EC%82%AC%EC%9A%A9%EC%9E%90/Pictures/Saved%20Pictures/bag%20of%20tricks%20image06.PNG)
