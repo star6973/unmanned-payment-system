@@ -75,17 +75,21 @@ According to Tong He et al., [Bag of Tricks for Image Classification with Convol
 <br>
     1. Label smoothing
     - 분류기 마지막 층은 label의 수(K)와 같은 size를 가지며, predicted confidence score를 출력한다.
-    - 이 점수들은 softmax 함수에 의해서 q로 변환되어 예상 확률값을 나타내고 다음과 같이 계산된다.
+    - 이 점수들은 softmax 함수에 의해서 q로 변환되어 예상 확률값을 나타내고 다음과 같이 계산된다.<br>
     ![Softmax function](file:///C:/Users/%EC%82%AC%EC%9A%A9%EC%9E%90/Pictures/Saved%20Pictures/bag%20of%20tricks%20image03.png)<br>
     According to Tong He et al., [Bag of Tricks for Image Classification with Convolutional Neural Networks], Amazon Web Services, 2019, p6<br>
     
     - Cross Entropy
         - Entropy : <Br>
-        ![Entropy](file:///C:/Users/%EC%82%AC%EC%9A%A9%EC%9E%90/Pictures/Saved%20Pictures/bag%20of%20tricks%20image04.PNG)<br>
+        ![Entropy](file:///C:/Users/%EC%82%AC%EC%9A%A9%EC%9E%90/Pictures/Saved%20Pictures/bag%20of%20tricks%20image04.PNG)
+        <br>
         - Cross Entropy : <Br>
-        ![Cross Entropy](file:///C:/Users/%EC%82%AC%EC%9A%A9%EC%9E%90/Pictures/Saved%20Pictures/bag%20of%20tricks%20image05.PNG)<br>
-        ![Cross Entropy](file:///C:/Users/%EC%82%AC%EC%9A%A9%EC%9E%90/Pictures/Saved%20Pictures/bag%20of%20tricks%20image06.PNG) : 실제 yc 일 확률분포  
-        ![Cross Entropy](file:///C:/Users/%EC%82%AC%EC%9A%A9%EC%9E%90/Pictures/Saved%20Pictures/bag%20of%20tricks%20image07.PNG) : yc가 yc임을 예측할 확률 분포<br>
+        ![Cross Entropy](file:///C:/Users/%EC%82%AC%EC%9A%A9%EC%9E%90/Pictures/Saved%20Pictures/bag%20of%20tricks%20image05.PNG)
+        <br>
+        ![Cross Entropy](file:///C:/Users/%EC%82%AC%EC%9A%A9%EC%9E%90/Pictures/Saved%20Pictures/bag%20of%20tricks%20image06.PNG)
+        실제 yc 일 확률분포  
+        ![Cross Entropy](file:///C:/Users/%EC%82%AC%EC%9A%A9%EC%9E%90/Pictures/Saved%20Pictures/bag%20of%20tricks%20image07.PNG)
+        yc가 yc임을 예측할 확률 분포<br>
         - 예측 모형은 실제 분포인 q를 모르고, 모델링을 통해서 q의 분포를 예측하고자 하는 것
         - 머신러닝을 통한 예측 모형에서 훈련데이터에서는 실제 분포인 q를 알 수 있기 때문에 cross entropy를 계산 가능        
         - 일반적으로 Cross Entropy > Entropy<br><br>
