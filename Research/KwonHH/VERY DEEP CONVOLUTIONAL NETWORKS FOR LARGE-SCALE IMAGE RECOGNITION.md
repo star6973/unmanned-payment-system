@@ -28,6 +28,6 @@ Abstract
         - convolution layer층은 3층의 fully connected layer에 의해서 수행된다.
         - 처음 2개의 층은 각 4096 채널
         - 세 번째 층은 1000개의 ILSVRC 분류를 수행하기 때문에 각 클래스 수와 동일한 1000개의 채널을 가진다.
-        
+        - 마지막 층은 softmax 층이고, 이와 같은 fully connected layer의 설정은 전체 network에서 동일
     
     
