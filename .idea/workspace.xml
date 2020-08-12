@@ -20,8 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="49a72ee4-5b9a-4b18-b1b3-01a0a89c294e" name="Default Changelist" comment="commit">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Research/INHWA/He_Bag_of_Tricks_for_Image_Classification_with_Convolutional_Neural_Networks_CVPR_2019_paper.md" beforeDir="false" afterPath="$PROJECT_DIR$/Research/INHWA/He_Bag_of_Tricks_for_Image_Classification_with_Convolutional_Neural_Networks_CVPR_2019_paper.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Research/INHWA/Gradient descent.md" beforeDir="false" afterPath="$PROJECT_DIR$/Research/INHWA/deep_learning/Gradient descent.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Research/INHWA/He_Bag_of_Tricks_for_Image_Classification_with_Convolutional_Neural_Networks_CVPR_2019_paper.md" beforeDir="false" afterPath="$PROJECT_DIR$/Research/INHWA/deep_learning/He_Bag_of_Tricks_for_Image_Classification_with_Convolutional_Neural_Networks_CVPR_2019_paper.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Research/INHWA/activation_funtion.md" beforeDir="false" afterPath="$PROJECT_DIR$/Research/INHWA/deep_learning/activation_funtion.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Research/INHWA/entropy.md" beforeDir="false" afterPath="$PROJECT_DIR$/Research/INHWA/deep_learning/entropy.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,8 +44,9 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
