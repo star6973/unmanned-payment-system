@@ -65,9 +65,11 @@ d.  no bias decay
 7x7conv를 3x3x3으로 바꿧더니 0.2% 더 좋아지고 ResNet-50 을 ResNet-D를 적용 시키면 1% 정확도 향상이있다. 하지만 ResNet-D는 연산처리량이 많아 속도가 3%가 느려졌다. 
 
 ### Label Smoothing 
-- label에 0,1 classification이 아닌 확률로 1-e로 임의의값으로 뺴서 레이블에 노이즈를 넣는다 
+- label에 0,1 classification이 아닌 확률로 1-e로 임의의값으로 뺴서 레이블에 노이즈를 넣는다
+- softmax의 후단계 친구들의 정답값에 시그마를 뺴서 값을 0.9로 만든다. 
+- softmax는 하나의 1값으로 나머지는 0으로 만드는 아주 강력한 함수라서 -0.1값이 작지만 큰 영향을 준다
 
 ###  Knowledge Distillation
 - 미리 잘 학습된 큰 네트워크(Teacher network) 의 지식을 실제로 사용하고자 하는 작은 네트워크(Student network) 에게 전달하는 것
 - 코스트는 (티처모델과 스튜던트 모델의 결과차이 ) + ( 실제물체와 스튜던트 모델의 차이)
-
+- 이것은 softmax의 전단계에 값을 가져오는 것이다. 
