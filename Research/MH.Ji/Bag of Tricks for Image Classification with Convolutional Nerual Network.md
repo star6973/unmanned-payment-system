@@ -1,4 +1,4 @@
-## 논문 내용 정리
+# 논문 내용 정리
 ### Abstract
 - object detection과 sementic segmentation과 같은 domain application에 적용하여 image classification 정확도를 향상시키는 것을 증명할 것이다.
 
@@ -147,3 +147,24 @@
 ### 1. ResNet
 ### 2. VGG
 ### 3. Image Classification의 다양한 기법들
+
+
+
+
+
+momentum - 역학적 의미와 같음 -> 변하지 않으려는 성질
+GD - 모든 데이터를 학습하기 위해서 사용 -> learning rate를 앞에 곱해서 -> 머신러닝에서 사용
+SGD - batch 개념 등장 -> learning rate를 곱해서 그 방향으로 ㄱ감
+모멘텀 - 이전의 업데이트 양을 남겨두기, 처음에 큰 로스를 구해서 다음 스텝을 조금씩만 해도 됨 -> 연산 수행 횟수가 적어짐
+NAG - 미리 예측
+linear하면 공간을 바꿔도 바뀌지 않지만, non-linearity를 넣으면 linear한 공간으로 넘어가서 바꿀 수 있다.
+파라미터 하이퍼파라미터 차이
+ 
+effiecient net, det
+
+
+
+
+
+cross entropy -> 얼마나 잘 구분되어 있느냐, 항상 증가하는 -> 비슷할 수록 큼
+decision tree
