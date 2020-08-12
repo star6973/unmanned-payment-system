@@ -18,7 +18,7 @@ Abstract
     - 또한 상대적으로 단순한 pipeline을 가진 다른 이미지 인식 datasets에도 적용 가능하다는 성과를 얻었다.(예를 들면 fine tuning 없이 deep feature 데이터를 SVM으로 분류)
 <br><br>
 1. Convolution Network Configuration
-    1.1 Architecture
+    1. Architecture
         - Training 동안 Network의 입력 데이터의 크기는 224 by 224 RGB image의 고정된 크기를 사용
         - 유일한 전처리 과정은 Training set에서 계산된 RGB값의 평균을 각 픽셀에서 빼줌
         - convolution layer는 이미지를 거쳐 들어가는데, 이때 필터는 3 by 3으로 매우 작은 사이즈 사용
