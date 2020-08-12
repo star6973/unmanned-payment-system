@@ -36,19 +36,17 @@
     + Hyper Parameter의 최적화 방법
         1) Manual Search  
             + 사용자의 직감 또는 경험에 의해
-
+            
         2) Grid Search  
             + 처음부터 시작하여 모든 조합을 시행
 
         3) Random Search  
             + 범위 내에서 무작위값을 반복적으로 추출
-
-<center><img src="/reference_image/MH.Ji/Deep Learning Conecpt/87.jpg" width="50%"></center><br>
+            <center><img src="/reference_image/MH.Ji/Deep Learning Conecpt/87.jpg" width="50%"></center><br>
 
         4) Bayesian Optimization  
             + 기존에 추출되어 평가된 결과를 바탕으로 추출 범위를 좁혀서 효율적으로 시행
-
-<center><img src="/reference_image/MH.Ji/Deep Learning Conecpt/88.png" width="50%"></center><br>
+            <center><img src="/reference_image/MH.Ji/Deep Learning Conecpt/88.png" width="50%"></center><br>
 
 
 > [파라미터(Parameter)와 하이퍼 파라미터(Hyper parameter)](https://bkshin.tistory.com/entry/%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D-13-%ED%8C%8C%EB%9D%BC%EB%AF%B8%ED%84%B0Parameter%EC%99%80-%ED%95%98%EC%9D%B4%ED%8D%BC-%ED%8C%8C%EB%9D%BC%EB%AF%B8%ED%84%B0Hyper-parameter){:target="_blank"}
