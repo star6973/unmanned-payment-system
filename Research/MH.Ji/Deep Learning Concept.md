@@ -42,17 +42,18 @@
 
         3) Random Search  
             + 범위 내에서 무작위값을 반복적으로 추출
-            <center><img src="/reference_image/MH.Ji/Deep Learning Conecpt/87.jpg" width="50%"></center><br>
+            <center><img src="/reference_image/MH.Ji/Deep Learning Conecpt/87.jpg" width="80%"></center><br>
 
         4) Bayesian Optimization  
             + 기존에 추출되어 평가된 결과를 바탕으로 추출 범위를 좁혀서 효율적으로 시행
-            <center><img src="/reference_image/MH.Ji/Deep Learning Conecpt/88.png" width="50%"></center><br>
+            <center><img src="/reference_image/MH.Ji/Deep Learning Conecpt/88.png" width="80%"></center><br>
 
 > [파라미터(Parameter)와 하이퍼 파라미터(Hyper parameter)](https://bkshin.tistory.com/entry/%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D-13-%ED%8C%8C%EB%9D%BC%EB%AF%B8%ED%84%B0Parameter%EC%99%80-%ED%95%98%EC%9D%B4%ED%8D%BC-%ED%8C%8C%EB%9D%BC%EB%AF%B8%ED%84%B0Hyper-parameter)
 
 > [Parameter vs HyperParameter 둘의 차이점은 무엇일까?](http://blog.naver.com/PostView.nhn?blogId=tjdudwo93&logNo=221067763334&parentCategoryNo=&categoryNo=&viewDate=&isShowPopularPosts=false&from=postView)
 
 > [Hyperparameter optimization](http://blog.naver.com/PostView.nhn?blogId=cjh226&logNo=221408767297&categoryNo=16&parentCategoryNo=0&viewDate=&currentPage=1&postListTopCurrentPage=1&from=section)
+
 <br><br>
 
 ## 2. Loss Function
@@ -78,12 +79,12 @@
         + 통계적으로 바라보는 MSE
             + 통계적 추정에 대한 설명
         
-[확률과 통계 챕터5. 표집분포와 통계적추론](https://star6973.github.io/blog/2020/06/21/probability-and-statistics-chapter-5)
+            [확률과 통계 챕터5. 표집분포와 통계적추론](https://star6973.github.io/blog/2020/06/21/probability-and-statistics-chapter-5)
 
             + 모집단에서 표본을 추출하여 각 표본 추정량의 값을 계산할 때 추정량이 바람직하기 위해서는 추정값들의 확률분포가 모수를 중심으로 밀집되어야 할 것이다.
                 + 바람직한 추정량: 평균적으로 모수에 근접하고 그 밀집도가 높은 추정량
     
-<center><img src="/reference_image/MH.Ji/Deep Learning Conecpt/93.jpg" width="50%"></center><br>
+            <center><img src="/reference_image/MH.Ji/Deep Learning Conecpt/93.jpg" width="50%"></center><br>
 
             + 이 밀집성의 정도는 MSE로 측정할 수 있다. 추정량($$\theta$$)과 추정모수($$\hat{\theta})와의 차이가 밀집성의 정도를 나타내는 지표로 사용할 수 있으며, 양의 값으로 취하기 위해서 제곱을 사용한다. 추정량은 일종의 확률변수이기 때문에 위에서 구한 차이의 제곱 역시 확률변수가 되기 때문에 이것의 평균을 구할 수 있으며, 그 결과를 평균제곱오차라고 한다.
 
@@ -100,13 +101,16 @@
 
         + 훈련 데이터를 사용한 예측 모형에서 cross-entropy는 실제값과 예측값의 차이를 계산하는데 사용할 수 있다.
 
-> [추정의 이해(점추정, 평균제곱오차(MSE))](https://m.blog.naver.com/PostView.nhn?blogId=victor3dh&logNo=220877005939&proxyReferer=https:%2F%2Fwww.google.com%2F){:target="_blank"}
-> [통계학 개론](http://jangun.com/study/IntroductionStatistics.html){:target="_blank"}
-> [Cross-entropy 의 이해: 정보이론과의 관계](https://3months.tistory.com/436){:target="_blank"}
+> [추정의 이해(점추정, 평균제곱오차(MSE))](https://m.blog.naver.com/PostView.nhn?blogId=victor3dh&logNo=220877005939&proxyReferer=https:%2F%2Fwww.google.com%2F)
+
+> [통계학 개론](http://jangun.com/study/IntroductionStatistics.html)
+
+> [Cross-entropy 의 이해: 정보이론과의 관계](https://3months.tistory.com/436)
+
 <br><br>
 
 ## 3. Optimization
-[5. Artificial Neural Networks(ANN)](https://star6973.github.io/blog/2020/06/19/deeplearning-day-2){:target="_blank"}
+[Artificial Neural Networks(ANN)](https://star6973.github.io/blog/2020/06/19/deeplearning-day-2)
 <br><br>
 
 ## 4. Learning rate & Batch size
@@ -119,10 +123,11 @@
 
         2) learning rate가 너무 작게 되면, 수렴하는 속도가 너무 느려 local minimum에 빠질 확률이 증가한다.  
 
-    <center><img src="/reference_image/MH.Ji/Deep Learning Conecpt/95.PNG" width="50%"></center><br>
+    <center><img src="/reference_image/MH.Ji/Deep Learning Conecpt/95.PNG" width="80%"></center><br>
 
-    > [Learning Rate, Overfitting, Regularization](https://m.blog.naver.com/PostView.nhn?blogId=cattree_studio&logNo=220703210504&proxyReferer=https:%2F%2Fwww.google.com%2F){:target="_blank"}
-    > [Learning Rate Scheduling](https://www.deeplearningwizard.com/deep_learning/boosting_models_pytorch/lr_scheduling/){:target="_blank"}
+    > [Learning Rate, Overfitting, Regularization](https://m.blog.naver.com/PostView.nhn?blogId=cattree_studio&logNo=220703210504&proxyReferer=https:%2F%2Fwww.google.com%2F)
+
+    > [Learning Rate Scheduling](https://www.deeplearningwizard.com/deep_learning/boosting_models_pytorch/lr_scheduling/)
 
 - Batch size
     + batch size는 한 번의 batch마다 주는 데이터 샘플의 사이즈이다. 보통 mini-batch를 사용하여 데이터셋을 나누어 학습을 시켜준다.
@@ -137,20 +142,24 @@
 
 - propagation이 한 번 돌리는 것을 1 epoch 주기라고 하며, epoch를 늘릴수록 가중치가 계속 업데이트되면서 점점 오차가 줄어나간다.
 
-<center><img src="/reference_image/MH.Ji/Deep Learning Conecpt/97.PNG" width="50%"></center><br>
+<center><img src="/reference_image/MH.Ji/Deep Learning Conecpt/97.png" width="80%"></center><br>
 
 - 위의 그림을 보면 output layer에서 나온 결과값이 가진 오차가 0.6이고, 이전 노드 output layer에서 위의 노드와 아래 노드는 각각 3과 2를 전달해주고 있다. 이는 output error에 위의 노드와 아래 노드는 각각 60%, 40%의 영향을 주었다고 볼 수 있다. 균등하게 가중치를 나눠줄 수 있지만 영향을 더 준 노드가 의미가 더 있기 때문에 Back Propagation을 할 때도 영향을 준 크기만큼 비례하여 주는 것이 좋다. 이렇듯 Back Propagation은 오차를 점점 거슬러 올라가면서 다시 전파하는 것을 의미하며, 오차를 전파시키면서 각 layer의 가중치를 업데이트하고 최적의 학습 결과를 찾아가는 방법이다.
 
 - 또한, Back Propagation은 chain rule을 사용하여 gradient의 계산과 업데이트를 엄청 간단하게 만들어주는 알고리즘으로, 각각의 parameter의 gradient를 계산할 때 parallelization도 용이하고, 메모리도 아낄 수 있다.
     + Chain Rule
-        + 1) x가 변화했을 때 함수 g가 얼마나 변하는지
-        + 2) 함수 g의 변화로 인해 함수 f가 얼마나 변하는지
-        + 3) 함수 f의 인자가 함수 g이면 최종값 F의 변화량에 기여하는 각 함수 f와 g의 기여도가 어떤지
+        + x가 변화했을 때 함수 g가 얼마나 변하는지
+        + 함수 g의 변화로 인해 함수 f가 얼마나 변하는지
+        + 함수 f의 인자가 함수 g이면 최종값 F의 변화량에 기여하는 각 함수 f와 g의 기여도가 어떤지
 
-        <center><img src="/reference_image/MH.Ji/Deep Learning Conecpt/98.PNG" width="50%"></center><br>
+        <center><img src="/reference_image/MH.Ji/Deep Learning Conecpt/98.PNG" width="80%"></center><br>
 
-> [순전파(forward propagation), 역전파(back propagation)](https://ko.d2l.ai/chapter_deep-learning-basics/backprop.html){:target="_blank"}
-> [오차 역전파, 경사하강법](https://sacko.tistory.com/19){:target="_blank"}
-> [Machine Learning 스터디 (18) Neural Network Introduction](http://sanghyukchun.github.io/74/){:target="_blank"}
-> [[Deep Learning이란 무엇인가?] Backpropagation, 역전파 알아보기](https://evan-moon.github.io/2018/07/19/deep-learning-backpropagation/){:target="_blank"}
-> [What is backpropagation really doing? | Deep learning, chapter 3](https://www.youtube.com/watch?v=Ilg3gGewQ5U&feature=youtu.be){:target="_blank"}
+> [순전파(forward propagation), 역전파(back propagation)](https://ko.d2l.ai/chapter_deep-learning-basics/backprop.html)
+
+> [오차 역전파, 경사하강법](https://sacko.tistory.com/19)
+
+> [Machine Learning 스터디 (18) Neural Network Introduction](http://sanghyukchun.github.io/74/)
+
+> [[Deep Learning이란 무엇인가?] Backpropagation, 역전파 알아보기](https://evan-moon.github.io/2018/07/19/deep-learning-backpropagation/)
+
+> [What is backpropagation really doing? | Deep learning, chapter 3](https://www.youtube.com/watch?v=Ilg3gGewQ5U&feature=youtu.be)
