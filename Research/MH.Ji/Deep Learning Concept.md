@@ -36,7 +36,7 @@
     + Hyper Parameter의 최적화 방법
         1) Manual Search  
             + 사용자의 직감 또는 경험에 의해
-            
+
         2) Grid Search  
             + 처음부터 시작하여 모든 조합을 시행
 
@@ -48,10 +48,11 @@
             + 기존에 추출되어 평가된 결과를 바탕으로 추출 범위를 좁혀서 효율적으로 시행
             <center><img src="/reference_image/MH.Ji/Deep Learning Conecpt/88.png" width="50%"></center><br>
 
+> [파라미터(Parameter)와 하이퍼 파라미터(Hyper parameter)](https://bkshin.tistory.com/entry/%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D-13-%ED%8C%8C%EB%9D%BC%EB%AF%B8%ED%84%B0Parameter%EC%99%80-%ED%95%98%EC%9D%B4%ED%8D%BC-%ED%8C%8C%EB%9D%BC%EB%AF%B8%ED%84%B0Hyper-parameter)
 
-> [파라미터(Parameter)와 하이퍼 파라미터(Hyper parameter)](https://bkshin.tistory.com/entry/%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D-13-%ED%8C%8C%EB%9D%BC%EB%AF%B8%ED%84%B0Parameter%EC%99%80-%ED%95%98%EC%9D%B4%ED%8D%BC-%ED%8C%8C%EB%9D%BC%EB%AF%B8%ED%84%B0Hyper-parameter){:target="_blank"}
-> [Parameter vs HyperParameter 둘의 차이점은 무엇일까?](http://blog.naver.com/PostView.nhn?blogId=tjdudwo93&logNo=221067763334&parentCategoryNo=&categoryNo=&viewDate=&isShowPopularPosts=false&from=postView){:target="_blank"}
-> [Hyperparameter optimization](http://blog.naver.com/PostView.nhn?blogId=cjh226&logNo=221408767297&categoryNo=16&parentCategoryNo=0&viewDate=&currentPage=1&postListTopCurrentPage=1&from=section){:target="_blank"}
+> [Parameter vs HyperParameter 둘의 차이점은 무엇일까?](http://blog.naver.com/PostView.nhn?blogId=tjdudwo93&logNo=221067763334&parentCategoryNo=&categoryNo=&viewDate=&isShowPopularPosts=false&from=postView)
+
+> [Hyperparameter optimization](http://blog.naver.com/PostView.nhn?blogId=cjh226&logNo=221408767297&categoryNo=16&parentCategoryNo=0&viewDate=&currentPage=1&postListTopCurrentPage=1&from=section)
 <br><br>
 
 ## 2. Loss Function
@@ -70,20 +71,19 @@
 - Loss Function의 종류
     1) MSE(Mean Squared Error, 평균제곱오차)
         + 오차의 제곱에 대한 평균을 취한 값으로, 통계적 추정의 정확성에 대한 질적인 척도로 사용된다.
-
-    <center><img src="/reference_image/MH.Ji/Deep Learning Conecpt/92.png" width="50%"></center><br>
+        <center><img src="/reference_image/MH.Ji/Deep Learning Conecpt/92.png" width="50%"></center><br>
 
         + 예측값과 실제값의 차이가 클수록 MSE의 값도 커진다는 것은, 이 값이 작을수록 예측력이 좋다(추정의 정확성이 높아진다)고 할 수 있다.
 
         + 통계적으로 바라보는 MSE
             + 통계적 추정에 대한 설명
         
-    [확률과 통계 챕터5. 표집분포와 통계적추론](https://star6973.github.io/blog/2020/06/21/probability-and-statistics-chapter-5){:target="_blank"}
+[확률과 통계 챕터5. 표집분포와 통계적추론](https://star6973.github.io/blog/2020/06/21/probability-and-statistics-chapter-5)
 
             + 모집단에서 표본을 추출하여 각 표본 추정량의 값을 계산할 때 추정량이 바람직하기 위해서는 추정값들의 확률분포가 모수를 중심으로 밀집되어야 할 것이다.
                 + 바람직한 추정량: 평균적으로 모수에 근접하고 그 밀집도가 높은 추정량
-
-    <center><img src="/reference_image/MH.Ji/Deep Learning Conecpt/93.jpg" width="50%"></center><br>
+    
+<center><img src="/reference_image/MH.Ji/Deep Learning Conecpt/93.jpg" width="50%"></center><br>
 
             + 이 밀집성의 정도는 MSE로 측정할 수 있다. 추정량($$\theta$$)과 추정모수($$\hat{\theta})와의 차이가 밀집성의 정도를 나타내는 지표로 사용할 수 있으며, 양의 값으로 취하기 위해서 제곱을 사용한다. 추정량은 일종의 확률변수이기 때문에 위에서 구한 차이의 제곱 역시 확률변수가 되기 때문에 이것의 평균을 구할 수 있으며, 그 결과를 평균제곱오차라고 한다.
 
