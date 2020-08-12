@@ -72,7 +72,7 @@
 - Loss Function의 종류
     1) MSE(Mean Squared Error, 평균제곱오차)
         + 오차의 제곱에 대한 평균을 취한 값으로, 통계적 추정의 정확성에 대한 질적인 척도로 사용된다.
-        <center><img src="/reference_image/MH.Ji/Deep Learning Conecpt/92.png" width="50%"></center><br>
+        <center><img src="/reference_image/MH.Ji/Deep Learning Conecpt/92.png" width="100%"></center><br>
 
         + 예측값과 실제값의 차이가 클수록 MSE의 값도 커진다는 것은, 이 값이 작을수록 예측력이 좋다(추정의 정확성이 높아진다)고 할 수 있다.
 
@@ -82,9 +82,10 @@
             [확률과 통계 챕터5. 표집분포와 통계적추론](https://star6973.github.io/blog/2020/06/21/probability-and-statistics-chapter-5)
 
             + 모집단에서 표본을 추출하여 각 표본 추정량의 값을 계산할 때 추정량이 바람직하기 위해서는 추정값들의 확률분포가 모수를 중심으로 밀집되어야 할 것이다.
-                + 바람직한 추정량: 평균적으로 모수에 근접하고 그 밀집도가 높은 추정량
+
+                - 바람직한 추정량: 평균적으로 모수에 근접하고 그 밀집도가 높은 추정량
     
-            <center><img src="/reference_image/MH.Ji/Deep Learning Conecpt/93.jpg" width="50%"></center><br>
+            <center><img src="/reference_image/MH.Ji/Deep Learning Conecpt/93.jpg" width="80%"></center><br>
 
             + 이 밀집성의 정도는 MSE로 측정할 수 있다. 추정량($$\theta$$)과 추정모수($$\hat{\theta})와의 차이가 밀집성의 정도를 나타내는 지표로 사용할 수 있으며, 양의 값으로 취하기 위해서 제곱을 사용한다. 추정량은 일종의 확률변수이기 때문에 위에서 구한 차이의 제곱 역시 확률변수가 되기 때문에 이것의 평균을 구할 수 있으며, 그 결과를 평균제곱오차라고 한다.
 
@@ -96,8 +97,7 @@
         + entropy란 불확실성(uncertainty)에 대한 척도이다. 예측 모형으로 하려고 하는 것은 결국 불확실성을 제어하고자 하는 것이다. 만약 파란공만 들어가있는 가방에서 공을 뽑을 때의 불확실성은 0이다. 왜냐하면 결국 가방 안에는 모두 파란공만 들어있기 때문이다. 하지만 만약 빨간공과 파란공이 모두 들어가 있다면, 불확실성이 0보다 커질 수 밖에 없다. 즉, entropy는 예측하기 쉬운 일보다, 예측하기 힘든 일에서 더 높은 값을 가진다.
 
         + 예측 모형은 실제 분포인 q를 모르고, 모델링을 하여 q분포를 예측하고자 하는 것이다. 예측 모델링을 통해 구한 분포를 p(x)라고 하자. 실제 분포인 q를 예측하는 p분포를 만들었을 때, cross-entropy는 아래의 식과 같다.
-
-    <center><img src="/reference_image/MH.Ji/Deep Learning Conecpt/94.PNG" width="50%"></center><br>
+        <center><img src="/reference_image/MH.Ji/Deep Learning Conecpt/94.PNG" width="80%"></center><br>
 
         + 훈련 데이터를 사용한 예측 모형에서 cross-entropy는 실제값과 예측값의 차이를 계산하는데 사용할 수 있다.
 
