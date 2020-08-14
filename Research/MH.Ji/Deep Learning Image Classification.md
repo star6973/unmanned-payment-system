@@ -140,13 +140,61 @@
 
     + 두 번째 레이어에서 convolution layer에서 64개의 3x3x64 필터로 convolution 연산을 해주어, 결과적으로 224x224x64의 feature map이 산출된다. pooling layer에서는 2x2 필터로 stride=2로 적용하여 max pooling을 하여, 결과적으로 feature map의 사이즈를 112x112x64로 줄인다.
 
-    + 세 번째 레이어에서부터는 AlexNet과 비슷한 맥락으로 진행한다. 자세하게 살펴보려면 [[CNN 알고리즘들] VGGNet의 구조 (VGG16)](https://bskyvision.com/504)로 GoGo..
+    + 세 번째 레이어에서부터는 AlexNet과 비슷한 맥락으로 진행한다. 자세하게 살펴보려면 [VGGNet의 구조 (VGG16)](https://bskyvision.com/504)로 GoGo..
 
 - VGGNet은 AlexNet이나 ZFNet처럼 224x224 크기의 컬러 이미지를 입력으로 받아들이고, 1개 혹은 그 이상의 convolutional layer 뒤에 max pooling layer가 오는 단순한 구조가 되어 있다. 또한, 맨 마지막 단에는 fully connected layer가 온다. 이러한 구조 덕분에 간단하고 이해나 변형이 쉬운 장점을 가지고 있지만, 파라미터의 수가 엄청나게 많기 때문에 학습 시간이 오래 걸린다.
+
+- 참고자료
+> [Deep Learning Image Classification Guidebook [1] LeNet, AlexNet, ZFNet, VGG, GoogLeNet, ResNet](https://hoya012.github.io/blog/deeplearning-classification-guidebook-1/)
+
+> [VGGNet의 구조 (VGG16)](https://bskyvision.com/504)
+
+> [VGGNet [1], [2] - 라온피플 머신러닝 아카데미](http://blog.naver.com/laonple/220738560542)
 <br><br>
 
 ## GoogleNet
-- 
+- 2014년 ILSVC 대회에서 1위를 한 모델이며, Google 연구팀이 개발하였다. 19층인 VGG19보다 좀 더 깊은 22층으로 구성되어 있다.
+
+- 특징
+    1) 1x1 Convolution
+        <center><img src="/reference_image/MH.Ji/Deep Learning Image Classification/112.PNG" width="70%"></center><br>
+
+        - 위의 구조도를 보면 곳곳에 1x1 필터의 convolution 연산이 있음을 확인할 수 있다.
+
+        - 1x1 convolution은 feature map의 개수를 줄이는 목적으로 사용된다. feature map을 줄일수록 연산량이 줄어들 수 있기 때문이다. 
+
+        - 예를 들어, 480장의 14x14의 feature map을 48장의 14x14로 줄여보도록 하자. 첫 번째 방법은 1x1 convolution을 사용하지 않고, 5x5 필터로 convolution 연산을 해주자. 이때 필요한 연산횟수는 (14x14x48) x (5x5x480) = 112.9M이 된다. 두 번째 방법은 16개의 1x1x480의 필터로 convolution 연산을 해보자. 결과적으로 16장의 14x14의 feature map이 산출된다. 다시 이 14x14x16 feature map을 48개의 5x5x16의 필터로 convolution 연산을 해주면 48장의 14x14 feature map으로 줄어들 수 있다. 그럼 이때 필요한 연산횟수는 (14x14x16) x (1x1x480) + (14x14x48) x (5x5x16) = 5.3M이다. 첫 번째 방법에 비해 훨씬 많은 연산량을 줄일 수 있다.
+    
+    <center><img src="/reference_image/MH.Ji/Deep Learning Image Classification/113.PNG" width="70%"></center><br>
+
+    2) Inception Module  
+        <center><img src="/reference_image/MH.Ji/Deep Learning Image Classification/114.PNG" width="70%"></center><br>
+
+        - GoogLeNet은 총 9개의 inception module을 포함하고 있다. 기존에는 layer간에 1 convolution + 1 pooling 연산으로 연결하였다면, inception module은 총 4가지 서로 다른 연산을 거친 뒤 feature map을 channel 방향으로 합치는 concatenation을 이용하고 있다는 점이다.
+
+    <center><img src="/reference_image/MH.Ji/Deep Learning Image Classification/115.PNG" width="70%"></center><br>
+
+        - 위의 구조에서 노란색 블럭으로 표현된 1x1 convolution을 제외하고, 3x3, 5x5 convolution 연산을 섞어서 사용하는 방식을 Naive Inception Module이라고 부른다. 또한, 여기에 추가로 3x3 convolution와 5x5 convolution 연산이 많은 연산량을 차지하고 있기 때문에, 두 convolution 연산 앞에는 1x1 필터를 적용한 convolution 연산을 추가하여 feature map의 개수를 줄이고, 다시 거꾸로 3x3, 5x5 convolution 연산을 수행하여 feature map을 키워주는 bottleneck 구조를 추가하였다.
+
+        - AlexNet, VGGNet 등의 이전 CNN 모델들은 하나의 layer에 동일한 사이즈의 필터를 이용해서 convolution 연산을 해줬던 것과는 차이가 있다. 따라서 Inception module 덕분에 다양한 종류의 특성이 도출될 뿐만 아니라, 연산량이 절반 이상을 줄일 수 있었다.
+
+    <center><img src="/reference_image/MH.Ji/Deep Learning Image Classification/116.PNG" width="70%"></center><br>
+    
+    3) Global Average Pooling  
+        - AlexNet, VGGNet 등에서는 FC layer들이 망의 후반부에 연결되어 있다. 하지만 GoogLeNet FC 방식 대신에 global average pulling이란 방식을 사용한다. global average pooling은 전 층에서 산출된 feature map들을 각각 평균낸 것을 이어서 1차원 벡터를 만들어주는 것이다. FC layer와 같이 1차원 벡터로 만들어주어야 최종적으로 이미지 분류를 위한 softmax 함수로 연결할 수 있기 때문이다.
+
+        - 이 방식을 통해 가중치의 개수를 상당히 많이 없애줄 수 있다. 만약 FC 방식을 사용한다면 훈련이 필요한 가중치의 개수가 7x7x1024x1024=51.3M이지만, global average pooling을 사용하면 가중치가 단 한 개도 필요하지 않다.
+
+    4) Auxiliary Classifier  
+        - 
+
+ 
+
+- 구조
+    <center><img src="/reference_image/MH.Ji/Deep Learning Image Classification/111.PNG" width="70%"></center><br>
+
+    + 
+
 
 ## ResNet
 
