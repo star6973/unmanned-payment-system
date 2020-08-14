@@ -123,7 +123,7 @@
     + 그렇다면 3x3 필터로 3번 convolution하는 것이 7x7 필터로 1번 convolution 연산을 하는 것보다 나은 점은 무엇인가? 바로, 가중치 또는 파라미터의 수의 차이다. 3x3 필터가 3개면 총 27개의 가중치를 가지는 반면, 7x7 필터는 1개만이어도 총 49개의 가중치를 가진다. CNN에서 가중치는 training에서 사용되는 파라미터이기 때문에, 학습 속도에 영향을 준다. 즉, 사용되는 파라미터의 개수가 적어질수록 학습 속도가 빨라진다는 것이다. 동시에 layer의 개수 역시 늘어나지면서 feature에 비선형성을 증가시켜주어 feature가 점점 더 유용해진다.
     <center><img src="/reference_image/MH.Ji/Deep Learning Image Classification/109.PNG" width="70%"></center><br>
 
-        + 위에서 나오는 feature에 비선형성을 증가시켜주는 것이 좋다는 이유를 알아보자. 만약 Neural Network에서 activation function을 linear function을 사용하면 신경망의 depth를 깊게 하는 의미가 사라진다. activation function이 h(x)=cx인 선형함수라고 가정할 때, 3층 네트워크가 되면 y(x)=h(h(h(x)))가 되는데 이는 y(x)=c*c*c*x가 된다. 이는 y(x)=ax라는 linear한 구조이기 때문에, 여러 층을 구성하는 이점을 살릴 수 없다.
+    + 위에서 나오는 feature에 비선형성을 증가시켜주는 것이 좋다는 이유를 알아보자. 만약 Neural Network에서 activation function을 linear function을 사용하면 신경망의 depth를 깊게 하는 의미가 사라진다. activation function이 h(x)=cx인 선형함수라고 가정할 때, 3층 네트워크가 되면 y(x)=h(h(h(x)))가 되는데 이는 y(x)=c*c*c*x가 된다. 이는 y(x)=ax라는 linear한 구조이기 때문에, 여러 층을 구성하는 이점을 살릴 수 없다.
 
     + B 구조는 3x3 convolution layer를 2번 사용하는 경우와 5x5 convolution layer를 1번 사용하는 모델을 만들어 실험을 했는데, 결과는 3x3 필터를 2번 사용하는 경우가 5x5 필터를 1번 사용하는 것보다 top-1 error에서 7% 성능을 높일 수 있었다.
 
