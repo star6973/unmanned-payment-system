@@ -7,7 +7,7 @@
     + input을 2차원으로 확장하였고, parameter sharing을 통해 input의 픽셀 수가 증가해도 parameter 수가 변하지 않는다는 특징을 가지고 있다.
 
 - 구조
-    + <center><img src="/reference_image/MH.Ji/Deep Learning Image Classification/99.png" width="70%"></center><br>
+    + <center><img src="/reference_image/MH.Ji/Deep Learning Image Classification/99.PNG" width="70%"></center><br>
 
     + C1 layer에서는 32x32 픽셀의 image를 input으로 사용하고, 6개의 5x5 필터와 convolution 연산을 해준다. 그 결과, 6장의 28x28 feature map을 산출한다.
 
@@ -35,7 +35,7 @@
 - 특징
     + Multiple GPU Training
     + activation function은 ReLU를 사용하였다. tanh보다 빠르게 수렴하는 효과를 얻을 수 있다고 한다.
-    <center><img src="/reference_image/MH.Ji/Deep Learning Image Classification/101.png" width="70%"></center><br>
+    <center><img src="/reference_image/MH.Ji/Deep Learning Image Classification/101.PNG" width="70%"></center><br>
     
     + normalization은 Local Response Normalization(LRN)을 사용하였고, Pooling의 커널 사이즈를 stride보다 크게 하는 Overlapping Pooling을 사용하였다. 이외에도 Dropout, PCA를 이용한 data augmentation 기법을 사용하였다.
 
@@ -50,27 +50,27 @@
             - pooling시에는 통상적으로 겹치는 값이 없게 하지만, original 논문인 [ImageNet Classification with Deep Convolutional Neural Networks](https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf)에서는 max pooling을 사용하면서 크기를 3으로, stride를 2로 주어 sliding이 겹치는 부분이 발생한다(overlapping pooling).
             
             - LeNet의 경우 average pooling을 사용하였지만, AlexNet에서는 max pooling을 사용하였다. 또한, AlexNet의 경우 pooling kernel이 움직이는 보폭인 stride를 커널 사이즈보다 작게하는 overlapping pooling을 적용하였다.
-            <center><img src="/reference_image/MH.Ji/Deep Learning Image Classification/102.png" width="70%"></center><br>
+            <center><img src="/reference_image/MH.Ji/Deep Learning Image Classification/102.PNG" width="70%"></center><br>
 
             - overlapping pooling을 하면 중첩이 되면서 진행하지만, non-overlapping pooling을 하면 중첩이 되지 않는다. original 논문은 overlapping pooling을 하면 top-1, top-5 error를 줄이는데 효과가 있다고 한다.
-            <center><img src="/reference_image/MH.Ji/Deep Learning Image Classification/104.png" width="70%"></center><br>
+            <center><img src="/reference_image/MH.Ji/Deep Learning Image Classification/104.PNG" width="70%"></center><br>
 
         + Local Response Normalization(LRN)
             - 활성화된 뉴런이 주변 이웃 뉴런들을 억누르는 현상을 lateral inhibition 현상이라고 하며, 이를 모델링한 것이 LRN이다. 강하게 활성화된 뉴런의 주변 이웃들에 대해서 normalization을 실행한다. 주변에 비해 어떤 뉴런이 비교적 강하게 활성화되어 있다면, 그 뉴런의 반응은 더욱더 돋보일 것이다. 반면에 강하게 활성화된 뉴런 주변도 모두 강하게 활성화되어 있다면, LRN 이후에는 모두 값이 작아질 것이다.
 
             - 이러한 LRN은 ReLU 활성화 함수를 처리하는데 유용하다. 만약 ReLU를 통해 활성화된 뉴런이 여러개가 있으면, 정규화를 위해 LRN이 필요하기 때문이다.
-            <center><img src="/reference_image/MH.Ji/Deep Learning Image Classification/103.png" width="70%"></center><br>
+            <center><img src="/reference_image/MH.Ji/Deep Learning Image Classification/103.PNG" width="70%"></center><br>
 
             - original 논문에서는 top-1, top-5에서 각각 1.4%, 1.2%의 성능 향상이 발생하였다. 하지만 이 방법은 지금에 와서는 성능상의 이점이 없어 잘 사용하지 않는다.
 
         + Data Augmentation
             - overfitting을 막기 위한 dropout과 같은 regularization의 방법이다. overffiting을 막기 위한 가장 좋은 방법은 데이터의 양을 늘리는 것인데, 하나의 이미지를 가지고 여러 장의 비슷한 이미지를 만들어내면서 데이터의 양을 늘릴 수 있다. 즉, 같은 내용을 담고 있지만 위치가 살짝 다른 이미지들이 생산된다.
-            <center><img src="/reference_image/MH.Ji/Deep Learning Image Classification/105.png" width="70%"></center><br>
+            <center><img src="/reference_image/MH.Ji/Deep Learning Image Classification/105.PNG" width="70%"></center><br>
 
 - 구조
     + AlexNet은 8개의 layer로 구성되어 있다. 5개의 convolution layer와 3개의 fully connected layer로 구성되어 있다.
 
-    + <center><img src="/reference_image/MH.Ji/Deep Learning Image Classification/99.png" width="70%"></center><br>
+    + <center><img src="/reference_image/MH.Ji/Deep Learning Image Classification/99.PNG" width="70%"></center><br>
 
     + input layer에는 224x224 사이즈의 RGB 컬러 이미지가 입력된다(224x224x3)
 
