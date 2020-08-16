@@ -27,7 +27,7 @@
 > [Deep Learning Image Classification Guidebook [1] LeNet, AlexNet, ZFNet, VGG, GoogLeNet, ResNet](https://hoya012.github.io/blog/deeplearning-classification-guidebook-1/)
 
 > [LeNet-5의 구조](https://bskyvision.com/418)
-<br><br>
+<br><br><br>
 
 ## AlexNet
 - LeNet-5와 구조가 크게 다르지 않으며, 2개의 GPU로 병렬연산을 수행하기 위해 병렬적인 구조로 설계되었다. 왜냐하면 그 당시에 사용한 GPU인 GTX 580이 3GB의 VRAM을 가지고 있는데, 하나의 GPU로 사용하기엔 메모리가 부족하기 때문이다.
@@ -98,7 +98,7 @@
 > [LeNet-5의 구조](https://bskyvision.com/421)
 
 > [AlexNet 논문 요약 정리](https://s3nsitive.tistory.com/entry/AlexNet-%EB%85%BC%EB%AC%B8-%EC%9A%94%EC%95%BD-%EC%A0%95%EB%A6%AC)
-<br><br>
+<br><br><br>
 
 ## VGGNet
 - 2014년 ILSVRC에서 GoogLeNet과 함께 큰 주목을 받으며, 준우승을 차지한 모델이다. 준우승이었지만, 구조적인 측면에서 GoogLeNet보다 훨씬 간단한 구조로 되어 있으며, 향후 모델의 발전 역사에서 VGGNet 모델부터 시작해서 네트워크의 깊이가 확 깊어졌다.
@@ -150,7 +150,7 @@
 > [VGGNet의 구조 (VGG16)](https://bskyvision.com/504)
 
 > [VGGNet [1], [2] - 라온피플 머신러닝 아카데미](http://blog.naver.com/laonple/220738560542)
-<br><br>
+<br><br><br>
 
 ## GoogleNet
 - 2014년 ILSVC 대회에서 1위를 한 모델이며, Google 연구팀이 개발하였다. 19층인 VGG19보다 좀 더 깊은 22층으로 구성되어 있다.
@@ -187,8 +187,7 @@
         <center><img src="/reference_image/MH.Ji/Deep Learning Image Classification/114.PNG" width="70%"></center><br>
 
         - GoogLeNet은 총 9개의 inception module을 포함하고 있다. 기존에는 layer간에 1 convolution + 1 pooling 연산으로 연결하였다면, inception module은 총 4가지 서로 다른 연산을 거친 뒤 feature map을 channel 방향으로 합치는 concatenation을 이용하고 있다는 점이다.
-
-    <center><img src="/reference_image/MH.Ji/Deep Learning Image Classification/115.PNG" width="70%"></center><br>
+        <center><img src="/reference_image/MH.Ji/Deep Learning Image Classification/115.PNG" width="50%"></center><br>
 
         - 위의 구조에서 노란색 블럭으로 표현된 1x1 convolution을 제외하고, 3x3, 5x5 convolution 연산을 섞어서 사용하는 방식을 Naive Inception Module이라고 부른다. 또한, 여기에 추가로 3x3 convolution와 5x5 convolution 연산이 많은 연산량을 차지하고 있기 때문에, 두 convolution 연산 앞에는 1x1 필터를 적용한 convolution 연산을 추가하여 feature map의 개수를 줄이고, 다시 거꾸로 3x3, 5x5 convolution 연산을 수행하여 feature map을 키워주는 bottleneck 구조를 추가하였다.
 
@@ -198,8 +197,7 @@
     
     3) Global Average Pooling  
         - AlexNet, VGGNet 등에서는 FC layer들이 망의 후반부에 연결되어 있다. 하지만 GoogLeNet FC 방식 대신에 global average pulling이란 방식을 사용한다. global average pooling은 전 층에서 산출된 feature map들을 각각 평균낸 것을 이어서 1차원 벡터를 만들어주는 것이다. FC layer와 같이 1차원 벡터로 만들어주어야 최종적으로 이미지 분류를 위한 softmax 함수로 연결할 수 있기 때문이다.
-
-    <center><img src="/reference_image/MH.Ji/Deep Learning Image Classification/117.png" width="70%"></center><br>
+        <center><img src="/reference_image/MH.Ji/Deep Learning Image Classification/117.png" width="70%"></center><br>
 
         - 이 방식을 통해 가중치의 개수를 상당히 많이 없애줄 수 있다. 만약 FC 방식을 사용한다면 훈련이 필요한 가중치의 개수가 7x7x1024x1024=51.3M이지만, global average pooling을 사용하면 가중치가 단 한 개도 필요하지 않다. 이러한 방식 덕분에 AlexNet, ZFNet, VGGNet 등에 비해 훨씬 적은 수의 파라미터를 가질 수 있다.
 
@@ -207,19 +205,17 @@
         - 네트워크의 깊이가 깊어질수록 Back Propagation 과정에서 가중치를 업데이트하는데 사용되는 gradient가 점점 작아져서 0이 되어버리는 Vanishing Gradient 문제가 발생하며, 이로 인해 학습 속도가 아주 느려지거나 overfitting 문제가 발생한다. gradient 값들이 0 근처로 가게 되면, 학습 속도가 느려지거나 파라미터의 변화가 별로 없어 학습 결과가 나빠지는 현상이 발생하기 때문이다.
         
         - 최근의 DNN에서는 activation function을 주로 ReLU를 사용하는데, sigmoid나 cross-entropy를 사용할 때보다 많은 이점이 있기 때문이다. 하지만 여러 layer를 거치면서 작은값들이 계속 곱해지다 보면, 0 근처로 수렴되면서 역시 vanishing gradient 문제에 빠질 수 있고, 망이 깊어질수록 이 가능성이 커진다. 따라서 네트워크 내의 가중치들이 제대로 훈련되지 못하는데, 이 문제를 극복하기 위해서 GoogLeNet은 네트워크 중간에 두 개의 보조 분류기(Auxiliary Classifier)를 달아주었다.
-
-    <center><img src="/reference_image/MH.Ji/Deep Learning Image Classification/121.png" width="70%"></center><br>
+        <center><img src="/reference_image/MH.Ji/Deep Learning Image Classification/121.png" width="70%"></center><br>
 
         - 위의 그림에서 왼쪽은 보조 분류기가 없는 경우에 iteration이 커질수록 grdient가 현저하게 작아지는 것을 보여주며, 오른쪽은 보조 분류기가 없는 경우는 파란색 점선, 보조 분류기가 있는 경우는 빨간색 실선으로 표시된다. 보다시피 빨간색 실선이 gradient 값이 다시 증가하게 되면서, 보다 더 안정적인 학습 결과를 얻을 수 있다.
-
-    <center><img src="/reference_image/MH.Ji/Deep Learning Image Classification/118.png" width="70%"></center><br>
+        <center><img src="/reference_image/MH.Ji/Deep Learning Image Classification/118.png" width="70%"></center><br>
 
         - 이 보조 분류기들로 구한 loss는 보조적인 역할을 맡고 있으므로, 기존 가장 뒷 부분에 존재하던 classifier보단 전체적으로 적은 영향을 주기 위해 0.3을 곱해 total loss에 더하는 식으로 사용했다고 한다.
 
         - 학습 단계에서만 사용이 되고 테스팅 단계에선 사용이 되지 않았는데, 그 이유는 테스팅시에 성능 향상이 미미하기 때문이다.
 
 - 구조
-    <center><img src="/reference_image/MH.Ji/Deep Learning Image Classification/111.PNG" width="70%"></center><br>
+    <center><img src="/reference_image/MH.Ji/Deep Learning Image Classification/111.PNG" width="50%"></center><br>
 
     <center><img src="/reference_image/MH.Ji/Deep Learning Image Classification/120.png" width="70%"></center><br>
 
@@ -264,7 +260,7 @@
 > [GoogLeNet의 구조](https://bskyvision.com/504)
 
 > [GoogLeNet [1], [2], [3], [4], [5] - 라온피플 머신러닝 아카데미](https://m.blog.naver.com/laonple/220686328027)
-
+<br><br><br>
 
 ## ResNet
 
