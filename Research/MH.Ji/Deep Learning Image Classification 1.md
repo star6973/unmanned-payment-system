@@ -267,10 +267,10 @@
 
 - ResNet은 3x3 convolution이 반복 사용한다는 점에서 VGGNet과 유사한 구조를 가지고 있다. Layer의 개수에 따라 ResNet-18, ResNet-34, ResNet-50, ResNet-101, ResNet-152 등 5가지 버전으로 나타낼 수 있다. Layer의 개수를 많이 사용할수록 연산량과 parameter의 개수는 커지지만 정확도도 좋아지는 효과를 얻을 수 있다. 즉, GoogLeNet이 22개 층으로 구성된 것에 비해, ResNet은 152개의 층을 가지면서 약 7배나 깊어졌다.
 
-- ResNet의 특징
+- 특징
     + [Deep Residual Learning for Image Recognition](https://github.com/star6973/lotte_studying/blob/myunghwa/Research/MH.Ji/Deep%20Residual%20Learning%20for%20Image%20Recognition.md)
 
-- ResNet의 실험
+- 실험
     + ResNet 팀은 실험을 위한 망을 설계하면서 VGGNet의 설계 철학을 많이 이용했다. 그래서 대부분의 convolutional layer은 3x3 kernel을 갖도록 하였으며, 복잡도를 줄이기 위해 max pooling(1곳 제외), hidden fully connected layer, dropout 등을 사용하지 않았다.
 
     + 또한, 다음 2가지 원칙을 지켰다.
