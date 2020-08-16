@@ -1,4 +1,4 @@
-# Image Classification의 종류 정리
+# Image Classification의 종류 정리 1
 
 ## LeNet
 - MLP가 가지는 한계점인 input의 픽셀수가 많아지면 parameter가 기하급수적으로 증가하는 문제를 해결할 수 있는 CNN 구조 제시하였다.
@@ -263,5 +263,9 @@
 <br><br><br>
 
 ## ResNet
+- Microsoft Research에서 제안한 구조이며, ILSVRC 2015 대회에서 1위를 한 모델이다.
 
+- ResNet은 3x3 convolution이 반복 사용한다는 점에서 VGGNet과 유사한 구조를 가지고 있다. Layer의 개수에 따라 ResNet-18, ResNet-34, ResNet-50, ResNet-101, ResNet-152 등 5가지 버전으로 나타낼 수 있다. Layer의 개수를 많이 사용할수록 연산량과 parameter의 개수는 커지지만 정확도도 좋아지는 효과를 얻을 수 있다. 즉, GoogLeNet이 22개 층으로 구성된 것에 비해, ResNet은 152개의 층을 가지면서 약 7배나 깊어졌다.
 
+- ResNet에 대해 더 알고 싶다면 다음 링크로...
+[]()
