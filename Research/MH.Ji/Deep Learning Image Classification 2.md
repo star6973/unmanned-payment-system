@@ -78,18 +78,18 @@
     + 3가지 종류의 SqueezeNet의 정확도의 성능은 Simple Bypass SqueezeNet > Complex Bypass SqueezeNet > SqueezeNet 순으로 정확도가 높았다. 
     <center><img src="/reference_image/MH.Ji/Deep Learning Image Classification/137.png" width="70%"></center><br>
 
-
 - 참고자료
 
->
+> [Deep Learning Image Classification Guidebook [3] SqueezeNet, Xception, MobileNet, ResNext, PolyNet, PyramidNet, Residual Attention Network, DenseNet, Dual Path Network (DPN)](https://hoya012.github.io/blog/deeplearning-classification-guidebook-3/)
 
->
+> [SQEEZENET(모델 압축)](https://jayhey.github.io/deep%20learning/2018/05/26/SqueezeNet/)
 
->
+> [[Keras] SqueezeNet Model (CNN) 이란? - 1 (이론편)](https://underflow101.tistory.com/27?category=826164)
 
 <br><br><br>
 
 ## MobileNet
+
 
 ## ResNext
 
