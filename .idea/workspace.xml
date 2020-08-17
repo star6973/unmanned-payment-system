@@ -25,7 +25,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a16f2a3-40ec-49fc-8363-f5f0dabf69c0" name="Default Changelist" comment="Deep Learning Image Classification Guidebook_HOYA012'S RESEARCH BLOG">
+    <list default="true" id="6a16f2a3-40ec-49fc-8363-f5f0dabf69c0" name="Default Changelist" comment="논문리뷰">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -159,7 +159,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597644860850</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="논문리뷰">
+      <created>1597645540185</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1597645540185</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -188,9 +195,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Bag of Tricks for Image Classification with Convolutional Neural Networks 논문리뷰" />
-    <MESSAGE value="논문리뷰" />
     <MESSAGE value="Deep Learning Image Classification Guidebook_HOYA012'S RESEARCH BLOG" />
-    <option name="LAST_COMMIT_MESSAGE" value="Deep Learning Image Classification Guidebook_HOYA012'S RESEARCH BLOG" />
+    <MESSAGE value="논문리뷰" />
+    <option name="LAST_COMMIT_MESSAGE" value="논문리뷰" />
   </component>
   <component name="WindowStateProjectService">
     <state x="695" y="343" key="#Notifications" timestamp="1597220246111">
@@ -245,10 +252,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="807" y="432" key="VCS.ChangelistChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1597039584758" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1597645190694">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1597645525383">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1597645190694" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1597645525383" />
     <state x="775" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597039485724">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
