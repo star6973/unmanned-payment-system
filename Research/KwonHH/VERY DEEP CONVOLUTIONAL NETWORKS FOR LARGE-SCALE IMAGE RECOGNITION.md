@@ -1,6 +1,6 @@
 # VERY DEEP CONVOLUTIONAL NETWORKS FOR LARGE-SCALE IMAGE RECOGNITION
 
-Abstract
+Abstract<br>
     - 큰 이미지에서 CNN 의 depth가 정확도에 미치는 영향에 대한 연구 진행
     - 주요한 업적은 3by3의 매우 작은 convolution filter를 사용하여 깊이가 증가하는 네트워크에 대한 철저한 평가
     - 이것은 깊이를 16~19 가중치 layer로 할 경우에 이러한 선행기술들이 성공할 수 있다는 것을 보여준다.<br><br>
