@@ -15,7 +15,7 @@ Abstract<br>
     - 논문의 끝에서 저자는 다른 parameter들을 수정하고, 지속적으로 convolution layer를 증가시켜 network의 depth를 증가시켰다.
     - 그것은 모든 층에서 매우 작은 convolution filter(3 by 3)를 사용했기 때문에 실현 가능하다.<br><br>
     - CNN 모델의 accuracy 향상의 결과로 state of the art 의 ILSVRC accuracy 와 classification 부문을 성과를 냈다.
-    - 또한 상대적으로 단순한 pipeline을 가진 다른 이미지 인식 datasets에도 적용 가능하다는 성과를 얻었다.(예를 들면 fine tuning 없이 deep feature 데이터를 SVM으로 분류)
+    - 또한 상대적으로 단순한 pipeline을 가진 다른 이미지 인식 datasets 에도 적용 가능하다는 성과를 얻었다.(예를 들면 fine tuning 없이 deep feature 데이터를 SVM으로 분류)
 <br><br>
 1. Convolution Network Configuration
     1. Architecture
