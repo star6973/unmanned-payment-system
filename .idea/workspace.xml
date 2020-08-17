@@ -25,9 +25,8 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a16f2a3-40ec-49fc-8363-f5f0dabf69c0" name="Default Changelist" comment="`논문리뷰`">
+    <list default="true" id="6a16f2a3-40ec-49fc-8363-f5f0dabf69c0" name="Default Changelist" comment="Deep Learning Image Classification Guidebook_HOYA012'S RESEARCH BLOG">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Research/KwonHH/VERY DEEP CONVOLUTIONAL NETWORKS FOR LARGE-SCALE IMAGE RECOGNITION.md" beforeDir="false" afterPath="$PROJECT_DIR$/Research/KwonHH/VERY DEEP CONVOLUTIONAL NETWORKS FOR LARGE-SCALE IMAGE RECOGNITION.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,7 +145,21 @@
       <option name="project" value="LOCAL" />
       <updated>1597220987954</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Deep Learning Image Classification Guidebook_HOYA012'S RESEARCH BLOG">
+      <created>1597644736833</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1597644736833</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Deep Learning Image Classification Guidebook_HOYA012'S RESEARCH BLOG">
+      <created>1597644860850</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1597644860850</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -176,7 +189,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Bag of Tricks for Image Classification with Convolutional Neural Networks 논문리뷰" />
     <MESSAGE value="논문리뷰" />
-    <option name="LAST_COMMIT_MESSAGE" value="논문리뷰" />
+    <MESSAGE value="Deep Learning Image Classification Guidebook_HOYA012'S RESEARCH BLOG" />
+    <option name="LAST_COMMIT_MESSAGE" value="Deep Learning Image Classification Guidebook_HOYA012'S RESEARCH BLOG" />
   </component>
   <component name="WindowStateProjectService">
     <state x="695" y="343" key="#Notifications" timestamp="1597220246111">
@@ -223,14 +237,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="454" y="225" key="MultipleFileMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1597220324353" />
+    <state x="306" y="243" key="RollbackChangesDialog" timestamp="1597645176461">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="306" y="243" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1597645176461" />
     <state x="807" y="432" key="VCS.ChangelistChooser" timestamp="1597039584758">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="807" y="432" key="VCS.ChangelistChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1597039584758" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1597391952433">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1597645190694">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1597391952433" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1597645190694" />
     <state x="775" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597039485724">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
