@@ -26,8 +26,16 @@ Abstract
         - 3 by 3 convolution layer에서 stride는 1픽셀로 고정
         - 공간 pooling은 5개의 max-pooling layer에 의해서 수행되며, 크기는 2 by 2 픽셀이고, stride 는 2 이다.<br><br>
         - convolution layer층은 3층의 fully connected layer에 의해서 수행된다.
-        - 처음 2개의 층은 각 4096 채널
-        - 세 번째 층은 1000개의 ILSVRC 분류를 수행하기 때문에 각 클래스 수와 동일한 1000개의 채널을 가진다.
-        - 마지막 층은 softmax 층이고, 이와 같은 fully connected layer의 설정은 전체 network에서 동일
-    
-    
+            - 처음 2개의 층은 각 4096 채널
+            - 세 번째 층은 1000개의 ILSVRC 분류를 수행하기 때문에 각 클래스 수와 동일한 1000개의 채널을 가진다.
+        - 마지막 층은 softmax 층이고, 이와 같은 fully connected layer의 설정은 전체 network에서 동일<br><br>
+    1. Configuration
+        - 본 논문에서 ConvNet configuration을 평가하여 A부터 E까지 표로 정리하였다.
+        - 모든 configuration은 depth에서만 차이를 가진다.(11 weight layer ~ 19 weight layer)
+        - convolution layer의 width는 꽤 작은데, 첫 번째 layer는 64부터 시작해서 각 max pooling layer마다 2씩 증가하여 512까지 증가한다.<br><br>
+        - Table2 에서는 각 config마다 parameter의 수를 표기했다.
+        - 깊은 depth를 가지지만 width와 receptive 영역을 가진 얕고 큰 convolution보다 weight수가 적다.<br><br>
+    1. Discussion
+        - 논문에 등장한 convolution network의 config는 ILSVRC 2012 와 2013에서 우수한 성능을 보인 모델들과는 약간 다르다. 본 논문에서는 전체 network에 상대적으로 작은(3 by 3 크기) receptive field를 사용했다. 그리고 그것은 입력의 모든 pixel에서 convolution 계산한다
+            - 예를 들면 Krizhevsky et al.(2012)의 논문에서는 11 by 11, Zeiler & Fergus(2013)의 논문에서는 7 by 7 크기를 사용했다.
+        - 두 층의 3 by 3 layer는 5 by 5 크기의 receptive field 에 효과적이다
