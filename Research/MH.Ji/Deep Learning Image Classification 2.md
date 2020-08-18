@@ -294,7 +294,7 @@
     + Soft Mask Branch
         - Attention mechanism에 따르면, Mask Branch는 fast feed-forward sweep과 top-down feedback step을 가지고 있다. 첫 번째 것은 전체 이미지의 글로벌 정보를 수집하고, 다음 단계로 글로벌 이미지 정보를 원래 feature map에 통합하게 된다. convolution network에서는 이를 bottom-up top-down의 fully convolutional 구조로 풀어지게 된다.
 
-        - 입력된 데이터는 약간의 residual unit을 통과시킨 다음 max pooling을 몇 번 적용하여 receptive field를 증가시킨다. 가장 낮은 해상도까지 다다르면 input feature의 글로벌 정보는 확장되어 각 위치로 들어간다. 다시 residual unit을 몇 번 통과시킨 뒤, max pooling과 같은 수로 linear interpolation으로 출력을 upsampling하면, 원래의 input feature와 같은 크기로 확장할 수 있다.
+        - 입력된 데이터를 약간의 residual unit을 통과시킨 다음 max pooling을 몇 번 적용하여 receptive field를 증가시킨다. 가장 낮은 해상도까지 다다르면 input feature의 글로벌 정보는 확장되어 각 위치로 들어간다. 다시 residual unit을 몇 번 통과시킨 뒤, max pooling과 같은 수로 linear interpolation으로 출력을 upsampling하면, 원래의 input feature와 같은 크기로 확장할 수 있다.
 
         - 마지막으로 1x1 convolution 연산을 적용한 뒤 sigmoid 활성화를 하여, 출력값을 0에서 1로 조절한다. 여기에 bottom-up과 top-down 사이에 skip connection을 추가하여 스케일간 정보를 얻도록 하였다.
     
