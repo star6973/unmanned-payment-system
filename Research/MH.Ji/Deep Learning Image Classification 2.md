@@ -88,17 +88,170 @@
 
 <br><br><br>
 
-## MobileNet
+## Xception
+- GoogLeNet의 Inception 구조에 대한 고찰로 연구를 시작하였으며, 추후 많은 연구들에서 사용이 되는 연산인 "depthwise-separable convolution"을 제안하고 있다. Inception-v1, 즉, GoogLeNet에서는 여러 갈래로 연산을 쪼갠 뒤 합치는 방식을 이용함으로써 cross channel correlation과 spatial correlation을 적절히 분리할 수 있다고 주장하고 있다. 쉽게 설명하자면, 채널간의 상관관계와 image의 지역적인 상관관계를 분리해서 학습하도록 가이드를 주는 Inception module을 제안한 것이다.
 
+    + 기존의 convolution layer는 2개의 spatial dimension(width, height)과 channel dimension으로 이루어진 3D 공간에 대한 filter를 학습하려고 시도한 것이다. 따라서 single convolution kernel은 cross-channel correlation과 spatial correlation을 동시에 mapping하는 작업을 수행한다고 할 수 있다.
+
+    + GoogLeNet의 Inception module의 기본 아이디어는 이러한 cross-channel correlation과 spatial correlation을 독립적으로 볼 수 있도록 일련의 작업을 명시적으로 분리함으로써, 이 프로세스를 보다 쉽고 효율적으로 만드는 것이다.
+
+    + 일반적인 Inception module의 경우, 우선 1x1 convolution으로 cross-correlation을 보고, input보다 작은 3~4개의 spatial 공간에 mapping한다. 그다음 보다 작아진 3D 공간에 3x3 혹은 5x5 convolution을 수행하여 spatial correlation을 mapping한다.
+    <center><img src="/reference_image/MH.Ji/Deep Learning Image Classification/144.png" width="70%"></center><br>
+
+    + Inception module은 기존의 위와 같은 구조를 단순화시키고, cross-channel correlation과 spatial correlatino이 함께 mapping이 되지 않도록 분리하는 형태로 구조를 변화시켰다.
+
+    <center><img src="/reference_image/MH.Ji/Deep Learning Image Classification/145.png" width="70%"></center><br>
+    <center><img src="/reference_image/MH.Ji/Deep Learning Image Classification/146.png" width="70%"></center><br>
+    <center><img src="/reference_image/MH.Ji/Deep Learning Image Classification/147.png" width="70%"></center><br>
+
+    + 위의 마지막 그림은 extreme version의 Inception moduel로, 먼저 1x1 convolution으로 cross-channel correlation을 mapping하고, 모든 output channel들의 spatial correlation들의 spatial correlation을 따로 mapping한다. 
+
+- Xception은 Inception module이 지향하고자 한, 채널간의 상관관계와 image의 지역적인 상관관계를 완벽하게 분리하는 더 높은 목표를 세우고 연구를 시작하였고, 그것이 바로 depthwise separable convolution이다. 위의 그림에 나오는 extreme version의 module은 depthwise separable convolution과 거의 동일하다고 할 수 있지만, 2가지의 차이점이 있다.
+    1) Operation의 순서  
+       : Inception에서는 1x1 convolution을 먼저 수행하는 반면, Tensorflow와 같이 일반적으로 구현된 depthwise separable convolution은 channel-wise spatial convolution을 먼저 수행한 뒤(depthwise convolution)에 1x1 convolution을 수행(pointwise convolution)한다.
+
+    2) 첫 번째 operation 뒤의 non-linearity 여부
+       : Inception에서는 두 operation 모두 non-linearity로 ReLU가 뒤따르는 반면, separable convolution은 일반적으로 non-linearity 없이 구현된다. 실험을 통해 연산의 지역 정보와 채널간의 상관관계를 연산하는 사이에 non-linearity 함수가 있으면 성능이 크게 저하된다는 사실을 알게되었기 때문이다.
+
+    <center><img src="/reference_image/MH.Ji/Deep Learning Image Classification/143.png" width="70%"></center><br>
+
+- 구조
+    <center><img src="/reference_image/MH.Ji/Deep Learning Image Classification/148.png" width="70%"></center><br>
+
+    + Xception 구조는 36개의 convolution layer로 feature extraction을 수행한다. Entry flow를 시작으로, 8회 반복되는 middle flow, 마지막에는 exit flow를 거치는 구조이다.
+
+    + 모든 convolution과 separable convolution의 뒤에는 BN(Batch Normalization)이 뒤따른다.
+        + BN(Batch Normalization)이란? [Deep Learning Concept](https://github.com/star6973/lotte_studying/blob/master/Research/MH.Ji/Deep%20Learning%20Concept.md)를 참고
+    
+    + 요약하자면, Xception 구조는 residual connection이 있는 depthwise separable convolution의 linear stack으로 볼 수 있다. 
+
+    <center><img src="/reference_image/MH.Ji/Deep Learning Image Classification/149.png" width="70%"></center><br>
+
+- 참고자료
+
+> [Deep Learning Image Classification Guidebook [3] SqueezeNet, Xception, MobileNet, ResNext, PolyNet, PyramidNet, Residual Attention Network, DenseNet, Dual Path Network (DPN)](https://hoya012.github.io/blog/deeplearning-classification-guidebook-3/)
+ 
+> [Xception](https://datascienceschool.net/view-notebook/0faaf59e0fcd455f92c1b9a1107958c4/)
+
+> [(Xception) Xception: Deep Learning with Depthwise Separable Convolutions 번역 및 추가 설명과 Keras 구현](https://sike6054.github.io/blog/paper/fifth-post/)
+
+<br><br><br>
+
+## MobileNet
+- MoblieNet은 컴퓨터 성능이 제한되거나 배터리 퍼포먼스가 중요한 곳에서 사용될 목적으로 설계된 CNN 구조이다.
+
+- Cloud Computing vs Edge Computing
+
+    <center><img src="/reference_image/MH.Ji/Deep Learning Image Classification/138.png" width="70%"></center><br>
+    
+    + 클라우드 컴퓨팅은 여러 디바이스들에서 나온 정보들을 클라우드에서 전부 처리하는 환경이다. 네이버의 NDrive, 구글의 Docs 등이 클라우드 컴퓨팅의 대표적인 예라고 할 수 있다. 클라우드 컴퓨팅이 탄생하면서 여러 기업들에 각광받으며 클라우드 환경으로 전환하였다. 그러나 클라우드 컴퓨팅에도 여러 문제가 있었다. 클라우드 서비스를 이용하는 사람들이 기하급수적으로 늘어나면서 서버 및 데이터 센터에서 처리할 수 있는 데이터의 양을 넘어서기 시작했고, 수집한 데이터를 분석하고 송신하는 과정에서 바랭하는 데이터 지연 현상도 문제가 발생했다. 또한, 컴퓨팅의 통신 과정에서 보안 문제도 발생하며, 데이터 처리 속도, 용량 및 보안 등의 문제를 해결하기 위해 탄생한 것이 엣지 컴퓨팅이다.
+
+    + 엣지 컴퓨팅은 클라우드에서 모든 연산을 처리하는 것이 아니라, 모바일 디바이스들이 직접 연산을 하거나, edge들에서 데이터 연산을 하여 cloud에 데이터를 뿌려주는 것이다. 즉, 클라우드 컴퓨팅은 데이터를 처리하는 곳이 데이터 센터에 있는 반면 엣지 컴퓨팅은 스마트폰과 같은 장치에서 데이터를 처리한다.
+
+    + 엣지 컴퓨팅의 장점 3가지
+        1) 데이터 부하 감소  
+           : 클라우드 컴퓨팅에서는 처리해야 할 데이터 양이 많을수록 시스템에 부하가 생기는 반면, 엣지 컴퓨팅은 해당 기기에서 발생되는 데이터만 처리하기 때문에 부하를 줄일 수 있다.
+
+        2) 보안  
+           : 클라우드 컴퓨팅은 중앙 서버 아키텍처로 데이터 전송부터 보안을 강화해야 하는 반면, 엣지 컴퓨팅은 데이터 수집과 처리를 자체적으로 처리하기 때문에 클라우드 컴퓨팅에 비해 상대적으로 보안이 좋다고 할 수 있다.
+
+        3) 장애대응  
+           : 클라우드 컴퓨팅을 사용했을 때 서버가 마비되면 치명적인 타격을 입지만, 엣지 컴퓨팅을 사용하면 자체적으로 컴퓨팅을 수행하기 때문에 효과적으로 장애를 대응할 수 있다.
+
+    + 이러한 엣지 컴퓨팅 환경은 MobileNet과 같이 비대한 크기의 네트워크보다는 빠른 성능이 필요한 곳에서 사용한다.
+
+- Techniques for Small Deep Neural Networks
+    + DNN에서 작은 네트워크를 만들기 위한 기법으로 다음과 같이 있다.
+        1) Remove fully-connected layers
+        2) Kernel reduction(3x3 -> 1x1)
+        3) Channel reduction
+        4) Evenly spaced downsampling
+            - 초반에 downsampling을 많이 하면 accuracy가 떨어지지만, 파라미터의 수가 적어짐.
+            - 후반에 downsampling을 많이 하면 accuracy가 좋아지지만, 파라미터의 수가 많아짐.
+
+        5) Depthwise separable convolutions
+            - depthwise convolution은 채널 숫자는 줄어들지 않고, 한 채널에서의 크기만 줄어든다.
+            - pointwise convolution은 채널 숫자가 하나로 줄어든다.
+
+        6) Shuffle operations
+        7) Distillation & Compression
+
+    + MobileNet은 위의 7가지 중 3) channel reduction, 5) depth separable convolutions 7) distillation & compression 기법을 사용한다.
+
+- Depthwise Seperable Convolutions
+    + 채널의 수를 증가시키면서 구성된 convolution-pooling의 구조는 이해도 쉽고 구현하기도 쉽지만, 모바일 환경에서 구동시키기엔 convolution 구조가 무겁다. 따라서 이를 해결하고자 새로운 convolution 연산인 depthwise separable convolution이 등장한 것이다.
+
+    + Xception 모델에서 나온 개념으로, convolution 연산을 각 채널별로 시행하고 그 결과에 1x1 convolution 연산을 취하는 것이다. 기존의 convolution이 모든 채널과 지역 정보를 고려해서 하나의 feature map을 만들었다면, depthwise convolution은 각 채널별로 feature map을 하나씩 만들고, 그 다음 1x1 convolution 연산을 수행하여 출력되는 feature map의 수를 조정한다. 이때의 1x1 convolution 연산을 pointwise convolution이라고 한다.
+
+    <center><img src="/reference_image/MH.Ji/Deep Learning Image Classification/139.png" width="70%"></center><br>
+
+    + 위와 같은 구조를 하면 어떤 장점이 있을까? 커널이 3개라 가정할 때,
+        1) 기존의 convolution의 경우, (3x3)x3(R, G, B)의 커널이 3개이므로 파라미터의 수는 3x3x3x3 = 81개가 된다.  
+        2) depthwise separable convolution의 경우, (3x3)x1의 커널이 3개(depthwise)(채널 별로 분리, R, G, B), (1x1)x3(출력의 채널을 3으로 설정)의 커널이 3개(pointwise)이므로 파라미터의 수는 3x3x1x3 + 1x1x3x3 = 36개가 된다.  
+
+    + depthwise separable convolution은 다음 그림과 같은 효율이 있다.
+    <center><img src="/reference_image/MH.Ji/Deep Learning Image Classification/141.png" width="70%"></center><br>
+
+- 구조
+    <center><img src="/reference_image/MH.Ji/Deep Learning Image Classification/140.png" width="70%"></center><br>
+
+    + MobileNet의 구조는 VGGNet의 구조와 비슷하지만, 기존의 convolution을 depthwise separable convolution으로 대체하고, pooling 대신에 stride를 2로 설정하여 사이즈를 축소하고 있다.
+
+- 참고자료
+
+> [Deep Learning Image Classification Guidebook [3] SqueezeNet, Xception, MobileNet, ResNext, PolyNet, PyramidNet, Residual Attention Network, DenseNet, Dual Path Network (DPN)](https://hoya012.github.io/blog/deeplearning-classification-guidebook-3/)
+ 
+> [MobileNet이란? 쉬운 개념 설명](http://melonicedlatte.com/machinelearning/2019/11/01/212800.html)
+
+> [[논문리뷰] MobileNet V1 설명, pytorch 코드(depthwise separable convolution)](https://minimin2.tistory.com/42)
+
+<br><br><br>
 
 ## ResNext
+- vision recognition에 대한 연구는 "feature engineering"에서 "network engineering"으로 변화하는 추세이다. 따라서 feature가 수작업으로 만들어지는 것이 아닌, model의 architecture를 만드는 것으로 옮겨지고 있다.
 
+- 하지만 architecture를 디자인하는 것은, 특히나 layer의 층이 깊어질수록 hyper parameter의 증가로 그 난이도가 어려워지고 있다. 같은 모양의 여러 블록을 쌓는 VGGNet처럼, ResNet도 VGGNet과 같은 방식으로 계승했고, 이 간단한 rule은 hyper parameter의 선택을 보다 간단하게 만들어주었다. 또한, VGGNet과 달리 Inception module은 낮은 연산량으로도 높은 정확도를 이끌어낼 수 있다고 증명했다. Inception module은 계속 발전하고 있지만, 메인 아이디어는 split-transform-merge 형태의 전략이다.
 
-## PolyNet
+<center><img src="/reference_image/MH.Ji/Deep Learning Image Classification/152.png" width="70%"></center><br>
 
+- ResNext는 하나의 입력을 group convolution을 통해 여러개로 나누고, 1x1 convolution으로 입력을 transform하고, concat을 통해 merge를 진행한다. 또한, 기존의 ResNet보다 연산량은 줄이면서 더 높은 성능을 보여주었다.
 
-## PyramidNet
+- 구조
+    <center><img src="/reference_image/MH.Ji/Deep Learning Image Classification/153.png" width="70%"></center><br>
 
+    + 위의 그림은 ResNet과 ResNext의 기본 구성으로, ResNext에서 나오는 파라미터 C는 Cardinarity로, 새로운 차원의 개념을 도입한다. cardinality는 집합의 크기 또는 집합의 원소의 개수를 의미하는데, CNN에서는 하나의 block 안의 transformation 개수 혹은 path, brach의 개수 혹은 group convolution의 수로 볼 수 있다. 그림에서 64개의 filter의 개수를 32개의 path로 쪼개서 각각 path마다 4개씩 filter를 사용하는 것을 보여주고 있는데, 이는 AlexNet에서 사용했던 grouped convolution과 유사한 방식이다.
+
+    <center><img src="/reference_image/MH.Ji/Deep Learning Image Classification/154.png" width="70%"></center><br>
+
+    + 이전의 ResNet에서, ResNet50 이하의 깊이를 갖는 구조에서는 basic block, 즉 블록을 하나 쌓을 때, convolution을 2번 진행하였다. 하지만 ResNext에서는 2개의 블록만 쌓게 된다면 group convolution의 의미가 없어져 성능 향상에 의미가 없게 된다. 따라서 ResNext에서는 block의 depth가 3 이상일 때부터 성능이 향상된다고 한다.
+
+- 실험
+    + ImageNet dataset을 사용하며, input image를 224x224 random crop하였다.
+    
+    + shortcut connection을 위해서는 identity connection을 사용했다.
+
+    + downsampling은 convolution 3, 4, 5 layer에서 진행하였으며, 각 layer의 첫 번째 블록에서 stride=2로 설정하였다.
+
+    + SGD optimizer, mini-batch 256, 8 GPU를 사용했으며, weight decay=0.0001, momentum=0.9로 설정하였다.
+
+    + learning rate는 0.1로 시작하여 학습을 진행하면서 3번에 걸쳐 1/10로 감소시켰다.
+
+    + weight initialization을 사용하였고, 모든 convolution 이후에는 BN을 수행하였고, 그 이후에는 ReLU로 활성화 시켰다.
+
+- 특징
+    + ResNext의 큰 특징이라고 하면 group convolution이다. 이때 group의 수를 cardinality라고 하는데, group의 수를 늘릴수록 더 낮은 연산량을 가질 수 있다. 따라서 같은 연산량을 갖는 네트워크라고 하면, group을 늘리면 더 깊은 채널을 가질 수 있다.
+
+    <center><img src="/reference_image/MH.Ji/Deep Learning Image Classification/155.png" width="70%"></center><br>
+
+    + 위의 표는 파라미터를 일정 수준으로 유지하면서 cardinality와 block width를 변경해주면서 비교한 표이다. group의 수를 늘리면 더 많은 채널을 이용할 수 있다.
+
+- 참고자료
+
+> [Deep Learning Image Classification Guidebook [3] SqueezeNet, Xception, MobileNet, ResNext, PolyNet, PyramidNet, Residual Attention Network, DenseNet, Dual Path Network (DPN)](https://hoya012.github.io/blog/deeplearning-classification-guidebook-3/)
+
+> [ResNeXt:Aggregated Residual Transformations for Deep Neural Networks](https://blog.airlab.re.kr/2019/08/resnext)
+
+<br><br><br>
 
 ## Residual Attention Network
 

@@ -54,7 +54,7 @@
 
 > [Hyperparameter optimization](http://blog.naver.com/PostView.nhn?blogId=cjh226&logNo=221408767297&categoryNo=16&parentCategoryNo=0&viewDate=&currentPage=1&postListTopCurrentPage=1&from=section)
 
-<br><br>
+<br><br><br>
 
 ## 2. Loss Function
 - Loss Function은 Cost Function이라고도 한다.
@@ -107,11 +107,11 @@
 
 > [Cross-entropy 의 이해: 정보이론과의 관계](https://3months.tistory.com/436)
 
-<br><br>
+<br><br><br>
 
 ## 3. Optimization
 [Artificial Neural Networks(ANN)](https://star6973.github.io/blog/2020/06/19/deeplearning-day-2)
-<br><br>
+<br><br><br>
 
 ## 4. Learning rate & Batch size
 - Learning rate
@@ -133,7 +133,7 @@
     + batch size는 한 번의 batch마다 주는 데이터 샘플의 사이즈이다. 보통 mini-batch를 사용하여 데이터셋을 나누어 학습을 시켜준다.
 
     + batch size의 양에 따라 비유를 해보자면, batch size가 작다면 조금씩 학습하기 때문에 한 번에 많이 학습하는 것보다는 메모리를 덜 잡아먹는다. 반대로 batch size가 크다면 작을 경우보다 안정적으로 학습할 수 있다. 일반적으로 batch size가 커질 수록 성능이 좋아지지만, 자신의 메모리 양에 따라 적절하게 크기를 정해줘야 한다.
-<br><br>
+<br><br><br>
 
 ## 5. Back Propagation
 - Neural Network에서 학습은 inpuy layer에서 output layer를 향해 순차적으로 학습하면서 Loss Function가 최소가 되도록 Weight을 계산하고 저장하는 것을 Forward Propagation이라고 한다. 하지만 한 번 Forward Propagation 했다고 출력값이 정확하기란 어려울 것이다.
@@ -163,3 +163,32 @@
 > [[Deep Learning이란 무엇인가?] Backpropagation, 역전파 알아보기](https://evan-moon.github.io/2018/07/19/deep-learning-backpropagation/)
 
 > [What is backpropagation really doing? | Deep learning, chapter 3](https://www.youtube.com/watch?v=Ilg3gGewQ5U&feature=youtu.be)
+
+<br><br><br>
+
+## 6. Batch Normalization
+- 딥러닝에서의 대표적인 문제 중 하나인 vanishing/exploding gradient 문제는, 활성화 함수로 sigmoid나 hyper-tangent와 같은 비선형 함수를 사용하게 되면, 입력의 절대값이 작은 일부 구간을 제외하면 미분값이 0 근처로 가기 때문에 back propagation을 통한 학습이 어려워지거나 느려지게 된다.
+
+- 이 문제에 대한 해결책으로 ReLU를 통해 완화되었지만, 이것은 간접적인 회피이며 본질적인 해결책이 아니기에 layer가 깊어질수록 문제가 여전히 발생한다.
+
+- 그러다 2015년 획기적인 방법 2가지가 발표되었는데, 그것이 바로 BN(Batch Normalization)과 Residual Network이다. Residual Network에 대한 설명은 ResNet에서 설명할 예정이므로, BN에 대해서만 알아보자.
+
+- Internal Convariate Shift
+    + 최근 딥러닝에서는 대부분 GPU 환경을 사용하며, 이 GPU 환경에 최적화된 방법이 mini-batch SGD 방법이다. SGD 방식은 효율적이기는 하지만, 효과를 거두려면 hyper parameter의 설정에 신경을 많이 써줘야 하며, 특히 초기값과 learning rate는 매우 중요한 요소가 된다. 학습 시 현재 layer의 입력은 모든 이전 layer의 파라미터 변화에 영향을 받게 되며, 망이 깊어짐에 따라 이전 layer에서의 작은 파라미터 변화가 증폭되어 뒷단에 큰 영향을 끼치게 될 수도 있다(Back Propagation).
+
+    + 이처럼 학습하는 도중에 이전 layer의 파라미터 변화로 인해 현재 layer의 입력의 분포가 바뀌는 현상을 "Convariate Shift"라고 한다. 한 가지 예로 건축에서 하중에 의해 기둥이 휘어지는 것과 비슷하다고 볼 수 있다.
+
+    <center><img src="/reference_image/MH.Ji/Deep Learning Image Classification/150.png" width="70%"></center><br>
+
+- Internal Convariate Shift를 줄이는 방법
+    + Internal Convariate Shift를 줄이는 대표적인 방법 중 하나는 각 layer로 들어가는 입력을 whitening시키는 것이다. whitening을 시킨다는 의미는 입력을 평균 0, 분산 1로 바꿔준다는 것이다(정규화).
+
+    + 하지만 단순히 whitening을 시킨다면, whitening 과정과 parameter를 계산하기 위한 최적화 과정(back propagation)과 무관하게 진행이 되기 때문에 특정 파라미터가 계속 커지는 상태로 whitening이 진행이 될 수 있다. whitening을 통해 loss function이 변하지 않게 되면, 최적화 과정을 거치면서 특정 변수가 계속 커지는 현상이 발생할 수 있다.
+
+    + 그러므로 단순하게 whitening을 통해 평균과 분산을 조정하는 것보다는 확실한 방법이 Batch Normalization 기법이다. BN은 평균과 분산을 조정하는 과정이 별도의 process로 있는 것이 아니라, 신경망 안에 포함이 되어 training 시에 평균과 분산을 조정하는 과정 역시 같이 조절이 된다는 점에서 단순 whitening과 구별되는 차이점이다.
+
+- BN이 whitening과 다른 부분은 평균과 분산을 구한 후 정규화시키고 다시 scale과 shift 연산을 위해 gamma와 beta가 추가되었으며, gamma와 beta가 추가됨으로써 정규화시켰던 부분을 원래대로 돌리는 identity mapping도 가능하고, 학습을 통해 gamma와 beta를 정할 수 있기 때문에 단순하게 정규화만을 할 때보다 훨씬 강력해진다.
+
+<center><img src="/reference_image/MH.Ji/Deep Learning Image Classification/151.png" width="70%"></center><br>
+
+> [[Machine Learning Academy_Part VI. CNN 핵심 요소 기술] 1. Batch Normalization [1], [2]](https://m.blog.naver.com/laonple/220808903260)
