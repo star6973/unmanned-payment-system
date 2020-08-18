@@ -253,12 +253,6 @@
 
 <br><br><br>
 
-## PolyNet
-
-
-## PyramidNet
-
-
 ## Residual Attention Network
 
 
