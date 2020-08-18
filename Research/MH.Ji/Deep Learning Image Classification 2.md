@@ -308,14 +308,14 @@
     + Attention을 주는 방식이 Spatial Attention과 Channel Attention이 있다.
     <center><img src="/reference_image/MH.Ji/Deep Learning Image Classification/159.PNG" width="70%"></center><br>
 
-        1) Channel Attention  
-            - Feature map의 "what"에 집중된다.
-            - 일반적으로 공간의 차원을 압축하여 정보를 집계하는 average pooling을 사용하며, 여기에 채널에 대한 더 세밀한 관심을 inference하기 위해 max pooling을 동시에 사용한다. 이처럼 독립적으로 사용하는 것보다 모두 이용하는 것이 네트워크의 표현력을 크게 향상시키는 것을 확인할 수 있다.
+    1) Channel Attention  
+        - Feature map의 "what"에 집중된다.
+        - 일반적으로 공간의 차원을 압축하여 정보를 집계하는 average pooling을 사용하며, 여기에 채널에 대한 더 세밀한 관심을 inference하기 위해 max pooling을 동시에 사용한다. 이처럼 독립적으로 사용하는 것보다 모두 이용하는 것이 네트워크의 표현력을 크게 향상시키는 것을 확인할 수 있다.
 
-        2) Spatial Attention   
-            - feature의 공간적 관계를 이용하는 것으로, feature map의 "where"에 집중한다.
-            - channel attention을 보완하는 정보적인 부분으로, channel attention처럼 average/max pooling을 적용하고, 이를 연계하여 효율적인 feature를 생성한다.
-            - convolution layer를 적용하여 생성하며, 2개의 pooling을 사용하여 feature map의 채널 정보를 집계한 후 강조하거나 억제할 위치를 인코딩한다.
+    2) Spatial Attention   
+        - feature의 공간적 관계를 이용하는 것으로, feature map의 "where"에 집중한다.
+        - channel attention을 보완하는 정보적인 부분으로, channel attention처럼 average/max pooling을 적용하고, 이를 연계하여 효율적인 feature를 생성한다.
+        - convolution layer를 적용하여 생성하며, 2개의 pooling을 사용하여 feature map의 채널 정보를 집계한 후 강조하거나 억제할 위치를 인코딩한다.
 
 - 참고자료
 
