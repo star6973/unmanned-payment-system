@@ -16,18 +16,11 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:KwonHH" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </select>
+    <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a16f2a3-40ec-49fc-8363-f5f0dabf69c0" name="Default Changelist" comment="논문리뷰">
+    <list default="true" id="49a72ee4-5b9a-4b18-b1b3-01a0a89c294e" name="Default Changelist" comment="commit-jw">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Research/KwonHH/VERY DEEP CONVOLUTIONAL NETWORKS FOR LARGE-SCALE IMAGE RECOGNITION.md" beforeDir="false" afterPath="$PROJECT_DIR$/Research/KwonHH/VERY DEEP CONVOLUTIONAL NETWORKS FOR LARGE-SCALE IMAGE RECOGNITION.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,8 +28,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="ProjectId" id="1fferx3ni5bSTKKoqlHPm86xaKs" />
   <component name="ProjectLevelVcsManager">
@@ -49,35 +46,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../pythonProject1/pb1.py" />
-  </component>
-  <component name="RunManager">
-    <configuration name="pb1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="lotte_studying" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="C:\anaconda\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../pythonProject1" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../pythonProject1/pb1.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Python.pb1" />
-      </list>
-    </recent_temporary>
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
@@ -85,97 +54,48 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="6a16f2a3-40ec-49fc-8363-f5f0dabf69c0" name="Default Changelist" comment="논문리뷰" />
+      <changelist id="49a72ee4-5b9a-4b18-b1b3-01a0a89c294e" name="Default Changelist" comment="" />
       <created>1596613776800</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1596613776800</updated>
     </task>
-    <task id="LOCAL-00001" summary="Bag of Tricks for Image Classification with Convolutional Neural Networks 논문리뷰">
-      <created>1597035680628</created>
+    <task id="LOCAL-00001" summary="commit-jw">
+      <created>1596764566536</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1597035680628</updated>
+      <updated>1596764566536</updated>
     </task>
-    <task id="LOCAL-00002" summary="Bag of Tricks for Image Classification with Convolutional Neural Networks 논문리뷰">
-      <created>1597036267983</created>
+    <task id="LOCAL-00002" summary="commit-jw">
+      <created>1597046875570</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1597036267983</updated>
+      <updated>1597046875570</updated>
     </task>
-    <task id="LOCAL-00003" summary="논문리뷰">
-      <created>1597039726985</created>
+    <task id="LOCAL-00003" summary="commit-jw">
+      <created>1597221379199</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1597039726985</updated>
+      <updated>1597221379199</updated>
     </task>
-    <task id="LOCAL-00004" summary="논문리뷰">
-      <created>1597039981587</created>
+    <task id="LOCAL-00004" summary="commit-jw">
+      <created>1597221456405</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1597039981587</updated>
+      <updated>1597221456405</updated>
     </task>
-    <task id="LOCAL-00005" summary="논문리뷰">
-      <created>1597220354590</created>
+    <task id="LOCAL-00005" summary="commit-jw">
+      <created>1597391885020</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1597220354590</updated>
+      <updated>1597391885020</updated>
     </task>
-    <task id="LOCAL-00006" summary="논문리뷰">
-      <created>1597220524023</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1597220524023</updated>
-    </task>
-    <task id="LOCAL-00007" summary="논문리뷰">
-      <created>1597220659487</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1597220659487</updated>
-    </task>
-    <task id="LOCAL-00008" summary="논문리뷰">
-      <created>1597220987954</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1597220987954</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Deep Learning Image Classification Guidebook_HOYA012'S RESEARCH BLOG">
-      <created>1597644736833</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1597644736833</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Deep Learning Image Classification Guidebook_HOYA012'S RESEARCH BLOG">
-      <created>1597644860850</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1597644860850</updated>
-    </task>
-    <task id="LOCAL-00011" summary="논문리뷰">
-      <created>1597645540185</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1597645540185</updated>
-    </task>
-    <task id="LOCAL-00012" summary="논문리뷰">
-      <created>1597671246005</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1597671246005</updated>
-    </task>
-    <option name="localTasksCounter" value="13" />
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -183,19 +103,7 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="KwonHH" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
@@ -203,71 +111,21 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Bag of Tricks for Image Classification with Convolutional Neural Networks 논문리뷰" />
-    <MESSAGE value="Deep Learning Image Classification Guidebook_HOYA012'S RESEARCH BLOG" />
-    <MESSAGE value="논문리뷰" />
-    <option name="LAST_COMMIT_MESSAGE" value="논문리뷰" />
+    <MESSAGE value="commit-jw" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit-jw" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="695" y="343" key="#Notifications" timestamp="1597220246111">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1596777757664">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="695" y="343" key="#Notifications/0.0.1920.1040@0.0.1920.1040" timestamp="1597220246111" />
-    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1597220296631">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1596777757664" />
+    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1597392322145">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1597220296631" />
-    <state x="967" y="324" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1597384949311">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1597392322145" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1597391896991">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="967" y="324" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1597384949311" />
-    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1597039931891">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1597039931891" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1597298968689">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1597298968689" />
-    <state width="1899" height="281" key="GridCell.Tab.0.bottom" timestamp="1597302662297">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1899" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1597302662297" />
-    <state width="1899" height="281" key="GridCell.Tab.0.center" timestamp="1597302662296">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1899" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1597302662296" />
-    <state width="1899" height="281" key="GridCell.Tab.0.left" timestamp="1597302662296">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1899" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1597302662296" />
-    <state width="1899" height="281" key="GridCell.Tab.0.right" timestamp="1597302662297">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1899" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1597302662297" />
-    <state x="184" y="86" key="MergeDialog" timestamp="1597220324342">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="184" y="86" key="MergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1597220324342" />
-    <state x="454" y="225" key="MultipleFileMergeDialog" timestamp="1597220324353">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="454" y="225" key="MultipleFileMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1597220324353" />
-    <state x="306" y="243" key="RollbackChangesDialog" timestamp="1597645176461">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="306" y="243" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1597645176461" />
-    <state x="807" y="432" key="VCS.ChangelistChooser" timestamp="1597039584758">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="807" y="432" key="VCS.ChangelistChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1597039584758" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1597671444237">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1597671444237" />
-    <state x="775" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597671331996">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="775" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1597671331996" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1597391896991" />
   </component>
 </project>

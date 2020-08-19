@@ -48,15 +48,15 @@
     
     + low-level vision과 컴퓨터 그래픽에서 편미분 방정식(PDE, Partial Differential Equations)를 해결하기 위해 널리 사용되는 방법은 Multigrid 방법이다. 이 방법은 시스템을 여러 scale의 하위 문제로 재구성한다. 여기서 각 하위 문제는 coarser(거칠다)하고 finer(미세하다)한 scale 사이의 잔차(residual) 해결법에 책임을 지고 있다.
 
-- Shortcut Connections
-    + 
+- Shortcut Connections(Skip Connections)
+    + 초기의 MLP 훈련은 네트워크 안에서부터 밖으로의 선형적인 layer를 추가하는 형태로 실습해왔다. 출력에 대한 입력에서는 몇 개의 중간 layer가 직접적으로 보조 분류기에 연결되어서, gradient의 소실/폭발 문제를 해결한다. 즉, 기존의 학습 방식에서 Neural Net의 학습 목적은 입력(x)을 타겟값(y)으로 맵핑하는 함수 H(x)를 찾는 것이라고 한다면, Neural Net은 H(x)-y를 최소화하는 방향으로 학습을 진행한다.
 
+    + 하지만 ResNet은 관점을 바꾸어 네트워크가 H(x)-x를 얻는 것으로 목표를 수정하였다. 입력과 출력의 잔차를 F(x)=H(x)-x라고 정의를 하고 네트워크는 이 F(x)를 찾는 것이다. 이 F(x)는 잔차라고 할 수 있고, 이렇게 잔차를 학습하는 것을 Residual Learning이라고 한다.
 
 ### 3. Deep Residual Learning
-
-
-### 4. Experiments
-
+- ResNet의 구조는 Residual Block과 Identity Block으로 이루어진다.
+    + 자세한 설명은 다음 URL을 통해..
+        [ResNet](https://datascienceschool.net/view-notebook/958022040c544257aa7ba88643d6c032/)
 
 # 새롭게 알게된 내용
 ### 1. Multigrid
@@ -79,9 +79,13 @@
 
 - 굵은 격자에서 문제를 해결하면, 미세 격자보다 훨씬 낮은 주파수 오류를 훨씬 더 빠르게 제거할 수 있다. 따라서 거친 그리드의 문제를 해결하면 더 낮은 주파수 오류가 크게 줄어든다.
 
-
-
-
 # 참고자료
-[ResNet](https://m.blog.naver.com/PostView.nhn?blogId=laonple&logNo=220761052425&proxyReferer=https:%2F%2Fwww.google.com%2F)
-[Jacobi method](https://kor.midasuser.com/nfx/techpaper/keyword_view.asp?pg=&sk=&bid=&nCat=&nIndex=&sHtml=&idx=293)
+- [ResNet](https://m.blog.naver.com/PostView.nhn?blogId=laonple&logNo=220761052425&proxyReferer=https:%2F%2Fwww.google.com%2F)
+- [ResNet [1], [2] - 라온피플 아카데미](https://m.blog.naver.com/laonple/220761052425)
+- [Jacobi method](https://kor.midasuser.com/nfx/techpaper/keyword_view.asp?pg=&sk=&bid=&nCat=&nIndex=&sHtml=&idx=293)
+<br><br>
+
+## 추후에 학습해야할 것
+### 1. R-CNN
+### 2. Fast R-CNN
+### 3. Faster R-CNN

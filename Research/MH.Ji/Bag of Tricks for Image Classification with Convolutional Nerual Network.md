@@ -1,4 +1,4 @@
-## 논문 내용 정리
+# 논문 내용 정리
 ### Abstract
 - object detection과 sementic segmentation과 같은 domain application에 적용하여 image classification 정확도를 향상시키는 것을 증명할 것이다.
 
