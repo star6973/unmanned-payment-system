@@ -18,7 +18,7 @@
 | <div style="width:290px">주차</div> | <div style="width:290px">기간</div> | <div style="width:290px">주제</div> | <div style="width:290px">진행 과정</div> |
 |:-----:|:-----|:-----:|:-----:|
 | 1주 | 2020-08-03 ~ 08-07 | 딥러닝 환경  구성 |개인 노트북에 GPU가 없기에 윈도우 환경에서 MobaXterm을 통해 KIRO 8 GPU 서버 연결 |
-| 2주 | 2020-08-10 ~ 08-14 |데이터셋 구축  1차 |데이터셋 구축 장비 준비가 늦춰지면서, 3주차와 순서를 바꿈. Image Classification 조사(LeNet, AlexNet, VGGNet, GoogLeNet, ResNet) |
+| 2주 | 2020-08-10 ~ 08-14 |데이터셋 구축 \n 1차 |데이터셋 구축 장비 준비가 늦춰지면서, 3주차와 순서를 바꿈. Image Classification 조사(LeNet, AlexNet, VGGNet, GoogLeNet, ResNet) |
 | 3주 | 2020-08-18 ~ 08-21 | Image Classification 기술 조사|Image Classification 기술 조사(PreActResNet ~ NASNet), 데이터셋 구축 중..(08/19 - 1,000장 완료) |
 | 4주 | 2020-08-24 ~ 08-28 | 데이터셋 구축  2차 | |
 | 5주 | 2020-08-31 ~ 09-04 | Object Detection  기술 조사 | |
