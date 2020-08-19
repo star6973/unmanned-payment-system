@@ -19,11 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49a72ee4-5b9a-4b18-b1b3-01a0a89c294e" name="Default Changelist" comment="commit">
-      <change beforePath="$PROJECT_DIR$/Research/INHWA/Gradient descent.md" beforeDir="false" afterPath="$PROJECT_DIR$/Research/INHWA/deep_learning/Gradient descent.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Research/INHWA/He_Bag_of_Tricks_for_Image_Classification_with_Convolutional_Neural_Networks_CVPR_2019_paper.md" beforeDir="false" afterPath="$PROJECT_DIR$/Research/INHWA/deep_learning/He_Bag_of_Tricks_for_Image_Classification_with_Convolutional_Neural_Networks_CVPR_2019_paper.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Research/INHWA/activation_funtion.md" beforeDir="false" afterPath="$PROJECT_DIR$/Research/INHWA/deep_learning/activation_funtion.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Research/INHWA/entropy.md" beforeDir="false" afterPath="$PROJECT_DIR$/Research/INHWA/deep_learning/entropy.md" afterDir="false" />
+    <list default="true" id="49a72ee4-5b9a-4b18-b1b3-01a0a89c294e" name="Default Changelist" comment="commit-jw">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,14 +55,35 @@
       <option name="presentableId" value="Default" />
       <updated>1596613776800</updated>
     </task>
-    <task id="LOCAL-00001" summary="commit">
-      <created>1596764183238</created>
+    <task id="LOCAL-00001" summary="commit-jw">
+      <created>1596764566536</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1596764183238</updated>
+      <updated>1596764566536</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="commit-jw">
+      <created>1597046875570</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1597046875570</updated>
+    </task>
+    <task id="LOCAL-00003" summary="commit-jw">
+      <created>1597221379199</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1597221379199</updated>
+    </task>
+    <task id="LOCAL-00004" summary="commit-jw">
+      <created>1597221456405</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1597221456405</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -81,21 +99,21 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit" />
+    <MESSAGE value="commit-jw" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit-jw" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1597021745026">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1596777757664">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1597021745026" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1596764229605">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1596777757664" />
+    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1597212998566">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1596764229605" />
-    <state x="479" y="199" key="git4idea.merge.GitPullDialog" timestamp="1596764272618">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1597212998566" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1597221462040">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="479" y="199" key="git4idea.merge.GitPullDialog/0.0.1536.824@0.0.1536.824" timestamp="1596764272618" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1597221462040" />
   </component>
 </project>
