@@ -81,6 +81,7 @@
 
 # 참고자료
 - [ResNet](https://m.blog.naver.com/PostView.nhn?blogId=laonple&logNo=220761052425&proxyReferer=https:%2F%2Fwww.google.com%2F)
+- [ResNet [1], [2] - 라온피플 아카데미](https://m.blog.naver.com/laonple/220761052425)
 - [Jacobi method](https://kor.midasuser.com/nfx/techpaper/keyword_view.asp?pg=&sk=&bid=&nCat=&nIndex=&sHtml=&idx=293)
 <br><br>
 
