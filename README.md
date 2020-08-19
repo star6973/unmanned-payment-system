@@ -17,13 +17,13 @@
 ### 주차별 학습
 | 주차 | 기간 | 주제 | 수행 과정 및 결과 |
 |:-----:|:-----:|:-----:|:-----:|
-| 1주 | 2020-08-03 ~ &nbsp; 2020-08-07 | 딥러닝 환경 &nbsp; 구성|개인 노트북에 GPU가 없기에 윈도우 환경에서 MobaXterm을 통해 KIRO 8 GPU 서버 연결 |
+| 1주 | 2020-08-03 ~ &nbsp; 2020-08-07 | 딥러닝 환경 구성|개인 노트북에 GPU가 없기에 윈도우 환경에서 MobaXterm을 통해 KIRO 8 GPU 서버 연결 |
 | 2주 | 2020-08-10 ~ &nbsp; 2020-08-14 | 데이터셋 구축 &nbsp; 1차|데이터셋 구축 장비 준비가 늦춰지면서, 3주차와 순서를 바꿈. Image Classification 조사(LeNet, AlexNet, VGGNet, GoogLeNet, ResNet) |
 | 3주 | 2020-08-18 ~ &nbsp; 2020-08-21 |Image Classification 기술 조사|Image Classification 기술 조사(PreActResNet ~ NASNet), 데이터셋 구축 중..(08/19 - 1,000장 완료) |
 | 4주 | 2020-08-24 ~ &nbsp; 2020-08-28 | 데이터셋 구축 &nbsp; 2차 | |
-| 5주 | 2020-08-31 ~ &nbsp; 2020-09-04 | Object Detection &nbsp; &nbsp; 기술 조사 | |
-| 6주 | 2020-09-07 ~ &nbsp; 2020-09-11 | Face Detection &nbsp; &nbsp; 기술 조사 | |
-| 7주 | 2020-09-14 ~ &nbsp; 2020-09-18 | 기존 모델 &nbsp; 다루기 실습 | |
+| 5주 | 2020-08-31 ~ &nbsp; 2020-09-04 | Object Detection &nbsp; 기술 조사 | |
+| 6주 | 2020-09-07 ~ &nbsp; 2020-09-11 | Face Detection &nbsp; 기술 조사 | |
+| 7주 | 2020-09-14 ~ &nbsp; 2020-09-18 | 기존 모델 다루기 실습 | |
 | 8주 | 2020-09-21 ~ &nbsp; 2020-09-25 | Transfer Learning 준비 | |
 | 9주 | 2020-09-28 ~ &nbsp; 2020-09-29 | Transfer Learning 실습 | |
 | 10주 | 2020-10-05 ~ &nbsp; 2020-10-08 | 결과 검토 및 &nbsp; 모델 수정 | |
