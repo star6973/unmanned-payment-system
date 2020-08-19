@@ -18,9 +18,9 @@
 | 주차 | 기간 | 주제 | 수행 과정 및 결과 |
 |:-----:|:-----:|:-----:|:-----:|
 | 1주 | 2020-08-03 ~ <br> 2020-08-07 </br> | 딥러닝 환경 <br>구성</br> |개인 노트북에 GPU가 없기에 윈도우 환경에서 MobaXterm을 통해 KIRO 8 GPU 서버 연결 |
-| 2주 | 2020-08-10 ~ <br> 2020-08-14 </br> | 데이터셋 구축 <br>1차</br> |데이터셋 구축 장비 준비가 늦춰지면서, 3주차와 순서를 바꿈. Image Classification 조사(LeNet, AlexNet, VGGNet, GoogLeNet, ResNet) |
+| 2주 | 2020-08-10 ~ <br> 2020-08-14 </br> | 데이터셋 <br>구축 1차</br> |데이터셋 구축 장비 준비가 늦춰지면서, 3주차와 순서를 바꿈. Image Classification 조사(LeNet, AlexNet, VGGNet, GoogLeNet, ResNet) |
 | 3주 | 2020-08-18 ~ <br> 2020-08-21 </br> | Image Classification <br>기술 조사</br>|Image Classification 기술 조사(PreActResNet ~ NASNet), 데이터셋 구축 중..(08/19 - 1,000장 완료) |
-| 4주 | 2020-08-24 ~ <br> 2020-08-28 </br> | 데이터셋 구축 <br>2차</br> | |
+| 4주 | 2020-08-24 ~ <br> 2020-08-28 </br> | 데이터셋 <br>구축 2차</br> | |
 | 5주 | 2020-08-31 ~ <br> 2020-09-04 </br> | Object Detection <br>기술 조사</br> | |
 | 6주 | 2020-09-07 ~ <br> 2020-09-11 </br> | Face Detection <br>기술 조사</br> | |
 | 7주 | 2020-09-14 ~ <br> 2020-09-18 </br> | 기존 모델 <br>다루기 실습</br> | |
