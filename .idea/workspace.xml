@@ -16,11 +16,19 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:KwonHH" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49a72ee4-5b9a-4b18-b1b3-01a0a89c294e" name="Default Changelist" comment="commit-jw">
+    <list default="true" id="49a72ee4-5b9a-4b18-b1b3-01a0a89c294e" name="Default Changelist" comment="commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Research/KwonHH/DEEP LEARNING IMAGE CLASSIFICATION GUIDE BOOK[1]_STUDY_출처_HOYA012'S RESEARCH BLOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/Research/KwonHH/DEEP LEARNING IMAGE CLASSIFICATION GUIDE BOOK[1]_STUDY_출처_HOYA012'S RESEARCH BLOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Research/KwonHH/DEEP LEARNING IMAGE CLASSIFICATION GUIDE BOOK[2]_STUDY_출처_HOYA012'S RESEARCH BLOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/Research/KwonHH/DEEP LEARNING IMAGE CLASSIFICATION GUIDE BOOK[2]_STUDY_출처_HOYA012'S RESEARCH BLOG.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +55,11 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\사용자\PycharmProjects\lotte_studying\PPT\KwonHH" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
@@ -95,7 +108,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597391885020</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="commit">
+      <created>1597811936431</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1597811936431</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -112,7 +132,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="commit-jw" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit-jw" />
+    <MESSAGE value="commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit" />
   </component>
   <component name="WindowStateProjectService">
     <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1596777757664">
@@ -123,9 +144,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1597392322145" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1597391896991">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="350" y="113" key="Vcs.Push.Dialog.v2" timestamp="1597811950718">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1597391896991" />
+    <state x="350" y="113" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1597811950718" />
   </component>
 </project>
