@@ -27,22 +27,22 @@
         - original 의 경우 BN 이후 addition하면 다시 unnormalized 상태로 다음으로 전달
         - full pre-activation 구조는 모든 Conv 연산에 normalized input 전달되므로 성능이 좋아지는 것으로 추정<br><br><br>
 1. Inception-v2(2016)
-1. 특징
-    1. Conv Filter Factorization
-        - Inception-v1은 VGG, AlexNet에 비해서 parameter수가 굉장히 적지만, 많은 연산을 한다는 단점이 있었음
-        - v2에서는 이런 연산 복잡도를 줄이기 위해서 Conv Filter Factorization 제안
-        - n x n conv => 1 x n + n x 1 conv로 쪼개는 방법 제안(receptive field 동일)<br>
-    1. Rethinking Auxiliary Classifier
-        - auxiliary classifier가 학습 초기 수렴성을 개선시키지 않았고
-        - 학습 후기에는 약간의 정확도 향상을 얻을 수 있는 부분
-        - 그리고 기존에 2개의 auxiliary classifier 사용
-           ==> auxiliary classifier 는 있으나 없으나 큰 차이가 없으므로 제거<br>
-    1. Avoid representational bottleneck
-        - Grid Size Reduction 제안
-            - representational bottleneck : CNN에서 pooling으로 인해서 feature map size가 줄어들면서, 정보량이 줄어드는 것
-            - pooling을 뒤에 하면 연산량이 많아짐
-            - 이런 두 가지 문제를 피하기 위해서 다음 사진과 같은 방식 제안<br>
-        ![InceptionV2](file:///C:/Users/%EC%82%AC%EC%9A%A9%EC%9E%90/Pictures/noname02.png)<br><br>             
+    1. 특징
+        1. Conv Filter Factorization
+            - Inception-v1은 VGG, AlexNet에 비해서 parameter수가 굉장히 적지만, 많은 연산을 한다는 단점이 있었음
+            - v2에서는 이런 연산 복잡도를 줄이기 위해서 Conv Filter Factorization 제안
+            - n x n conv => 1 x n + n x 1 conv로 쪼개는 방법 제안(receptive field 동일)<br>
+        1. Rethinking Auxiliary Classifier
+            - auxiliary classifier가 학습 초기 수렴성을 개선시키지 않았고
+            - 학습 후기에는 약간의 정확도 향상을 얻을 수 있는 부분
+            - 그리고 기존에 2개의 auxiliary classifier 사용
+               ==> auxiliary classifier 는 있으나 없으나 큰 차이가 없으므로 제거<br>
+        1. Avoid representational bottleneck
+            - Grid Size Reduction 제안
+                - representational bottleneck : CNN에서 pooling으로 인해서 feature map size가 줄어들면서, 정보량이 줄어드는 것
+                - pooling을 뒤에 하면 연산량이 많아짐
+                - 이런 두 가지 문제를 피하기 위해서 다음 사진과 같은 방식 제안<br>
+            ![InceptionV2](file:///C:/Users/%EC%82%AC%EC%9A%A9%EC%9E%90/Pictures/noname02.png)<br><br>             
 1. Inception-v3 (2016)
     - v2의 architecture는 그대로, 여러 학습 방법을 적용
         - Model Regularization via Label smoothing
@@ -50,13 +50,9 @@
         - Training Methodology
             - momentum optimizer->RMSProp optimizer->Gradient clipping with threshold 2.0->Evaluation using a running average of the parameters computed over time
         - BN-auxiliary classify
-            - Auxiliary classifier 의 FC layer에 BN추가
-
-
+            - Auxiliary classifier 의 FC layer에 BN추가<br><br>
 1. Inception-v4 (2016)  
-1. Inception-ResNet(2016)  
-
-
+1. Inception-ResNet(2016)<br><br>
 1. Stochastic Depth ResNet(2016)
     1. 특징
         - Self-training with Noise Student improves ImageNet classification 논문에 소개

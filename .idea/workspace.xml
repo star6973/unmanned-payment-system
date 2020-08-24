@@ -27,8 +27,6 @@
   <component name="ChangeListManager">
     <list default="true" id="49a72ee4-5b9a-4b18-b1b3-01a0a89c294e" name="Default Changelist" comment="commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Research/KwonHH/DEEP LEARNING IMAGE CLASSIFICATION GUIDE BOOK[1]_STUDY_출처_HOYA012'S RESEARCH BLOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/Research/KwonHH/DEEP LEARNING IMAGE CLASSIFICATION GUIDE BOOK[1]_STUDY_출처_HOYA012'S RESEARCH BLOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Research/KwonHH/DEEP LEARNING IMAGE CLASSIFICATION GUIDE BOOK[2]_STUDY_출처_HOYA012'S RESEARCH BLOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/Research/KwonHH/DEEP LEARNING IMAGE CLASSIFICATION GUIDE BOOK[2]_STUDY_출처_HOYA012'S RESEARCH BLOG.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +113,21 @@
       <option name="project" value="LOCAL" />
       <updated>1597811936431</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="commit">
+      <created>1597813050845</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1597813050845</updated>
+    </task>
+    <task id="LOCAL-00008" summary="commit">
+      <created>1597813207085</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1597813207085</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -144,10 +156,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1597392322145" />
-    <state x="350" y="113" key="Vcs.Push.Dialog.v2" timestamp="1597811950718">
+    <state x="350" y="113" key="Vcs.Push.Dialog.v2" timestamp="1597813214670">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1597391896991" />
-    <state x="350" y="113" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1597811950718" />
+    <state x="350" y="113" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1597813214670" />
   </component>
 </project>
