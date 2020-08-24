@@ -28,6 +28,18 @@ Abstract
     - 본 논문에서 간단한 model->복잡한 model로의 과정은 search space에서 structure를 통째로 정하는 방식에 비해 여러 장점이 있음
         1. 간단한 structure는 train이 빠르게 됨 => surrogate 를 train하기 위한 초기 결과를 빠르게 얻을 수 있음
         1. surrogate는 약간 더 큰 structure만 예측하도록 할 수 있음 cf. trust-region method
-        1. search space를 작은 search space의 곱으로 분해할 수 있고, 그것은 만은 block를 가진 model들을 잠재적으로 찾을 수 있도록 해줌
+        1. search space를 작은 search space의 곱으로 분해할 수 있고, 그것은 만은 block를 가진 model들을 잠재적으로 찾을 수 있도록 해줌<br><br><br><br>
+1. Architecture Search Space
+    1. Cell Topoligies
+        - Cell 은 fully convolutional network로 H X W X F 의 tensor 를 다른 H` X W` X F` 으로 사상된다
+            - 이때 stride = 1 이면 H` = H, W` = W 이고, stride = 2 이면 H` = H/2, W` = W/2 이다
+        - 공간적 activation 이 반으로 줄어들 떄마다 filter 개수(F)를 두배로 하기 위해서 공통의 heuristic 을 적용하면,<br>F` = F 이기 위해서 stride = 1, F` = 2F 이기 위해서 stride  = 2 이다<br><br>
+        - Cell 은 B개의 block들로 구성된 DAG 로 설명된다
+        - 각 block은 2개의 input tensor 와 1개의 ouput tensor 로 매핑된다
+        - 논문 저자들은 b라는 block 로 구성된 c의 cell을 5개의 튜플로 정한다<br>: I1, I2, O1, O2, C <br>
+            - Ib ( : I1, I2) 는 block으로의 input을 의미
+            - O ( : O1, O2 ) 는 input에 operation이 적용된 것을 의미
+            - C 는 출력에 대해서 어떻게 O1, O2를 결합하여 feature map을 그릴 것인가에 대한 의미<br> => Hcb 라는 기호로 표현
+            
 
           
