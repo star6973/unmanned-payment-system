@@ -6,4 +6,5 @@
     - 따라서 본 paper에서는 간단하고 scalable 가능한 detection 알고리즘을 제안하여 이전 VOC2012의 최우수 모델보다 mAP를 30% 이상 끌어올림<br>그 방법으로는
         1. 이미지를 분리하고, localize 하기 위해서 아래에서부터 윗방향으로 region proposal 에 대해서 high capacity CNN 적용
         1. 만약 라벨 된 훈련 데이터가 부족할 경우 중요한 performance boost를 하도록 함
-    - CNN 과 proposal region을 결합했기 때문에 R-CNN 이라고 
+    - Proposal region 에 CNN을 적용했기 때문에 R-CNN이라고 함
+    
