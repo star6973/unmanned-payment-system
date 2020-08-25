@@ -17,7 +17,6 @@
     1. 특징
         - ILSVRC 대회에서 2012년 우승한 architecture
         - 224x224 size의 RGB 3channel image를 input으로 사용
-        
         - Multi GPU Training : 위 그림과 같이 2갈래로 나눠지며 중간에 중간결과를 공유 ; 당시 GPU의 Memory가 부족
         - activation 함수로 ReLU 사용 ; tanh 사용할 때보다 빠르게 수렴 가능
         - LRN(Local Response Normalization) 사용 ; 최근에는 거의 사용하지 않음

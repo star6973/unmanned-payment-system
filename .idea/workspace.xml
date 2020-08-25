@@ -16,12 +16,16 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:KwonHH" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49a72ee4-5b9a-4b18-b1b3-01a0a89c294e" name="Default Changelist" comment="commit-jw">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="49a72ee4-5b9a-4b18-b1b3-01a0a89c294e" name="Default Changelist" comment="commit" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -88,6 +92,11 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\사용자\PycharmProjects\lotte_studying\PPT\KwonHH" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
@@ -135,6 +144,7 @@
       <option name="project" value="LOCAL" />
       <updated>1597391885020</updated>
     </task>
+<<<<<<< HEAD
     <task id="LOCAL-00006" summary="commit-jw">
       <created>1597811456732</created>
       <option name="number" value="00006" />
@@ -157,6 +167,58 @@
       <updated>1598278437484</updated>
     </task>
     <option name="localTasksCounter" value="9" />
+=======
+    <task id="LOCAL-00006" summary="commit">
+      <created>1597811936431</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1597811936431</updated>
+    </task>
+    <task id="LOCAL-00007" summary="commit">
+      <created>1597813050845</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1597813050845</updated>
+    </task>
+    <task id="LOCAL-00008" summary="commit">
+      <created>1597813207085</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1597813207085</updated>
+    </task>
+    <task id="LOCAL-00009" summary="commit">
+      <created>1598257591638</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1598257591638</updated>
+    </task>
+    <task id="LOCAL-00010" summary="commit">
+      <created>1598274406745</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1598274406745</updated>
+    </task>
+    <task id="LOCAL-00011" summary="commit">
+      <created>1598274607633</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1598274607633</updated>
+    </task>
+    <task id="LOCAL-00012" summary="commit">
+      <created>1598277653081</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1598277653081</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
+>>>>>>> 3189dadf54c0caf4fd639a9b895d53f619eb09da
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -164,7 +226,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="KwonHH" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -173,7 +247,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="commit-jw" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit-jw" />
+    <MESSAGE value="commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit" />
   </component>
   <component name="WindowStateProjectService">
     <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1596777757664">
@@ -199,10 +274,23 @@
     <state width="1259" height="163" key="GridCell.Tab.0.right" timestamp="1598332653157">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
+<<<<<<< HEAD
     <state width="1259" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1598332653157" />
     <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1598336979019">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1598336979019" />
+=======
+    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1597392322145" />
+    <state x="-66" y="205" key="Vcs.Push.Dialog.v2" timestamp="1598277661016">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1597391896991" />
+    <state x="-66" y="205" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1598277661016" />
+    <state x="143" y="230" width="672" height="678" key="search.everywhere.popup" timestamp="1598268352036">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="143" y="230" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1598268352036" />
+>>>>>>> 3189dadf54c0caf4fd639a9b895d53f619eb09da
   </component>
 </project>
