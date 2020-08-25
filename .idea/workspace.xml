@@ -27,7 +27,7 @@
   <component name="ChangeListManager">
     <list default="true" id="49a72ee4-5b9a-4b18-b1b3-01a0a89c294e" name="Default Changelist" comment="commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Research/KwonHH/Progressive Neural Architecture Search.md" beforeDir="false" afterPath="$PROJECT_DIR$/Research/KwonHH/Progressive Neural Architecture Search.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Research/KwonHH/Region-based Convolutional Networks for Accurate Object Detection and Segmentation.md" beforeDir="false" afterPath="$PROJECT_DIR$/Research/KwonHH/Region-based Convolutional Networks for Accurate Object Detection and Segmentation.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,7 +163,21 @@
       <option name="project" value="LOCAL" />
       <updated>1598278866768</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="commit">
+      <created>1598338113665</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1598338113665</updated>
+    </task>
+    <task id="LOCAL-00015" summary="commit">
+      <created>1598338118702</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1598338118702</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -204,11 +218,15 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1597392322145" />
-    <state x="72" y="256" key="Vcs.Push.Dialog.v2" timestamp="1598279153135">
+    <state x="598" y="280" key="MultipleFileMergeDialog" timestamp="1598338158565">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="598" y="280" key="MultipleFileMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1598338158565" />
+    <state x="72" y="256" key="Vcs.Push.Dialog.v2" timestamp="1598338203927">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1597391896991" />
-    <state x="72" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1598279153135" />
+    <state x="72" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1598338203927" />
     <state x="143" y="230" width="672" height="678" key="search.everywhere.popup" timestamp="1598268352036">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
