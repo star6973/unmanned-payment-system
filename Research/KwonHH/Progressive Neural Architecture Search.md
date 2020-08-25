@@ -39,7 +39,15 @@ Abstract
         - 논문 저자들은 b라는 block 로 구성된 c의 cell을 5개의 튜플로 정한다<br>: I1, I2, O1, O2, C <br>
             - Ib ( : I1, I2) 는 block으로의 input을 의미
             - O ( : O1, O2 ) 는 input에 operation이 적용된 것을 의미
-            - C 는 출력에 대해서 어떻게 O1, O2를 결합하여 feature map을 그릴 것인가에 대한 의미<br> => Hcb 라는 기호로 표현
+            - C 는 출력에 대해서 어떻게 O1, O2를 결합하여 feature map을 그릴 것인가에 대한 의미<br> => H^c_b 라는 기호로 표현
+            - 가능한 입력의 집합 Ib 는 현재 cell의 모든 이전 블록의 집합이다<br> {H^c_1, ..., H^c_b-1}, H^c-1_B ; 이전 cell의 output, H^c-2_B ; 이전이전 cell의 output
+            - 연산자 space O는 다음의 8가지 함수를 가진다<br>3X3 depthwise-separable convolution    /    identity<br>5x5 depthwise-separable convolution    /    3x3 average pooling<br>7x7 depthwise-separable convolution    /    3x3 max pooling<br>1x7 followed by 7x1 convolution    /    3x3 dilated convolution
+                - 이는 Learning transferable architectures for scalable image recognition, Zoph et al.(2018) 에서 사용한 것보다<br> 13개 더 적게 사용한 것<br> : RL 방식에서 발견한 것 중 사용되지 않는 것들을 제거
+            - 또한 RL 방식에서 사용된 elementwise additon, concatenation을 모두 사용하지 않고,addition만 사용<br> : RL방식에서 concatenation은 사용하지 않는다는 것을 발견함<br> => 따라서 block은 4-tuple로 정의<br><br>
+            - search space를 정량화 하여 search problem의 magnitude가 잘 보이도록 하였다
+                - b번째 block을 Bb라고 할 때, 이것의 크기는 <br>|Bb| = |Ib|^2 * |O|^2 * |C| ( |Ib| = 2 + b - 1, |O| = 8, |C| = 1 )<br>
+                
+              
             
 
           
