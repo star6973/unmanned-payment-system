@@ -39,7 +39,7 @@
 1. Image classification에 관한 추천 논문 자료
 2. google drive에 공유자료 업로드
 
-### 20202-08-18
+### 2020-08-18
 1. ResNet
 
     F(x): 출력값과 실제값의 차이 -> 줄이자
@@ -76,3 +76,19 @@
     - 연산량 감소를 위한 목적으로 생성한 모델
 
     <center><img src="/reference_image/MH.Ji/Deep Learning Image Classification/173.png" width="70%"></center><br>
+
+### 2020-08-25
+1. Data set을 합쳐서, 그 분포도를 확인해보기
+    - 한쪽으로 치우쳐지면, 그 부분에만 학습이 많이 되서 overfitting이 될 가능성이 높음
+
+2. Classification -> Localization -> Detection -> Segmentation의 역사
+    - 처음에는 물체를 분류하기 시작했다가, 어디에 위치하는지를 보고 싶어서 Localization의 등장
+    - 그 이후에는 어떤 물체인지를 판단하고 싶어서 detection의 등장
+    - polygon 형태의 물체를 인식하는 방법인 segemntation이 등장하고, 개별 물체 탐지가 가능한 intance segmentation이 등장
+
+3. Data set을 detection model에 학습시키기 위해선, 다양한 포맷이 있음
+    - COCO, Pascal VOC, xml, json 등..
+
+4. Object Detection 논문 공부하기(만들어놓은 데이터를 학습시켜보기 위해)
+    - R-CNN을 기초로..
+    - [deep learning object detection](https://github.com/hoya012/deep_learning_object_detection)
