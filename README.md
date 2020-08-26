@@ -77,6 +77,14 @@
 
     <center><img src="/reference_image/MH.Ji/Deep Learning Image Classification/173.png" width="70%"></center><br>
 
+4. docker gpu 사용
+
+        local host: 172.16.201.167
+        id: nvidia
+        pw : nvidia
+
+        docker run --gpus all -it --rm -v ~/MH.Ji:/MH.Ji nvcr.io/nvidia/pytorch:20.07-py3
+
 ### 2020-08-25
 1. Data set을 합쳐서, 그 분포도를 확인해보기
     - 한쪽으로 치우쳐지면, 그 부분에만 학습이 많이 되서 overfitting이 될 가능성이 높음
