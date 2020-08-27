@@ -17,10 +17,10 @@
 ### 주차별 학습
 | 주차 | 기간 | 주제 | 수행 과정 및 결과 |
 |:-----:|:-----:|:-----:|:-----:|
-| 1주 | 2020-08-03 ~ <br> 2020-08-07 </br> | 딥러닝 환경 구성|개인 노트북에 GPU가 없기에 윈도우 환경에서 MobaXterm을 통해 KIRO 8 GPU 서버 연결 |
-| 2주 | 2020-08-10 ~ <br> 2020-08-14 </br> | 데이터셋 구축 1차|데이터셋 구축 장비 준비가 늦춰지면서, 3주차와 순서를 바꿈. Image Classification 조사(LeNet, AlexNet, VGGNet, GoogLeNet, ResNet) |
-| 3주 | 2020-08-18 ~ <br> 2020-08-21 </br> | Image Classification 기술 조사|Image Classification 기술 조사(PreActResNet ~ NASNet), 데이터셋 구축 중..(08/19 - 1,000장 완료, 8/20 - 2,000장 완료, 8/21 - Labeling 시작) |
-| 4주 | 2020-08-24 ~ <br> 2020-08-28 </br> | 데이터셋 구축 2차 (8/24 - Labeling 끝) | |
+| 1주 | 2020-08-03 ~ <br> 2020-08-07 </br> | 딥러닝 환경 구성 | 개인 노트북에 GPU가 없기에 윈도우 환경에서 MobaXterm을 통해 KIRO 8 GPU 서버 연결 |
+| 2주 | 2020-08-10 ~ <br> 2020-08-14 </br> | 데이터셋 구축 1차 | 데이터셋 구축 장비 준비가 늦춰지면서, 3주차와 순서를 바꿈. Image Classification 조사(LeNet, AlexNet, VGGNet, GoogLeNet, ResNet) |
+| 3주 | 2020-08-18 ~ <br> 2020-08-21 </br> | Image Classification 기술 조사 | Image Classification 기술 조사(PreActResNet ~ NASNet), 데이터셋 구축 중..(08/19 - 1,000장 완료, 8/20 - 2,000장 완료, 8/21 - Labeling 시작) |
+| 4주 | 2020-08-24 ~ <br> 2020-08-28 </br> | 데이터셋 구축 2차 (8/24 - Labeling 끝) | Object Detection 기술 조사(R-CNN ~ YOLO) |
 | 5주 | 2020-08-31 ~ <br> 2020-09-04 </br> | Object Detection 기술 조사 | |
 | 6주 | 2020-09-07 ~ <br> 2020-09-11 </br> | Face Detection 기술 조사 | |
 | 7주 | 2020-09-14 ~ <br> 2020-09-18 </br> | 기존 모델 다루기 실습 | |
@@ -76,6 +76,14 @@
     - 연산량 감소를 위한 목적으로 생성한 모델
 
     <center><img src="/reference_image/MH.Ji/Deep Learning Image Classification/173.png" width="70%"></center><br>
+
+4. docker gpu 사용
+
+        local host: 172.16.201.167
+        id: nvidia
+        pw : nvidia
+
+        docker run --gpus all -it --rm -v ~/MH.Ji:/MH.Ji nvcr.io/nvidia/pytorch:20.07-py3
 
 ### 2020-08-25
 1. Data set을 합쳐서, 그 분포도를 확인해보기
