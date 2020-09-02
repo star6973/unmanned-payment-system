@@ -1,6 +1,6 @@
 ## Object detection이란?
 
-### - Image Classification task에 사물의 위치를 Bounding Box로 예측하는 Regression task가 추가된 문제dlek.
+### - Image Classification task에 사물의 위치를 Bounding Box로 예측하는 Regression task가 추가된 문제이다.
 ### - "Object Detection = Multi-labeled Classification + Bounding Box Regression"
 ### - Object detection 방법론 종류
 
@@ -22,3 +22,18 @@
 #### (1) input image가 있으면 Selective Search를 통해 Region Proposal을 수행
 #### (2) 그 뒤, Proposal된 영역들을 CNN의 고정 사이즈를 가지는 입력으로 변환
 #### (3) 각 영역마다 Classification을 수행하는 방식
+
+
+#### -----------------------------------------------------------------------------------------------------------------------------------
+
+
+#### - Deep Learning 을 이용한 object detection의 2가지 방법
+#### 1) 1-stage Object detector : Region propsal과 detection을 한번에 처리하는 방법론
+#### ** SSD, YOLO가 대표적인 1-stage Object detector이다.
+#### ** 2-stage Object detector보다 빠르지만 부정확하다는 특징을 가짐.
+
+#### 2) 2-stage Object detector : Region propsal과 detection을 두가지 과정으로 순차적으로 처리하는 방법론
+#### ** R-CNN 이후 진행된 R-CNN 계열 연구들이 이에 해당(Fast R-CNN, Faster R-CNN)
+#### ** 1-stage Object detector보다 비교적 느리지만 정확하다.
+
+#### *** 두 가지 모두 특징에 따른 연구에 각각 사용되고 있는중이다.
