@@ -21,7 +21,7 @@
 | 2주 | 2020-08-10 ~ <br> 2020-08-14 </br> | 데이터셋 구축 1차 | 데이터셋 구축 장비 준비가 늦춰지면서, 3주차와 순서를 바꿈. Image Classification 조사(LeNet, AlexNet, VGGNet, GoogLeNet, ResNet) |
 | 3주 | 2020-08-18 ~ <br> 2020-08-21 </br> | Image Classification 기술 조사 | Image Classification 기술 조사(PreActResNet ~ NASNet), 데이터셋 구축 중..(08/19 - 1,000장 완료, 8/20 - 2,000장 완료, 8/21 - Labeling 시작) |
 | 4주 | 2020-08-24 ~ <br> 2020-08-28 </br> | 데이터셋 구축 2차 (8/24 - Labeling 끝) | Object Detection 기술 조사(R-CNN ~ YOLO) |
-| 5주 | 2020-08-31 ~ <br> 2020-09-04 </br> | Object Detection 기술 조사 | 데이터셋 cropping(9/3), 데이터셋으로 Image Classification 구현, Object Detection 기술 조사 |
+| 5주 | 2020-08-31 ~ <br> 2020-09-04 </br> | Object Detection 기술 조사 | 데이터셋 cropping(9/3 - train 9924장, val 2505장, test 5327장), 데이터셋으로 Image Classification 구현(9/4 - customCNN 구현, [train Loss: 0.5210 Acc: 0.9209], [val Loss: 0.3969 Acc: 0.9246]), Object Detection 기술 조사 |
 | 6주 | 2020-09-07 ~ <br> 2020-09-11 </br> | Face Detection 기술 조사 | |
 | 7주 | 2020-09-14 ~ <br> 2020-09-18 </br> | 기존 모델 다루기 실습 | |
 | 8주 | 2020-09-21 ~ <br> 2020-09-25 </br> | Transfer Learning 준비 | |
