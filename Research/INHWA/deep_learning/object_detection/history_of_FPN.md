@@ -44,7 +44,7 @@
 
 - 모두 서로 다른 input feature들을 합칠때 구분없이 단순히 더하는 방식을 사용하고 있는데 그것을 지적함
 
-- 서로 다른 input feature들은 해상도가 다르기 때문에 output feature에 기여하는 정도를 다르게 가져가야 험을 주장함  이것이 Bi-FPN 
+- 서로 다른 input feature들은 해상도가 다르기 때문에 output feature에 기여하는 정도를 다르게 가져가야 험을 주장함  이것이 Bi-FPN 이다
 
 
  
