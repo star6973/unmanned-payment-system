@@ -27,6 +27,7 @@
   <component name="ChangeListManager">
     <list default="true" id="49a72ee4-5b9a-4b18-b1b3-01a0a89c294e" name="Default Changelist" comment="commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Research/KwonHH/RODEO_Replay for Online Object Detection_review.md" beforeDir="false" afterPath="$PROJECT_DIR$/Research/KwonHH/RODEO_Replay for Online Object Detection_review.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +35,19 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="KwonHH" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="master" />
@@ -56,6 +70,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\사용자\PycharmProjects\lotte_studying\reference_image\KwonHH\RODEO_Replay for Online Object Detection" />
       <recent name="C:\Users\사용자\PycharmProjects\lotte_studying\PPT\KwonHH" />
     </key>
   </component>
@@ -218,7 +233,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599036542886</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="commit">
+      <created>1599326193871</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1599326193871</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -268,14 +290,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="598" y="280" key="MultipleFileMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1598338158565" />
-    <state x="72" y="256" key="Vcs.Push.Dialog.v2" timestamp="1599209457037">
+    <state x="72" y="256" key="Vcs.Push.Dialog.v2" timestamp="1599326208665">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1597391896991" />
-    <state x="72" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1599209457037" />
-    <state x="143" y="230" width="672" height="678" key="search.everywhere.popup" timestamp="1599324241440">
+    <state x="72" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1599326208665" />
+    <state x="143" y="230" width="672" height="678" key="search.everywhere.popup" timestamp="1599326276265">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="143" y="230" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1599324241440" />
+    <state x="143" y="230" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1599326276265" />
   </component>
 </project>
