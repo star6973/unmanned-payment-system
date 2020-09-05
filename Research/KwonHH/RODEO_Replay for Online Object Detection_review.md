@@ -25,11 +25,11 @@
     - mAP를 정규화하기 위해서 VOC 와 COCO 에 대해서 각각 0.42, 0.715 의 mAP를 기록한 모델을 사용
     - VOC에 대해서 RODEO는 4개의 sample만 replay해도 이전 방식이 적용된 모델들보다 모두 결과가 좋았다
     - 또한 다양한 크기로 replay를 해본 결과 Recounstruct 했을 때보다 Real Feature일 때, VOC 와 COCO 모두에서 좋은 결과를 보였다
-    - 다음의 그래프에서 알 수 있듯이 다른 모델들보다 RODEO가 forgetting하는 경향성이 적었다<br>![Figure2_Learning Curve for VOC 2007]()<br>
+    - 다음의 그래프에서 알 수 있듯이 다른 모델들보다 RODEO가 forgetting하는 경향성이 적었다<br>![Figure2_Learning Curve for VOC 2007](https://github.com/star6973/lotte_studying/blob/KwonHH/reference_image/KwonHH/RODEO_Replay%20for%20Online%20Object%20Detection/Figure2_Learning%20Curve%20for%20VOC%202007.JPG?raw=true) <br>
     - SLDA+Regress 모델은 BackBone을 업데이트 할 필요 없이 VOC 와 COCO, 두 데이터셋 모두 놀라울 정도로 경쟁력이 있다
     - RODEO에서 4개의 sample만 replay한 경우 다른 모델들에 피해 큰 폭으로 mAP가 증가함을 확인할 수 있다<br><br>
     1. Additional Studies of RODEO Components
-        - Buffer Management 방법을 사용했을 때의 효과를 연구하기 위해 COCO에 다음의 대체 방법들을 적용<br>(BAL : 전체 class 분포에 최소의 영향을 주도록 Balance를 주는 방식 <br>MIN,MAX : label이 가장 많은 경우와 가장 적은 경우의 이미지로 대체하는 방식 <br>RANDOM : 랜덤으로 buffer의 이미지를 대체하는 방식 <br>NO-REPLACE : 모든 sample 저장하고, buffer가 무한으로 확장하도록 하는 방식 )![Tabel2_Incremental mAP results for several variants of RODEO]()<br>
+        - Buffer Management 방법을 사용했을 때의 효과를 연구하기 위해 COCO에 다음의 대체 방법들을 적용<br>(BAL : 전체 class 분포에 최소의 영향을 주도록 Balance를 주는 방식 <br>MIN,MAX : label이 가장 많은 경우와 가장 적은 경우의 이미지로 대체하는 방식 <br>RANDOM : 랜덤으로 buffer의 이미지를 대체하는 방식 <br>NO-REPLACE : 모든 sample 저장하고, buffer가 무한으로 확장하도록 하는 방식 )![Tabel2_Incremental mAP results for several variants of RODEO](https://github.com/star6973/lotte_studying/blob/KwonHH/reference_image/KwonHH/RODEO_Replay%20for%20Online%20Object%20Detection/Tabel2_Incremental%20mAP%20results%20for%20several%20variants%20of%20RODEO.JPG?raw=true) <br>
         - 이상적인 경우 RODEO의 replay 수를 4로, buffer 크기를 무제한(모든 이미지 sample)으로 설정
             - 이 경우 mAP 는 0.928 획득
         - Replacement 방식이 적용된 모델들의 경우 17,668개의 sample만 저장하도록 함
@@ -39,7 +39,7 @@
         - VOC 실험에서 buffer에 아무것도 replace하지 않고, replay하는 sample 수를 4 -> 12 로 증가시켰을 때 real feature에서는 0.3%, reconstructed feature에서는 5.3% 의 성능 증가
         - 반면, COCO 실험에서는 buffer에 replacement를 적용했더니, replay 하는 sample수를 증가시켰음에도 성능이 하락
             - COCO 가 VOC 와 비교했을 때 이미지의 배경으로 취급되는 region proposal 내에 더 많은 object가 있기 때문인 것으로 추정<br><br>
-    1. Training Time`
+    1. Training Time
         
         
         
