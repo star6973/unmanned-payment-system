@@ -54,10 +54,10 @@
         - Continual Learning 방식이 Streaming Learning 방식에서 쉬운 방식이긴 하지만, 두 양식 모두 Train 대상이 바뀌면 Catastrophic Forgetting 문제가 발생
         - Catastrophic Forgetting 은 <u>Stability-Plastic Dilemma (안정성-가소성 딜레마)</u>
             - Stability-Plastic Dilemma : 인공신경망이 기존에 학습된 내용을 유지하면서도 새로운 내용을 학습해야할 때 발생하는 딜레마.<br>
-                1. Neural Network 의 Stability 에 중점을 둔 경우<br>![Stability-Plastic Dilemma_stability]()<br>
+                1. Neural Network 의 Stability 에 중점을 둔 경우<br>![Stability-Plastic Dilemma_stability](https://github.com/star6973/lotte_studying/blob/KwonHH/reference_image/KwonHH/RODEO_Replay%20for%20Online%20Object%20Detection/Stability-Plastic%20Dilemma_stability.JPG?raw=true) <br>
                     - 그림1은 시간의 경과(왼쪽->오른쪽)일 때 Node 사이의 Weight가 변하지 않고 유지
                     - 그림2는 시간의 경과에 따라 Node 사이의 Weight가 약해지지만 다시 원상태로 돌아오는 모습<br> => 이런 경향이 Stability
-                1. Neural Network 의 Plastic 에 중점을 둔 경우<br>![Stability-Plastic Dilemma_plastic]()<br>
+                1. Neural Network 의 Plastic 에 중점을 둔 경우<br>![Stability-Plastic Dilemma_plastic](https://github.com/star6973/lotte_studying/blob/KwonHH/reference_image/KwonHH/RODEO_Replay%20for%20Online%20Object%20Detection/Stability-Plastic%20Dilemma_plastic.JPG?raw=true) <br>
                     - 그림3은 핵심 node는 그대로 유지되고 있지만, 학습이 진행되면서 Weight가 변하면서 Node 간 연결이 강해졌다, 약해졌다 변화함
                     - 즉, Node 에 저장된 메모리는 유지되지만 weight가 변화하면서 저장된 값의 변화가 생기고, 기존의 값이 손상됨<br>
                 - 학습된 기억을 지속적으로 유지하는 것도 중요(Stability)하지만, 새로운 내용을 학습함에 있어서는 Weight를 조정함(Plastic)으로써 약간의 변형이 불가피
@@ -105,7 +105,7 @@
         - 그렇지 않으면 새로운 압축 sample을 직접 더해줌
         - 모든 실험에서 codebook의 index들을 저장하여 8비트로 사용
         - COCO 에서는 64개, VOC 에서는 32개의 codebook 사용
-        - PQ 연산을 위해서는 Faiss library를 사용<br><br>지금까지의 과정이 모두 설명된 알고리즘 사진은 다음과 같음<br>![Algorithm1_Incremental update procedure for RODEO on COCO]()<br><br>
+        - PQ 연산을 위해서는 Faiss library를 사용<br><br>지금까지의 과정이 모두 설명된 알고리즘 사진은 다음과 같음<br>![Algorithm1_Incremental update procedure for RODEO on COCO](https://github.com/star6973/lotte_studying/blob/KwonHH/reference_image/KwonHH/RODEO_Replay%20for%20Online%20Object%20Detection/Algorithm1_Incremental%20update%20procedure%20for%20RODEO%20on%20COCO.JPG?raw=true) <br><br>
         - 평생의 학습 agent 에서는 학습을 위해서 무한한 data stream이 필요하고, 이것은 이전의 examples를 memory replay buffer에 모두 저장하는 것이 불가능<br>반면 RODEO에서는 버퍼 사이즈가 고정되어있기 때문에 시간에 따라서 덜 필요한 examples를 제거하는 것이 필수적<br>=> 따라서 replay buffer로부터 이미지의 최소 라벨수가 가장 적은 이미지를 대체하는 replacement 전략을 사용
 1. Experimental Result<br>
 ![table1](https://github.com/star6973/lotte_studying/blob/KwonHH/reference_image/KwonHH/RODEO_Replay%20for%20Online%20Object%20Detection/Table1_mAP%20result%20for%20VOC%20and%20COCO.JPG?raw=true) <br>** Real feature는 Plastic Layer(F)를 지나기 전에 Reconstruction(Recon)을 하지 않았음<br><br>
