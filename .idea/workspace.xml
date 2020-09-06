@@ -240,7 +240,21 @@
       <option name="project" value="LOCAL" />
       <updated>1599326193871</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="commit">
+      <created>1599329537686</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1599329537686</updated>
+    </task>
+    <task id="LOCAL-00024" summary="commit">
+      <created>1599329723415</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1599329723415</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -290,11 +304,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="598" y="280" key="MultipleFileMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1598338158565" />
-    <state x="72" y="256" key="Vcs.Push.Dialog.v2" timestamp="1599326208665">
+    <state x="72" y="256" key="Vcs.Push.Dialog.v2" timestamp="1599329734595">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1597391896991" />
-    <state x="72" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1599326208665" />
+    <state x="72" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1599329734595" />
     <state x="143" y="230" width="672" height="678" key="search.everywhere.popup" timestamp="1599326276265">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
