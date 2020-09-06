@@ -1,8 +1,14 @@
-- Object Detetion에 CNN을 적용한 첫 논문
-- selective search를 통해 region proposal을 수행, proposal된 영역들을 CNN의 고정 사이즈를 가지는 입력으로 변환시키고, 각 영역마다 classification을 수행
-- proposal된 region에서 실제 object의 위치와 가까워지도록 보정해주는 regression도 수행
-- 초기에는 detection의 성능을 향상시키는데 초점을 두는 연구를 진행, 최근에는 연산을 가속하는 연구들과 효율적으로 학습을 시키는 방법으로 연구가 진행
+- Image Classification은 이미지를 넣으면 그 이미지에 해당하는 class를 분류해내는 방법
 
+- Object Detection은 Image Classification에 사물의 위치를 Bounding Box로 예측하는 Regression
+
+- Object Detetion에 CNN을 적용한 첫 논문
+
+- selective search를 통해 region proposal을 수행, proposal된 영역들을 CNN의 고정 사이즈를 가지는 입력으로 변환시키고, 각 영역마다 classification을 수행
+
+- proposal된 region에서 실제 object의 위치와 가까워지도록 보정해주는 regression도 수행
+
+- 초기에는 detection의 성능을 향상시키는데 초점을 두는 연구를 진행, 최근에는 연산을 가속하는 연구들과 효율적으로 학습을 시키는 방법으로 연구가 진행
 
 - Region Proposal과 Detection의 과정이 순차적으로 진행되는지(2-stage object detector), 한 번에 진행되는지(1-stage object detector)
 - R-CNN 계열의 연구들(R-CNN, Fast R-CNN, Faster R-CNN)이 2-stage object detector
