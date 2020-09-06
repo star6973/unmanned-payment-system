@@ -27,3 +27,12 @@
 #### R-CNN
 
 - input image가 있으면 Selective Search를 통해 Region Proposal을 수행합니다. 그 뒤, Proposal된 영역들을 CNN의 고정 사이즈를 가지는 입력으로 변환시키고, 각 영역마다 Classification을 수행하는 방식으로 되어있습니다. 예를 들어 1000개의 Region이 Proposal된 경우에는 CNN에서 1000번의 Classification이 수행되는 것입니다. 또한 Proposal된 Region에서 실제 object의 위치와 가까워지도록 보정해주는 Regression도 수행이 됩니다.
+
+
+#### backbone
+
+- 입력 이미지를 특징맵으로 변형시켜주는 부분이 백본이다 .
+
+#### Neck 
+
+- backbone 과 head를 연결짓는 부분으로, 날것의 특징맵에 정제, 재구성을 한다.
