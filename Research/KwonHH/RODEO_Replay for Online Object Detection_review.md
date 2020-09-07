@@ -78,11 +78,11 @@
             - 유사하게, Dawei Li et al. [near real-time incremental learning for object detection at the edge Symposium on Edge Computing, 2019] 에서는 classification prediction 과 bounding box 좌표, end-to-end incrementl network를 훈련하기 위한 feature 등을 distillation 함
             - 추가적으로 Shin et al. [Incremental deep learning for robust object detection in unknown cluttered environments. IEEE Access, 6, 2018]에서는 새로운 incremental 프레임워크를 사용하여 지도 학습과 유사한 방법으로 active learning 을 통합함<br>
         - 위에 언급한 모든 방법은 일괄적으로 작동하며, <u>__한번에 하나의 example을 학습하도록 설계되지 않음__</u> <br><br><br>
-1. Replay for the Online Detection of Objects(RODEO)
+1. Replay for the Online Detection of Objects(RODEO)<br>![Figure1]() <br>이해를 돕기 위한 그림<br>
     - RODEO 는 Tyler L Hayes et al. [Remind your neural network to prevent catastrophic forgetting. In ECCV, 2020] 에서 영감을 얻음
     - RODEO는 example을 한 번에 하나씩 학습하는 방법이 적용된 Online Object Detection
         - 즉, 새로운 대상이 관찰되자마자 새롭게 업데이트 가능하며, __incremental batch 방식보다 real-time applicatin에 적용하기 더 좋음__
-    - Online 학습을 용이하게 하기 위해서 메모리 버퍼를 사용하여 이곳에 representation의 example들을 저장함
+    - Online 학습을 용이하게 하기 위해서 메모리 버퍼를 사용하여, 버퍼에 representation의 example들을 저장함
     - 이러한 representation들은 CNN backbone의 중간 계층에서 얻어지며, 저장 공간을 줄이기 위해서 압축이 이뤄짐
     - Training 동안 RODEO는 새로 입력된 이미지를 압축함
         - 그 다음 이 새로운 입력을 재생 버퍼에서 임의로 재구성된 샘플 subset 과 결합한 후 이 재생 mini-batch로 모델을 업데이트
