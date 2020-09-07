@@ -85,7 +85,7 @@
     - Online 학습을 용이하게 하기 위해서 메모리 버퍼를 사용하여, 버퍼에 representation의 example들을 저장함
     - 이러한 representation들은 CNN backbone의 중간 계층에서 얻어지며, 저장 공간을 줄이기 위해서 압축이 이뤄짐
     - Training 동안 RODEO는 새로 입력된 이미지를 압축함
-        - 그 다음 이 새로운 입력을 재생 버퍼에서 임의로 재구성된 샘플 subset 과 결합한 후 이 재생 mini-batch로 모델을 업데이트
+        - 그 다음 이 새로운 입력을 재생 버퍼에서 임의로 재구성된 샘플 subset 과 결합한 후 이 replay mini-batch로 모델을 업데이트
     - 정식으로 설명하면, H(RODEO Model) 는 다음과 같이 표현될 수 있다
         - H(x) = F(G(x))    : 여기서 x는 입력 image 를 의미  / G 는 이전 CNN layers 로 구성 / F 는 나머지 layers
         1. 먼저 dataset 전체 class 중 절반만 offline에서 train 된 model에서 base initailization 단계에서 G를 초기화
