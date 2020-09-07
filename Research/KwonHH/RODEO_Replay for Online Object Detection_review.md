@@ -159,7 +159,7 @@
         - Konstantin Shmelkov et al. [Incremental learning of object detectors without catastrophic forgetting(2017)] 논문에 따르면<br>Fast RCNN 구조와 ResNet-50 backbone 과 edge box object proposal 을 사용
         - Edge boxes는 알지 못하는 object proposal을 만들기 위한 비지도 방법(?)으로 우리가 앞으로 나타날 object 의 형태를 알지 못할 때 streaming setting에 유용함
         - 특별히, 본 노문에서는 2000 edge boxes 를 연산 수행함
-        - []에 따라서 이미지를 800x1000 크기로 변경
+        - Shaoqing Ren et al. [Faster r-cnn: Towards real-time object detection with region proposal networks(2015)]에 따라서 이미지를 800x1000 크기로 변경
         - label이 background 에 쳐져야 할지 foreground 에 쳐져야 할지 결정하기 위해서 IoU 0.5를 threshold로 하는 ground truth boxes 와의 overlap을 계산
         - 이후, box 64 개의 batches 를 이미지마다 무작위로 선택하고, 각각의 batch는 대략 25% 의 positive box(IoU > 0.5)를 가져야 함
         - Inference 동안 overlap 되는 boxes를 제거하기 위해서 NMS(Non-Maximum Suppression) threshold가 0.3으로 적용되고, 이후에 128개의 boxes 가 출력으로 선택<br><br>
@@ -170,8 +170,7 @@
         - ResNet-50 backbone은 4개의 residual block들을 가지는데, 논문에서는 3번째 residual block 이후에 RODEO를 quantization 하였음<br>즉, F는 마지막 residual block으로 구성되고, Fast RCNN MLP의 초단은 2개의 FC layer, 선형 분류기, 선형 회귀로 구성됨<br><br>
         - 실험 조건을 공평하게 하기 위해서 RODEO의 replay 버퍼의 한계를 510MB로 정함. 이것은 ILwFOD에서 필요로하는 메모리와 같은 크기
         - VOC에서 이것은 RODEO가 training set에서 모든 sample의 representation을 저장할 수 있도록 하고, <br>COCO에서는 이것이 17688 개의 압축된 samples를 저장할 수 있게 함
-        - 버퍼를 관리하기 위해서 최소의 object를 갖고 있는 이미지를 항상 대체하는 전략을 사용
-         
+        - 버퍼를 관리하기 위해서 최소의 object를 갖고 있는 이미지를 항상 대체하는 전략을 사용<br><br><br>         
 1. Experimental Result<br>
 ![table1](https://github.com/star6973/lotte_studying/blob/KwonHH/reference_image/KwonHH/RODEO_Replay%20for%20Online%20Object%20Detection/Table1_mAP%20result%20for%20VOC%20and%20COCO.JPG?raw=true) <br>** Real feature는 Plastic Layer(F)를 지나기 전에 Reconstruction(Recon)을 하지 않았음<br><br>
     - mAP를 정규화하기 위해서 VOC 와 COCO 에 대해서 각각 0.42, 0.715 의 mAP를 기록한 모델을 사용
@@ -192,6 +191,7 @@
         - 반면, COCO 실험에서는 buffer에 replacement를 적용했더니, replay 하는 sample수를 증가시켰음에도 성능이 하락
             - COCO 가 VOC 와 비교했을 때 이미지의 배경으로 취급되는 region proposal 내에 더 많은 object가 있기 때문인 것으로 추정<br><br>
     1. Training Time
-        
+1. Discussion
+1. Conclusion
         
         
