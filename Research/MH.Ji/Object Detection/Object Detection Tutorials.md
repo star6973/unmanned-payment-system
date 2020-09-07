@@ -38,20 +38,30 @@
     + 교집합이 없는 경우 0, 예측 결과가 100%이면 1
     + 일반적으로 0.5를 넘으면 정답
 
+    <center><img src="/reference_image/MH.Ji/Object Detection Tutorials/1.PNG" width="70%"></center><br>
+
 - Pascal VOC는 0.5로 threshold로 설정
 
 - Precision = TP / (TP + FP)
     + 주로 예측된 결과가 얼마나 정확한지를 나타는데 사용
 
+    <center><img src="/reference_image/MH.Ji/Object Detection Tutorials/2.PNG" width="70%"></center><br>
+
 - Recall = TP / (TP + FN)
     + 입력으로 Positive를 주었을 때 얼마나 잘 Positive를 예측하는지
     + 정답을 많이 맞출수록
 
+    <center><img src="/reference_image/MH.Ji/Object Detection Tutorials/3.PNG" width="70%"></center><br>
+
 - AP(Average Precision)
     + Recall을 0부터 0.1단위로 증가시켜서 1까지 증가시킬 때 필연적으로 Precision이 감소하는데, 각 단위마다 Precision 값을 계산하여 평균을 내어 계산한다.
 
+    <center><img src="/reference_image/MH.Ji/Object Detection Tutorials/4.PNG" width="70%"></center><br>
+
 - mAP(mean Average Precision)
     + 전체 class에 대해 AP를 계산하여 평균을 낸 값이 mAP
+
+    <center><img src="/reference_image/MH.Ji/Object Detection Tutorials/5.PNG" width="70%"></center><br>
 
 - FPS(Frame Per Second)
     + 속도를 나타낼 때 보통 초당 몇 장의 이미지가 처리 가능한지
@@ -78,8 +88,6 @@
 ## 7. 읽어봐야할 논문
 ### 2014
 - R-CNN [Rich feature hierarchies for accurate object detection and semantic segmentation](https://arxiv.org/pdf/1311.2524.pdf)
-
-
 
 ### 2015
 - Fast R-CNN [Fast R-CNN](https://arxiv.org/pdf/1504.08083.pdf)
