@@ -78,7 +78,7 @@
             - 유사하게, Dawei Li et al. [near real-time incremental learning for object detection at the edge Symposium on Edge Computing, 2019] 에서는 classification prediction 과 bounding box 좌표, end-to-end incrementl network를 훈련하기 위한 feature 등을 distillation 함
             - 추가적으로 Shin et al. [Incremental deep learning for robust object detection in unknown cluttered environments. IEEE Access, 6, 2018]에서는 새로운 incremental 프레임워크를 사용하여 지도 학습과 유사한 방법으로 active learning 을 통합함<br>
         - 위에 언급한 모든 방법은 일괄적으로 작동하며, <u>__한번에 하나의 example을 학습하도록 설계되지 않음__</u> <br><br><br>
-1. Replay for the Online Detection of Objects(RODEO)<br>![Figure1]() <br>이해를 돕기 위한 그림<br>
+1. Replay for the Online Detection of Objects(RODEO)<br>![Figure1](https://github.com/star6973/lotte_studying/blob/KwonHH/reference_image/KwonHH/RODEO_Replay%20for%20Online%20Object%20Detection/Figure1.JPG?raw=true) <br> => 아래의 설명 이해를 돕기 위한 그림<br><br>
     - RODEO 는 Tyler L Hayes et al. [Remind your neural network to prevent catastrophic forgetting. In ECCV, 2020] 에서 영감을 얻음
     - RODEO는 example을 한 번에 하나씩 학습하는 방법이 적용된 Online Object Detection
         - 즉, 새로운 대상이 관찰되자마자 새롭게 업데이트 가능하며, __incremental batch 방식보다 real-time applicatin에 적용하기 더 좋음__
@@ -171,8 +171,7 @@
         - 실험 조건을 공평하게 하기 위해서 RODEO의 replay 버퍼의 한계를 510MB로 정함. 이것은 ILwFOD에서 필요로하는 메모리와 같은 크기
         - VOC에서 이것은 RODEO가 training set에서 모든 sample의 representation을 저장할 수 있도록 하고, <br>COCO에서는 이것이 17688 개의 압축된 samples를 저장할 수 있게 함
         - 버퍼를 관리하기 위해서 최소의 object를 갖고 있는 이미지를 항상 대체하는 전략을 사용<br><br><br>         
-1. Experimental Result<br>
-![table1](https://github.com/star6973/lotte_studying/blob/KwonHH/reference_image/KwonHH/RODEO_Replay%20for%20Online%20Object%20Detection/Table1_mAP%20result%20for%20VOC%20and%20COCO.JPG?raw=true) <br>** Real feature는 Plastic Layer(F)를 지나기 전에 Reconstruction(Recon)을 하지 않았음<br><br>
+1. Experimental Result<br> ![table1](https://github.com/star6973/lotte_studying/blob/KwonHH/reference_image/KwonHH/RODEO_Replay%20for%20Online%20Object%20Detection/Table1_mAP%20result%20for%20VOC%20and%20COCO.JPG?raw=true) <br>** Real feature는 Plastic Layer(F)를 지나기 전에 Reconstruction(Recon)을 하지 않았음<br><br>
     - mAP를 정규화하기 위해서 VOC 와 COCO 에 대해서 각각 0.42, 0.715 의 mAP를 기록한 모델을 사용
     - VOC에 대해서 RODEO는 4개의 sample만 replay해도 이전 방식이 적용된 모델들보다 모두 결과가 좋았다
     - 또한 다양한 크기로 replay를 해본 결과 Recounstruct 했을 때보다 Real Feature일 때, VOC 와 COCO 모두에서 좋은 결과를 보였다
@@ -180,7 +179,7 @@
     - SLDA+Regress 모델은 BackBone을 업데이트 할 필요 없이 VOC 와 COCO, 두 데이터셋 모두 놀라울 정도로 경쟁력이 있다
     - RODEO에서 4개의 sample만 replay한 경우 다른 모델들에 피해 큰 폭으로 mAP가 증가함을 확인할 수 있다<br><br>
     1. Additional Studies of RODEO Components
-        - Buffer Management 방법을 사용했을 때의 효과를 연구하기 위해 COCO에 다음의 대체 방법들을 적용<br>(BAL : 전체 class 분포에 최소의 영향을 주도록 Balance를 주는 방식 <br>MIN,MAX : label이 가장 많은 경우와 가장 적은 경우의 이미지로 대체하는 방식 <br>RANDOM : 랜덤으로 buffer의 이미지를 대체하는 방식 <br>NO-REPLACE : 모든 sample 저장하고, buffer가 무한으로 확장하도록 하는 방식 )![Tabel2_Incremental mAP results for several variants of RODEO](https://github.com/star6973/lotte_studying/blob/KwonHH/reference_image/KwonHH/RODEO_Replay%20for%20Online%20Object%20Detection/Tabel2_Incremental%20mAP%20results%20for%20several%20variants%20of%20RODEO.JPG?raw=true) <br>
+        - Buffer Management 방법을 사용했을 때의 효과를 연구하기 위해 COCO에 다음의 대체 방법들을 적용<br>(BAL : 전체 class 분포에 최소의 영향을 주도록 Balance를 주는 방식 <br>MIN,MAX : label이 가장 많은 경우와 가장 적은 경우의 이미지로 대체하는 방식 <br>RANDOM : 랜덤으로 buffer의 이미지를 대체하는 방식 <br>NO-REPLACE : 모든 sample 저장하고, buffer가 무한으로 확장하도록 하는 방식 )<br> ![Tabel2_Incremental mAP results for several variants of RODEO](https://github.com/star6973/lotte_studying/blob/KwonHH/reference_image/KwonHH/RODEO_Replay%20for%20Online%20Object%20Detection/Tabel2_Incremental%20mAP%20results%20for%20several%20variants%20of%20RODEO.JPG?raw=true) <br>
         - 이상적인 경우 RODEO의 replay 수를 4로, buffer 크기를 무제한(모든 이미지 sample)으로 설정
             - 이 경우 mAP 는 0.928 획득
         - Replacement 방식이 적용된 모델들의 경우 17,668개의 sample만 저장하도록 함
