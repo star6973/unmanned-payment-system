@@ -39,7 +39,7 @@
 
     + 하나의 그리드마다 크기가 각기 다른 default box들을 먼저 계산한다. defualt box란 Faster R-CNN에서 anchor 개념으로, 비율과 크기가 각기 다른 기본 박스를 먼저 설정해놓아 bounding box를 추론하는데 도움을 주는 장치이다.
 
-    <center><img src="/reference_image/MH.Ji/SSD(Single Shot MultiBox Detector)/1.PNG" width="70%"></center><br>
+        <center><img src="/reference_image/MH.Ji/SSD(Single Shot MultiBox Detector)/1.PNG" width="70%"></center><br>
 
         - 위 그림에서 고양이는 작은 물체이고, 강아지는 상대적으로 더 크다. 높은 resolution의 feature map에서는 작은 물체를 잘 잡아낼 수 있고, 낮은 resolution에서는 큰 물체를 잘 잡아낼 것이라고 추측할 수 있다.
 
@@ -120,9 +120,9 @@
 
 - SSD의 큰 문제점은 작은 물체들을 잘 못찾는다는 것이다. 작은 물체들은 보통 앞 layer에서 detection이 될텐데, feature map이 충분히 abstract level이 높지 않기 때문에 성능이 낮을 수 있다(RetinaNet은 이를 극복함). 이러한 문제를 data augmentation 기법으로 극복하고자 한다.
 
-<center><img src="/reference_image/MH.Ji/SSD(Single Shot MultiBox Detector)/14.PNG" width="70%"></center><br>
+    <center><img src="/reference_image/MH.Ji/SSD(Single Shot MultiBox Detector)/14.PNG" width="70%"></center><br>
 
-<center><img src="/reference_image/MH.Ji/SSD(Single Shot MultiBox Detector)/15.PNG" width="70%"></center><br>
+    <center><img src="/reference_image/MH.Ji/SSD(Single Shot MultiBox Detector)/15.PNG" width="70%"></center><br>
 
     + *표시된 부분이 data augmentation을 사용한 부분\
 
