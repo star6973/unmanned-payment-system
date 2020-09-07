@@ -29,7 +29,7 @@
         - 각 반복횟수 t에서 batch만큼 반복적으로 학습
         - 이는 real-time에 이상적인 방식이 아니며 그 이유는 2가지
             1. 학습이 발생하기 전에 batch 데이터가 축적되기를 기다려야 함
-            1. batch의 반복학습이 끝나야만 evaluate 할 수 있음
+            1. batch의 반복학습이 끝나야만 evaluate 할 수 있음<br><br>
     1. Streaming Leaarning
         - 최근에서야 Image classification 에 쓰이기 시작했으며, Object Detection 에서는 사용되지 않았고, 본 논문에서 그 길을 개척
         - <u>Streaming Object Detection</u> 은 Training 동안 dataset으로부터 임시로 순서가 정해진 바운딩 박스 이미지와 그것의 라벨을 받는다
@@ -67,7 +67,7 @@
                 1. 간섭 현상을 완화하기 위해서 Network 의 Weight 업데이트를 드문드문 하는 방법
                 1. 여러개의 classifier 사용하여 앙상블 하는 방법
                 1. 이전 training 의 input의 일부분을 저장하고, 새로운 network가 업데이트 되었을 때 함께 mix하여 => model을 rehearsal/replay 하는 방법
-                - 많은 이전의 연구들은 이러한 방법들을 혼합하였고, 특히 __replay 방법은 Sota 의 image recognition에서 많은 모델을 생산함__
+                - 많은 이전의 연구들은 이러한 방법들을 혼합하였고, 특히 __replay 방법은 Sota 의 image recognition에서 많은 모델을 생산함__ <br><br>
     1. Incremental Object Detection
         - Streaming Object Detection이 발견되지 않았을 때, Continual learning 양식이 사용되어왔다
         - Konstantin 등 3명의 2017년 ICCV 에 발표된 "Incremental learning of object detectors without catastrophic forgetting" 논문에서 replay 방식을 사용하지 않고 distillation 기반의 방식이 제안되었음
@@ -77,7 +77,7 @@
                 - 자세한 설명은 무슨말인지 이해를 못하겠음...
             - 유사하게, Dawei Li et al. [near real-time incremental learning for object detection at the edge Symposium on Edge Computing, 2019] 에서는 classification prediction 과 bounding box 좌표, end-to-end incrementl network를 훈련하기 위한 feature 등을 distillation 함
             - 추가적으로 Shin et al. [Incremental deep learning for robust object detection in unknown cluttered environments. IEEE Access, 6, 2018]에서는 새로운 incremental 프레임워크를 사용하여 지도 학습과 유사한 방법으로 active learning 을 통합함<br>
-        - 위에 언급한 모든 방법은 일괄적으로 작동하며, <u>__한번에 하나의 example을 학습하도록 설계되지 않음__</u><br><br><br>
+        - 위에 언급한 모든 방법은 일괄적으로 작동하며, <u>__한번에 하나의 example을 학습하도록 설계되지 않음__</u> <br><br><br>
 1. Replay for the Online Detection of Objects(RODEO)
     - RODEO 는 Tyler L Hayes et al. [Remind your neural network to prevent catastrophic forgetting. In ECCV, 2020] 에서 영감을 얻음
     - RODEO는 example을 한 번에 하나씩 학습하는 방법이 적용된 Online Object Detection
@@ -106,7 +106,7 @@
         - 모든 실험에서 codebook의 index들을 저장하여 8비트로 사용
         - COCO 에서는 64개, VOC 에서는 32개의 codebook 사용
         - PQ 연산을 위해서는 Faiss library를 사용<br><br>지금까지의 과정이 모두 설명된 알고리즘 사진은 다음과 같음<br>![Algorithm1_Incremental update procedure for RODEO on COCO](https://github.com/star6973/lotte_studying/blob/KwonHH/reference_image/KwonHH/RODEO_Replay%20for%20Online%20Object%20Detection/Algorithm1_Incremental%20update%20procedure%20for%20RODEO%20on%20COCO.JPG?raw=true) <br><br>
-        - 평생의 학습 agent 에서는 학습을 위해서 무한한 data stream이 필요하고, 이것은 이전의 examples를 memory replay buffer에 모두 저장하는 것이 불가능<br>반면 RODEO에서는 버퍼 사이즈가 고정되어있기 때문에 시간에 따라서 덜 필요한 examples를 제거하는 것이 필수적<br>=> 따라서 replay buffer로부터 이미지의 최소 라벨수가 가장 적은 이미지를 대체하는 replacement 전략을 사용
+        - 평생의 학습 agent 에서는 학습을 위해서 무한한 data stream이 필요하고, 이것은 이전의 examples를 memory replay buffer에 모두 저장하는 것이 불가능<br>반면 RODEO에서는 버퍼 사이즈가 고정되어있기 때문에 시간에 따라서 덜 필요한 examples를 제거하는 것이 필수적<br>=> 따라서 replay buffer로부터 이미지의 최소 라벨수가 가장 적은 이미지를 대체하는 replacement 전략을 사용 <br><br><br>
 1. Experimental Setup
     1. Datasets
         - Pascal VOC 2007 & Microsoft COCO dataset 사용
@@ -134,14 +134,14 @@
         - 모든 모델은 동일한 초기화 과정을 거쳤다
         - SLDA를 제외하고는 모두 SGD 를 적용
         - ILwFOD 의 경우 결과에 대한 복제가 불가능하여, VOC의 경우는 저자가 제공한 숫자를 사용했고, COCO에 대한 결과는 포함하지 않았다
-        - RODEO, SLDA+Stream-Regress, Fine-Tune 의 경우는 모두 single epoch 에 하나의 example 을 train 하는 Streaming model인 반면<br>ILwFOD 는 Incremental batch 방식으로 batch 만큼 데이터를 반복하며 immediate 학습에 덜 이상적이다
+        - RODEO, SLDA+Stream-Regress, Fine-Tune 의 경우는 모두 single epoch 에 하나의 example 을 train 하는 Streaming model인 반면<br>ILwFOD 는 Incremental batch 방식으로 batch 만큼 데이터를 반복하며 immediate 학습에 덜 이상적이다 <br><br>
     1. Metrics
         - 여기서는 새로운 측정 기준이 등장하는데, 바로 0.5 IoU threshold 마다 모델의 mAP 를 기록한다
             - 이 방식은 Tyler L Hayes et al. [Memory efficient experience replay for streaming learning(2019)] 과 Ronald Kemker et al. [Measuring catastrophic forgetting in neural networks(2018)] 의 개념으로부터 확장
-            - ![expression1]() 에서 ![alpha_t]() 는 time t에서 incremental 학습의 mAP 이고, ![alpha_offT]() 는 t에서 offline 학습의 mAP를 의미, T 는 전체 test envents 를 의미
+            - ![expression1](https://github.com/star6973/lotte_studying/blob/KwonHH/reference_image/KwonHH/RODEO_Replay%20for%20Online%20Object%20Detection/expression1.JPG?raw=true) 에서 ![alpha_t](https://github.com/star6973/lotte_studying/blob/KwonHH/reference_image/KwonHH/RODEO_Replay%20for%20Online%20Object%20Detection/alpha_t.JPG?raw=true) 는 time t에서 incremental 학습의 mAP 이고, ![alpha_offT](https://github.com/star6973/lotte_studying/blob/KwonHH/reference_image/KwonHH/RODEO_Replay%20for%20Online%20Object%20Detection/alpha_offT.JPG?raw=true) 는 t에서 offline 학습의 mAP를 의미, T 는 전체 test envents 를 의미
             - 이것은 오직 class 학습 시간인 t에서만 측정함
-            - ![omega_mAP]() 는 보통 0 과 1 사이의 값이며, 1을 초과하는 경우는 incremental 학습이 offline 학습의 성능보다 우수하다는 것을 의미
-            - 이러한 측정 기준을 통해서 다양한 난이도의 데이터셋에서 성능을 쉽게 비교할 수 있음
+            - ![omega_mAP](https://github.com/star6973/lotte_studying/blob/KwonHH/reference_image/KwonHH/RODEO_Replay%20for%20Online%20Object%20Detection/omega_mAP.JPG?raw=true) 는 보통 0 과 1 사이의 값이며, 1을 초과하는 경우는 incremental 학습이 offline 학습의 성능보다 우수하다는 것을 의미
+            - 이러한 측정 기준을 통해서 다양한 난이도의 데이터셋에서 성능을 쉽게 비교할 수 있음 <br><br>
     1. Training Protocol
         - 모델은 전체 class 중 절반에 대해서만 초기화 하고, 나머지 class 는 한 번에 학습해야 함
         - Konstantin Shmelkov et al. [Incremental learning of object detectors without catastrophic forgetting(2017)] 논문에 자세히 나와있다고 함
