@@ -219,3 +219,4 @@
 ## 참고자료
 - [갈아먹는 Object Detection](https://yeomko.tistory.com/)
 - [Mask R-CNN 정리](https://mylifemystudy.tistory.com/82)
+- [Image segmentation with Mask R-CNN](https://medium.com/@jonathan_hui/image-segmentation-with-mask-r-cnn-ebe6d793272)
