@@ -112,7 +112,9 @@
 ## 4. Experiment Result
 - VGG16을 base network로 사용하였으며, fc6와 fc7을 convolution layer로 사용하였다. 그리고 pool5를 stride=2인 2x2에서 stride=1인 3x3으로 atrous algorithm을 사용하여 바꾸고, fc8과 dropout을 사용하지 않았다.
 
-    + [astrous altorithm]()
+    + [Review: DeepLabv1 & DeepLabv2 — Atrous Convolution (Semantic Segmentation)](https://towardsdatascience.com/review-deeplabv1-deeplabv2-atrous-convolution-semantic-segmentation-b51c5fbde92d)
+
+    + atrous algorithm을 간단히 설명하자면, convolution이나 pooling을 이웃하게 적용하는 것이 아니라, 한 칸씩 건너뛰어서 하는 방법이다.
 
 <center><img src="/reference_image/MH.Ji/SSD(Single Shot MultiBox Detector)/12.PNG" width="70%"></center><br>
 
