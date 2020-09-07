@@ -1,4 +1,5 @@
 # Faster-R-CNN
+- selective search는 cpu에서 돌아서 바운더링 박스를 gpu에서 돌려 속도를 더 빠르게 하자!
 
 ## introduction 
 

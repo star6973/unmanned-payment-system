@@ -22,6 +22,8 @@
 >> Feature Scaling 
 >feature을 0~1 사이갑승로 정규화 시켜 정확한 분석이 가능하게 해주는것!
 
+>>입력과 가까운 층에서는 가장자리(edge),곡선(curve)과 같은 저수준(low level) 특징을 학습한다. 점차 높은 층으로 올라 갈수록 질감(texture), 물체 일부분(object parts)과 같은 고수준(high level) 특징을 인식한다
+
 ![image3](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FdgMQdR%2FbtqubTSVsGf%2FUb7AYjHyJWz39ou6bISqhK%2Fimg.png)
 
 
