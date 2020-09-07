@@ -107,6 +107,71 @@
         - COCO 에서는 64개, VOC 에서는 32개의 codebook 사용
         - PQ 연산을 위해서는 Faiss library를 사용<br><br>지금까지의 과정이 모두 설명된 알고리즘 사진은 다음과 같음<br>![Algorithm1_Incremental update procedure for RODEO on COCO](https://github.com/star6973/lotte_studying/blob/KwonHH/reference_image/KwonHH/RODEO_Replay%20for%20Online%20Object%20Detection/Algorithm1_Incremental%20update%20procedure%20for%20RODEO%20on%20COCO.JPG?raw=true) <br><br>
         - 평생의 학습 agent 에서는 학습을 위해서 무한한 data stream이 필요하고, 이것은 이전의 examples를 memory replay buffer에 모두 저장하는 것이 불가능<br>반면 RODEO에서는 버퍼 사이즈가 고정되어있기 때문에 시간에 따라서 덜 필요한 examples를 제거하는 것이 필수적<br>=> 따라서 replay buffer로부터 이미지의 최소 라벨수가 가장 적은 이미지를 대체하는 replacement 전략을 사용
+1. Experimental Setup
+    1. Datasets
+        - Pascal VOC 2007 & Microsoft COCO dataset 사용
+            - VOC : 20개 클래스 / 5000장의 training+validataion 이미지 / 5000장의 test 이미지
+            - COCO : 80개 클래스 / 80K 장의 training 이미지 / 40K 장의 test 이미지<br><br>
+    1. Baseline Models
+        - Fast RCNN 구조와 ResNet-50 을 backbone으로 사용하는 몇 가지 baseline들을 비교했다
+            - RODEO
+                - replay 메커니즘을 적용해 incremental object detection으로 작용
+                - 변량은 각 time step 마다 버퍼에서 무작위로 선택된 4개의 samples를 replay함
+            - Fine-Tune(NO-replay)
+                - 일반적인 object detection 모델로 single epoch 마다 하나의 example 가져옴(즉, replay 없음)
+                - 이 모델은 낮은 한계를 가지며, 이전 class에 대해서 catastrophic forgetting 문제가 발생
+            - ILwFOD
+                - distillaion 을 통해서 점진적으로 classes 를 학습하고, 고정된 proposal 박스를 사용
+                - Forgetting 없는 Incremental 학습
+            - SLDA + Stream-Regress
+                - Deep Streaming 선형 판별식 분석은 최근 ImageNet에서 deep network의 특징을 잘 구별한다는 것을 보여줬다
+                - SLDA 는 classification 에만 사용되기 때문에, streaming regression 모델과 혼합해서 bounding box 좌표를 regression 하도록 했다
+                - background class를 SLDA로 다루기 위해서 각 class마다 벡터의 평균과 background 벡터 평균을 covariance matrix 형식으로 저장했다
+                - test할 때 라벨은 class 평균 벡터와 covariant matrix 에 의해 정의된 feature space 에서 가장 가까운 가우시안에 기초하여 할당된다                 
+            - Offline 
+                - 기본적인 object detection network 이며, offline 에서 train 된다
+                - mini-batch 와 여러 epoch 동안 train 진행<br>
+        - 모든 모델은 동일한 초기화 과정을 거쳤다
+        - SLDA를 제외하고는 모두 SGD 를 적용
+        - ILwFOD 의 경우 결과에 대한 복제가 불가능하여, VOC의 경우는 저자가 제공한 숫자를 사용했고, COCO에 대한 결과는 포함하지 않았다
+        - RODEO, SLDA+Stream-Regress, Fine-Tune 의 경우는 모두 single epoch 에 하나의 example 을 train 하는 Streaming model인 반면<br>ILwFOD 는 Incremental batch 방식으로 batch 만큼 데이터를 반복하며 immediate 학습에 덜 이상적이다
+    1. Metrics
+        - 여기서는 새로운 측정 기준이 등장하는데, 바로 0.5 IoU threshold 마다 모델의 mAP 를 기록한다
+            - 이 방식은 Tyler L Hayes et al. [Memory efficient experience replay for streaming learning(2019)] 과 Ronald Kemker et al. [Measuring catastrophic forgetting in neural networks(2018)] 의 개념으로부터 확장
+            - ![expression1]() 에서 ![alpha_t]() 는 time t에서 incremental 학습의 mAP 이고, ![alpha_offT]() 는 t에서 offline 학습의 mAP를 의미, T 는 전체 test envents 를 의미
+            - 이것은 오직 class 학습 시간인 t에서만 측정함
+            - ![omega_mAP]() 는 보통 0 과 1 사이의 값이며, 1을 초과하는 경우는 incremental 학습이 offline 학습의 성능보다 우수하다는 것을 의미
+            - 이러한 측정 기준을 통해서 다양한 난이도의 데이터셋에서 성능을 쉽게 비교할 수 있음
+    1. Training Protocol
+        - 모델은 전체 class 중 절반에 대해서만 초기화 하고, 나머지 class 는 한 번에 학습해야 함
+        - Konstantin Shmelkov et al. [Incremental learning of object detectors without catastrophic forgetting(2017)] 논문에 자세히 나와있다고 함
+        - 본 논문에서는 PASCAL VOC 2007 과 COCO 데이터를 알파벳 순으로 정렬한다.<BR>예를 들면, VOC 에 20 class 가 있을 때, 1-10 class 에 대해서는 초기화 하고, 11, 12, 13..순으로 학습한다
+        - 이러한 경향은 Incremetal class 의 학습 경험이 어떻게 분류 작업을 수행하는지와 거의 유사하다
+        - 모든 실험에서 network는 적어도 하나의 class를 포함하는 모든 이미지에 대해서 점진적으로 train 된다
+            - 이것은 이미지들이 잠재적으로 이전 혹은 이후의 increment에서 반복할 수도 있음을 의미한다
+        - 새로운 class를 train할 때, 특정 class 에 대해 ground truth boxes를 가진 라벨만 제공된다<br>
+        - Increment batch model은 base initialization 이후 single class 에 대한 데이터를 모두 포함하는 batch로 제공되며, 그것은 반복적으로 허용된다
+        - Streaming model 은 데이터의 동일한 batches 에 대해서 동작하지만, batch 의 examples는 한 번에 하나씩 관찰되며, <br>메모리 버퍼에 cach 되지 않는 한 한 번만 관찰할 수 있다<br>
+        - VOC의 경우 새로운 각각의 class가 학습된 이후, 각 model은 이전에 train된 class 중 적어도 하나의 box를 포함하는 test data를 통해서 evaluate가 이뤄진다
+        - COCO의 경우 model은 base initailization 이후에 단일 calss 를 포함하는 batches 에 의해서 업데이트 된다. 이것은 VOC의 경향과 동일하다
+        - 그러나, COCO는 VOC 보다 훨씬 큰 dataset이고, evaluation 이 훨씬 길기 때문에 본 논문에서는 model을 evaluation 할 때 10개의 새로운 classes가 train 될 때마다 evaluation을 진행했다<br><br>
+    1. Implementation Details
+        - Konstantin Shmelkov et al. [Incremental learning of object detectors without catastrophic forgetting(2017)] 논문에 따르면<br>Fast RCNN 구조와 ResNet-50 backbone 과 edge box object proposal 을 사용
+        - Edge boxes는 알지 못하는 object proposal을 만들기 위한 비지도 방법(?)으로 우리가 앞으로 나타날 object 의 형태를 알지 못할 때 streaming setting에 유용함
+        - 특별히, 본 노문에서는 2000 edge boxes 를 연산 수행함
+        - []에 따라서 이미지를 800x1000 크기로 변경
+        - label이 background 에 쳐져야 할지 foreground 에 쳐져야 할지 결정하기 위해서 IoU 0.5를 threshold로 하는 ground truth boxes 와의 overlap을 계산
+        - 이후, box 64 개의 batches 를 이미지마다 무작위로 선택하고, 각각의 batch는 대략 25% 의 positive box(IoU > 0.5)를 가져야 함
+        - Inference 동안 overlap 되는 boxes를 제거하기 위해서 NMS(Non-Maximum Suppression) threshold가 0.3으로 적용되고, 이후에 128개의 boxes 가 출력으로 선택<br><br>
+        - RODEO로 입력되는 각각의 이미지에서, layer G는 25 x 30 x 2048 크기로 feature map을 생성
+        - base initialization classes 의 이미지는(1-10 은 VOC / 1-40 은 COCO) PQ model을 train하기 위해서 사용됨
+            - VOC에서 PQ model을 train하기 위한 메모리 안에 있는 모든 feature map을 고정하는 것이 가능함
+            - COCO에서는 이것이 불가능하며, 따라서 PQ를 train하기 위해서 각 이미지로부터의 feature map에서 무작위로 30개의 sub-sample을 추출
+        - ResNet-50 backbone은 4개의 residual block들을 가지는데, 논문에서는 3번째 residual block 이후에 RODEO를 quantization 하였음<br>즉, F는 마지막 residual block으로 구성되고, Fast RCNN MLP의 초단은 2개의 FC layer, 선형 분류기, 선형 회귀로 구성됨<br><br>
+        - 실험 조건을 공평하게 하기 위해서 RODEO의 replay 버퍼의 한계를 510MB로 정함. 이것은 ILwFOD에서 필요로하는 메모리와 같은 크기
+        - VOC에서 이것은 RODEO가 training set에서 모든 sample의 representation을 저장할 수 있도록 하고, <br>COCO에서는 이것이 17688 개의 압축된 samples를 저장할 수 있게 함
+        - 버퍼를 관리하기 위해서 최소의 object를 갖고 있는 이미지를 항상 대체하는 전략을 사용
+         
 1. Experimental Result<br>
 ![table1](https://github.com/star6973/lotte_studying/blob/KwonHH/reference_image/KwonHH/RODEO_Replay%20for%20Online%20Object%20Detection/Table1_mAP%20result%20for%20VOC%20and%20COCO.JPG?raw=true) <br>** Real feature는 Plastic Layer(F)를 지나기 전에 Reconstruction(Recon)을 하지 않았음<br><br>
     - mAP를 정규화하기 위해서 VOC 와 COCO 에 대해서 각각 0.42, 0.715 의 mAP를 기록한 모델을 사용
