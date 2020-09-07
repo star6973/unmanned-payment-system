@@ -21,17 +21,17 @@
 | 2주 | 2020-08-10 ~ <br> 2020-08-14 </br> | 데이터셋 구축 1차 | 데이터셋 구축 장비 준비가 늦춰지면서, 3주차와 순서를 바꿈. Image Classification 조사(LeNet, AlexNet, VGGNet, GoogLeNet, ResNet) |
 | 3주 | 2020-08-18 ~ <br> 2020-08-21 </br> | Image Classification 기술 조사 | Image Classification 기술 조사(PreActResNet ~ NASNet), 데이터셋 구축 중..(08/19 - 1,000장 완료, 8/20 - 2,000장 완료, 8/21 - Labeling 시작) |
 | 4주 | 2020-08-24 ~ <br> 2020-08-28 </br> | 데이터셋 구축 2차 (8/24 - Labeling 끝) | Object Detection 기술 조사(R-CNN ~ YOLO) |
-| 5주 | 2020-08-31 ~ <br> 2020-09-04 </br> | Object Detection 기술 조사 | 데이터셋 cropping(9/3 - train 9924장, val 2505장, test 5327장), 데이터셋으로 Image Classification 구현(9/4 - customCNN 구현, [train Loss: 0.5210 Acc: 0.9209], [val Loss: 0.3969 Acc: 0.9246]), Object Detection 기술 조사 |
-| 6주 | 2020-09-07 ~ <br> 2020-09-11 </br> | Face Detection 기술 조사 | |
-| 7주 | 2020-09-14 ~ <br> 2020-09-18 </br> | 기존 모델 다루기 실습 | |
-| 8주 | 2020-09-21 ~ <br> 2020-09-25 </br> | Transfer Learning 준비 | |
-| 9주 | 2020-09-28 ~ <br> 2020-09-29 </br> | Transfer Learning 실습 | |
-| 10주 | 2020-10-05 ~ <br> 2020-10-08 </br> | 결과 검토 및 모델 수정 | |
-| 11주 | 2020-10-12 ~ <br> 2020-10-16 </br> | GUI 개발 | |
-| 12주 | 2020-10-19 ~ <br> 2020-10-23 </br> | 기술별 보완 | |
-| 13주 | 2020-10-26 ~ <br> 2020-10-30 </br> | 추론기 제작 | |
-| 14주 | 2020-11-02 ~ <br> 2020-11-06 </br> | 동작 시험 및 디버깅 | |
-| 15주 | 2020-11-09 ~ <br> 2020-11-13 </br> | 발표 준비 및 최종 발표 | |
+| 5주 | 2020-08-31 ~ <br> 2020-09-04 </br> | Object Detection 기술 조사 | 데이터셋 cropping(9/3 - train 9924장, val 2505장, test 5327장), 데이터셋으로 Image Classification 구현(9/4 - customCNN 구현, 9/5 - ResNet 구현, 9/6 - VGGNet 구현, 9/7 - DenseNet 구현), Object Detection 기술 조사(R-CNN, Fast R-CNN, Faster R-CNN, Mask R-CNN) |
+| 6주 | 2020-09-07 ~ <br> 2020-09-11 </br> | Face Detection 기술 조사 | 9/8 - Object Detection 발표(RODEO(혁화), IterDet(정운), SSD(명화), EfficientDet(인화)) |
+| 7주 | 2020-09-14 ~ <br> 2020-09-18 </br> | 기존 모델 다루기 실습 |  |
+| 8주 | 2020-09-21 ~ <br> 2020-09-25 </br> | Transfer Learning 준비 |  |
+| 9주 | 2020-09-28 ~ <br> 2020-09-29 </br> | Transfer Learning 실습 |  |
+| 10주 | 2020-10-05 ~ <br> 2020-10-08 </br> | 결과 검토 및 모델 수정 |  |
+| 11주 | 2020-10-12 ~ <br> 2020-10-16 </br> | GUI 개발 |  |
+| 12주 | 2020-10-19 ~ <br> 2020-10-23 </br> | 기술별 보완 |  |
+| 13주 | 2020-10-26 ~ <br> 2020-10-30 </br> | 추론기 제작 |  |
+| 14주 | 2020-11-02 ~ <br> 2020-11-06 </br> | 동작 시험 및 디버깅 |  |
+| 15주 | 2020-11-09 ~ <br> 2020-11-13 </br> | 발표 준비 및 최종 발표 |  |
 <br><br>
 
 ## 피드백
@@ -106,3 +106,10 @@
     - 대표적으로 YOLO는 DarkNet을 back bone으로 사용
 
 2. 현재 만들어놓은 2,000장의 사진을 Image Classification하기 위해서, xmin, ymin, xmax, ymax 영역으로 잘라서 만든다.
+
+### 2020-09-07
+1. gpu 서버로 파일 전송 방법
+
+        local server: 172.16.201.167
+        
+        scp vggnet.py nvidia@172.16.201.167:~/MH.Ji
