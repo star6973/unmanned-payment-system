@@ -1,5 +1,5 @@
-## R-CNN부터 Mask R-CNN까지..
-### 1. R-CNN
+# R-CNN부터 Mask R-CNN까지..
+## 1. R-CNN
 - 구조
     <center><img src="/reference_image/MH.Ji/R-CNN models/1.PNG" width="70%"></center><br>
 
@@ -40,17 +40,17 @@
     + selective search가 찾은 bounding box의 위치를 교정하기 위해 bounding box regression을 도입한다.
     + selective search를 통해 추출된 bounding box에는 다음과 같은 정보들이 포함된다.
 
-    <center><img src="/reference_image/MH.Ji/R-CNN models/5.PNG" width="70%"></center><br>
-    <center><img src="/reference_image/MH.Ji/R-CNN models/6.PNG" width="70%"></center><br>
+    <center><img src="/reference_image/MH.Ji/R-CNN models/5.PNG" width="30%"></center><br>
+    <center><img src="/reference_image/MH.Ji/R-CNN models/6.PNG" width="30%"></center><br>
 
     + 하나의 박스에는 x, y좌표와 width, height의 값이 담기고, Ground Truth(정답)은 G로 표현한다.
     + 우리는 최대한 정답에 가깝게 만들어줘야 하기 떄문에 다음과 같은 수식을 얻을 수 있다.
 
-    <center><img src="/reference_image/MH.Ji/R-CNN models/7.PNG" width="70%"></center><br>
+    <center><img src="/reference_image/MH.Ji/R-CNN models/7.PNG" width="30%"></center><br>
 
     + G에 가깝게 하도록 d의 값을 찾는 것으로 다음과 같은 함수로 가중치를 부여한다.
 
-    <center><img src="/reference_image/MH.Ji/R-CNN models/8.PNG" width="70%"></center><br>
+    <center><img src="/reference_image/MH.Ji/R-CNN models/8.PNG" width="30%"></center><br>
 
 - R-CNN의 특징
     + multi staged training을 해야 한다(fine tune, svm classifier, bounding box regression).
@@ -58,7 +58,7 @@
 
 <br><br>
 
-### 2. Fast R-CNN
+## 2. Fast R-CNN
 - 구조
     + 이전의 R-CNN이 여러 번 CNN inference하는 방식으로 인해 속도가 저하되었다면, Fast R-CNN은 CNN 특징 추출부터 classification, bounding box regression까지 모두 하나의 모델에 학습시킨다.
 
@@ -91,19 +91,19 @@
     + bounding box regression을 적용하면 위의 식에서 각각 x, y, w, h값을 조정하는 tk를 반환한다. 즉, 이 RoI를 통해 어떤 클래스는 어디 위치로 조절해야하는지에 대한 값이다. loss function에서는 이 값들 가운데 ground truth 라벨에 해당하는 값만 가져오며, 이는 tu에 해당한다.
     + v는 ground truth bounding box 조절값에 해당한다.
 
-    <center><img src="/reference_image/MH.Ji/R-CNN models/12.PNG" width="70%"></center><br>
+    <center><img src="/reference_image/MH.Ji/R-CNN models/12.PNG" width="30%"></center><br>
 
     + 다시 전체 로스에서 앞부분 p와 u를 가지고 classification loss를 구한다. 여기서는 log loss를 사용한다.
 
-    <center><img src="/reference_image/MH.Ji/R-CNN models/13.PNG" width="70%"></center><br>
+    <center><img src="/reference_image/MH.Ji/R-CNN models/13.PNG" width="30%"></center><br>
 
     + 전체 로스의 뒷부분은 bounding box regression을 통해 얻은 loss로 다음 수식과 같다.
 
-    <center><img src="/reference_image/MH.Ji/R-CNN models/14.PNG" width="70%"></center><br>
+    <center><img src="/reference_image/MH.Ji/R-CNN models/14.PNG" width="30%"></center><br>
 
     + 위의 수식에서 입력으로는 정답 라벨에 해당하는 BBR 예측값과 ground truth 조절값을 받는다. 그리고 x, y, w, h 각각에 대해서 예측값과 라벨값의 차이를 계산한 다음, smoothL1이라는 함수를 통과시킨 합을 계산한다.
 
-    <center><img src="/reference_image/MH.Ji/R-CNN models/15.PNG" width="70%"></center><br>
+    <center><img src="/reference_image/MH.Ji/R-CNN models/15.PNG" width="50%"></center><br>
 
     + 예측값과 라벨값의 차이가 1보다 작으면 0.5(x^2)로 L2 distance를 계산해준다. 반면에 1보다 크다면 L1 distance를 계산해준다. 이는 object detection task에 맞춰 loss function을 커스텀하는 것으로 볼 수 있다.
 
@@ -112,7 +112,7 @@
 
     + 과연 네트워크를 어디까지 학습시키는 것이 성능에 가장 좋은지를 검증해보자.
 
-    <center><img src="/reference_image/MH.Ji/R-CNN models/16.PNG" width="70%"></center><br>
+    <center><img src="/reference_image/MH.Ji/R-CNN models/16.PNG" width="30%"></center><br>
 
     + xi는 CNN을 통해 추출된 feature map에서 하나의 feature를 의미한다. 전체 loss에 대해서 이 feature 값의 편미분을 구하면 그 값이 곧 xi에 대한 loss값이 되며, back propagation을 수행할 수 있다.
 
@@ -128,7 +128,7 @@
 
 <br><br>
 
-### 3. Faster R-CNN
+## 3. Faster R-CNN
 - 구조
     + Faster R-CNN의 핵심 아이디어는 Region Proposal Network(RPN)이다. 기존 Fast R-CNN의 구조를 그대로 계승하면서, selective search를 제거하고 RPN을 통해서 RoI를 계산한다. 이를 통해서 GPU를 통한 RoI 계산이 가능해졌다.
 
@@ -176,8 +176,46 @@
 
 <br><br>
 
-### 4. Mask R-CNN
+## 4. Mask R-CNN
+- 개요
+    + 지금까지의 R-CNN 계열의 모델을이 object detection을 위한 모델이라면, Mask R-CNN은 Faster R-CNN을 확장하여 instance segmentation을 위한 모델이다.
 
+    + Mask R-CNN = Faster R-CNN with FCN on RoIs
+
+    + Faster R-CNN과 다른 점은 Faster R-CNN에 존재하는 bounding box를 위한 브랜치에 병렬로 object mask predict 브랜치를 추가하였다. 또한, RoI Pooling 대신 RoI Align을 사용하였다.
+
+    + Instance Segmentation을 하기 위해서는 object detection과 semantic segmentation을 동시에 해야 한다. 이를 위해 Mask R-CNN은 기존의 Faster R-CNN을 object detection 역할을 하도록 하고, 각각의 RoI에 mask segmentation을 해주는 작은 fully convolutional network를 추가해주었다.
+
+    + 기존의 Faster R-CNN은 object detection을 위한 모델이었기에, RoI Pooling 과정에서 정확한 위치 정보를 담는 것은 중요하지 않았다. RoI Pooling에서 RoI가 소수점 좌표를 갖고 있을 경우에는 각 좌표를 반올림한 다음에 Pooling을 해준다. 이렇게 되면 input image의 원본 위치 정보가 왜곡되기 때문에 classification task에서는 문제가 발생하지 않지만, segmentation task에서는 문제가 발생한다.
+
+    <center><img src="/reference_image/MH.Ji/R-CNN models/21.PNG" width="70%"></center><br>
+
+    + 위와 같은 문제를 해결하기 위해 RoI Pooling 대신에 RoI Align을 사용한다.
+
+- 구조
+
+    <center><img src="/reference_image/MH.Ji/R-CNN models/25.PNG" width="70%"></center><br>
+
+- RoI Align
+
+    <center><img src="/reference_image/MH.Ji/R-CNN models/22.PNG" width="70%"></center><br>
+
+    + 파란색 점선은 feature map을 나타내고, 실선은 RoI를 나타낸다. RoI에서 얻어내고자 하는 정보는 박스안의 동그라미 점(샘플링 포인트)이다. 하지만 RoI가 정확히 칸에 맞춰져 있지 않기 때문에, 이에 대한 정확한 계산을 위해 bilinear interpolation을 적용하여 각 샘플링 포인트의 값을 계산한다.
+
+    <center><img src="/reference_image/MH.Ji/R-CNN models/26.PNG" width="70%"></center><br>
+
+    + 게산된 값들을 Max Pooling해준다.
+
+    <center><img src="/reference_image/MH.Ji/R-CNN models/23.PNG" width="70%"></center><br>
+
+    <center><img src="/reference_image/MH.Ji/R-CNN models/24.PNG" width="70%"></center><br>
+
+- R-CNN vs Fast/Faster R-CNN vs Mask R-CNN
+
+    <center><img src="/reference_image/MH.Ji/R-CNN models/27.PNG" width="70%"></center><br>
+
+<br><br>
 
 ## 참고자료
 - [갈아먹는 Object Detection](https://yeomko.tistory.com/)
+- [Mask R-CNN 정리](https://mylifemystudy.tistory.com/82)
