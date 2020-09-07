@@ -138,7 +138,7 @@
 
 - Region Proposal Network
 
-    <center><img src="/reference_image/MH.Ji/R-CNN models/19.PNG" width="70%"></center><br>
+    <center><img src="/reference_image/MH.Ji/R-CNN models/20.PNG" width="70%"></center><br>
 
     1) CNN을 통해 뽑아낸 feature map을 입력으로 받고, 크기를 H x W x C로 잡는다.  
 
@@ -155,7 +155,7 @@
 - Loss Function
     + loss function은 classification과 bounding box regression을 통해 얻은 loss를 엮은 형태를 취한다.
 
-    <center><img src="/reference_image/MH.Ji/R-CNN models/20.PNG" width="70%"></center><br>
+    <center><img src="/reference_image/MH.Ji/R-CNN models/21_1.PNG" width="70%"></center><br>
 
     + i는 하나의 anchor를 의미하며, pi는 classification을 통해서 얻은 해당 anchor가 물체일 확률을 의미한다. ti는 bounding box regression을 통해서 얻은 박스 조정 값 벡터를 의미한다.
 
@@ -198,7 +198,7 @@
 
 - RoI Align
 
-    <center><img src="/reference_image/MH.Ji/R-CNN models/22.PNG" width="70%"></center><br>
+    <center><img src="/reference_image/MH.Ji/R-CNN models/22.PNG" width="30%"></center><br>
 
     + 파란색 점선은 feature map을 나타내고, 실선은 RoI를 나타낸다. RoI에서 얻어내고자 하는 정보는 박스안의 동그라미 점(샘플링 포인트)이다. 하지만 RoI가 정확히 칸에 맞춰져 있지 않기 때문에, 이에 대한 정확한 계산을 위해 bilinear interpolation을 적용하여 각 샘플링 포인트의 값을 계산한다.
 
