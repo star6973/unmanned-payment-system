@@ -22,7 +22,7 @@
 | 3주 | 2020-08-18 ~ <br> 2020-08-21 </br> | Image Classification 기술 조사 | Image Classification 기술 조사(PreActResNet ~ NASNet), 데이터셋 구축 중..(08/19 - 1,000장 완료, 8/20 - 2,000장 완료, 8/21 - Labeling 시작) |
 | 4주 | 2020-08-24 ~ <br> 2020-08-28 </br> | 데이터셋 구축 2차 (8/24 - Labeling 끝) | Object Detection 기술 조사(R-CNN ~ YOLO) |
 | 5주 | 2020-08-31 ~ <br> 2020-09-04 </br> | Object Detection 기술 조사 | 데이터셋 cropping(9/3 - train 9924장, val 2505장, test 5327장), 데이터셋으로 Image Classification 구현(9/4 - customCNN 구현, 9/5 - ResNet 구현, 9/6 - VGGNet 구현, 9/7 - DenseNet 구현), Object Detection 기술 조사(R-CNN, Fast R-CNN, Faster R-CNN, Mask R-CNN) |
-| 6주 | 2020-09-07 ~ <br> 2020-09-11 </br> | Face Detection 기술 조사 | 9/8 - Object Detection 발표(RODEO(혁화), IterDet(정운), SSD(명화), EfficientDet(인화)) |
+| 6주 | 2020-09-07 ~ <br> 2020-09-11 </br> | Face Detection 기술 조사 | 9/8 - Object Detection 발표(RODEO(혁화), IterDet(정운), SSD(명화), EfficientDet(인화)), 9/9 - Image Classification 테스팅 98%(ResNet) 완료 |
 | 7주 | 2020-09-14 ~ <br> 2020-09-18 </br> | 기존 모델 다루기 실습 |  |
 | 8주 | 2020-09-21 ~ <br> 2020-09-25 </br> | Transfer Learning 준비 |  |
 | 9주 | 2020-09-28 ~ <br> 2020-09-29 </br> | Transfer Learning 실습 |  |
@@ -113,3 +113,22 @@
         local server: 172.16.201.167
         
         scp vggnet.py nvidia@172.16.201.167:~/MH.Ji
+
+### 2020-09-09
+1. Image Classification 모델 및 코드 첨삭
+    - gray scale에 대해 회의적
+    - horiental flip -> 거울상이 생기는 것이라서 별로 비추...
+    - augmentation 및 randomsampler를 보통 한다.(Nomalization 하지 않고.. -> 한 번 해보기)
+    - 항상 함수를 사용하기 전에 pytorch docs를 한번 보고 눈으로 확인해야한다.
+    - https://hoya012.github.io/blog/albumentation_tutorial/ 여기 참고해서 로테이션에 관한것은 가져다 써보기
+    - 다른 optimizer 썼을 때는 튀는 경우가 많은데 SGD 쓰면 괜찮다.
+    - scheduler는 learning rate를 계속 줄여서 미니멈한 것을 찾아내는 것이다. 
+    - early stopping 의 patience가 scheduler보다 더 길어야한다. -> ealry stopping은 어느 정도 찾았을 때 진행이 더디면 끝내는 것.
+    - validation을 참고해서 test data load를 만들어서 확인하는게 좋을거 같다. 
+    - [성능 문제] -> 테스트 결과 5,000개 중 400개밖에 못 맞춤. -> Overfitting 문제는 아닌 것 같음. -> image_list가 어떤건지 뽑아봐서 확인할 필요가 있음 -> 확인 완료.. 0, 1, 10, 11, ... 클래스가 이런 형태였음
+
+2. Pytorch 튜토리얼을 라인 바이 라인으로 분석해보자.
+
+3. 과제
+    - 다시 Image Classification 학습 해보기(최소 90% 이상은 나와야 함)
+    - Object Detection 조사 및 발표
