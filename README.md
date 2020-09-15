@@ -132,3 +132,5 @@
 3. 과제
     - 다시 Image Classification 학습 해보기(최소 90% 이상은 나와야 함)
     - Object Detection 조사 및 발표
+
+1
