@@ -132,3 +132,39 @@
 3. 과제
     - 다시 Image Classification 학습 해보기(최소 90% 이상은 나와야 함)
     - Object Detection 조사 및 발표
+
+### 2020-09-10
+1. torch.nn [loss_function]
+    
+
+2. torch.optim [optimizer]
+
+    <center><img src="/reference_image/MH.Ji/Deep Learning Concept/optimizer.png" width="70%"></center><br>
+
+3. torch.optim.lr_scheduler [lr_scheduler]
+    - ReduceLROnPlateau
+        + 학습이 잘 되고 있는지 아닌지에 따라 동적으로 lr을 변화. 보통 validation set의 loss를 인자로 주어서 사전에 지정한 epoch동안 loss가 줄어들지 않으면 lr을 감소시키는 방식.
+
+    - LambdaLR
+        + 각 파라미터 그룹의 lr을 지정된 함수의 초기 lr 배로 설정. lambda 함수를 하나 받아 그 함수의 결과를 lr로 설정.
+
+    - StepLR
+        + step_size epoch마다 감마 비율만큼 각 파라미터 그룹의 lr을 감소.
+
+    - MultiStepLR
+        + step마다가 아닌 지정된 epoch에만 gamma 비율로 감소
+
+    - MultiplicativeLR
+        + 각 매개 변수 그룹의 lr에 지정된 함수에 주어진 계수를 곱함.
+
+    - ExponentialLR
+        + lr을 지수함수적으로 감소.
+
+    - CosineAnnealingLR
+        + lr을 cosine 함수의 형태처럼 변화. lr이 커졌다가 작아졌다가 함.
+
+    - CyclicLR
+        + CLR에 따라 각 파라미터 그룹의 lr을 설정. 정책은 두 경계 사이의 lr을 일정한 빈도로 순환. 두 경계 사이의 거리는 반복 단위 또는 주기 단위로 확장. 매 배치 후 lr을 변경.
+
+    - OneCycleLR
+        + OneCycle에 따라 각 파라미터 그룹의 lr을 설정. 초기 학습률에서 최대 학습률로, 그 다음 최대 학습률에서 초기 학습률보다 훨씬 낮은 최소 학습률로 학습률을 어닐링(단련). 대규모 학습률을 사용하는 신경망의 매우 빠른 훈련. OneCycle은 모든 배치 후 학습률을 변경.
