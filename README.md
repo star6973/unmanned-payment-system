@@ -134,14 +134,65 @@
     - Object Detection 조사 및 발표
 
 ### 2020-09-10
-1. torch.nn [loss_function]
-    
+1. torch.nn [loss_function] - by 권혁화, 김정운
+    - binary_cross_entropy
+        + Function that measures the Binary Cross Entropy between the target and the output
 
-2. torch.optim [optimizer]
+    - binary_cross_entropy_with_logits
+        + Function that measures Binary Cross Entropy between target and output logits.
+
+    - cosine_embedding_loss
+        + See CosineEmbeddingLoss for details.
+
+    - cross_entropy
+        + This criterion combines log_softmax and nll_loss in a single function.
+
+    - hinge_embedding_loss
+        + See HingeEmbeddingLoss for details.
+
+    - l1_loss
+        + Function that takes the mean element-wise absolute value difference.
+    
+    - mse_loss
+        + input x, predict y 간에 element-wise 로 loss값을 mean square 연산하여 구함
+        + binary classification 에 대해서 non-convex하기 때문에 성능이 좋진 않음
+
+    - margin_ranking_loss
+        + 2개의 1D mini-batch Tensor( 입력x1, 입력x2 ) 및 1개의 1D mini-batch Tensor( label Y )에 대한 loss를 계산
+        + 만약 y 가 1이면, 첫 번째 입력이 두 번쨰 입력보다 rank가 높다고 가정하고, -1 이면 더 낮다고 가정
+        + 특수한 목적으로 각 item에 대해서 순위를 구해야 하는 경우에 사용
+
+    - multilabel_margin_loss
+        + multi-class classification 에서 hinge loss를 계산
+
+    - multilabel_soft_margin_loss
+        + 입력x 와 predict y 에 대해서 Max-entropy 를 사용하여 "1개 label에 대한 loss : 전체 label에 대한 loss"를 계산하는 방식
+
+    - multi_margin_loss
+        + multi-class classification에서 Input x 와 output y 사이의 hinge loss를 계산
+        + hinge loss : SVM loss 라고도 함
+            : "정답클래스 score"가 "정답이 아닌 클래스 score + Safety margin(=1)" 보다 크면, loss = 0  
+            : otherwise "정답이 아닌 클래스 - 정답클래스 + 1"  
+        + [출처]https://lsjsj92.tistory.com/391
+
+    - nll_loss
+        + C개의 classes를 분류하는 문제에 유용한 방식
+        + nll_loss를 사용하는 경우 각 class의 weight 는 1D tensor여야 하는데, 이것은 특히 training set이 불균형할 때 유용하다
+        + 즉, 얼마나 성능이 좋지 않은지 알 수 있다
+        + (참고) L1 Loss function stands for Least Absolute Deviations. Also known as LAD. L2 Loss function stands for Least Square Errors.
+
+    - smooth_l1_loss
+        + element-wise 연산 값 또는 L1(Least Absolute Deviation)이 1 아래로 떨어지는 경우 제곱
+        + MSE 방식에 비해서 덜 예민하며, Gradient 값이 증가하는 것을 막을 수 있음
+
+    - soft_margin_loss
+        + 입력 tensor 와 predicted tensor 간의 차이를 softmax 를 거쳐 -1 ~ 1 사이로 출력
+
+2. torch.optim [optimizer] - by 홍인화
 
     <center><img src="/reference_image/MH.Ji/Deep Learning Concept/optimizer.png" width="70%"></center><br>
 
-3. torch.optim.lr_scheduler [lr_scheduler]
+3. torch.optim.lr_scheduler [lr_scheduler] - by 지명화
     - ReduceLROnPlateau
         + 학습이 잘 되고 있는지 아닌지에 따라 동적으로 lr을 변화. 보통 validation set의 loss를 인자로 주어서 사전에 지정한 epoch동안 loss가 줄어들지 않으면 lr을 감소시키는 방식.
 
@@ -168,3 +219,35 @@
 
     - OneCycleLR
         + OneCycle에 따라 각 파라미터 그룹의 lr을 설정. 초기 학습률에서 최대 학습률로, 그 다음 최대 학습률에서 초기 학습률보다 훨씬 낮은 최소 학습률로 학습률을 어닐링(단련). 대규모 학습률을 사용하는 신경망의 매우 빠른 훈련. OneCycle은 모든 배치 후 학습률을 변경.
+
+### 2020-09-16
+1. Feedback
+    - 권혁화
+        + RODEO는 Incremetal(증분) learning에 대한 논문
+        + 이는 기존에 학습된 모델에 새로운 학습 데이터가 발생할 경우, 모델을 처음부터 다시 학습하는 것이 아니라 새로운 데이터에 대해서만 학습시킨 뒤 업데이트
+        + 하지만 Incremental Learning의 경우 성능이 보장되지 않고, 어려운 분야이므로, 현재는 연구분야에 그치고 있음. 따라서 새로운 Object Detection 모델을 선정 및 실습하고, 성능을 확인하는 것을 추천
+        + Classification Augmentation에 대해서는 깔끔하게 진행되었음.
+        + 추가적으로 ColorJitter에 Contrast를 조정해보는 것도 좋은 시도가 될 것 같음.
+
+
+    - 김정운
+        + 바운딩박스가 겹치는 것을 잘 잡아내는것이 필요하고 우리에게 좋은 접근이다.
+        + Faster-RCNN이나 RetinaNet 이렇게 2개만 detector를 적용할 수 있을 뿐아니라 다른 모델로도 코팅이 가능해야할 것 같다.
+        + 3D face detection을 찾아보기위해 Prnet을 검색하면 좋다.(3d face reconstruction)
+
+
+    - 지명화
+        + SSD는 작은 물체를 잡는 부분이 약함. 특히나 진행 중인 프로젝트는 제품들이 겹치는 부분이 많을 텐데, SSD는 bounding box를 하나하나씩 잡는데, RGB가 겹치면 객체가 다른 것으로 분류될 수도 있음. 
+        + 새로운 논문을 찾아보는 것을 추천
+        + 보통 연구를 진행할 때, 가장 무거운 모델부터 돌려서 정확도를 얼추 계산한 다음, 조금씩 가벼운 모델로 바꿔서 연구함.
+        + ResNet50의 성능이 ResNet18보다 적게 나온 이유는 꼭 집어서 설명하기란 어렵지만, 단순한 이미지 분류에서 굳이 무거운 모델을 돌릴 이유는 없기 때문이다. 하지만, 성능이 적게나오는 이유를 정확히 알기 위해서는 ResNet18보다 큰, ResNet34, ResNet50, ... 등 여러 개를 돌려보고 난 후 생각해보자.
+
+    - 홍인화
+        + 좀 더 많은 어그먼테이션 시도가 필요.
+
+2. Face Detection 모델은 다다음주 이하늘 멘토님이 추가로 설명 예정
+    - 기본적으로 Face Detection은 Verification과 Identification이 있다.
+
+3. 다음주까지 과제
+    - Image Classification 성능 향상(data augmentation 적용, metrics 변경 등을 이용)
+    - Object Detection 모델링
