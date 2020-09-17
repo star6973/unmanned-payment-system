@@ -27,7 +27,6 @@
   <component name="ChangeListManager">
     <list default="true" id="49a72ee4-5b9a-4b18-b1b3-01a0a89c294e" name="Default Changelist" comment="commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PPT/KwonHH/RODEO_Replay for Online Object Detection(3).pptx" beforeDir="false" afterPath="$PROJECT_DIR$/PPT/KwonHH/RODEO_Replay for Online Object Detection(3).pptx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -338,7 +337,21 @@
       <option name="project" value="LOCAL" />
       <updated>1600225949402</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="수정3">
+      <created>1600244441970</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1600244441970</updated>
+    </task>
+    <task id="LOCAL-00038" summary="commit">
+      <created>1600244451505</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1600244451505</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -367,6 +380,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="commit-jw" />
+    <MESSAGE value="수정3" />
     <MESSAGE value="commit" />
     <option name="LAST_COMMIT_MESSAGE" value="commit" />
   </component>
@@ -388,14 +402,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="598" y="280" key="MultipleFileMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1598338158565" />
-    <state x="72" y="256" key="Vcs.Push.Dialog.v2" timestamp="1600225962577">
+    <state x="72" y="256" key="Vcs.Push.Dialog.v2" timestamp="1600244461485">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1597391896991" />
-    <state x="72" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1600225962577" />
-    <state x="143" y="230" width="672" height="678" key="search.everywhere.popup" timestamp="1599457999147">
+    <state x="72" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1600244461485" />
+    <state x="143" y="230" width="672" height="678" key="search.everywhere.popup" timestamp="1600322302083">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="143" y="230" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1599457999147" />
+    <state x="143" y="230" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1600322302083" />
   </component>
 </project>
