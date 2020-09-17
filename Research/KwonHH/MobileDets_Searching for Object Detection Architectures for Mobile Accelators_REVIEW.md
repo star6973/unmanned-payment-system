@@ -24,8 +24,8 @@
         - 유효한 convoultions 를 재방문하는 TDB search space 의 사용을 제안
         - 새로운 accelerator에서 NAS가 어떻게 높은 성능을 내는 architecture를 찾는지 설명<br><br><br>
  1. Related Work
-    1. dd
-    1. dd
+    1. Mobile Object Detection
+    1. Mbile Neural Architecture Search(NAS)
     1. NAS for mobile Object Detection
          - NAS 의 대부분은 classification 과 backbone으로 이미 학습된 feature extractor를 다시 제안하는 것에 그쳤다
          - 최근, 많은 논문에서는 더 나은 latency-accuracy trade-off 를 얻도록 object detection으로부터 직접 search 를 했다
