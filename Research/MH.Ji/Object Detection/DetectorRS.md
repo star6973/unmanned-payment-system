@@ -124,40 +124,40 @@
     - BiFPN 구조가 등장하기 전까지의 FPN의 새로운 구조들
 
         + (a) FPN
-        <center><img src="/reference_image/MH.Ji/DetectorRS/9.PNG" width="70%"></center><br>
+            <center><img src="/reference_image/MH.Ji/DetectorRS/9.PNG" width="70%"></center><br>
 
-        - 전통적인 FPN 구조로, top-down 방식을 사용한다.
+            - 전통적인 FPN 구조로, top-down 방식을 사용한다.
 
         + (b) PANet
-        <center><img src="/reference_image/MH.Ji/DetectorRS/10.PNG" width="70%"></center><br>
+            <center><img src="/reference_image/MH.Ji/DetectorRS/10.PNG" width="70%"></center><br>
 
-        - FPN에서 bottom-up을 추가하였다.
+            - FPN에서 bottom-up을 추가하였다.
 
         + (c) NAS-FPN
-        <center><img src="/reference_image/MH.Ji/DetectorRS/11.PNG" width="70%"></center><br>
+            <center><img src="/reference_image/MH.Ji/DetectorRS/11.PNG" width="70%"></center><br>
 
-        - AutoML의 Neural Architecture Search를 FPN 구조에 적용하였고, 불규칙적인 FPN 구조를 보인다. (a)와 (b)는 같은 scale에만 connection이 존재하지만, NAS-FPN부터는 scale이 다른 경우에도 connection이 존재하는 cross-scale connection을 적용한다.
+            - AutoML의 Neural Architecture Search를 FPN 구조에 적용하였고, 불규칙적인 FPN 구조를 보인다. (a)와 (b)는 같은 scale에만 connection이 존재하지만, NAS-FPN부터는 scale이 다른 경우에도 connection이 존재하는 cross-scale connection을 적용한다.
 
         + (d) Fully-connected FPN
-        <center><img src="/reference_image/MH.Ji/DetectorRS/12.PNG" width="70%"></center><br>
+            <center><img src="/reference_image/MH.Ji/DetectorRS/12.PNG" width="70%"></center><br>
 
-        - EfficientDet 논문의 저자들이 실험한 방식으로, 정확도에서 향상되지 못하고 계산이 복잡한 단점을 가지고 있다.
+            - EfficientDet 논문의 저자들이 실험한 방식으로, 정확도에서 향상되지 못하고 계산이 복잡한 단점을 가지고 있다.
 
         + (e) Simplified PANet
-        <center><img src="/reference_image/MH.Ji/DetectorRS/13.PNG" width="70%"></center><br>
+            <center><img src="/reference_image/MH.Ji/DetectorRS/13.PNG" width="70%"></center><br>
 
-        - PANet에서 input edge가 1개인 노드들은 기여도가 적을 것이라 생각하며 제거를 하여 얻은 네트워크 구조이다.
+            - PANet에서 input edge가 1개인 노드들은 기여도가 적을 것이라 생각하며 제거를 하여 얻은 네트워크 구조이다.
 
         + (f) BiFPN
-        <center><img src="/reference_image/MH.Ji/DetectorRS/14.PNG" width="70%"></center><br>
+            <center><img src="/reference_image/MH.Ji/DetectorRS/14.PNG" width="70%"></center><br>
 
-        - 대망의 BiFPN은 보라색 선처럼 같은 scale에서 edge를 추가하여 더 많은 feature들이 fusion되도록 구성을 하였다.
+            - 대망의 BiFPN은 보라색 선처럼 같은 scale에서 edge를 추가하여 더 많은 feature들이 fusion되도록 구성을 하였다.
 
-        - PANet은 top-down과 bottom-up path를 하나씩만 사용한 반면, BiFPN은 여러 번 반복하여 사용하였다. 이를 통해 더 high-level의 fusion을 할 수 있다고 한다.
+            - PANet은 top-down과 bottom-up path를 하나씩만 사용한 반면, BiFPN은 여러 번 반복하여 사용하였다. 이를 통해 더 high-level의 fusion을 할 수 있다고 한다.
 
-        - FPN에서 레이어마다 가중치를 주어 좀더 각각의 층에 대한 resolution 정보가 잘 녹아낼 수 있도록 하는 장치이다.
+            - FPN에서 레이어마다 가중치를 주어 좀더 각각의 층에 대한 resolution 정보가 잘 녹아낼 수 있도록 하는 장치이다.
         
-        <center><img src="/reference_image/MH.Ji/DetectorRS/15.PNG" width="70%"></center><br>
+            <center><img src="/reference_image/MH.Ji/DetectorRS/15.PNG" width="70%"></center><br>
 
 <br>
 
