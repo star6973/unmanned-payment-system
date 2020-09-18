@@ -73,21 +73,21 @@
 - 다음은 FPN이 등장하기 까지의 새로운 형태의 기법들이다.
 
     - Featurized Image Pyramid
-        <center><img src="/reference_image/MH.Ji/DetectorRS/4.PNG" width="70%"></center><br>
+        <center><img src="/reference_image/MH.Ji/DetectorRS/4.PNG" width="60%"></center><br>
 
         + 딥러닝이 대두하기 전에 다양한 해상도에서 feature를 추출하려고 할 때, 이미지의 크기를 rescale해서 추출하고자 한 방식이다.
         + 입력 이미지 자체를 여러 크기로 resize한 뒤, 각각의 이미지에서 object detetion을 한다.
         + 입력 이미지 자체를 여러 크기로 복사하기 때문에, 연산량이 크고 시간이 오래 걸리는 단점이 있다.
 
     - Single Feature Map
-        <center><img src="/reference_image/MH.Ji/DetectorRS/5.PNG" width="70%"></center><br>
+        <center><img src="/reference_image/MH.Ji/DetectorRS/5.PNG" width="60%"></center><br>
 
         + 초기의 CNN 구조 형태로, 계속 convolution 필터를 적용하는 방식이다.
         + CNN을 통과하여 얻은 최종 단계의 feature map으로 object detetion을 한다.
         + multi-scale을 사용하지 않고 한번에 feature를 압축하기 때문에, 신경망을 통과할수록 이미지에 담겨져있는 정보들이 추상화되어 작은 물체들에 대한 정보가 사라지는 문제가 있다.
 
     - Pyramidal Feature Hierarchy
-        <center><img src="/reference_image/MH.Ji/DetectorRS/6.PNG" width="70%"></center><br>
+        <center><img src="/reference_image/MH.Ji/DetectorRS/6.PNG" width="60%"></center><br>
 
         + 서로 다른 scale의 feature map을 이용하여 multi-scale feature를 추출하는 방식이다. 각 레벨에서 독립적으로 feature를 추출하여 object detetion을 하는데, 이미 계산되어 있는 상위 레벨의 feature를 재사용하지 않는다는 특징이 있다.
         + SSD
@@ -124,32 +124,32 @@
     - BiFPN 구조가 등장하기 전까지의 FPN의 새로운 구조들
 
         + (a) FPN
-            <center><img src="/reference_image/MH.Ji/DetectorRS/9.PNG" width="70%"></center><br>
+            <center><img src="/reference_image/MH.Ji/DetectorRS/9.PNG" width="40%"></center><br>
 
             - 전통적인 FPN 구조로, top-down 방식을 사용한다.
 
         + (b) PANet
-            <center><img src="/reference_image/MH.Ji/DetectorRS/10.PNG" width="70%"></center><br>
+            <center><img src="/reference_image/MH.Ji/DetectorRS/10.PNG" width="40%"></center><br>
 
             - FPN에서 bottom-up을 추가하였다.
 
         + (c) NAS-FPN
-            <center><img src="/reference_image/MH.Ji/DetectorRS/11.PNG" width="70%"></center><br>
+            <center><img src="/reference_image/MH.Ji/DetectorRS/11.PNG" width="40%"></center><br>
 
             - AutoML의 Neural Architecture Search를 FPN 구조에 적용하였고, 불규칙적인 FPN 구조를 보인다. (a)와 (b)는 같은 scale에만 connection이 존재하지만, NAS-FPN부터는 scale이 다른 경우에도 connection이 존재하는 cross-scale connection을 적용한다.
 
         + (d) Fully-connected FPN
-            <center><img src="/reference_image/MH.Ji/DetectorRS/12.PNG" width="70%"></center><br>
+            <center><img src="/reference_image/MH.Ji/DetectorRS/12.PNG" width="40%"></center><br>
 
             - EfficientDet 논문의 저자들이 실험한 방식으로, 정확도에서 향상되지 못하고 계산이 복잡한 단점을 가지고 있다.
 
         + (e) Simplified PANet
-            <center><img src="/reference_image/MH.Ji/DetectorRS/13.PNG" width="70%"></center><br>
+            <center><img src="/reference_image/MH.Ji/DetectorRS/13.PNG" width="40%"></center><br>
 
             - PANet에서 input edge가 1개인 노드들은 기여도가 적을 것이라 생각하며 제거를 하여 얻은 네트워크 구조이다.
 
         + (f) BiFPN
-            <center><img src="/reference_image/MH.Ji/DetectorRS/14.PNG" width="70%"></center><br>
+            <center><img src="/reference_image/MH.Ji/DetectorRS/14.PNG" width="40%"></center><br>
 
             - 대망의 BiFPN은 보라색 선처럼 같은 scale에서 edge를 추가하여 더 많은 feature들이 fusion되도록 구성을 하였다.
 
@@ -246,6 +246,6 @@
 <br>
 
 ## 참고자료
-[[Object Detection] Feature Pyramid Network (FPN)](https://eehoeskrap.tistory.com/300)
-[FPN (Feature Pyramid Network) 과 BiFPN](http://machinelearningkorea.com/2020/01/19/fpn-feature-pyramid-network-%EA%B3%BC-bifpn/)
+[[Object Detection] Feature Pyramid Network (FPN)](https://eehoeskrap.tistory.com/300)  
+[FPN (Feature Pyramid Network) 과 BiFPN](http://machinelearningkorea.com/2020/01/19/fpn-feature-pyramid-network-%EA%B3%BC-bifpn/)  
 [EfficientDet ： Scalable and Efficient Object Detection Review](https://hoya012.github.io/blog/EfficientDet-Review/)
