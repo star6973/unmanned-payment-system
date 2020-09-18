@@ -49,7 +49,7 @@
     + PANet, STDL, G=FRNet, NAS=FPN, Auto-FPN, EfficientDet과 다르게, Recursive Feature Pyramid는 bottom-up backbone을 반복적으로 거쳐 FPN의 표현력을 강화한다. 추가적으로 mini-DeepLab에서 디자인한 Seamless와 비슷하게 features를 풍부하게 해줄 ASPP를 통합시켰다.
 
     + ASPP(Atrous Spatial Pyramid Pooling)
-        + sementic segmentation의 성능을 높이기 위한 방법 중 하나로, DeepLab v2에서 feature map으로부터 rate가 다른 atrous convolution을 병렬로 정렬한 뒤, 이를 다시 합쳐주는 기법이다.
+        + sementic segmentation의 성능을 높이기 위한 방법 중 하나로, DeepLab V2에서 feature map으로부터 rate가 다른 atrous convolution을 병렬로 정렬한 뒤, 이를 다시 합쳐주는 기법이다.
 
 - Recursive Convolutional Network
     + 많은 recursive 방법은 다양한 종류의 computer vision 문제들을 해결하기 위해 제안되어왔다. 최근에 CBNet recursive는 FPN의 인풋으로 features를 출력하기 위해 여러 backbone을 cascade하는 object detection을 제안했다.
@@ -156,40 +156,94 @@
             - PANet은 top-down과 bottom-up path를 하나씩만 사용한 반면, BiFPN은 여러 번 반복하여 사용하였다. 이를 통해 더 high-level의 fusion을 할 수 있다고 한다.
 
             - FPN에서 레이어마다 가중치를 주어 좀더 각각의 층에 대한 resolution 정보가 잘 녹아낼 수 있도록 하는 장치이다.
-        
+            
             <center><img src="/reference_image/MH.Ji/DetectorRS/15.PNG" width="70%"></center><br>
 
 <br>
 
 ### 4.2. Recursive Feature Pyramid
+- 본 논문에서 제시하는 FPN 구조는 RFP(Recursive Feature Pyramid) 방식이다.
 
+    <center><img src="/reference_image/MH.Ji/DetectorRS/16.PNG" width="70%"></center><br>
 
+    + 전통적인 (a) FPN에 recursive를 추가한 것이 (b) RFP이다. 이러한 recursive 연산을 unroll한 것이 (c)의 구조이다. ASPP를 connecting module로 사용하였고, Fusion을 output update로 사용하였다.
+
+<br>
 
 ### 4.3. ASPP as the Connecting Module
+- 본 논문에서는 Atrous Spatial Pyramid Pooling(ASPP)를 connecting 모듈 R로 사용했다.
 
+    <center><img src="/reference_image/MH.Ji/DetectorRS/17.PNG" width="70%"></center><br>
+
+    + 이 모듈에는 4개의 평행한 브랜치들로 구성되어 있다. 이들 중 3개의 브랜치는 convolution 레이어를 사용하고, ReLU 함수를 적용한다. output 채널의 수는 input 채널의 수의 1/4이다. 마지막 브랜치는 feature를 압축시키기 위해 1x1 conv와 ReLU를 사용하여 feature를 1/4로 변환해주는 GAP를 사용한다. 최종적으로, 스케일을 resize하고 나머지 3개의 브랜치들을 연결해준다.
+
+- ASPP를 이해하기 위해..
+    + Atrous Convolution
+
+        <center><img src="/reference_image/MH.Ji/DetectorRS/1.PNG" width="70%"></center><br>
+
+        - trous는 구멍(hole)을 의미한다. 기존 convolution과 다르게 필터 내부에 빈 공간을 둔 채 작동한다. ROI가 커질수록 빈 공간이 넓어지게 됨을 의미한다.
+
+        - 이는 기존 convolution과 동일한 양의 파라미터와 계산량을 유지해주며, field of view(한 픽셀이 볼 수 있는 영역)을 크게 가져갈 수 있게 된다. 여러 convolution과 pooling 과정에서 디테일한 정보가 줄어들고, 특성이 점점 abstract해지는 것을 방지해줄 수 있다.
+
+        - 보통 sementic segmentation에서 높은 성능을 내기 위해서는 convolutional neural network의 마지막에 존재하는 한 픽셀이 입력값에서 어느 크기의 영역을 커버할 수 있는지를 결정하는 receptive field의 크기가 중요하게 작용한다. Atrous convolution을 활용하면 파라미터의 수를 늘리지 않으면서도 receptive field를 크게 키울 수 있기 때문에, DeepLab Series에서 이를 적극적으로 활용하려고 한다.
+
+    + Spatial Pyramid Pooling
+
+        <center><img src="/reference_image/MH.Ji/DetectorRS/18.PNG" width="70%"></center><br>
+
+        - Semantic segmentation의 성능을 높이기 위한 방법 중 하나로, spatial pyramid pooling 기법이 자주 활용되고 있다. DeepLab V2에서 feature map으로부터 여러 개의 rate가 다른 atrous convolution을 병렬로 적용한 뒤, 이를 다시 합쳐주는 ASPP 기법을 제안했다. 이러한 방식은 multi-scale context를 모델 구조로 구현하여 보다 정확한 semantic segmentation을 수행할 수 있도록 도와준다.
+
+<br>
 
 ### 4.4. Output Update by the Fusion Module
+- Fusion 모듈은 시퀀스 데이터를 사용한다고 가정할 때, RNN의 업데이트 프로세스 과정과 유사하다. Fusion 모듈은 2에서부터 T까지 스텝으로 진행된다.
 
+- Fusion 모듈은 sigmoid 동작으로 진행되는 convolution layer에 의해, attention map을 계산하기 위해 사용한다. attention map 결과는 feature들의 weight를 계산하고, 업데이트하는데 사용된다. 
 
 <br><br>
 
 ## 5. Switchable Atrous Convolution
 ### 5.1. Atrous Convolution
-
-<center><img src="/reference_image/MH.Ji/DetectorRS/1.PNG" width="70%"></center><br>
-
-- trous는 구멍(hole)을 의미한다. 기존 convolution과 다르게 필터 내부에 빈 공간을 둔 채 작동한다. ROI가 커질수록 빈 공간이 넓어지게 됨을 의미한다.
-- 이는 기존 convolution과 동일한 양의 파라미터와 계산량을 유지해주며, field of view(한 픽셀이 볼 수 있는 영역)을 크게 가져갈 수 있게 된다. 여러 convolution과 pooling 과정에서 디테일한 정보가 줄어들고, 특성이 점점 abstract해지는 것을 방지해줄 수 있다.
-
+- 위의 설명 참조
 
 ### 5.2. Switchable Atrous Convolution
+- 본 논문에서 제시하고 있는 SAC는 다음 그림과 같은 구조를 가지며, 3가지 주요 구성(2개의 global context modules과 SAC)으로 이루어진다.
+
+    <center><img src="/reference_image/MH.Ji/DetectorRS/19.PNG" width="70%"></center><br>
+
+- 논문에서는 convolutional 연산을 위해, y = Conv(x, w, r) 식을 사용했다. w는 weight, r은 atrous rate, x는 input, y는 output이다. 아래와 같은 식을 통해 ResNet backbone의 convolutional layer를 SAC로 변환한다.
+
+    <center><img src="/reference_image/MH.Ji/DetectorRS/20.PNG" width="70%"></center><br>
+
+    + S(X)는 switch function이며, delta w는 trainable weight이다. S(X)는 5x5 kernel의 average pooling과 1x1 convolutional layer로 구성되어 있다. switch function은 input과 location이 독립적이기 때문에, backbone 모델은 필요에 따라 다양한 scale에 적용가능하다.
+
+    + 이러한 SAC를 통해 input이 두 가지 다른 atrous rate를 바탕으로 연산을 하면서 더욱 정확한 모델을 만들어낼 수 있다. 다시 말해, 특정 이미지를 하나의 네트워크로 하여금 다양한 관점(receptive field)으로 바라보게 함으로써 성능을 향상시켰다.
 
 ### 5.3. Global Context
+- SAC 구조를 다시 보면 SAC의 메인 컴포넌트의 앞뒤로, 2개의 global context modules를 넣은 것을 볼 수 있다. 이러한 2개의 모듈은 input feature가 GAP 레이어에 의해 먼저 압축되기 때문에 경량화된다.
+
+- Global context 모듈은 SENet과 비슷하지만 다음 2가지의 주요한 차이점이 있다. 차이점을 말하기 전에, SENet 간단 설명.
+
+    + Squeeze and Excitation Networks로, SE block으로 이루어져있다. SE block은 2가지 operation으로 작동하는데, 첫 번째는 squeeze operation이다. feature map에 대한 전체 정보를 요약해주는 것으로, 각 채널들의 중요한 정보들만 추출해서 가져가겠다는 뜻이다. 채널들의 중요한 정보를 추출해주는 대표적인 기법은 GAP로, 채널 디스크립터로 압축이 가능하다.
+
+    + 두 번째는 excitation operation이다. recalibration하는 것으로, 채널간 의존성을 계싼한다. fully connected layer와 non-linearity function을 조절함으로써, 각 feature map의 중요도를 0~1 사이로 스케일한다.
+
+    + SENet은 모델 구조와 성능에 초점을 맞춘 것이 아니라, 연산량을 줄이기 위한 목적이다. 또한, 기존 네트워크에 붙이면 바로 적용이 가능하다.
+
+- 차이점
+    1) non-linearity layers없이 one convolutional layer를 사용했다.  
+
+    2) output 뒤에 Sigmoid로 re-calibraing value를 계산한 다중 input 대신에 main stream을 더했다.  
 
 <br><br>
 
 ## 6. Experiments
+<center><img src="/reference_image/MH.Ji/DetectorRS/21.PNG" width="70%"></center><br>
 
+<center><img src="/reference_image/MH.Ji/DetectorRS/21.PNG" width="70%"></center><br>
+
+<br>
 
 ## 참고자료
 [[Object Detection] Feature Pyramid Network (FPN)](https://eehoeskrap.tistory.com/300)
