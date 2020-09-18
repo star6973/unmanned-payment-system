@@ -1,9 +1,20 @@
+'''
+import sys, os
+sys.path.append(os.pardir)
+from mnist import load_mnist
+
+(x_train, t_train), (x_test, t_test) = \
+    load_mnist(flatten=True, normalize=False)
+
+print(x_train.shape)
+'''
+'''
 import sys, os
 sys.path.append(os.pardir)  # 부모 디렉터리의 파일을 가져올 수 있도록
 import numpy as np
 import pickle
-from dataset.mnist import load_mnist
-from common.functions import sigmoid, softmax
+from mnist import load_mnist
+from functions import sigmoid, softmax
 
 
 def get_data():
@@ -44,3 +55,27 @@ for i in range(0, len(x), batch_size):
     accuracy_cnt += np.sum(p == t[i:i+batch_size])
 
 print("Accuracy:" + str(float(accuracy_cnt) / len(x)))
+'''
+
+import sys, os
+sys.path.append(os.pardir)  # 부모 디렉터리의 파일을 가져올 수 있도록
+import numpy as np
+from mnist import load_mnist
+from PIL import Image
+
+def img_show(img):
+    pil_img=Image.fromarray(np.uint8(img))
+    pil_img.show()
+
+(x_train,t_train), (x_test,t_test) = \
+    load_mnist(flatten=True, normalize=False)
+
+img = x_train[0]
+label=t_train[0]
+print(label)
+
+print(img.shape)
+img = img.reshape(28,28)
+print(img.shape)
+
+img_show(img)
