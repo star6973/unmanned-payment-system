@@ -45,6 +45,8 @@
 
         - SSD는 각각의 feature map을 가져와서 비율과 크기가 각기 다른 default box를 projection한다. 그리고 이렇게 찾아낸 박스들에 bounding box regression을 적용하고 confidence level을 계산한다. YOLO는 아무런 기본값 없이 2개의 box를 예측한 것과 대조적이다.
 
+        - 즉, 하나의 그리드에서 생성하는 anchor box의 크기가 동일하다면, output feature map의 크기가 작은 4x4 filter에서는 큰 물체를 검출할 가능성이 높다. 반대로 output feature map의 크기가 큰 8x8 filter에서는 작은 물체를 검출할 가능성이 높다. 이러한 형태는 다양한 크기의 feature map을 detection하기 위해 사용한다면 더 좋은 성능을 기대할 수 있기 때문이다.
+
 - Convolutional predictors for detection
 
     + 다음으로 feature map에 3x3 convolution을 적용(padding=1)하여, score for a category(classification)과 shape offset relative to the default box coordinates(bounding box regression) 값을 계산한다. 이는 각각의 default box들의 x, y, w, h의 조절값을 나타내므로 4차원 벡터에 해당한다. 위의 그림에서는 인덱스 하나에 3개의 defualt box를 적용하였기에, 결과 feature map의 크기가 5x5x12가 된다.
