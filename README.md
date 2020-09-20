@@ -23,7 +23,7 @@
 | 4주 | 2020-08-24 ~ <br> 2020-08-28 </br> | 데이터셋 구축 2차 (8/24 - Labeling 끝) | Object Detection 기술 조사(R-CNN ~ YOLO) |
 | 5주 | 2020-08-31 ~ <br> 2020-09-04 </br> | Object Detection 기술 조사 | 데이터셋 cropping(9/3 - train 9924장, val 2505장, test 5327장), 데이터셋으로 Image Classification 구현(9/4 - customCNN 구현, 9/5 - ResNet 구현, 9/6 - VGGNet 구현, 9/7 - DenseNet 구현), Object Detection 기술 조사(R-CNN, Fast R-CNN, Faster R-CNN, Mask R-CNN) |
 | 6주 | 2020-09-07 ~ <br> 2020-09-11 </br> | Face Detection 기술 조사 | 9/8 - Object Detection 발표(RODEO(혁화), IterDet(정운), SSD(명화), EfficientDet(인화)), 9/9 - Image Classification 테스팅 98%(ResNet) 완료 |
-| 7주 | 2020-09-14 ~ <br> 2020-09-18 </br> | 기존 모델 다루기 실습 | 9/10-9/13 - Image Classification 테스팅 (VGGNet, ResNet, MobileNet, EfficientNet) 완료, 9/14 - Object Detection Tutorial, 9/17-18 논문 찾기 |
+| 7주 | 2020-09-14 ~ <br> 2020-09-18 </br> | 기존 모델 다루기 실습 | 9/10-9/13 - Image Classification 테스팅 (VGGNet, ResNet, MobileNet, EfficientNet) 완료, 9/14 - Object Detection Tutorial, 9/17-20 논문 찾기(DetectorRS, NETNet) |
 | 8주 | 2020-09-21 ~ <br> 2020-09-25 </br> | Transfer Learning 준비 |  |
 | 9주 | 2020-09-28 ~ <br> 2020-09-29 </br> | Transfer Learning 실습 |  |
 | 10주 | 2020-10-05 ~ <br> 2020-10-08 </br> | 결과 검토 및 모델 수정 |  |
