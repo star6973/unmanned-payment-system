@@ -227,7 +227,7 @@
 
     + Squeeze and Excitation Networks로, SE block으로 이루어져있다. SE block은 2가지 operation으로 작동하는데, 첫 번째는 squeeze operation이다. feature map에 대한 전체 정보를 요약해주는 것으로, 각 채널들의 중요한 정보들만 추출해서 가져가겠다는 뜻이다. 채널들의 중요한 정보를 추출해주는 대표적인 기법은 GAP로, 채널 디스크립터로 압축이 가능하다.
 
-    + 두 번째는 excitation operation이다. recalibration하는 것으로, 채널간 의존성을 계싼한다. fully connected layer와 non-linearity function을 조절함으로써, 각 feature map의 중요도를 0~1 사이로 스케일한다.
+    + 두 번째는 excitation operation이다. recalibration하는 것으로, 채널간 의존성을 계산한다. fully connected layer와 non-linearity function을 조절함으로써, 각 feature map의 중요도를 0~1 사이로 스케일한다.
 
     + SENet은 모델 구조와 성능에 초점을 맞춘 것이 아니라, 연산량을 줄이기 위한 목적이다. 또한, 기존 네트워크에 붙이면 바로 적용이 가능하다.
 
