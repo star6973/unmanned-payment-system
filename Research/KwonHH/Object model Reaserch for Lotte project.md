@@ -39,6 +39,8 @@
     1. Efficiency Study
     
 1. SOLOv2: Dynamic, Faster and Stronger
+    1. Introduction
+        - 
 1. CBNet: A Novel Composite Backbone Network Architecture for Object Detection
 1. Grid R-CNN Plus: Faster and Better
 1. GCNet: Non-local Networks Meet Squeeze-Excitation Networks and Beyond
