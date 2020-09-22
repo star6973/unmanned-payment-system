@@ -109,8 +109,6 @@
 - RefineDet [Single-Shot Refinement Neural Network for Object Detection](https://openaccess.thecvf.com/content_cvpr_2018/papers/Zhang_Single-Shot_Refinement_Neural_CVPR_2018_paper.pdf)
 
 ### 2019
-- M2Det []()
-- ExtremeNet []()
 - [Generative Modeling for Small-Data Object Detection](https://openaccess.thecvf.com/content_ICCV_2019/papers/Liu_Generative_Modeling_for_Small-Data_Object_Detection_ICCV_2019_paper.pdf)
 - ThunderNet [ThunderNet: Towards Real-Time Generic Object Detection on Mobile Devices](https://arxiv.org/pdf/1903.11752.pdf)
 - DetNAS [DetNAS: Backbone Search for Object Detection](https://arxiv.org/pdf/1903.10979v4.pdf)

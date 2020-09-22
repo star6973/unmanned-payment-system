@@ -1,4 +1,4 @@
-# 논문 내용 정리
+# 논문 내용 정리(SSD:Single Shot Multibox Detector)
 ## 1. Abstract
 - YOLO의 정확도의 한계를 극복하기 위해 출발.
 - YOLO는 입력 이미지를 7x7 그리드로 나누고, 각 그리드별로 bounding box prediction을 진행하기 때문에 그리드 크기보다 작은 물체를 잡아내지 못하는 문제가 있다. 그리고 신경망을 모두 통과하면서 convolution과 pooling을 거쳐 coarse(조잡)한 정보만 남은 마지막 layer의 feature map만 사용하기 때문에 정확도가 하락하는 한계가 있다.
