@@ -97,10 +97,44 @@
     <center><img src="/reference_image/MH.Ji/NETNet/10.PNG" width="70%"></center><br>
 
 ### 4.3. Neighbor Transferring Module
-- 
+- 피라미드 feature ps는 {x_s+1, x_s+2, ..., xS}의 디테일한 정보를 포함하고 있다. 이러한 정보들은 작은 객체 xs를 탐지하는데 방해될 수 있지만, classification과 localization의 정확도를 위한 큰 객체들의 features를 강화하기에 도움이 될 수 있다. 따라서 NTM을 이용해 shallow layer로부터 deep layer로 이러한 feature를 transfer한다.
+
+    <center><img src="/reference_image/MH.Ji/NETNet/11.PNG" width="70%"></center><br>
+
+<br><br>
 
 ## 5. Single-Shot Detector: NETNet
+- basic pyramid를 기반으로 NET 모듈을 만들어 scale-aware features를 만들었고, 앞서 말한 scale 문제들을 해결했다. Implementation에서는, detection anchos를 구성하고 ground truth를 할당하는 과정에서 가장 가까운 neighbor pyramid levels 사이에 scale-overlap이 있었다. 이를 방지하고자, NETM skip manner를 만들었다.
 
+- 또한, scale-overlap이 가장 가까운 인접 피라미드 레이어에 존재하는 하나의 객체에 대한 feature를 보완한다는 점을 고려하여, NNFM(Nearest Neighbor Fusion Module)을 도입한다.
 
+- NNFM 및 NETM를 기반으로 한 box regression 및 classification을 위한 6개의 다른 detection head는 scale-aware detector NETNet을 구성하기 위한 scale-aware features를 기반으로 구축되었다.
+
+    <center><img src="/reference_image/MH.Ji/NETNet/12.PNG" width="70%"></center><br>
+
+### 5.1. NETM(NTM + NEM) in a Skip Manner
+- 작은 객체를 탐지하기 위해 사용되었던 shallow layers(38x38 resolution)의 features와 반대로, 큰 객체를 탐지하기 위해 deeper layers(10x10 resolution)를 사용했다. 왜냐하면 small resolution(3x3)은 큰 receptive fields를 가지고 있고 적은 spatial 정보를 가지고 있기 때문이다. 따라서 우리는 p5와 p6의 features를 사용하지 않고 feature를 erasing하고 transferring하는 2개의 NETM을 만들었다.
+
+- 하나의 작은 객체는 p1과 p2에 동시에 탐지될 수 있는데, 이를 피하고자 2개의 skipped NETM을 이용하여 오버랩된 부분을 방해한다.
+
+### 5.2. NNFM(Nearest Neighbor Fusion Module)
+- feature 피라미드의 연구에서 지적했듯이, 인접한 피라미드 레이어의 feature는 상호보완적이다. 따라서 서로 다른 레이어의 context 정보를 통합하면 feature 표현이 촉진된다.
+
+- 일반적으로 feature 피라미드를 구축하기 위해 위에서부터 아래로 features를 결합한다. 그러나 우리의 목적은 shallow 레이어에서 큰 객체의 feature는 제거하고, scale-aware  features를 생성하는 것이므로, 다른 scale feature를 도입하면 scale-confusion 문제를 증가시킨다. 따라서, feature pyramid를 향상시키기 위해 보다 효과적인 융합 모듈인 NNFM을 제안한다.
+
+- H_s-1은 pooling layer와 1x1 conv layer로 구성되고, Hs는 1x1 conv layer로 구성된다. H_s+1은 bilinear upsampling layer와 1x1 conv layer로 구성된다.
+
+    <center><img src="/reference_image/MH.Ji/NETNet/13.PNG" width="70%"></center><br>
+
+- top-down 방식처럼 {p6, p5, p4, p3, p2} features를 사용하는 대신에, p1, p2, 그리고 p3로부터 완전한 정보를 집계시킴으로써 p2 feature를 강화시켰다.
+
+- 작은 객체의 정보 p1은 pooling 명령과 큰 객체 p3 정보로부터 NEM 다음에 삭제된다. 결과적으로, 객체의 features는 p2에서 감지되고 NNFM의 보완적인 정보를 융합하여 강화시킨다.
+
+<br><br>
 
 ## 6. Experiments
+<center><img src="/reference_image/MH.Ji/NETNet/14.PNG" width="70%"></center><br>
+
+<center><img src="/reference_image/MH.Ji/NETNet/15.PNG" width="70%"></center><br>
+
+<center><img src="/reference_image/MH.Ji/NETNet/16.PNG" width="70%"></center><br>
