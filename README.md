@@ -250,3 +250,9 @@
 3. 다음주까지 과제
     - Image Classification 성능 향상(data augmentation 적용, metrics 변경 등을 이용)
     - Object Detection 모델링
+
+### 2020-09-23
+1. Object Detection 모델링
+    - 일단 우리 데이터셋으로 돌려보기 전에, 기존 COCO나 VOC 데이터셋으로 돌려볼 수 있는 환경 구축해보기
+    - 구축이 되면, 우리 데이터셋에 맞게 모듈을 하나씩 가져와서 사용해보기
+    - 우선적으로 왠만하면 깃허브에서 제시해주는 데이터셋 포맷에 맞게, 데이터 형식을 변형해주자.
