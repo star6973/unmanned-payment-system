@@ -188,9 +188,8 @@
     - soft_margin_loss
         + 입력 tensor 와 predicted tensor 간의 차이를 softmax 를 거쳐 -1 ~ 1 사이로 출력
 
-2. torch.optim [optimizer] - by 홍인화
-
-    <center><img src="/reference_image/MH.Ji/Deep Learning Concept/optimizer.png" width="70%"></center><br>
+2. torch.optim [optimizer] - by 홍인화  
+    <center><img src="/reference_image/MH.Ji/Deep Learning Conecpt/optimizer.png" width="70%"></center><br>
 
 3. torch.optim.lr_scheduler [lr_scheduler] - by 지명화
     - ReduceLROnPlateau
