@@ -54,3 +54,24 @@
     + 왜 fc-head는 classification score와 proposal IoU 사이에 상관관계를 보이고, localization에 성능이 더 안좋을까? 이러한 이유를 본 논문 저자들은 fc-head가 conv-head보다 공간적으로 sensiive하기 때문이라고 생각한다. 직관적으로, fc-head는 input feature map의 다른 위치에 공유되지 않은 transformation을 적용한다. 따라서 암묵적으로 공간정보가 깊숙이 있다는 것을 알 수 있다. fc-head의 spatial sensitivity는 객체를 구분하는데 도움을 줄 수 있다. 하지만, 전체 객체의 위치를 결정하는데는 불충분하다.
 
     + 반대로, conv-head는 공유되는 transformation을 적용하기 때문에 input feature map에 모든 위치 정보가 있다.
+
+## 5. Our Approach: Double-Head
+- 제안한 Double-Head 구조는 fully connected head가 classification, convolution head는 bounding box regression을 가지는 구조이다. 추가로, Double-Head-Ext는 fc-head의 bounding box와 conv-head의 classification과 같은 중심적이지 않았던 부분을 확장하였다.
+
+<center><img src="/reference_image/MH.Ji/Rethinking/5.PNG" width="70%"></center><br>
+
+- 실험을 통해, 중심적이지 않았던 부분(fc-head의 bounding box regression과 conv-head의 classification)이 2가지 면에서 도움을 주었다.
+    + (a) bounding box regression이 fc-head에서 auxiliary supervision을 제공해준다.
+
+    + (b) 두 head의 classifier가 상호보완적이다.
+
+- 그러므로 중심적이지 않았던 task의 supervision과 상호보완적인 fusion 메소드를 통해, inference 과정에서 두 head로부터 얻어진 classification 점수를 결합한다.
+
+## 6. Experiment Result
+<center><img src="/reference_image/MH.Ji/Rethinking/6.PNG" width="70%"></center><br>
+
+<center><img src="/reference_image/MH.Ji/Rethinking/7.PNG" width="70%"></center><br>
+
+<center><img src="/reference_image/MH.Ji/Rethinking/8.PNG" width="70%"></center><br>
+
+<center><img src="/reference_image/MH.Ji/Rethinking/9.PNG" width="70%"></center><br>
