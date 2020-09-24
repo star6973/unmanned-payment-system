@@ -26,15 +26,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="49a72ee4-5b9a-4b18-b1b3-01a0a89c294e" name="Default Changelist" comment="commit">
+      <change beforePath="$PROJECT_DIR$/.idea/lotte_studying.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/lotte_studying.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Research/KwonHH/Object model Reaserch for Lotte project.md" beforeDir="false" afterPath="$PROJECT_DIR$/Research/KwonHH/Object model Reaserch for Lotte project.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <excluded-from-favorite>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="master" />
+              </list>
+            </value>
+          </entry>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="origin/master" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </excluded-from-favorite>
     <favorite-branches>
       <branch-storage>
         <map>
@@ -42,6 +70,13 @@
             <value>
               <list>
                 <branch-info repo="$PROJECT_DIR$" source="KwonHH" />
+              </list>
+            </value>
+          </entry>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="origin/KwonHH" />
               </list>
             </value>
           </entry>
@@ -74,7 +109,35 @@
       <recent name="C:\Users\사용자\PycharmProjects\lotte_studying\PPT\KwonHH" />
     </key>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="RunManager">
+    <configuration name="xml2yml_" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="lotte_studying" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Research/KwonHH" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="C:\lotte_studying\Research\KwonHH\xml2yml_.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.xml2yml_" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -394,7 +457,35 @@
       <option name="project" value="LOCAL" />
       <updated>1600428569650</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="~ing">
+      <created>1600664072562</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1600664072562</updated>
+    </task>
+    <task id="LOCAL-00046" summary="~ing">
+      <created>1600664084056</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1600664084056</updated>
+    </task>
+    <task id="LOCAL-00047" summary="commit">
+      <created>1600664091617</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1600664091617</updated>
+    </task>
+    <task id="LOCAL-00048" summary="commit">
+      <created>1600853611199</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1600853611199</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -424,6 +515,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="commit-jw" />
     <MESSAGE value="수정3" />
+    <MESSAGE value="~ing" />
     <MESSAGE value="commit" />
     <option name="LAST_COMMIT_MESSAGE" value="commit" />
   </component>
@@ -441,6 +533,22 @@
     </state>
     <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1597392322145" />
     <state x="632" y="147" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1598872592969" />
+    <state width="468" height="279" key="GridCell.Tab.0.bottom" timestamp="1600875028310">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="468" height="279" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1600875028310" />
+    <state width="468" height="279" key="GridCell.Tab.0.center" timestamp="1600875028310">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="468" height="279" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1600875028310" />
+    <state width="468" height="279" key="GridCell.Tab.0.left" timestamp="1600875028310">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="468" height="279" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1600875028310" />
+    <state width="468" height="279" key="GridCell.Tab.0.right" timestamp="1600875028310">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="468" height="279" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1600875028310" />
     <state x="184" y="86" key="MergeDialog" timestamp="1600395252902">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -449,11 +557,23 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="598" y="280" key="MultipleFileMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1600395271803" />
-    <state x="72" y="256" key="Vcs.Push.Dialog.v2" timestamp="1600413227416">
+    <state x="754" y="164" key="SettingsEditor" timestamp="1600685153628">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="754" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1600685153628" />
+    <state x="72" y="256" key="Vcs.Push.Dialog.v2" timestamp="1600853648962">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1597391896991" />
-    <state x="72" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1600413227416" />
+    <state x="72" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1600853648962" />
+    <state x="688" y="254" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1600853606022">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="688" y="254" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1600853606022" />
+    <state x="1260" y="419" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1600685082164">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1260" y="419" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1600685082164" />
     <state x="143" y="230" width="672" height="678" key="search.everywhere.popup" timestamp="1600322302083">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
