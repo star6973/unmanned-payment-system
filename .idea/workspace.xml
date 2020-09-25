@@ -25,7 +25,9 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49a72ee4-5b9a-4b18-b1b3-01a0a89c294e" name="Default Changelist" comment="commit" />
+    <list default="true" id="49a72ee4-5b9a-4b18-b1b3-01a0a89c294e" name="Default Changelist" comment="xml 내 파일이름 변경_수정본">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -450,8 +452,13 @@
     <MESSAGE value="commit-jw" />
     <MESSAGE value="수정3" />
     <MESSAGE value="~ing" />
+    <MESSAGE value="ImageSets의 text 파일 내 이름 변경" />
+    <MESSAGE value="ImageSets의 text 파일 내 이름 변경_수정본" />
+    <MESSAGE value="xml-&gt;mat(실패)" />
+    <MESSAGE value="xml-&gt;yml(실패)" />
     <MESSAGE value="commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit" />
+    <MESSAGE value="xml 내 파일이름 변경_수정본" />
+    <option name="LAST_COMMIT_MESSAGE" value="xml 내 파일이름 변경_수정본" />
   </component>
   <component name="WindowStateProjectService">
     <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1596777757664">
@@ -467,6 +474,22 @@
     </state>
     <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1597392322145" />
     <state x="632" y="147" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1598872592969" />
+    <state width="1899" height="281" key="GridCell.Tab.0.bottom" timestamp="1600941806653">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1600941806653" />
+    <state width="1899" height="281" key="GridCell.Tab.0.center" timestamp="1600941806653">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1600941806653" />
+    <state width="1899" height="281" key="GridCell.Tab.0.left" timestamp="1600941806653">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1600941806653" />
+    <state width="1899" height="281" key="GridCell.Tab.0.right" timestamp="1600941806653">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1600941806653" />
     <state x="184" y="86" key="MergeDialog" timestamp="1600395252902">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -479,11 +502,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="754" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1600685153628" />
-    <state x="72" y="256" key="Vcs.Push.Dialog.v2" timestamp="1600853648962">
+    <state x="72" y="256" key="Vcs.Push.Dialog.v2" timestamp="1600941336056">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1597391896991" />
-    <state x="72" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1600853648962" />
+    <state x="72" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1600941336056" />
     <state x="688" y="254" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1600853606022">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
