@@ -12,12 +12,13 @@ def int2str(num):
     else:
         return str(num)
 
+print(os.getcwd())
 numbering = 0
 
-targetDir = '../pascal_voc/pascalVOC_hh/Annotations/'
+targetDir = 'C:/Users/사용자/Desktop/pascal_voc/pascalVOC_hh/Annotations/'
 save_Dir = 'C:/Users/사용자/Desktop/Annotations/'
 
-img_targetDir = '../pascal_voc/pascalVOC_hh/JPEGImages/'
+img_targetDir = 'C:/Users/사용자/Desktop/pascal_voc/pascalVOC_hh/JPEGImages/'
 img_save_Dir = 'C:/Users/사용자/Desktop/JPEGImages/'
 
 file_listhh = os.listdir(targetDir)
@@ -74,8 +75,8 @@ for xml_file in file_listhh:
 #=================================================================================#
 
 
-targetDir = '../pascal_voc/pascalVOC_ih/Annotations/'
-img_targetDir = '../pascal_voc/pascalVOC_ih/JPEGImages/'
+targetDir = 'C:/Users/사용자/Desktop/pascal_voc/pascalVOC_ih/Annotations/'
+img_targetDir = 'C:/Users/사용자/Desktop/pascal_voc/pascalVOC_ih/JPEGImages/'
 
 file_listih = os.listdir(targetDir)
 print('ih\n', file_listih)
@@ -135,8 +136,8 @@ for xml_file in file_listih:
 #=================================================================================#
 
 
-targetDir = '../pascal_voc/pascalVOC_ih/Annotations/'
-img_targetDir = '../pascal_voc/pascalVOC_ih/JPEGImages/'
+targetDir = 'C:/Users/사용자/Desktop/pascal_voc/pascalVOC_jw/Annotations/'
+img_targetDir = 'C:/Users/사용자/Desktop/pascal_voc/pascalVOC_jw/JPEGImages/'
 
 file_listjw = os.listdir(targetDir)
 print('jw\n', file_listjw)
@@ -189,8 +190,8 @@ for xml_file in file_listjw:
 
     # =================================================================================#
 
-targetDir = '../pascal_voc/pascalVOC_ih/Annotations/'
-img_targetDir = '../pascal_voc/pascalVOC_ih/JPEGImages/'
+targetDir = 'C:/Users/사용자/Desktop/pascal_voc/pascalVOC_mh/Annotations/'
+img_targetDir = 'C:/Users/사용자/Desktop/pascal_voc/pascalVOC_mh/JPEGImages/'
 
 file_listmh = os.listdir(targetDir)
 print('mh\n',file_listmh)
