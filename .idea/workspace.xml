@@ -27,6 +27,7 @@
   <component name="ChangeListManager">
     <list default="true" id="49a72ee4-5b9a-4b18-b1b3-01a0a89c294e" name="Default Changelist" comment="commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Research/KwonHH/Joint Face Detection and Alignment using Multi-task Cascaded Convolution Networks_review.md" beforeDir="false" afterPath="$PROJECT_DIR$/Research/KwonHH/Joint Face Detection and Alignment using Multi-task Cascaded Convolution Networks_review.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,48 +85,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1596613776800</updated>
-    </task>
-    <task id="LOCAL-00004" summary="commit-jw">
-      <created>1597221456405</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1597221456405</updated>
-    </task>
-    <task id="LOCAL-00005" summary="commit-jw">
-      <created>1597391885020</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1597391885020</updated>
-    </task>
-    <task id="LOCAL-00006" summary="commit">
-      <created>1597811936431</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1597811936431</updated>
-    </task>
-    <task id="LOCAL-00007" summary="commit">
-      <created>1597813050845</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1597813050845</updated>
-    </task>
-    <task id="LOCAL-00008" summary="commit">
-      <created>1597813207085</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1597813207085</updated>
-    </task>
-    <task id="LOCAL-00009" summary="commit">
-      <created>1598257591638</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1598257591638</updated>
     </task>
     <task id="LOCAL-00010" summary="commit">
       <created>1598274406745</created>
@@ -428,7 +387,49 @@
       <option name="project" value="LOCAL" />
       <updated>1601535855944</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="Joint Face Detection and Alignment using Multi-task Cascaded Convolution Networks 논문 리뷰">
+      <created>1601541783416</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1601541783416</updated>
+    </task>
+    <task id="LOCAL-00054" summary="commit">
+      <created>1601541794381</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1601541794381</updated>
+    </task>
+    <task id="LOCAL-00055" summary="commit">
+      <created>1601559390347</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1601559390347</updated>
+    </task>
+    <task id="LOCAL-00056" summary="commit">
+      <created>1601559690762</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1601559690762</updated>
+    </task>
+    <task id="LOCAL-00057" summary="Joint Face Detection and Alignment using Multi-task Cascaded Convolution Networks 리뷰">
+      <created>1601559998385</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1601559998385</updated>
+    </task>
+    <task id="LOCAL-00058" summary="commit">
+      <created>1601563474680</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1601563474680</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -460,6 +461,8 @@
     <MESSAGE value="수정3" />
     <MESSAGE value="~ing" />
     <MESSAGE value="xml2json for single xml file" />
+    <MESSAGE value="Joint Face Detection and Alignment using Multi-task Cascaded Convolution Networks 논문 리뷰" />
+    <MESSAGE value="Joint Face Detection and Alignment using Multi-task Cascaded Convolution Networks 리뷰" />
     <MESSAGE value="commit" />
     <option name="LAST_COMMIT_MESSAGE" value="commit" />
   </component>
@@ -489,11 +492,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="754" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1600685153628" />
-    <state x="72" y="256" key="Vcs.Push.Dialog.v2" timestamp="1601038353036">
+    <state x="72" y="256" key="Vcs.Push.Dialog.v2" timestamp="1601563488426">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1597391896991" />
-    <state x="72" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1601038353036" />
+    <state x="72" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1601563488426" />
     <state x="688" y="254" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1600853606022">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -502,9 +505,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1260" y="419" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1600685082164" />
-    <state x="143" y="230" width="672" height="678" key="search.everywhere.popup" timestamp="1600322302083">
+    <state x="143" y="230" width="672" height="678" key="search.everywhere.popup" timestamp="1601555747924">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="143" y="230" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1600322302083" />
+    <state x="143" y="230" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1601555747924" />
   </component>
 </project>
