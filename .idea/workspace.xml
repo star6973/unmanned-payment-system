@@ -85,20 +85,6 @@
       <option name="presentableId" value="Default" />
       <updated>1596613776800</updated>
     </task>
-    <task id="LOCAL-00002" summary="commit-jw">
-      <created>1597046875570</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1597046875570</updated>
-    </task>
-    <task id="LOCAL-00003" summary="commit-jw">
-      <created>1597221379199</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1597221379199</updated>
-    </task>
     <task id="LOCAL-00004" summary="commit-jw">
       <created>1597221456405</created>
       <option name="number" value="00004" />
@@ -428,7 +414,21 @@
       <option name="project" value="LOCAL" />
       <updated>1601440686483</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="xml2json for single xml file">
+      <created>1601535846214</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1601535846215</updated>
+    </task>
+    <task id="LOCAL-00052" summary="commit">
+      <created>1601535855944</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1601535855944</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -459,6 +459,7 @@
     <MESSAGE value="commit-jw" />
     <MESSAGE value="수정3" />
     <MESSAGE value="~ing" />
+    <MESSAGE value="xml2json for single xml file" />
     <MESSAGE value="commit" />
     <option name="LAST_COMMIT_MESSAGE" value="commit" />
   </component>
