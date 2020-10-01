@@ -1,0 +1,103 @@
+<annotation verified="yes">
+    <folder>Annotation</folder>
+    <filename>0647.jpg</filename>
+    <path>PascalVoc/Annotations/0647.jpg</path>
+    <source>
+        <database>Unknown</database>
+    </source>
+    <size>
+        <width>1280</width>
+        <height>720</height>
+        <depth>3</depth>
+    </size>
+    <segmented>0</segmented>
+    <object>
+    <name>chocopie</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>107.87878787878788</xmin>
+        <ymin>215.75757575757575</ymin>
+        <xmax>368.4848484848485</xmax>
+        <ymax>499.3939393939394</ymax>
+    </bndbox>
+</object><object>
+    <name>vita500</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>366.06060606060606</xmin>
+        <ymin>52.121212121212125</ymin>
+        <xmax>488.4848484848485</xmax>
+        <ymax>418.1818181818182</ymax>
+    </bndbox>
+</object><object>
+    <name>coke</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>476.3636363636364</xmin>
+        <ymin>49.696969696969695</ymin>
+        <xmax>608.4848484848485</xmax>
+        <ymax>406.06060606060606</ymax>
+    </bndbox>
+</object><object>
+    <name>tuna</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>591.5151515151515</xmin>
+        <ymin>178.1818181818182</ymin>
+        <xmax>715.1515151515151</xmax>
+        <ymax>407.27272727272725</ymax>
+    </bndbox>
+</object><object>
+    <name>couque_white</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>905.4545454545455</xmin>
+        <ymin>15.757575757575758</ymin>
+        <xmax>1104.2424242424242</xmax>
+        <ymax>441.2121212121212</ymax>
+    </bndbox>
+</object><object>
+    <name>gumi_gumi</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>1013.3333333333334</xmin>
+        <ymin>164.84848484848484</ymin>
+        <xmax>1276.3636363636365</xmax>
+        <ymax>511.5151515151515</ymax>
+    </bndbox>
+</object><object>
+    <name>zec</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>360</xmin>
+        <ymin>426.6666666666667</ymin>
+        <xmax>1004.8484848484849</xmax>
+        <ymax>603.6363636363636</ymax>
+    </bndbox>
+</object><object>
+    <name>juicyfresh</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>602.4242424242425</xmin>
+        <ymin>607.2727272727273</ymin>
+        <xmax>801.2121212121212</xmax>
+        <ymax>669.0909090909091</ymax>
+    </bndbox>
+</object>
+</annotation>
