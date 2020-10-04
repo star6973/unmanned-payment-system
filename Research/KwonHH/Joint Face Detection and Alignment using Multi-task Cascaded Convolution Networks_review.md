@@ -69,4 +69,38 @@
                 - 역전파 계산에서 위에서 선택된 hard sample에 대해서만 gradient를 계산
                 - 이것은 easy sample을 무시하여 Network 가 weak하지 않도록 하기 위함이며, Experiment 에서 확인할 수 있듯이 이러한 전략은 manual sample selection 없이도 좋은 성능을 낼 수 있도록 함<br><br><br>
 1. Experiment
+    - 이 장에서는 본 논문에서 제안된 hard sample mining 의 효율성에 대해서 평가한다
+    - 다음 FDDB, WIDER FACE, AFLW 에 대해서 본 논문의 모델과 다른 sota 모델들의 성능을 비교한다<br><br>
+    1. Training Data
+        - Negatives : IoU 가 0.3 이하인 경우
+        - Positive : IoU 가 0.65 이상인 경우
+        - Part faces : IoU 가 0.4 ~ 0.65 사이값을 가지는 경우
+        - Land mark faces : 5개 landmark의 위치가 label 표시된 face<br><br>
+        - Negatives + Positives : classification task에 사용
+        - Positives + Part faces : bounding box regression에 사용
+        - Landmark faces : landmark를 localization 할 때 사용<br><br>
+        1. P-Net
+            - WIDER FACE에서 무작위로 crop하여 positives, negatives, part face 를 수집
+            - 이후 CelebA로부터 face를 crop하여 landmark faces로 사용
+        1. R-Net
+            - P-Net을 사용하여 WIDER FACE 에서 positives, negatives, part face 를 detect하고, 동시에 CelebA로부터 face landmark를 detect
+        1. O-Net
+            - R-Net 과 유사하지만, P-Net, R-Net을 모두 사용<br><br>
+    1.  The effectiveness of online hard sample minig
+        - O-Net을 Online hard sampling 을 적용한 경우와 적용하지 않은 경우에 대한 loss curve 비교
+        - 더욱 직접적인 비교를 위해서 O-Net을 classification에 대해서만 train
+            - networ 초기화를 비롯한 모든 train parameters는 위 두 가지 경우에서 동일
+        - 더욱 취운 비교를 위해서 고정된 learning rate를 사용
+        - hard sample mining이 더욱 성능을 높일 수 있다는 결과를 보였으며, 그 그래프는 아래와 같음<br> [!fig3_a](https://github.com/star6973/lotte_studying/blob/KwonHH/reference_image/KwonHH/Joint%20Face%20Detection%20and%20Alignment%20using%20Multi-task%20Cascaded%20Convolutional%20Networks/fig3_a.JPG?raw=true) <br><br>
+    1. The effectiveness of joint detection and alignment
+        - 다음은 Joint detection and alignment를 적용했을 때 더욱 높은 성능을 보인 것을 확인<br> [!fig3_b](https://github.com/star6973/lotte_studying/blob/KwonHH/reference_image/KwonHH/Joint%20Face%20Detection%20and%20Alignment%20using%20Multi-task%20Cascaded%20Convolutional%20Networks/fig3_b.JPG?raw=true) <br><br>
+    1. Evaluation on face detection
+        - WIDER FACE에 대해서 본 논문의 모델과 sota 모델들을 비교하였으며, 다른 모델에 비해서 큰 성능 향상을 보임<br> [!fig4_atod](https://github.com/star6973/lotte_studying/blob/KwonHH/reference_image/KwonHH/Joint%20Face%20Detection%20and%20Alignment%20using%20Multi-task%20Cascaded%20Convolutional%20Networks/fig4_atod.JPG?raw=true) <br><br>
+    1. Evaluation on face alignment
+        - RCPR, TSPM, Luxand face SDK, ESR, CDM, SDM, TCDCN 에 대해서 성능을 비교했고, Test 과정에서 본 논문의 모델이 detect 실패한 13장의 face에 대해서<br>중간 지역을 crop하여 다시 test를 진행했고, 높은 성능향상을 확인함<br> [!fig4_e](https://github.com/star6973/lotte_studying/blob/KwonHH/reference_image/KwonHH/Joint%20Face%20Detection%20and%20Alignment%20using%20Multi-task%20Cascaded%20Convolutional%20Networks/fig4_e.JPG?raw=true) <br><br>
+    1. Runtime dfficiency
+        - 2.6GHz CPU 에서는 16fps , Nvidia titan black 에 대해서는 99 fps<br><br><br>        
 1. Conclusion
+    - 본 논문에서는 joint detection and alignment 기반의 multi-task cascaded CNN 방식의 framework를 제안함
+    - 제안된 framework를 사용하여 여러 Dataset에 대해서 sota 모델에 비해서 높은 성능향상을 보임
+    - 추후 face detection 과 다른 face 분석 작업 사이의 내재된 상관 관계를 개척할 예정 
