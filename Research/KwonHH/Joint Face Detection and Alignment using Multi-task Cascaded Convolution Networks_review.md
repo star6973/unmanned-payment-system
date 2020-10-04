@@ -91,13 +91,13 @@
         - 더욱 직접적인 비교를 위해서 O-Net을 classification에 대해서만 train
             - networ 초기화를 비롯한 모든 train parameters는 위 두 가지 경우에서 동일
         - 더욱 취운 비교를 위해서 고정된 learning rate를 사용
-        - hard sample mining이 더욱 성능을 높일 수 있다는 결과를 보였으며, 그 그래프는 아래와 같음<br> [!fig3_a](https://github.com/star6973/lotte_studying/blob/KwonHH/reference_image/KwonHH/Joint%20Face%20Detection%20and%20Alignment%20using%20Multi-task%20Cascaded%20Convolutional%20Networks/fig3_a.JPG?raw=true) <br><br>
+        - hard sample mining이 더욱 성능을 높일 수 있다는 결과를 보였으며, 그 그래프는 아래와 같음<br> ![fig3_a](https://github.com/star6973/lotte_studying/blob/KwonHH/reference_image/KwonHH/Joint%20Face%20Detection%20and%20Alignment%20using%20Multi-task%20Cascaded%20Convolutional%20Networks/fig3_a.JPG?raw=true) <br><br>
     1. The effectiveness of joint detection and alignment
-        - 다음은 Joint detection and alignment를 적용했을 때 더욱 높은 성능을 보인 것을 확인<br> [!fig3_b](https://github.com/star6973/lotte_studying/blob/KwonHH/reference_image/KwonHH/Joint%20Face%20Detection%20and%20Alignment%20using%20Multi-task%20Cascaded%20Convolutional%20Networks/fig3_b.JPG?raw=true) <br><br>
+        - 다음은 Joint detection and alignment를 적용했을 때 더욱 높은 성능을 보인 것을 확인<br> ![fig3_b](https://github.com/star6973/lotte_studying/blob/KwonHH/reference_image/KwonHH/Joint%20Face%20Detection%20and%20Alignment%20using%20Multi-task%20Cascaded%20Convolutional%20Networks/fig3_b.JPG?raw=true) <br><br>
     1. Evaluation on face detection
-        - WIDER FACE에 대해서 본 논문의 모델과 sota 모델들을 비교하였으며, 다른 모델에 비해서 큰 성능 향상을 보임<br> [!fig4_atod](https://github.com/star6973/lotte_studying/blob/KwonHH/reference_image/KwonHH/Joint%20Face%20Detection%20and%20Alignment%20using%20Multi-task%20Cascaded%20Convolutional%20Networks/fig4_atod.JPG?raw=true) <br><br>
+        - WIDER FACE에 대해서 본 논문의 모델과 sota 모델들을 비교하였으며, 다른 모델에 비해서 큰 성능 향상을 보임<br> ![fig4_atod](https://github.com/star6973/lotte_studying/blob/KwonHH/reference_image/KwonHH/Joint%20Face%20Detection%20and%20Alignment%20using%20Multi-task%20Cascaded%20Convolutional%20Networks/fig4_atod.JPG?raw=true) <br><br>
     1. Evaluation on face alignment
-        - RCPR, TSPM, Luxand face SDK, ESR, CDM, SDM, TCDCN 에 대해서 성능을 비교했고, Test 과정에서 본 논문의 모델이 detect 실패한 13장의 face에 대해서<br>중간 지역을 crop하여 다시 test를 진행했고, 높은 성능향상을 확인함<br> [!fig4_e](https://github.com/star6973/lotte_studying/blob/KwonHH/reference_image/KwonHH/Joint%20Face%20Detection%20and%20Alignment%20using%20Multi-task%20Cascaded%20Convolutional%20Networks/fig4_e.JPG?raw=true) <br><br>
+        - RCPR, TSPM, Luxand face SDK, ESR, CDM, SDM, TCDCN 에 대해서 성능을 비교했고, Test 과정에서 본 논문의 모델이 detect 실패한 13장의 face에 대해서<br>중간 지역을 crop하여 다시 test를 진행했고, 높은 성능향상을 확인함<br> ![fig4_e](https://github.com/star6973/lotte_studying/blob/KwonHH/reference_image/KwonHH/Joint%20Face%20Detection%20and%20Alignment%20using%20Multi-task%20Cascaded%20Convolutional%20Networks/fig4_e.JPG?raw=true) <br><br>
     1. Runtime dfficiency
         - 2.6GHz CPU 에서는 16fps , Nvidia titan black 에 대해서는 99 fps<br><br><br>        
 1. Conclusion
