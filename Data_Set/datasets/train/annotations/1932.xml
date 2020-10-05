@@ -1,0 +1,114 @@
+<annotation verified="yes">
+    <folder>Annotation</folder>
+    <filename>1932.jpg</filename>
+    <path>PascalVoc/Annotations/1932.jpg</path>
+    <source>
+        <database>Unknown</database>
+    </source>
+    <size>
+        <width>1280</width>
+        <height>960</height>
+        <depth>3</depth>
+    </size>
+    <segmented>0</segmented>
+    <object>
+    <name>vita500</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>66.41245136186771</xmin>
+        <ymin>124.48132780082987</ymin>
+        <xmax>301.4941634241245</xmax>
+        <ymax>308.7136929460581</ymax>
+    </bndbox>
+</object><object>
+    <name>diget_ori</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>317.431906614786</xmin>
+        <ymin>67.71784232365145</ymin>
+        <xmax>526.9416342412451</xmax>
+        <ymax>417.26141078838174</ymax>
+    </bndbox>
+</object><object>
+    <name>diget_choco</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>524.6225680933852</xmin>
+        <ymin>62.73858921161826</ymin>
+        <xmax>710.2256809338521</xmax>
+        <ymax>404.3153526970954</ymax>
+    </bndbox>
+</object><object>
+    <name>squid_peanut</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>659.0972762645914</xmin>
+        <ymin>20.91286307053942</ymin>
+        <xmax>1109.338521400778</xmax>
+        <ymax>648.298755186722</ymax>
+    </bndbox>
+</object><object>
+    <name>welchs</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>1041.603112840467</xmin>
+        <ymin>153.3609958506224</ymin>
+        <xmax>1280</xmax>
+        <ymax>383.402489626556</ymax>
+    </bndbox>
+</object><object>
+    <name>homerunball</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>643.15953307393</xmin>
+        <ymin>596.5145228215767</ymin>
+        <xmax>1220.9027237354085</xmax>
+        <ymax>952.0331950207469</ymax>
+    </bndbox>
+</object><object>
+    <name>jjolbyung_noodle</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>401.10505836575874</xmin>
+        <ymin>419.253112033195</ymin>
+        <xmax>707.9066147859921</xmax>
+        <ymax>835.5186721991702</ymax>
+    </bndbox>
+</object><object>
+    <name>jjolbyung_ori</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>182.95719844357976</xmin>
+        <ymin>415.26970954356847</ymin>
+        <xmax>472.82490272373536</xmax>
+        <ymax>876.3485477178424</ymax>
+    </bndbox>
+</object><object>
+    <name>zec</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>0</xmin>
+        <ymin>285.8091286307054</ymin>
+        <xmax>237.7431906614786</xmax>
+        <ymax>958.0082987551868</ymax>
+    </bndbox>
+</object>
+</annotation>

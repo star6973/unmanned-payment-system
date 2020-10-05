@@ -1,0 +1,81 @@
+<annotation verified="yes">
+    <folder>Annotation</folder>
+    <filename>0255.jpg</filename>
+    <path>PascalVoc/Annotations/0255.jpg</path>
+    <source>
+        <database>Unknown</database>
+    </source>
+    <size>
+        <width>1280</width>
+        <height>960</height>
+        <depth>3</depth>
+    </size>
+    <segmented>0</segmented>
+    <object>
+    <name>samdasu</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>16.623376623376622</xmin>
+        <ymin>303.37662337662334</ymin>
+        <xmax>225.45454545454544</xmax>
+        <ymax>890.3896103896103</ymax>
+    </bndbox>
+</object><object>
+    <name>diget_choco</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>297.1428571428571</xmin>
+        <ymin>338.7012987012987</ymin>
+        <xmax>498.70129870129864</xmax>
+        <ymax>663.8961038961038</ymax>
+    </bndbox>
+</object><object>
+    <name>cidar</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>770.9090909090909</xmin>
+        <ymin>280.5194805194805</ymin>
+        <xmax>958.9610389610389</xmax>
+        <ymax>671.168831168831</ymax>
+    </bndbox>
+</object><object>
+    <name>ID_gum</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>951.6883116883116</xmin>
+        <ymin>124.67532467532466</ymin>
+        <xmax>1156.3636363636363</xmax>
+        <ymax>369.87012987012986</ymax>
+    </bndbox>
+</object><object>
+    <name>tuna</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>941.2987012987012</xmin>
+        <ymin>360.5194805194805</ymin>
+        <xmax>1171.948051948052</xmax>
+        <ymax>604.6753246753246</ymax>
+    </bndbox>
+</object><object>
+    <name>coke</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>682.5974025974025</xmin>
+        <ymin>698.1818181818181</ymin>
+        <xmax>1057.6623376623374</xmax>
+        <ymax>845.7142857142857</ymax>
+    </bndbox>
+</object>
+</annotation>

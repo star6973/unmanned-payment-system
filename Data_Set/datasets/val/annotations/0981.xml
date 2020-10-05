@@ -1,0 +1,103 @@
+<annotation verified="yes">
+    <folder>Annotation</folder>
+    <filename>0981.jpg</filename>
+    <path>PascalVoc/Annotations/0981.jpg</path>
+    <source>
+        <database>Unknown</database>
+    </source>
+    <size>
+        <width>1280</width>
+        <height>720</height>
+        <depth>3</depth>
+    </size>
+    <segmented>0</segmented>
+    <object>
+    <name>gumi_gumi</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>143.85015608740895</xmin>
+        <ymin>31.649722735674676</ymin>
+        <xmax>502.1436004162331</xmax>
+        <ymax>347.0656192236599</ymax>
+    </bndbox>
+</object><object>
+    <name>welchs</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>464.84911550468263</xmin>
+        <ymin>51.612754158964876</ymin>
+        <xmax>819.146722164412</xmax>
+        <ymax>235.27264325323472</ymax>
+    </bndbox>
+</object><object>
+    <name>diget_choco</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>791.1758584807492</xmin>
+        <ymin>2.370609981515712</ymin>
+        <xmax>1153.465140478668</xmax>
+        <ymax>244.58872458410352</ymax>
+    </bndbox>
+</object><object>
+    <name>jjolbyung_noodle</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>852.4453694068678</xmin>
+        <ymin>142.11182994454714</ymin>
+        <xmax>1280</xmax>
+        <ymax>492.13031423290204</ymax>
+    </bndbox>
+</object><object>
+    <name>jjolbyung_ori</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>860.4370447450573</xmin>
+        <ymin>410.94731977818856</ymin>
+        <xmax>1280</xmax>
+        <ymax>669.1358595194085</ymax>
+    </bndbox>
+</object><object>
+    <name>couque_white</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>499.4797086368366</xmin>
+        <ymin>384.3299445471349</ymin>
+        <xmax>869.7606659729448</xmax>
+        <ymax>665.1432532347504</ymax>
+    </bndbox>
+</object><object>
+    <name>coke</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>467.5130072840791</xmin>
+        <ymin>235.27264325323475</ymin>
+        <xmax>833.7981269510926</xmax>
+        <ymax>377.67560073937153</ymax>
+    </bndbox>
+</object><object>
+    <name>couque_coffee</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>230.42663891779398</xmin>
+        <ymin>317.7865064695009</ymin>
+        <xmax>495.48387096774195</xmax>
+        <ymax>717.0471349353049</ymax>
+    </bndbox>
+</object>
+</annotation>
