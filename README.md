@@ -26,7 +26,7 @@
 | 7주 | 2020-09-14 ~ <br> 2020-09-18 </br> | 기존 모델 다루기 실습 | 9/10-9/13 - Image Classification 테스팅 (VGGNet, ResNet, MobileNet, EfficientNet) 완료, 9/14 - Object Detection Tutorial, 9/17-20 논문 찾기(DetectorRS, NETNet, CenterNet) |
 | 8주 | 2020-09-21 ~ <br> 2020-09-25 </br> | Transfer Learning 준비 | 9/21-9/23 - Object Detection Model Train, 9/24 - mmdetection(faster rcnn - mAP 98.20%, ssd - 97.36%, cascade rcnn - mAP 98.16%) 학습 완료(mAP=97) |
 | 9주 | 2020-09-28 ~ <br> 2020-09-29 </br> | Transfer Learning 실습 | 9/28-9/29 - mmdetection(dynamic rcnn - 97.99%, detectors - 97.90%) 학습 완료  |
-| 10주 | 2020-10-05 ~ <br> 2020-10-08 </br> | 결과 검토 및 모델 수정 | 10/5-10/6 - Object Detection 추론 학습 |
+| 10주 | 2020-10-05 ~ <br> 2020-10-08 </br> | 결과 검토 및 모델 수정 | 10/5-10/6 - Object Detection 추론 및 테스팅 완료 |
 | 11주 | 2020-10-12 ~ <br> 2020-10-16 </br> | GUI 개발 |  |
 | 12주 | 2020-10-19 ~ <br> 2020-10-23 </br> | 기술별 보완 |  |
 | 13주 | 2020-10-26 ~ <br> 2020-10-30 </br> | 추론기 제작 |  |
@@ -250,3 +250,40 @@
 3. 다음주까지 과제
     - Image Classification 성능 향상(data augmentation 적용, metrics 변경 등을 이용)
     - Object Detection 모델링
+
+### 2020-10-07
+1. Face Detection 교육
+    - 유클라디안 거리 
+        + n차원에서의 두 점 사이의 거리 [거리개념이 나온 이유는 아웃풋인 네모의 벡터값이 나오는데 그것으로 비교를 하려고할때 loss값을 벡터의 거리를 측정]
+        + 유클라디안 거리는 가까울수록 1이다. 
+
+    - K-NN 
+        + 새로운 데이터가 들어왓을때 기존의 데이터 사이의 거리를 재서 이웃들을 뽑음 
+        + classification = 출력은 소속된 항목
+        + regression 출략 = 객체의 특성 , k개의 최근접 이웃한 데이터가 가진값의 평균 
+        + 하이퍼파라미터 = 탐색할 이웃수(k), 거리측정법
+
+    - 클러스터링 
+        + 비지도학습 = 라벨링이없음. 그래서 클러스터링으로 특징이 가까운 친구들끼리를 같은 소속된 항목으로 갖는다. 
+
+    - FaceNet
+        + CNN을 태워서 인베딩함 
+        + 임베딩한 거리가 가까울수록 유사한 사람이 됨 
+        + 결과값인 벡터값을 뽑아서 라벨링의 벡터랑 
+        + L2 = nomalize
+        + triplet loss 
+        + 새로운 데이터의 앵커값을 얼굴이 매치되는 positive과 매치가 안되는 negative를 한쌍씩 묶어서 학습한다. 
+
+    - Face Detection 종류
+        + verification - 동일인 인식 1:1
+        + recognition - 사람 인식 1:N
+        + clustering - 얼굴 분류 N:N -> 이번 프로젝트에서는 진행 x
+
+2. Object Detection 피드백
+    - detection의 정확도와 속도를 함께 가져갈 수 없기 때문에, 프로젝트의 목적성에 따라 선택하는 것이 맞음. 현재 진행하고 있는 프로젝트는 카메라 기반의 실시간이 보장되어야 한다.
+    - pre-train 모델을 image classification에서 학습된 모델을 사용한다 하더라도 더 나은 결과를 보여주지는 않음. 원한다면 scratch 방식으로 pre-train을 하는 것이 좋다.
+
+3. 다음주까지 과제
+    - lfw dataset 다운로드 -> face recognition
+    - face recognition은 기존의 학습된 모델을 쓰는게 제일 최고. 추가로 데이터를 분류하기 위해서는 svm으로 학습하는 것이 좋음.
+    - FaceNet을 기본으로 공부, 추가적 논문 => 다음주 발표
