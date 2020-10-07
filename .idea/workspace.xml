@@ -25,8 +25,13 @@
     </select>
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="49a72ee4-5b9a-4b18-b1b3-01a0a89c294e" name="Default Changelist" comment="commit">
       <change beforePath="$PROJECT_DIR$/Research/KwonHH/Joint Face Detection and Alignment using Multi-task Cascaded Convolution Networks_review.md" beforeDir="false" afterPath="$PROJECT_DIR$/Research/KwonHH/Joint Face Detection and Alignment using Multi-task Cascaded Convolution Networks_review.md" afterDir="false" />
+=======
+    <list default="true" id="49a72ee4-5b9a-4b18-b1b3-01a0a89c294e" name="Default Changelist" comment="commit-jw">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+>>>>>>> 503ed8298a66545ef6ccef66bc107729708976ee
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -302,6 +307,7 @@
       <option name="project" value="LOCAL" />
       <updated>1600428569650</updated>
     </task>
+<<<<<<< HEAD
     <task id="LOCAL-00045" summary="~ing">
       <created>1600664072562</created>
       <option name="number" value="00045" />
@@ -429,6 +435,16 @@
       <updated>1601796259989</updated>
     </task>
     <option name="localTasksCounter" value="63" />
+=======
+    <task id="LOCAL-00013" summary="commit-jw">
+      <created>1599058775420</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1599058775420</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
+>>>>>>> 503ed8298a66545ef6ccef66bc107729708976ee
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -474,6 +490,7 @@
     <state x="153" y="320" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1598872554562">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+<<<<<<< HEAD
     <state x="153" y="320" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1598872554562" />
     <state x="632" y="147" key="FileChooserDialogImpl" timestamp="1598872592969">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -482,6 +499,15 @@
     <state x="632" y="147" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1598872592969" />
     <state x="184" y="86" key="MergeDialog" timestamp="1600395252902">
       <screen x="0" y="0" width="1920" height="1040" />
+=======
+    <state x="346" y="141" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.680@0.0.1280.680" timestamp="1598507512093" />
+    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1601242426334">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1601242426334" />
+    <state width="1259" height="163" key="GridCell.Tab.0.bottom" timestamp="1598511823763">
+      <screen x="0" y="0" width="1280" height="680" />
+>>>>>>> 503ed8298a66545ef6ccef66bc107729708976ee
     </state>
     <state x="184" y="86" key="MergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1600395252902" />
     <state x="598" y="280" key="MultipleFileMergeDialog" timestamp="1600395271803">
@@ -495,6 +521,7 @@
     <state x="72" y="256" key="Vcs.Push.Dialog.v2" timestamp="1601796278520">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+<<<<<<< HEAD
     <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1597391896991" />
     <state x="72" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1601796278520" />
     <state x="688" y="254" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1600853606022">
@@ -509,5 +536,13 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="143" y="230" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1601794767539" />
+=======
+    <state width="1259" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1598511823763" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1601963059877">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1601963059877" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1599058795095" />
+>>>>>>> 503ed8298a66545ef6ccef66bc107729708976ee
   </component>
 </project>
