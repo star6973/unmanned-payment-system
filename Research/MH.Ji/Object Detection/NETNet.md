@@ -1,4 +1,4 @@
-# 논문 내용 정리(DetectorRS: Detecting Objects with Recursive Feature Pyramid and Switchable Atrous Convolution)
+# 논문 내용 정리(NETNet: Neighbor Erasing and Transferring Network for Better Single Shot Object Detection)
 ## 1. Abstract
 - 실시간 탐지와 성능 향상을 위해, 최근 SSD가 주목받기 시작했다. 복잡한 scale variations를 해결하기 위해, SSD는 multiple pyramid layers를 기반으로 scale-aware predictions를 진행한다. 하지만, pyramid의 features는 detection performance에 제한적이기에 scale-aware가 충분하지 않다.
 
