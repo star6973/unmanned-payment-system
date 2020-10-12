@@ -26,8 +26,8 @@
 | 7주 | 2020-09-14 ~ <br> 2020-09-18 </br> | 기존 모델 다루기 실습 | 9/10-9/13 - Image Classification 테스팅 (VGGNet, ResNet, MobileNet, EfficientNet) 완료, 9/14 - Object Detection Tutorial, 9/17-20 논문 찾기(DetectorRS, NETNet, CenterNet) |
 | 8주 | 2020-09-21 ~ <br> 2020-09-25 </br> | Transfer Learning 준비 | 9/21-9/23 - Object Detection Model Train, 9/24 - mmdetection(faster rcnn - mAP 98.20%, ssd - 97.36%, cascade rcnn - mAP 98.16%) 학습 완료(mAP=97) |
 | 9주 | 2020-09-28 ~ <br> 2020-09-29 </br> | Transfer Learning 실습 | 9/28-9/29 - mmdetection(dynamic rcnn - 97.99%, detectors - 97.90%) 학습 완료  |
-| 10주 | 2020-10-05 ~ <br> 2020-10-08 </br> | 결과 검토 및 모델 수정 | 10/5-10/6 - Object Detection 추론 및 테스팅 완료 |
-| 11주 | 2020-10-12 ~ <br> 2020-10-16 </br> | GUI 개발 |  |
+| 10주 | 2020-10-05 ~ <br> 2020-10-08 </br> | 결과 검토 및 모델 수정 | 10/5-10/9 - Object Detection 추론 및 테스팅 완료 |
+| 11주 | 2020-10-12 ~ <br> 2020-10-16 </br> | GUI 개발 | YOLOv5(IoU=0.5 -> mAP=98.7%, IoU=0.95 -> mAP=85.6%) |
 | 12주 | 2020-10-19 ~ <br> 2020-10-23 </br> | 기술별 보완 |  |
 | 13주 | 2020-10-26 ~ <br> 2020-10-30 </br> | 추론기 제작 |  |
 | 14주 | 2020-11-02 ~ <br> 2020-11-06 </br> | 동작 시험 및 디버깅 |  |
