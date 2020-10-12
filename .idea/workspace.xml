@@ -25,8 +25,9 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49a72ee4-5b9a-4b18-b1b3-01a0a89c294e" name="Default Changelist" comment="~ing">
+    <list default="true" id="49a72ee4-5b9a-4b18-b1b3-01a0a89c294e" name="Default Changelist" comment="commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Research/KwonHH/FaceNet_A Unified Embedding for Face Recognition and Clustering.md" beforeDir="false" afterPath="$PROJECT_DIR$/Research/KwonHH/FaceNet_A Unified Embedding for Face Recognition and Clustering.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,13 +120,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1596613776800</updated>
-    </task>
-    <task id="LOCAL-00018" summary="commit">
-      <created>1598344645306</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1598344645306</updated>
     </task>
     <task id="LOCAL-00019" summary="commit">
       <created>1598353868852</created>
@@ -463,7 +457,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601892474741</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="commit">
+      <created>1602432942691</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1602432942692</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -497,10 +498,10 @@
     <MESSAGE value="Joint Face Detection and Alignment using Multi-task Cascaded Convolution Networks 논문 리뷰" />
     <MESSAGE value="Joint Face Detection and Alignment using Multi-task Cascaded Convolution Networks 리뷰" />
     <MESSAGE value="Joint Face Detection and Alignment using Multi-task Cascaded Convolutional Networks 리뷰" />
-    <MESSAGE value="commit" />
     <MESSAGE value="Joint Face Detection and Alignment using Multi-task Cascaded Convolution Networks 논문리뷰" />
     <MESSAGE value="~ing" />
-    <option name="LAST_COMMIT_MESSAGE" value="~ing" />
+    <MESSAGE value="commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit" />
   </component>
   <component name="WindowStateProjectService">
     <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1596777757664">
@@ -558,9 +559,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1260" y="419" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1600685082164" />
-    <state x="143" y="230" width="672" height="678" key="search.everywhere.popup" timestamp="1601794767539">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="-1777" y="233" width="672" height="678" key="search.everywhere.popup" timestamp="1602479264217">
+      <screen x="-1920" y="3" width="1920" height="1040" />
     </state>
+    <state x="-1777" y="233" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.3.1920.1040@-1920.3.1920.1040" timestamp="1602479264217" />
     <state x="143" y="230" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1601794767539" />
   </component>
 </project>
