@@ -26,6 +26,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="49a72ee4-5b9a-4b18-b1b3-01a0a89c294e" name="Default Changelist" comment="commit">
+      <change beforePath="$PROJECT_DIR$/.idea/lotte_studying.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/lotte_studying.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -526,11 +528,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="153" y="320" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1598872554562" />
-    <state x="632" y="147" key="FileChooserDialogImpl" timestamp="1600959400519">
+    <state x="632" y="147" key="FileChooserDialogImpl" timestamp="1598872592969">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1597392322145" />
-    <state x="632" y="147" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1600959400519" />
+    <state x="632" y="147" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1598872592969" />
     <state width="468" height="279" key="GridCell.Tab.0.bottom" timestamp="1600875028310">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -559,11 +561,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="754" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1600685153628" />
-    <state x="72" y="256" key="Vcs.Push.Dialog.v2" timestamp="1600959312095">
+    <state x="72" y="256" key="Vcs.Push.Dialog.v2" timestamp="1600853648962">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1597391896991" />
-    <state x="72" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1600959312095" />
+    <state x="72" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1600853648962" />
     <state x="688" y="254" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1600853606022">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
