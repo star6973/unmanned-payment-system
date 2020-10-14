@@ -25,18 +25,13 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49a72ee4-5b9a-4b18-b1b3-01a0a89c294e" name="Default Changelist" comment="commit" />
+    <list default="true" id="49a72ee4-5b9a-4b18-b1b3-01a0a89c294e" name="Default Changelist" comment="commit">
+      <change beforePath="$PROJECT_DIR$/Research/KwonHH/Joint Face Detection and Alignment using Multi-task Cascaded Convolution Networks_review.md" beforeDir="false" afterPath="$PROJECT_DIR$/Research/KwonHH/Joint Face Detection and Alignment using Multi-task Cascaded Convolution Networks_review.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Python Script" />
-      </list>
-    </option>
   </component>
   <component name="Git.Settings">
     <favorite-branches>
@@ -78,34 +73,6 @@
       <recent name="C:\Users\사용자\PycharmProjects\lotte_studying\PPT\KwonHH" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="open-one-pkl" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="lotte_studying" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Research/KwonHH" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Research/KwonHH/open-one-pkl.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Python.open-one-pkl" />
-      </list>
-    </recent_temporary>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
@@ -117,6 +84,48 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1596613776800</updated>
+    </task>
+    <task id="LOCAL-00014" summary="commit">
+      <created>1598338113665</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1598338113665</updated>
+    </task>
+    <task id="LOCAL-00015" summary="commit">
+      <created>1598338118702</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1598338118702</updated>
+    </task>
+    <task id="LOCAL-00016" summary="commit">
+      <created>1598339874554</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1598339874554</updated>
+    </task>
+    <task id="LOCAL-00017" summary="commit">
+      <created>1598341257370</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1598341257370</updated>
+    </task>
+    <task id="LOCAL-00018" summary="commit">
+      <created>1598344645306</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1598344645306</updated>
+    </task>
+    <task id="LOCAL-00019" summary="commit">
+      <created>1598353868852</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1598353868852</updated>
     </task>
     <task id="LOCAL-00020" summary="commit">
       <created>1598421887812</created>
@@ -419,49 +428,7 @@
       <option name="project" value="LOCAL" />
       <updated>1601796259989</updated>
     </task>
-    <task id="LOCAL-00063" summary="Joint Face Detection and Alignment using Multi-task Cascaded Convolutional Networks 리뷰">
-      <created>1601796476561</created>
-      <option name="number" value="00063" />
-      <option name="presentableId" value="LOCAL-00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1601796476561</updated>
-    </task>
-    <task id="LOCAL-00064" summary="commit">
-      <created>1601796491772</created>
-      <option name="number" value="00064" />
-      <option name="presentableId" value="LOCAL-00064" />
-      <option name="project" value="LOCAL" />
-      <updated>1601796491772</updated>
-    </task>
-    <task id="LOCAL-00065" summary="Joint Face Detection and Alignment using Multi-task Cascaded Convolution Networks 논문리뷰">
-      <created>1601796663762</created>
-      <option name="number" value="00065" />
-      <option name="presentableId" value="LOCAL-00065" />
-      <option name="project" value="LOCAL" />
-      <updated>1601796663762</updated>
-    </task>
-    <task id="LOCAL-00066" summary="~ing">
-      <created>1601892474740</created>
-      <option name="number" value="00066" />
-      <option name="presentableId" value="LOCAL-00066" />
-      <option name="project" value="LOCAL" />
-      <updated>1601892474741</updated>
-    </task>
-    <task id="LOCAL-00067" summary="commit">
-      <created>1602432942691</created>
-      <option name="number" value="00067" />
-      <option name="presentableId" value="LOCAL-00067" />
-      <option name="project" value="LOCAL" />
-      <updated>1602432942692</updated>
-    </task>
-    <task id="LOCAL-00068" summary="commit">
-      <created>1602488363529</created>
-      <option name="number" value="00068" />
-      <option name="presentableId" value="LOCAL-00068" />
-      <option name="project" value="LOCAL" />
-      <updated>1602488363530</updated>
-    </task>
-    <option name="localTasksCounter" value="69" />
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -491,12 +458,11 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="commit-jw" />
     <MESSAGE value="수정3" />
+    <MESSAGE value="~ing" />
     <MESSAGE value="xml2json for single xml file" />
     <MESSAGE value="Joint Face Detection and Alignment using Multi-task Cascaded Convolution Networks 논문 리뷰" />
     <MESSAGE value="Joint Face Detection and Alignment using Multi-task Cascaded Convolution Networks 리뷰" />
-    <MESSAGE value="Joint Face Detection and Alignment using Multi-task Cascaded Convolutional Networks 리뷰" />
     <MESSAGE value="Joint Face Detection and Alignment using Multi-task Cascaded Convolution Networks 논문리뷰" />
-    <MESSAGE value="~ing" />
     <MESSAGE value="commit" />
     <option name="LAST_COMMIT_MESSAGE" value="commit" />
   </component>
@@ -509,28 +475,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="153" y="320" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1598872554562" />
-    <state x="632" y="147" key="FileChooserDialogImpl" timestamp="1602488383495">
+    <state x="632" y="147" key="FileChooserDialogImpl" timestamp="1598872592969">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1597392322145" />
-    <state x="632" y="147" key="FileChooserDialogImpl/0.0.1920.1040/-1920.3.1920.1040@0.0.1920.1040" timestamp="1602488383495" />
     <state x="632" y="147" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1598872592969" />
-    <state width="1899" height="281" key="GridCell.Tab.0.bottom" timestamp="1601961448907">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1899" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.3.1920.1040@0.0.1920.1040" timestamp="1601961448907" />
-    <state width="1899" height="281" key="GridCell.Tab.0.center" timestamp="1601961448907">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1899" height="281" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.3.1920.1040@0.0.1920.1040" timestamp="1601961448907" />
-    <state width="1899" height="281" key="GridCell.Tab.0.left" timestamp="1601961448906">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1899" height="281" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.3.1920.1040@0.0.1920.1040" timestamp="1601961448906" />
-    <state width="1899" height="281" key="GridCell.Tab.0.right" timestamp="1601961448907">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1899" height="281" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.3.1920.1040@0.0.1920.1040" timestamp="1601961448907" />
     <state x="184" y="86" key="MergeDialog" timestamp="1600395252902">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -543,12 +492,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="754" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1600685153628" />
-    <state x="72" y="256" key="Vcs.Push.Dialog.v2" timestamp="1601892479228">
+    <state x="72" y="256" key="Vcs.Push.Dialog.v2" timestamp="1601796278520">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1597391896991" />
-    <state x="72" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.3.1920.1040@0.0.1920.1040" timestamp="1601892479228" />
-    <state x="72" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1601796670721" />
+    <state x="72" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1601796278520" />
     <state x="688" y="254" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1600853606022">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -557,10 +505,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1260" y="419" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1600685082164" />
-    <state x="-1777" y="233" width="672" height="678" key="search.everywhere.popup" timestamp="1602479264217">
-      <screen x="-1920" y="3" width="1920" height="1040" />
+    <state x="143" y="230" width="672" height="678" key="search.everywhere.popup" timestamp="1601794767539">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1777" y="233" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.3.1920.1040@-1920.3.1920.1040" timestamp="1602479264217" />
     <state x="143" y="230" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1601794767539" />
   </component>
 </project>
