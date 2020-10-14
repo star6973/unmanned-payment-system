@@ -28,6 +28,7 @@
 <<<<<<< HEAD
     <list default="true" id="49a72ee4-5b9a-4b18-b1b3-01a0a89c294e" name="Default Changelist" comment="commit">
 <<<<<<< HEAD
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/Research/KwonHH/Joint Face Detection and Alignment using Multi-task Cascaded Convolution Networks_review.md" beforeDir="false" afterPath="$PROJECT_DIR$/Research/KwonHH/Joint Face Detection and Alignment using Multi-task Cascaded Convolution Networks_review.md" afterDir="false" />
 =======
     <list default="true" id="49a72ee4-5b9a-4b18-b1b3-01a0a89c294e" name="Default Changelist" comment="commit-jw">
@@ -38,40 +39,17 @@
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
 >>>>>>> e3dcfe74232e31e8ce14b2126882220874a1b08a
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PPT/KwonHH/FaceNet and FoveaBox Result.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/PPT/KwonHH/FaceNet and FoveaBox Result.pptx" afterDir="false" />
+>>>>>>> a39cbe8ca9c988bf3d8ec04f6a0b3681c54cb27a
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Python Script" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
-    <excluded-from-favorite>
-      <branch-storage>
-        <map>
-          <entry type="LOCAL">
-            <value>
-              <list>
-                <branch-info repo="$PROJECT_DIR$" source="master" />
-              </list>
-            </value>
-          </entry>
-          <entry type="REMOTE">
-            <value>
-              <list>
-                <branch-info repo="$PROJECT_DIR$" source="origin/master" />
-              </list>
-            </value>
-          </entry>
-        </map>
-      </branch-storage>
-    </excluded-from-favorite>
     <favorite-branches>
       <branch-storage>
         <map>
@@ -79,13 +57,6 @@
             <value>
               <list>
                 <branch-info repo="$PROJECT_DIR$" source="KwonHH" />
-              </list>
-            </value>
-          </entry>
-          <entry type="REMOTE">
-            <value>
-              <list>
-                <branch-info repo="$PROJECT_DIR$" source="origin/KwonHH" />
               </list>
             </value>
           </entry>
@@ -110,7 +81,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../2020_study_coding" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -118,35 +89,7 @@
       <recent name="C:\Users\사용자\PycharmProjects\lotte_studying\PPT\KwonHH" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="xml2yml_" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="lotte_studying" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Research/KwonHH" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\lotte_studying\Research\KwonHH\xml2yml_.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Python.xml2yml_" />
-      </list>
-    </recent_temporary>
-  </component>
-  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -157,97 +100,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1596613776800</updated>
-    </task>
-    <task id="LOCAL-00001" summary="commit-jw">
-      <created>1596764566536</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1596764566536</updated>
-    </task>
-    <task id="LOCAL-00002" summary="commit-jw">
-      <created>1597046875570</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1597046875570</updated>
-    </task>
-    <task id="LOCAL-00003" summary="commit-jw">
-      <created>1597221379199</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1597221379199</updated>
-    </task>
-    <task id="LOCAL-00004" summary="commit-jw">
-      <created>1597221456405</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1597221456405</updated>
-    </task>
-    <task id="LOCAL-00005" summary="commit-jw">
-      <created>1597391885020</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1597391885020</updated>
-    </task>
-    <task id="LOCAL-00006" summary="commit">
-      <created>1597811936431</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1597811936431</updated>
-    </task>
-    <task id="LOCAL-00007" summary="commit">
-      <created>1597813050845</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1597813050845</updated>
-    </task>
-    <task id="LOCAL-00008" summary="commit">
-      <created>1597813207085</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1597813207085</updated>
-    </task>
-    <task id="LOCAL-00009" summary="commit">
-      <created>1598257591638</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1598257591638</updated>
-    </task>
-    <task id="LOCAL-00010" summary="commit">
-      <created>1598274406745</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1598274406745</updated>
-    </task>
-    <task id="LOCAL-00011" summary="commit">
-      <created>1598274607633</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1598274607633</updated>
-    </task>
-    <task id="LOCAL-00012" summary="commit">
-      <created>1598277653081</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1598277653081</updated>
-    </task>
-    <task id="LOCAL-00013" summary="commit">
-      <created>1598278866767</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1598278866768</updated>
     </task>
     <task id="LOCAL-00014" summary="commit">
       <created>1598338113665</created>
@@ -496,6 +348,9 @@
       <updated>1600853611199</updated>
     </task>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a39cbe8ca9c988bf3d8ec04f6a0b3681c54cb27a
     <task id="LOCAL-00049" summary="commit">
       <created>1601038253153</created>
       <option name="number" value="00049" />
@@ -595,6 +450,7 @@
       <updated>1601796259989</updated>
     </task>
     <option name="localTasksCounter" value="63" />
+<<<<<<< HEAD
 =======
     <task id="LOCAL-00013" summary="commit-jw">
       <created>1599058775420</created>
@@ -608,6 +464,8 @@
 =======
     <option name="localTasksCounter" value="49" />
 >>>>>>> e3dcfe74232e31e8ce14b2126882220874a1b08a
+=======
+>>>>>>> a39cbe8ca9c988bf3d8ec04f6a0b3681c54cb27a
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -638,6 +496,10 @@
     <MESSAGE value="commit-jw" />
     <MESSAGE value="수정3" />
     <MESSAGE value="~ing" />
+    <MESSAGE value="xml2json for single xml file" />
+    <MESSAGE value="Joint Face Detection and Alignment using Multi-task Cascaded Convolution Networks 논문 리뷰" />
+    <MESSAGE value="Joint Face Detection and Alignment using Multi-task Cascaded Convolution Networks 리뷰" />
+    <MESSAGE value="Joint Face Detection and Alignment using Multi-task Cascaded Convolution Networks 논문리뷰" />
     <MESSAGE value="commit" />
     <option name="LAST_COMMIT_MESSAGE" value="commit" />
   </component>
@@ -656,22 +518,6 @@
     </state>
     <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1597392322145" />
     <state x="632" y="147" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1598872592969" />
-    <state width="468" height="279" key="GridCell.Tab.0.bottom" timestamp="1600875028310">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="468" height="279" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1600875028310" />
-    <state width="468" height="279" key="GridCell.Tab.0.center" timestamp="1600875028310">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="468" height="279" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1600875028310" />
-    <state width="468" height="279" key="GridCell.Tab.0.left" timestamp="1600875028310">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="468" height="279" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1600875028310" />
-    <state width="468" height="279" key="GridCell.Tab.0.right" timestamp="1600875028310">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="468" height="279" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1600875028310" />
     <state x="184" y="86" key="MergeDialog" timestamp="1600395252902">
       <screen x="0" y="0" width="1920" height="1040" />
 =======
@@ -693,12 +539,13 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="754" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1600685153628" />
-    <state x="72" y="256" key="Vcs.Push.Dialog.v2" timestamp="1600853648962">
+    <state x="72" y="256" key="Vcs.Push.Dialog.v2" timestamp="1602661250707">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
 <<<<<<< HEAD
     <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1597391896991" />
-    <state x="72" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1600853648962" />
+    <state x="72" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.3.1920.1040@0.0.1920.1040" timestamp="1602661250707" />
+    <state x="72" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1601796278520" />
     <state x="688" y="254" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1600853606022">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -707,9 +554,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1260" y="419" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1600685082164" />
-    <state x="143" y="230" width="672" height="678" key="search.everywhere.popup" timestamp="1600322302083">
+    <state x="143" y="230" width="672" height="678" key="search.everywhere.popup" timestamp="1601794767539">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+<<<<<<< HEAD
 <<<<<<< HEAD
     <state x="143" y="230" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1601794767539" />
 =======
@@ -723,5 +571,8 @@
 =======
     <state x="143" y="230" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1600322302083" />
 >>>>>>> e3dcfe74232e31e8ce14b2126882220874a1b08a
+=======
+    <state x="143" y="230" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1601794767539" />
+>>>>>>> a39cbe8ca9c988bf3d8ec04f6a0b3681c54cb27a
   </component>
 </project>
