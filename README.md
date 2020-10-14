@@ -27,7 +27,7 @@
 | 8주 | 2020-09-21 ~ <br> 2020-09-25 </br> | Transfer Learning 준비 | 9/21-9/23 - Object Detection Model Train, 9/24 - mmdetection(faster rcnn - mAP 98.20%, ssd - 97.36%, cascade rcnn - mAP 98.16%) 학습 완료(mAP=97) |
 | 9주 | 2020-09-28 ~ <br> 2020-09-29 </br> | Transfer Learning 실습 | 9/28-9/29 - mmdetection(dynamic rcnn - 97.99%, detectors - 97.90%) 학습 완료  |
 | 10주 | 2020-10-05 ~ <br> 2020-10-08 </br> | 결과 검토 및 모델 수정 | 10/5-10/9 - Object Detection 추론 및 테스팅 완료 |
-| 11주 | 2020-10-12 ~ <br> 2020-10-16 </br> | GUI 개발 | YOLOv5(IoU=0.5 -> mAP=98.7%, IoU=0.95 -> mAP=85.6%) |
+| 11주 | 2020-10-12 ~ <br> 2020-10-16 </br> | GUI 개발 | 10/12-10/14YOLOv5(IoU=0.5 -> mAP=98.7%, IoU=0.95 -> mAP=85.6%), Fovea(mAP=98%), EfficientDet(mAP=81%) |
 | 12주 | 2020-10-19 ~ <br> 2020-10-23 </br> | 기술별 보완 |  |
 | 13주 | 2020-10-26 ~ <br> 2020-10-30 </br> | 추론기 제작 |  |
 | 14주 | 2020-11-02 ~ <br> 2020-11-06 </br> | 동작 시험 및 디버깅 |  |
@@ -296,3 +296,27 @@
     - lfw dataset 다운로드 -> face recognition
     - face recognition은 기존의 학습된 모델을 쓰는게 제일 최고. 추가로 데이터를 분류하기 위해서는 svm으로 학습하는 것이 좋음.
     - FaceNet을 기본으로 공부, 추가적 논문 => 다음주 발표
+
+### 2020-10-14
+1. FaceNet FeedBack
+    - 과거 방식으로 Face detection 구현하면 => 차원이 큰 경우에 연산량이 많아서 병목현상 생김 -> 해결책 PCA (딥러닝이 아닌 과거에 적용되었던 방식) 사용자가 수동으로 잘 작동하는 차원을 찾는 것
+
+    - FACENET의 경우는 PCA에 따라서 직접 연산한 것이 아니라 딥러닝 적용하여 해결
+    - 차원의 종류는 128, 256, 512, 1024 로 다양함
+
+    - FaceNet 논문에서 FULLY CONNECTED 한다는 것의 의미는 : 몇 차원으로 이어 붙일 것인지
+        + => 차원이 증가하면 더 많은 사람 구별 가능
+        + BUT 차원의 저주 : TRADE OFF 존재
+
+    - HARD CASE triplet 적용 이유 : 다른데 같은 사람, 같은데 다른 사람에 대해서 TRIPLET을 선정하면 더 강건한 모델 설계 가능
+
+2. MTCNN FeedBack
+    - FACE ALIGNMENT : 기존의 좌표를 저장해놓고, 이를 토대로 AFFINE 변환 => 정면/측면 얼굴에 대한 RECOGNITION 성능을 높일 수 있음
+    - PNet, RNet, ONet 알아두는 것이 좋음
+
+3. 다음주까지 과제
+    - LFW DATASET에 대해서 훈련, 테스트 (Verification, Recognition )진행해보기
+    - GUI 설계해보기(상품 시각화)
+        + 결제대에 올려져 있는 상품들과 BBOX가 보이는 창, 상품 리스트 창(어떤 상품, 갯수, 가격)
+        + 얼굴 시각화(웹캠의 이미지 보여주는 창, 얼굴 리스트(누구인지))
+        + 결제완료 : 총 가격 등 .....
