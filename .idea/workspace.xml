@@ -25,7 +25,11 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49a72ee4-5b9a-4b18-b1b3-01a0a89c294e" name="Default Changelist" comment="commit" />
+    <list default="true" id="49a72ee4-5b9a-4b18-b1b3-01a0a89c294e" name="Default Changelist" comment="commit">
+      <change beforePath="$PROJECT_DIR$/.idea/lotte_studying.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/lotte_studying.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -139,11 +143,32 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="0c325ce5-0b8b-4145-a864-22a791ec3d80" name="Default Changelist" comment="Mobilenet_V2" />
+      <changelist id="49a72ee4-5b9a-4b18-b1b3-01a0a89c294e" name="Default Changelist" comment="" />
       <created>1596613776800</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1596613776800</updated>
+    </task>
+    <task id="LOCAL-00001" summary="commit-jw">
+      <created>1596764566536</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1596764566536</updated>
+    </task>
+    <task id="LOCAL-00002" summary="commit-jw">
+      <created>1597046875570</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1597046875570</updated>
+    </task>
+    <task id="LOCAL-00003" summary="commit-jw">
+      <created>1597221379199</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1597221379199</updated>
     </task>
     <task id="LOCAL-00004" summary="commit-jw">
       <created>1597221456405</created>
@@ -460,35 +485,7 @@
       <option name="project" value="LOCAL" />
       <updated>1600853611199</updated>
     </task>
-    <task id="LOCAL-00049" summary="resnet50">
-      <created>1602522704853</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1602522704853</updated>
-    </task>
-    <task id="LOCAL-00050" summary="Mobilenet_V2">
-      <created>1602522866716</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1602522866716</updated>
-    </task>
-    <task id="LOCAL-00051" summary="commit">
-      <created>1602781422789</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1602781422790</updated>
-    </task>
-    <task id="LOCAL-00052" summary="commit">
-      <created>1602781432087</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1602781432087</updated>
-    </task>
-    <option name="localTasksCounter" value="53" />
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -519,8 +516,6 @@
     <MESSAGE value="commit-jw" />
     <MESSAGE value="수정3" />
     <MESSAGE value="~ing" />
-    <MESSAGE value="resnet50" />
-    <MESSAGE value="Mobilenet_V2" />
     <MESSAGE value="commit" />
     <option name="LAST_COMMIT_MESSAGE" value="commit" />
   </component>
@@ -533,10 +528,6 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="153" y="320" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1598872554562" />
-    <state x="184" y="85" key="DiffContextDialog" timestamp="1602781408860">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="184" y="85" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602781408860" />
     <state x="632" y="147" key="FileChooserDialogImpl" timestamp="1598872592969">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -570,19 +561,15 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="754" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1600685153628" />
-    <state x="72" y="256" key="Vcs.Push.Dialog.v2" timestamp="1602781696111">
+    <state x="72" y="256" key="Vcs.Push.Dialog.v2" timestamp="1600853648962">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1597391896991" />
-    <state x="72" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602781696111" />
+    <state x="72" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1600853648962" />
     <state x="688" y="254" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1600853606022">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="688" y="254" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1600853606022" />
-    <state x="669" y="306" key="git4idea.merge.GitPullDialog" timestamp="1602781396584">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="669" y="306" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602781396584" />
     <state x="1260" y="419" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1600685082164">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
