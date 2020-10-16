@@ -85,13 +85,6 @@
       <option name="presentableId" value="Default" />
       <updated>1596613776800</updated>
     </task>
-    <task id="LOCAL-00015" summary="commit">
-      <created>1598338118702</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1598338118702</updated>
-    </task>
     <task id="LOCAL-00016" summary="commit">
       <created>1598339874554</created>
       <option name="number" value="00016" />
@@ -428,7 +421,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602661864262</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="commit">
+      <created>1602664532761</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1602664532762</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -475,11 +475,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="153" y="320" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1598872554562" />
-    <state x="-1288" y="150" key="FileChooserDialogImpl" timestamp="1602664521806">
+    <state x="-1288" y="150" key="FileChooserDialogImpl" timestamp="1602664575552">
       <screen x="-1920" y="3" width="1920" height="1040" />
     </state>
     <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1597392322145" />
-    <state x="-1288" y="150" key="FileChooserDialogImpl/0.0.1920.1040/-1920.3.1920.1040@-1920.3.1920.1040" timestamp="1602664521806" />
+    <state x="-1288" y="150" key="FileChooserDialogImpl/0.0.1920.1040/-1920.3.1920.1040@-1920.3.1920.1040" timestamp="1602664575552" />
     <state x="632" y="147" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1598872592969" />
     <state x="184" y="86" key="MergeDialog" timestamp="1600395252902">
       <screen x="0" y="0" width="1920" height="1040" />
