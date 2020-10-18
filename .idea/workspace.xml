@@ -145,6 +145,13 @@
       <option name="presentableId" value="Default" />
       <updated>1596613776800</updated>
     </task>
+    <task id="LOCAL-00001" summary="commit-jw">
+      <created>1596764566536</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1596764566536</updated>
+    </task>
     <task id="LOCAL-00002" summary="commit-jw">
       <created>1597046875570</created>
       <option name="number" value="00002" />
@@ -481,14 +488,7 @@
       <option name="project" value="LOCAL" />
       <updated>1602781951885</updated>
     </task>
-    <task id="LOCAL-00050" summary="commit">
-      <created>1602783055892</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1602783055893</updated>
-    </task>
-    <option name="localTasksCounter" value="51" />
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -564,19 +564,15 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="754" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1600685153628" />
-    <state x="72" y="256" key="Vcs.Push.Dialog.v2" timestamp="1602783071957">
+    <state x="72" y="256" key="Vcs.Push.Dialog.v2" timestamp="1602781962381">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1597391896991" />
-    <state x="72" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602783071957" />
+    <state x="72" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602781962381" />
     <state x="688" y="254" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1600853606022">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="688" y="254" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1600853606022" />
-    <state x="669" y="306" key="git4idea.merge.GitPullDialog" timestamp="1602783042021">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="669" y="306" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602783042021" />
     <state x="1260" y="419" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1600685082164">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
