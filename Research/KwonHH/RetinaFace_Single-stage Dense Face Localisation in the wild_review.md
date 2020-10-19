@@ -62,5 +62,30 @@
         - 따라서 classification loss ![Lcls](../../reference_image/KwonHH/RetinaFace/Lcls.JPG) 는 Face or Not Face 의 2진 분류기(softmax)임<br><br>
         - ![Lbox](../../reference_image/KwonHH/RetinaFace/Lbox.JPG) 에서 ![Ti](../../reference_image/KwonHH/RetinaFace/Ti.JPG) 는 positive anchor에 대해서 예측 box의 좌표를, ![Tstari](../../reference_image/KwonHH/RetinaFace/Tstari.JPG)는 ground truth box의 좌표를 의미
         - 이어서 "Fast R-CNN"에 따라 center location, width, height 등 regression targets 를 normalize 했고, ![Lbox_R](../../reference_image/KwonHH/RetinaFace/Lbox_R.JPG)를 사용 <br>R은 "Fast R-CNN"에서 정의했던 강직한 loss function(smooth-L1)임<br><br>
-    1. dd 
-         
+        - Facial landmark regression loss ![Lpts](../../reference_image/KwonHH/RetinaFace/Lpts.JPG) 에서 ![li](../../reference_image/KwonHH/RetinaFace/Li.JPG) 는 5개 landmark에 대한 예측 확률을 ![lstari](../../reference_image/KwonHH/RetinaFace/Lstari.JPG) 는 ground-truth 에 대한 positive anchor 값을 나타냄
+        - box center regression과 유사하게 anchor의 center에 대해 target mormalization을 적용<br><br>
+        - Dense regression loss ![lpixel](../../reference_image/KwonHH/RetinaFace/Lpixel.JPG) 에서 loss-balancing parameter 인 ![lbd1_lbd3](../../reference_image/KwonHH/RetinaFace/lbd1_lbd3.JPG) 은 각각 0.25, 0.1, 0.01 로 설정
+        - 즉, supervision signal로부터 더 중요한 better box 와 landmark location을 증가시키기 위함<br><br><br>
+    1. Dense regression Branch
+        - __Mesh Decoder__
+            - "Dense 3d face decoding over 2500fps"에서 제시된 __graph convolution__ 방식을 적용
+            - 또한 <u>더 빠른 속도</u>를 위해서 "Dense 3d face decoding over 2500fps" 처럼 __joint shape decoder__ & __texture decoder__ 도 적용<br><br>
+            - 2D convolution vs graph convolution
+                - 2D convolution<br> ![2D conv](../../reference_image/KwonHH/RetinaFace/2d conv.JPG) <br>
+                - 유클리디안 좌표에서의 kernel-weighted neighbour sum<br><br>
+                - graph convolution<br> ![graph conv](../../reference_image/KwonHH/RetinaFace/graph conv.JPG) <br>
+                - 2d conv 와 동일하게 유클리디안 좌표에서 거리에 따른 가중치 합이지만, neighbour distance 는 graph 내에서 edge들 사이의 2개의 vertice로 구성된 최소의 갯수로부터 계산됨<br><br>
+            - "Dense 3d face decoding over 2500fps"에 따라 face mesh ![face mesh](../../reference_image/KwonHH/RetinaFace/face mesh.JPG)를 정의
+                - 이때의 ![v](../../reference_image/KwonHH/RetinaFace/v.JPG) 는 face shape 와 texture information을 포하하는 vertex 이며, ![Rn6](../../reference_image/KwonHH/RetinaFace/Rn6.JPG)
+                - ![epsilon](../../reference_image/KwonHH/RetinaFace/epsilon.JPG) 은 vertex 사이의 거의 인접하지 않은 연결을 행렬로 표현한 값이며, ![01nn](../../reference_image/KwonHH/RetinaFace/01nn.JPG)
+                - graph Laplacian 은 ![L=Dblah](../../reference_image/KwonHH/RetinaFace/L=Dblah.JPG) 로 정의되고, 그때 ![DRnn](../../reference_image/KwonHH/RetinaFace/DRnn.JPG) 는 ![Dii](../../reference_image/KwonHH/RetinaFace/Dii.JPG) 의 대각행렬
+                - graph convolution 은 "Chebyshev 다항식"에서 K 값에서 표현한 것으로 표현할 수 있으므로 ![chebyshevwithk](../../reference_image/KwonHH/RetinaFace/chebyshevwithk.JPG) <br>
+                - ~~이후의 설명은 어려워서 모르겠음...~~ <br><br> 
+            - Differentiable Renderer
+                - shape 와 texture 에 대한 예측에 대해서 ![Pst](../../reference_image/KwonHH/RetinaFace/Pst.JPG) 가 성립할 때, efficient differentiable 3D mesh renderer 를 적용하여, coloured mesh ![Dst](../../reference_image/KwonHH/RetinaFace/Dst.JPG) 를 2D 평면상에 투영시킴
+                - 이 2D image 평면에는 camera의 parameter(예를 들면 pose, focal length 등) ![Pcam](../../reference_image/KwonHH/RetinaFace/Pcam.JPG) 와 illumination parameter(예를 들면 location,light source, colour value 등) ![Pill](../../reference_image/KwonHH/RetinaFace/Pill.JPG) 가 있음<br><br>
+            - Dense Regression Loss
+                - 2D face ![Rendered face](../../reference_image/KwonHH/RetinaFace/Rendered face.JPG) 를 rendering 하자마자 pixel-wise 로 rendering 된 face와 원래의 2D face를 다음의 식을 사용해서 차이를 비교함<br> ![Lpixel_](../../reference_image/KwonHH/RetinaFace/Lpixel.JPG) <br>
+                - W, H는 각각 anchor crop에서 width, heigh 를 의미<br><br><br>
+1. Experiments
+                 

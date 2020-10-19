@@ -25,11 +25,10 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49a72ee4-5b9a-4b18-b1b3-01a0a89c294e" name="Default Changelist" comment="retinaface_reference image">
+    <list default="true" id="49a72ee4-5b9a-4b18-b1b3-01a0a89c294e" name="Default Changelist" comment="commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Research/KwonHH/RetinaFace_Single-stage Dense Face Localisation in the wild_review.md" beforeDir="false" afterPath="$PROJECT_DIR$/Research/KwonHH/RetinaFace_Single-stage Dense Face Localisation in the wild_review.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reference_image/KwonHH/RetinaFace/Lbox.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/reference_image/KwonHH/RetinaFace/Lbox.JPG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reference_image/KwonHH/RetinaFace/Lcls.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/reference_image/KwonHH/RetinaFace/Lcls.JPG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reference_image/KwonHH/RetinaFace/Lpts.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/reference_image/KwonHH/RetinaFace/Lpts.JPG" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,20 +148,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1596613776800</updated>
-    </task>
-    <task id="LOCAL-00005" summary="commit-jw">
-      <created>1597391885020</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1597391885020</updated>
-    </task>
-    <task id="LOCAL-00006" summary="commit">
-      <created>1597811936431</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1597811936431</updated>
     </task>
     <task id="LOCAL-00007" summary="commit">
       <created>1597813050845</created>
@@ -493,7 +478,21 @@
       <option name="project" value="LOCAL" />
       <updated>1603095714379</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="retinaface_reference image">
+      <created>1603097305328</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1603097305328</updated>
+    </task>
+    <task id="LOCAL-00055" summary="commit">
+      <created>1603097312847</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1603097312847</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -524,9 +523,9 @@
     <MESSAGE value="commit-jw" />
     <MESSAGE value="수정3" />
     <MESSAGE value="~ing" />
-    <MESSAGE value="commit" />
     <MESSAGE value="retinaface_reference image" />
-    <option name="LAST_COMMIT_MESSAGE" value="retinaface_reference image" />
+    <MESSAGE value="commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit" />
   </component>
   <component name="WindowStateProjectService">
     <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1596777757664">
