@@ -25,10 +25,9 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49a72ee4-5b9a-4b18-b1b3-01a0a89c294e" name="Default Changelist" comment="commit">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="49a72ee4-5b9a-4b18-b1b3-01a0a89c294e" name="Default Changelist" comment="RetinaFace reference image">
       <change beforePath="$PROJECT_DIR$/Research/KwonHH/RetinaFace_Single-stage Dense Face Localisation in the wild_review.md" beforeDir="false" afterPath="$PROJECT_DIR$/Research/KwonHH/RetinaFace_Single-stage Dense Face Localisation in the wild_review.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reference_image/KwonHH/RetinaFace/Lpts.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/reference_image/KwonHH/RetinaFace/Lpts.JPG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reference_image/KwonHH/RetinaFace/L=dblah.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/reference_image/KwonHH/RetinaFace/L_dblah.JPG" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,20 +147,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1596613776800</updated>
-    </task>
-    <task id="LOCAL-00007" summary="commit">
-      <created>1597813050845</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1597813050845</updated>
-    </task>
-    <task id="LOCAL-00008" summary="commit">
-      <created>1597813207085</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1597813207085</updated>
     </task>
     <task id="LOCAL-00009" summary="commit">
       <created>1598257591638</created>
@@ -492,7 +477,21 @@
       <option name="project" value="LOCAL" />
       <updated>1603097312847</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="commit">
+      <created>1603110651439</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1603110651439</updated>
+    </task>
+    <task id="LOCAL-00057" summary="RetinaFace reference image">
+      <created>1603110675369</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1603110675369</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -525,7 +524,8 @@
     <MESSAGE value="~ing" />
     <MESSAGE value="retinaface_reference image" />
     <MESSAGE value="commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit" />
+    <MESSAGE value="RetinaFace reference image" />
+    <option name="LAST_COMMIT_MESSAGE" value="RetinaFace reference image" />
   </component>
   <component name="WindowStateProjectService">
     <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1596777757664">
@@ -569,11 +569,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="754" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1600685153628" />
-    <state x="72" y="256" key="Vcs.Push.Dialog.v2" timestamp="1603084048838">
+    <state x="72" y="256" key="Vcs.Push.Dialog.v2" timestamp="1603110685908">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1597391896991" />
-    <state x="72" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1603084048838" />
+    <state x="72" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1603110685908" />
     <state x="688" y="254" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1600853606022">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
