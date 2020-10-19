@@ -37,6 +37,30 @@
             - <u>그러나,</u> Mesh Decoder를 single-stage에 적용하는 것은 "camera 파라미터의 정확도 평가 어려움", "감춰진 joint shape 와 texture representation이 single feature 벡터에 의해서 예측" 되는 이유로 인해서 어려움이 따름
             - 본 논문에서는 mesh decoder branch를 <u>pixel-wise 3D face shape 예측을 위한 self-supervision 학습</u>을 통해서 mesh decoder를 supervised branch 와 병렬로 적용<br><br><br>
 1. Related Work
-    - ![test1](./reference_image/KwonHH/RODEO_Replay_for_Online_Object_Detection/Figure1.JPG)
-    
+    1. Image pyramid vs Feature pyramid
+        - Image pymaid 방식은 sliding window로부터 구해지며, 밀집된 image gird에 적용됨
+        - 이 방식은 "실시간 효율", "크기가 고정된 image에 대한 광범위한 적용" 등의 이유로 detection paradigm을 주도했음<br><br>
+        - 그러나 sliding-anchor 방식은 크기가 다양한 feature map에 적용 가능하다는 점 때문에 <u>빠른 속도로 face detection 분야를 주도함</u><br><br>
+    1. Two stage vs Single stage
+        - Two stage 방식은 "proposal" 과 "refinement" 메커니즘에 의해서 높은 localization 정확도를 가짐<br><br>
+        - 반면, Single stage 방식은 train 동안 발생한 positive sample 과 negative sample 사이의 불균형에서 빽빽하게 face location 과 scale 을 빽빽하게 샘플링 함
+        - 이러한 불균형을 다루기 위해서 sampling & re-weighting 방식이 널리 적용되었음
+        - 따라서 two stage에 비해서 single stage 방식은 더욱 효율적이며, 높은 재현률을 가짐
+        - 그러나, 높은 거짓 positive rate 와 localization 정확도의 절충의 리스크가 있음<br><br>
+    1. Context Modelling
+        - 작은 얼굴에 대해서 모델의 contextual 추론을 강화하기 위해서, SSH 와 PyramidBox 에서는 context 모듈을 적용하여 유클리디안 좌표에서 feature pyramid 의 reception field를 키우려 하였음
+        - CNN의 non-rigid transformation modelling을 강화하기 위해서 DCN(Deformable Conv Network)에서는 새로운 deformable layer를 모델의 기하학적 변환에 적용함<br><br>
+    1. Multi-task Learning
+        - Joint face detection 과 alignment는 aligned face가 face classification 에서 더 좋은 특징을 제공함에도 불구하고, 널리 사용되었다
+        - Mask R-CNN에서 detection 성능은 object mask를 예측하는 branch를 추가한 결과 상당히 성능이 향상되었다
+        - DensePose 에서 dense part label과 선택된 각 영역의 좌표를 얻기 위해서 Mask R-CNN의 구조를 적용했음에도 불구하고, Dense regression branch 는 supervised learning에 의해서 train되었다
+        - 또한, dense branch 는 small FCN이며, 각 RoI의 pixel-to-pixel dense mapping을 예측하기 위해서 적용되었음<br><br><br>
+1. RetinaFace
+    1. Multi-task Loss
+        - ![multi_task_Loss](../../reference_image/KwonHH/RetinaFace/multi_task_Loss.JPG) 의 값을 최소로 해야함<br><br>
+        - classification loss ![Lcls](../../reference_image/KwonHH/RetinaFace/Lcls.JPG) 에서 ![Pi](../../reference_image/KwonHH/RetinaFace/Pi.JPG) 는 i번째 anchor가 face일 확률이고, ![Pstari](../../reference_image/KwonHH/RetinaFace/Pstari.JPG) 는 positive anchor면 1, negative anchor면 0의 값을 가짐
+        - 따라서 classification loss ![Lcls](../../reference_image/KwonHH/RetinaFace/Lcls.JPG) 는 Face or Not Face 의 2진 분류기(softmax)임<br><br>
+        - ![Lbox](../../reference_image/KwonHH/RetinaFace/Lbox.JPG) 에서 ![Ti](../../reference_image/KwonHH/RetinaFace/Ti.JPG) 는 positive anchor에 대해서 예측 box의 좌표를, ![Tstari](../../reference_image/KwonHH/RetinaFace/Tstari.JPG)는 ground truth box의 좌표를 의미
+        - 이어서 "Fast R-CNN"에 따라 center location, width, height 등 regression targets 를 normalize 했고, ![Lbox_R](../../reference_image/KwonHH/RetinaFace/Lbox_R.JPG)를 사용 <br>R은 "Fast R-CNN"에서 정의했던 강직한 loss function(smooth-L1)임<br><br>
+    1. dd 
          

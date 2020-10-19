@@ -25,20 +25,11 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49a72ee4-5b9a-4b18-b1b3-01a0a89c294e" name="Default Changelist" comment="commit">
+    <list default="true" id="49a72ee4-5b9a-4b18-b1b3-01a0a89c294e" name="Default Changelist" comment="retinaface_reference image">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Research/KwonHH/RetinaFace_Single-stage Dense Face Localisation in the wild_review.md" beforeDir="false" afterPath="$PROJECT_DIR$/Research/KwonHH/RetinaFace_Single-stage Dense Face Localisation in the wild_review.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reference_image/KwonHH/RODEO_Replay for Online Object Detection/Algorithm1_Incremental update procedure for RODEO on COCO.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/reference_image/KwonHH/RODEO_Replay_for_Online_Object_Detection/Algorithm1_Incremental update procedure for RODEO on COCO.JPG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reference_image/KwonHH/RODEO_Replay for Online Object Detection/Figure1.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/reference_image/KwonHH/RODEO_Replay_for_Online_Object_Detection/Figure1.JPG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reference_image/KwonHH/RODEO_Replay for Online Object Detection/Figure2_Learning Curve for VOC 2007.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/reference_image/KwonHH/RODEO_Replay_for_Online_Object_Detection/Figure2_Learning Curve for VOC 2007.JPG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reference_image/KwonHH/RODEO_Replay for Online Object Detection/Stability-Plastic Dilemma_plastic.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/reference_image/KwonHH/RODEO_Replay_for_Online_Object_Detection/Stability-Plastic Dilemma_plastic.JPG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reference_image/KwonHH/RODEO_Replay for Online Object Detection/Stability-Plastic Dilemma_stability.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/reference_image/KwonHH/RODEO_Replay_for_Online_Object_Detection/Stability-Plastic Dilemma_stability.JPG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reference_image/KwonHH/RODEO_Replay for Online Object Detection/Tabel2_Incremental mAP results for several variants of RODEO.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/reference_image/KwonHH/RODEO_Replay_for_Online_Object_Detection/Tabel2_Incremental mAP results for several variants of RODEO.JPG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reference_image/KwonHH/RODEO_Replay for Online Object Detection/Table1_mAP result for VOC and COCO.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/reference_image/KwonHH/RODEO_Replay_for_Online_Object_Detection/Table1_mAP result for VOC and COCO.JPG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reference_image/KwonHH/RODEO_Replay for Online Object Detection/alpha_offT.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/reference_image/KwonHH/RODEO_Replay_for_Online_Object_Detection/alpha_offT.JPG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reference_image/KwonHH/RODEO_Replay for Online Object Detection/alpha_t.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/reference_image/KwonHH/RODEO_Replay_for_Online_Object_Detection/alpha_t.JPG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reference_image/KwonHH/RODEO_Replay for Online Object Detection/expression1.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/reference_image/KwonHH/RODEO_Replay_for_Online_Object_Detection/expression1.JPG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reference_image/KwonHH/RODEO_Replay for Online Object Detection/omega_mAP.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/reference_image/KwonHH/RODEO_Replay_for_Online_Object_Detection/omega_mAP.JPG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reference_image/KwonHH/RetinaFace/Lbox.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/reference_image/KwonHH/RetinaFace/Lbox.JPG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reference_image/KwonHH/RetinaFace/Lcls.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/reference_image/KwonHH/RetinaFace/Lcls.JPG" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,20 +149,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1596613776800</updated>
-    </task>
-    <task id="LOCAL-00003" summary="commit-jw">
-      <created>1597221379199</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1597221379199</updated>
-    </task>
-    <task id="LOCAL-00004" summary="commit-jw">
-      <created>1597221456405</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1597221456405</updated>
     </task>
     <task id="LOCAL-00005" summary="commit-jw">
       <created>1597391885020</created>
@@ -502,7 +479,21 @@
       <option name="project" value="LOCAL" />
       <updated>1603042774398</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="commit">
+      <created>1603084036487</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1603084036487</updated>
+    </task>
+    <task id="LOCAL-00053" summary="retinaface_reference image">
+      <created>1603095714379</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1603095714379</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -534,7 +525,8 @@
     <MESSAGE value="수정3" />
     <MESSAGE value="~ing" />
     <MESSAGE value="commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit" />
+    <MESSAGE value="retinaface_reference image" />
+    <option name="LAST_COMMIT_MESSAGE" value="retinaface_reference image" />
   </component>
   <component name="WindowStateProjectService">
     <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1596777757664">
@@ -578,11 +570,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="754" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1600685153628" />
-    <state x="72" y="256" key="Vcs.Push.Dialog.v2" timestamp="1603042790978">
+    <state x="72" y="256" key="Vcs.Push.Dialog.v2" timestamp="1603084048838">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1597391896991" />
-    <state x="72" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1603042790978" />
+    <state x="72" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1603084048838" />
     <state x="688" y="254" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1600853606022">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
