@@ -78,7 +78,7 @@
             - "Dense 3d face decoding over 2500fps"에 따라 face mesh ![face mesh](../../reference_image/KwonHH/RetinaFace/face mesh.JPG)를 정의
                 - 이때의 ![v](../../reference_image/KwonHH/RetinaFace/v.JPG) 는 face shape 와 texture information을 포하하는 vertex 이며, ![Rn6](../../reference_image/KwonHH/RetinaFace/Rn6.JPG)
                 - ![epsilon](../../reference_image/KwonHH/RetinaFace/epsilon.JPG) 은 vertex 사이의 거의 인접하지 않은 연결을 행렬로 표현한 값이며, ![01nn](../../reference_image/KwonHH/RetinaFace/01nn.JPG)
-                - graph Laplacian 은 ![L_Dblah](../../reference_image/KwonHH/RetinaFace/L_Dblah.JPG) 로 정의되고, 그때 ![DRnn](../../reference_image/KwonHH/RetinaFace/DRnn.JPG) 는 ![Dii](../../reference_image/KwonHH/RetinaFace/Dii.JPG) 의 대각행렬
+                - graph Laplacian 은 ![L_dblah](../../reference_image/KwonHH/RetinaFace/L_dblah.JPG) 로 정의되고, 그때 ![DRnn](../../reference_image/KwonHH/RetinaFace/DRnn.JPG) 는 ![Dii](../../reference_image/KwonHH/RetinaFace/Dii.JPG) 의 대각행렬
                 - graph convolution 은 "Chebyshev 다항식"에서 K 값에서 표현한 것으로 표현할 수 있으므로 ![chebyshevwithk](../../reference_image/KwonHH/RetinaFace/chebyshevwithk.JPG) <br>
                 - ~~이후의 설명은 어려워서 모르겠음...~~ <br><br> 
             - Differentiable Renderer
