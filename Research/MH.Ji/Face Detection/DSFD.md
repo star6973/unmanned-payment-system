@@ -76,7 +76,7 @@
 
 - 위의 그림에서 of1, of2, of3, of4, of5, of6를 ef1, ef2, ef3, ef4, ef5, ef6로 변경한다. 이는 원래 크기와 동일한 크기이며, second shot detection layer를 구성하기 위해 SSD 스타일의 head로 공급된다.
 - S3FD, PyramidBox와 달리 FEM에서 receptive field 확대를 하고 난 후, 동일 비율 간격의 원칙을 만족하는 stride, anchor 그리고 receptive field의 세 가지 사이즈가 불필요한 새로운 anchor 디자인 전략을 활용한다.
-- 그러므로 DSFD는 더욱 유연하고 강건하다. 게다가, 원본과 강화된 shot들은 2개의 서로 다른 loss를 가지며, 각각 First Shot progressive anchor Loss(FSL)과 Second Shot progressive anchor Loss(SSL)이라고 명친한다.
+- 그러므로 DSFD는 더욱 유연하고 강건하다. 게다가, 원본과 강화된 shot들은 2개의 서로 다른 loss를 가지며, 각각 First Shot progressive anchor Loss(FSL)과 Second Shot progressive anchor Loss(SSL)이라고 명칭한다.
 
 <br>
 
