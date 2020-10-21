@@ -93,7 +93,31 @@
 
 <br>
 
-### 4.3. 
+### 4.3. Progressive Anchor Loss
+- low-level에서는 작은 feature를, high-level에서는 큰 feature를 탐지하는데 용이한 점에서 모티브를 얻어, first shot에서는 작은 사이즈의 anchor를, second shot에서는 큰 사이즈의 anchor를 할당한다.
+
+    <center><img src="/reference_image/MH.Ji/DSFD/7.PNG" width="60%"></center><br>
+
+- 우선, Second Shot anchor-based multi-task Loss function은 다음과 같다.
+
+    <center><img src="/reference_image/MH.Ji/DSFD/4.PNG" width="60%"></center><br>
+
+    + N_conf, N_loc은 각각 positive/negative anchor와, postive anchor의 수를 나타낸다.
+    + L_conf는 2개의 클래스(face인지, 배경인지)에 대한 softmax loss이고, L_loc은 앵커 ai를 사용하여 예측값인 ti와 실측값인 gi 사이의 매개변수화이다.
+
+- 같은 레벨에서 강화된 feature map과 비교했을 때, original feature map에서는 더 적은 sementic 정보를 포함한다. 그러므로 original feature map이 더 적은 face를 감지하고 분류한다는 것을 알았다. 결과적으로, 더 적은 anchors의 세트의 First Shot multi-task Loss를 제안한다.
+
+    <center><img src="/reference_image/MH.Ji/DSFD/5.PNG" width="60%"></center><br>
+
+- 더 작은 anchor를 sa라는 변수로 설정, 전체 Progressive Anchor Loss 함수는 다음과 같다.
+
+    <center><img src="/reference_image/MH.Ji/DSFD/6.PNG" width="60%"></center><br>
+
+
+
+
+
+### 4.4. Improved Anchor Matching
 
 
 
