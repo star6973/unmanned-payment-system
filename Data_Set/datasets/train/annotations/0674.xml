@@ -1,0 +1,92 @@
+<annotation verified="yes">
+    <folder>Annotation</folder>
+    <filename>0674.jpg</filename>
+    <path>PascalVoc/Annotations/0674.jpg</path>
+    <source>
+        <database>Unknown</database>
+    </source>
+    <size>
+        <width>1280</width>
+        <height>720</height>
+        <depth>3</depth>
+    </size>
+    <segmented>0</segmented>
+    <object>
+    <name>coke</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>248.38526912181302</xmin>
+        <ymin>166.05793450881612</ymin>
+        <xmax>405.2124645892351</xmax>
+        <ymax>517.896725440806</ymax>
+    </bndbox>
+</object><object>
+    <name>chocopie</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>14.504249291784703</xmin>
+        <ymin>189.63476070528966</ymin>
+        <xmax>269.23512747875355</xmax>
+        <ymax>529.6851385390428</ymax>
+    </bndbox>
+</object><object>
+    <name>squid_peanut</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>363.51274787535414</xmin>
+        <ymin>1.0201511335012594</ymin>
+        <xmax>750.5949008498584</xmax>
+        <ymax>576.8387909319899</ymax>
+    </bndbox>
+</object><object>
+    <name>cidar</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>716.1473087818697</xmin>
+        <ymin>163.33753148614608</ymin>
+        <xmax>1119.5467422096317</xmax>
+        <ymax>332.0025188916876</ymax>
+    </bndbox>
+</object><object>
+    <name>couque_white</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>782.3229461756374</xmin>
+        <ymin>14.622166246851386</ymin>
+        <xmax>1233.7677053824364</xmax>
+        <ymax>167.87153652392945</ymax>
+    </bndbox>
+</object><object>
+    <name>couque_coffee</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>816.7705382436261</xmin>
+        <ymin>324.74811083123427</ymin>
+        <xmax>1199.3201133144476</xmax>
+        <ymax>720</ymax>
+    </bndbox>
+</object><object>
+    <name>zec</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>167.70538243626063</xmin>
+        <ymin>542.3803526448363</ymin>
+        <xmax>807.7053824362606</xmax>
+        <ymax>720</ymax>
+    </bndbox>
+</object>
+</annotation>

@@ -1,0 +1,92 @@
+<annotation verified="yes">
+    <folder>Annotation</folder>
+    <filename>1551.jpg</filename>
+    <path>PascalVoc/Annotations/1551.jpg</path>
+    <source>
+        <database>Unknown</database>
+    </source>
+    <size>
+        <width>1280</width>
+        <height>960</height>
+        <depth>3</depth>
+    </size>
+    <segmented>0</segmented>
+    <object>
+    <name>coke</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>172</xmin>
+        <ymin>0.995850622406639</ymin>
+        <xmax>435.96887159533077</xmax>
+        <ymax>376.43153526970957</ymax>
+    </bndbox>
+</object><object>
+    <name>squid_peanut</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>270.6147859922179</xmin>
+        <ymin>40.829875518672196</ymin>
+        <xmax>933.0272373540856</xmax>
+        <ymax>351.5352697095436</ymax>
+    </bndbox>
+</object><object>
+    <name>diget_ori</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>42.505836575875485</xmin>
+        <ymin>390.37344398340247</ymin>
+        <xmax>257.6653696498054</xmax>
+        <ymax>708.0497925311204</ymax>
+    </bndbox>
+</object><object>
+    <name>diget_choco</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>258.66147859922177</xmin>
+        <ymin>404.3153526970954</ymin>
+        <xmax>450.91050583657585</xmax>
+        <ymax>729.9585062240664</ymax>
+    </bndbox>
+</object><object>
+    <name>toreta</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>395.1284046692607</xmin>
+        <ymin>350.53941908713693</ymin>
+        <xmax>629.2140077821011</xmax>
+        <ymax>569.6265560165975</ymax>
+    </bndbox>
+</object><object>
+    <name>cidar</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>518.6459143968872</xmin>
+        <ymin>391.36929460580916</ymin>
+        <xmax>802.5369649805448</xmax>
+        <ymax>797.6763485477179</ymax>
+    </bndbox>
+</object><object>
+    <name>homerunball</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>674.0389105058366</xmin>
+        <ymin>253.94190871369295</ymin>
+        <xmax>1140.2178988326848</xmax>
+        <ymax>842.4896265560167</ymax>
+    </bndbox>
+</object>
+</annotation>

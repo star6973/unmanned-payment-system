@@ -1,0 +1,37 @@
+# Object as Points review
+## Lotte project 에서 사용할 모델 선정을 위한 조사
+- Abstract
+    - Detectio 은 object를 축 정렬된 box를 바탕으로 인식
+    - 대부분 Detector는 object로 추정되는 거의 모든 것을 확인하고 각각을 분류함
+    - 이것은 매우 비효율적이고, 낭비이며, 전처리가 필요한 작업<br><br>
+    - 본 논문에서는 center 한점으로 bounding box를 사용
+        - center point 를 찾고 regress 하기 위해서 size, 3D location, orientation, 좌표에 대해서 key point estimate 사용
+        - 즉, CenterNet은 기존의 bounding box를 base로 한 방식에 비해서 "간편, 신속, 정확, end-to-end differentiable"함<br><br><br>
+1. Introduction
+    - 현재의 object detection 은 축 정렬된 bounding box를 object에 꽉 맞게 대응시킴
+    - 이후 object detection을 imgae classification의 object일 확률을 갖고 있는 bounding box들로 감소시킴
+    - 각 bounding box에 대해서 classifier는 image가 배경인지, 특정 object인지 결정함
+    - One-stage detector는 "anchor"라고 불리는 모든 이미지에 대해서 가능한 bounding box로 slide 하고, 각 box를 특정하지 않고 구별을 한다
+    - Two-stage detector는 image feature를 각 potential box에 대해서 재연산하고, 각각을 분류함        
+    - Post-processing (= non-maxima suppression)은 동일한 instance에 대해서 bounding box IoU를 계산하고, 복제된 detections를 제거
+        - 이 방식은 train 과 differentiate 가 어려움
+        - 이런 까닭에 현재의 detector들은 end-to-end train이 불가능
+        - 그럼에도 불구하고 최근 5년간 이런 아이디어는 좋은 성능을 나타냈음
+        - 그러나 Sliding window 기반의 object detector는 모든 가능성 있는 object location 과 dimention들을 반복하기 때문에 낭비가 심하다<br><br>
+    - 본 논문에서는 훨씬 간단하고 효율적인 대안을 제시
+        - object의 bounding box center 점을 통해서 object를 대표하도록 함
+        - 다른 property(ex size, dimension, 3D extent, orientation, pose ...) 들은 이미지 center의 feature로부터 직접 regress된다
+        - 이후 object detection은 keypoint esimation을 표준화
+        - 그럼, 간편하게 입력 image를 fully conv network에 입력하고, heatmap을 작성 가능
+        - heatmap의 peak는 object의 center와 대응됨
+        - 각 peak에 대한 image features는 object 의 bounding box의 width, height 를 예측함
+        - model은 표준 dense 강화학습을 통해서 train한다
+        - inference는 singe network의 foward pass에 의하며, post-processing에 대해 non-mazimal suppression을 적용
+    - 본 논문은 다른 task들에 대해서 간단한 방식으로 인해서 빠른 속도로 실행이 가능<br> link : https://github.com/xingyizhou/CenterNet <br>
+        - ResNet-18을 적용
+            - COCO boundig box AP 28.1 %
+            - 142 FPS
+        - DLA-34
+            - COCO AP 37.4 %
+            - 52 FPS
+        - etc .. <br><br>

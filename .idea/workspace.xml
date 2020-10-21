@@ -21,7 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="49a72ee4-5b9a-4b18-b1b3-01a0a89c294e" name="Default Changelist" comment="commit-jw">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Research/jeongwoon/detect.py" beforeDir="false" afterPath="$PROJECT_DIR$/Research/jeongwoon/detect.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -283,14 +282,7 @@
       <option name="project" value="LOCAL" />
       <updated>1599058775420</updated>
     </task>
-    <task id="LOCAL-00014" summary="commit-jw">
-      <created>1601963085784</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1601963085784</updated>
-    </task>
-    <option name="localTasksCounter" value="15" />
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -318,11 +310,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="346" y="141" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.680@0.0.1280.680" timestamp="1598507512093" />
-    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1602115333548">
+    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1601242426334">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1602115333548" />
-    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1602000429415" />
+    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1601242426334" />
     <state width="1259" height="163" key="GridCell.Tab.0.bottom" timestamp="1598511823763">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -339,10 +330,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1259" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1598511823763" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1601963098583">
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1601963059877">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1601963098583" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1601963059877" />
     <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1599058795095" />
   </component>
 </project>

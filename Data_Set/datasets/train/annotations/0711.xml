@@ -1,0 +1,92 @@
+<annotation verified="yes">
+    <folder>Annotation</folder>
+    <filename>0711.jpg</filename>
+    <path>PascalVoc/Annotations/0711.jpg</path>
+    <source>
+        <database>Unknown</database>
+    </source>
+    <size>
+        <width>1280</width>
+        <height>720</height>
+        <depth>3</depth>
+    </size>
+    <segmented>0</segmented>
+    <object>
+    <name>zec</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>231.1614730878187</xmin>
+        <ymin>40.91939546599496</ymin>
+        <xmax>415.1841359773371</xmax>
+        <ymax>672.9596977329975</ymax>
+    </bndbox>
+</object><object>
+    <name>coke</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>465.94900849858357</xmin>
+        <ymin>10.994962216624685</ymin>
+        <xmax>824.0226628895184</xmax>
+        <ymax>169.6851385390428</ymax>
+    </bndbox>
+</object><object>
+    <name>chocopie</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>833.9943342776204</xmin>
+        <ymin>49.08060453400503</ymin>
+        <xmax>1231.9546742209632</xmax>
+        <ymax>225</ymax>
+    </bndbox>
+</object><object>
+    <name>couque_white</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>1018.0169971671388</xmin>
+        <ymin>271.2468513853904</ymin>
+        <xmax>1210.1983002832862</xmax>
+        <ymax>693.816120906801</ymax>
+    </bndbox>
+</object><object>
+    <name>couque_coffee</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>917.3937677053824</xmin>
+        <ymin>324.74811083123427</ymin>
+        <xmax>1123.1728045325779</xmax>
+        <ymax>660.2644836272041</ymax>
+    </bndbox>
+</object><object>
+    <name>cidar</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>758.7535410764873</xmin>
+        <ymin>306.6120906801007</ymin>
+        <xmax>909.2351274787536</xmax>
+        <ymax>698.3501259445843</ymax>
+    </bndbox>
+</object><object>
+    <name>squid_peanut</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>398.8668555240793</xmin>
+        <ymin>208.67758186397984</ymin>
+        <xmax>766.9121813031161</xmax>
+        <ymax>720</ymax>
+    </bndbox>
+</object>
+</annotation>
