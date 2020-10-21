@@ -80,7 +80,7 @@
 
 <br>
 
-### 4.2. Feature Enhance Moduel
+### 4.2. Feature Enhance Module
 - FEM은 original feature를 더욱 차별화되고 강건하게 만들어줄 수 있다. 이를 위해 서로 다른 차원의 정보(original neuron cell의 상위 layer와 non-local neuron cell의 현재 layer의 정보)를 포함한다.
 - 수학적인 공식은 다음과 같다.
 
