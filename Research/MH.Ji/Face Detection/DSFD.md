@@ -113,12 +113,26 @@
 
     <center><img src="/reference_image/MH.Ji/DSFD/6.PNG" width="60%"></center><br>
 
-
-
-
+<br>
 
 ### 4.4. Improved Anchor Matching
+- 현재 anchor 매칭 방법은 anchor와 실측값간에 양방향이다. 따라서 data augmentation을 하는 중에 anchor 디자인과 얼굴 샘플링은 regressor를 더 잘 초기화하기 위해 가능한 한 anchor와 face를 일치시키기 위해 협력한다.
+- IAM은 이산적인 anchor 스케일과 연속적인 face 스케일간의 모순점을 해결하고자, 40%의 확률을 가진 S_input * S_face / S_anchor 식에 의한 augmentation을 한다. 이를 통해, positive anchor를 증가시키고 학습을 안정화시켜 결과를 향상시킬 수 있다.
 
+    <center><img src="/reference_image/MH.Ji/DSFD/8.PNG" width="60%"></center><br>
 
+    + 위의 그림과 같이 기존의 anchor matching 방법과 같은 스케일에서 비교했을 때, IAM 방식이 더 작은 IoU 임계값을 사용한다.
+
+<br><br>
 
 ## 5. Experiments
+- 3가지 기능을 통해 3가지 성능 향상을 이뤘다.  
+    1) 더욱 차별적이고 robust한 Feature Enhance를 통해 hard face에서 feature presentation을 향상시켰다.  
+    2) 점진적 anchor를 기반으로 한 보조 손실 함수는 12개의 다른 스케일 detection feature map을 모두 훈련하는 데 사용된다. 그리고 이는 easy, medium, hard face를 동시에 향상시켰다.  
+    3) 개선된 anchor matching은 더 나은 초기화 anchor와 ground-truth face를 제공해준다.  
+
+<center><img src="/reference_image/MH.Ji/DSFD/9.PNG" width="60%"></center><br>
+
+<center><img src="/reference_image/MH.Ji/DSFD/10.PNG" width="60%"></center><br>
+
+<center><img src="/reference_image/MH.Ji/DSFD/11.PNG" width="60%"></center><br>
