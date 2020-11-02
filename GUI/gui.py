@@ -13,8 +13,8 @@ import torch
 from mmdet.apis import inference_detector, init_detector
 
 main_ui = uic.loadUiType("GUI/main.ui")[0]
-model = torch.load('../../content/Object_Detection/mmdetection_object_detection_demo/save_model/SSD_model.pt')
-score_thr = 0.5
+model = torch.load('../../content/Object_Detection/mmdetection_object_detection_demo/save_model/DynamicRCNN_model.pt')
+score_thr = 0.7
 colors = [tuple(255 * np.random.rand(3)) for _ in range(10)]
 
 class ObjectDetection(QDialog):
