@@ -329,3 +329,4 @@
     2) 폰트 → 롯데마트 드림체 BOLD / 색상 → 하늘색  
     3) GPU 서버(작년꺼)  
     4) 모델 압축: TensorFlow → TensorRT / Pytorch, Keras → OMNX → TensorRT(fp 32 → 16, quantization)  
+4. 얼굴 등록할 때, 다양한 모습을 찍어서 특징 추출하기(정면 → 우측 → 아래측 → 좌측) / 얼굴이랑 아이디만 등록하기

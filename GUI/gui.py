@@ -27,7 +27,7 @@ import model
 import os
 
 model = torch.load('../../content/Object_Detection/mmdetection_object_detection_demo/save_model/DynamicRCNN_model.pt')
-score_thr = 0.5
+score_thr = 0.7
 CLASSES = ('ID_gum', 'buttering', 'couque_coffee', 'chocopie', 'cidar', 
            'couque_white', 'coke', 'diget_ori', 'diget_choco', 'gumi_gumi', 
            'homerunball', 'jjolbyung_noodle', 'juicyfresh', 'jjolbyung_ori', 
@@ -155,6 +155,14 @@ def show_result(img,
     if not (show or out_file):
         return img, detect_labels
 
+# 결제 화면(5)
+class PaymentWindow(QDialog):
+    def __init__(self, parent):
+        super(PaymentWindow, self).__init__(parent)
+        payment_ui = 'GUI/fiveth(payment).ui'
+        uic.loadUi(payment_ui, self)
+        self.show()
+
 
 # 객체 인식 화면(4)
 class ObjectDetection(QDialog):
@@ -169,9 +177,14 @@ class ObjectDetection(QDialog):
         self.detectButton.setCheckable(True)
         self.detectButton.toggled.connect(self.detect_webcam_face)
         self.face_Enabled = False
+        self.payButton.clicked.connect(self.goto_payment)
         self.show()
 
-    def detect_webcam_face(self,status):
+    def goto_payment(self):
+        PaymentWindow(self)
+
+
+    def detect_webcam_face(self, status):
         if status:
             self.detectButton.setText('Stop Detection')
             self.face_Enabled = True
@@ -180,7 +193,7 @@ class ObjectDetection(QDialog):
             self.face_Enabled = False
 
     def start_webcam(self):
-        self.capture = cv2.VideoCapture(0)
+        self.capture = cv2.VideoCapture(2)
         self.capture.set(cv2.CAP_PROP_FRAME_HEIGHT,480)
         self.capture.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
 
@@ -231,7 +244,7 @@ class ObjectDetection(QDialog):
         global label_list
         for label in labels:
             if label not in label_list:
-                self.listWidget.addItem(str(CLASSES[label]))
+                # self.listWidget.addItem(str(CLASSES[label]))
                 label_list.append(label)
 
 
