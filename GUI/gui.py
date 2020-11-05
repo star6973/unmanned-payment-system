@@ -155,6 +155,7 @@ def show_result(img,
     if not (show or out_file):
         return img, detect_labels
 
+
 # 결제 화면(5)
 class PaymentWindow(QDialog):
     def __init__(self, parent):
