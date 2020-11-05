@@ -39,7 +39,7 @@ class_by_color = [[128, 0, 0], [255,0,0], [255,165,0], [128,128,0], [124,252,0],
                   [205,133,63], [255,222,173], [112,128,144], [0,0,0]]
 label_list = []
 
-model_path = 'GUI/out/model.pt'
+model_path = 'out/model.pt'
 depth = 50
 scale = 1.0
 
@@ -160,7 +160,7 @@ def show_result(img,
 class PaymentWindow(QDialog):
     def __init__(self, parent):
         super(PaymentWindow, self).__init__(parent)
-        payment_ui = 'GUI/fiveth(payment).ui'
+        payment_ui = 'fiveth(payment).ui'
         uic.loadUi(payment_ui, self)
         self.show()
 
@@ -169,7 +169,7 @@ class PaymentWindow(QDialog):
 class ObjectDetection(QDialog):
     def __init__(self, parent):
         super(ObjectDetection, self).__init__(parent)
-        detection_ui = 'GUI/fourth(detection).ui'
+        detection_ui = 'fourth(detection).ui'
         uic.loadUi(detection_ui, self)
         self.image = None
         self.processedImage = None
@@ -253,15 +253,15 @@ class ObjectDetection(QDialog):
 class RegisterInfo(QDialog):
     def __init__(self, parent):
         super(RegisterInfo, self).__init__(parent)
-        info_ui = 'GUI/third(info).ui'
+        info_ui = 'third(info).ui'
         uic.loadUi(info_ui, self)
         
-        self.pushButton.setFont(QFont("GUI/12롯데마트드림Bold.ttf", 15))
-        self.label_3.setFont(QFont("GUI/12롯데마트드림Bold.ttf", 10))
-        self.label_4.setFont(QFont("GUI/12롯데마트드림Bold.ttf", 15))
-        self.label_5.setFont(QFont("GUI/12롯데마트드림Bold.ttf", 15))
-        self.label_6.setFont(QFont("GUI/12롯데마트드림Bold.ttf", 15))
-        self.label_7.setFont(QFont("GUI/12롯데마트드림Bold.ttf", 15))
+        self.pushButton.setFont(QFont("12롯데마트드림Bold.ttf", 15))
+        self.label_3.setFont(QFont("12롯데마트드림Bold.ttf", 10))
+        self.label_4.setFont(QFont("12롯데마트드림Bold.ttf", 15))
+        self.label_5.setFont(QFont("12롯데마트드림Bold.ttf", 15))
+        self.label_6.setFont(QFont("12롯데마트드림Bold.ttf", 15))
+        self.label_7.setFont(QFont("12롯데마트드림Bold.ttf", 15))
 
         self.start_webcam()
         self.pushButton.clicked.connect(self.getInfo)
@@ -345,7 +345,7 @@ class RegisterInfo(QDialog):
             else:
                 qformat=QImage.Format_RGB888
 
-        outImage = QImage(img,img.shape[1], img.shape[0], img.strides[0], qformat)
+        outImage = QImage(img, img.shape[1], img.shape[0], img.strides[0], qformat)
         outImage = outImage.rgbSwapped()
 
         if window==1:
@@ -357,11 +357,11 @@ class RegisterInfo(QDialog):
 class RegisterWindow(QDialog):
     def __init__(self, parent):
         super(RegisterWindow, self).__init__(parent)
-        register_ui = 'GUI/second(register).ui'
+        register_ui = 'second(register).ui'
         uic.loadUi(register_ui, self)
 
-        self.register_button.setFont(QFont("GUI/12롯데마트드림Bold.ttf", 15))
-        self.payment_button.setFont(QFont("GUI/12롯데마트드림Bold.ttf", 15))
+        self.register_button.setFont(QFont("12롯데마트드림Bold.ttf", 15))
+        self.payment_button.setFont(QFont("12롯데마트드림Bold.ttf", 15))
         
         self.register_button.clicked.connect(self.faceRegisterButtonFunction)
         self.payment_button.clicked.connect(self.paymentButtonFunction)
@@ -378,11 +378,11 @@ class RegisterWindow(QDialog):
 class MainWindow(QMainWindow) :
     def __init__(self) :
         super().__init__()
-        main_ui = 'GUI/first(main).ui'
+        main_ui = 'first(main).ui'
         uic.loadUi(main_ui, self)
 
-        self.title_label.setFont(QFont("GUI/12롯데마트드림Bold.ttf", 30))
-        self.start_button.setFont(QFont("GUI/12롯데마트드림Bold.ttf", 15))
+        self.title_label.setFont(QFont("12롯데마트드림Bold.ttf", 30))
+        self.start_button.setFont(QFont("12롯데마트드림Bold.ttf", 15))
 
         # START 버튼 클릭 시 이벤트 발생
         self.start_button.clicked.connect(self.startButtonFunction)
