@@ -1,12 +1,21 @@
+import os
 import sys
+from sys import exit
 import cv2
-import urllib.request
+import PyQt5
+from PyQt5.QtCore import QTimer
+from PyQt5.QtGui import QImage
+from PyQt5.QtGui import QPixmap
 from PyQt5 import QtGui, QtCore
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
-from PyQt5 import uic
+from PyQt5.QtWidgets import QApplication
+from PyQt5.QtWidgets import QDialog
 from PyQt5.uic import loadUi
+from functools import partial
+from PIL.ImageQt import ImageQt
+from PIL import Image
 import numpy as np
 import time
 from mmdet.apis import inference_detector, init_detector
@@ -19,15 +28,13 @@ import torch.nn as nn
 import torch.nn.functional as F
 import skimage
 from skimage import io
-from PIL import Image
 import torchvision
 import eval_widerface
 import torchvision_model
 import model
-import os
 
-model = torch.load('../../content/Object_Detection/mmdetection_object_detection_demo/save_model/DynamicRCNN_model.pt')
-score_thr = 0.5
+model = torch.load('/home/jmh/mmdetection/save_model/DynamicRCNN_model.pt')
+score_thr = 0.7
 CLASSES = ('ID_gum', 'buttering', 'couque_coffee', 'chocopie', 'cidar', 
            'couque_white', 'coke', 'diget_ori', 'diget_choco', 'gumi_gumi', 
            'homerunball', 'jjolbyung_noodle', 'juicyfresh', 'jjolbyung_ori', 
@@ -39,9 +46,11 @@ class_by_color = [[128, 0, 0], [255,0,0], [255,165,0], [128,128,0], [124,252,0],
                   [205,133,63], [255,222,173], [112,128,144], [0,0,0]]
 label_list = []
 
-model_path = 'GUI/out/model.pt'
+model_path = 'out/model.pt'
 depth = 50
 scale = 1.0
+
+print(os.getcwd())
 
 def random_color(label_num):
     return tuple(class_by_color[label_num])
@@ -156,12 +165,21 @@ def show_result(img,
         return img, detect_labels
 
 
+# 결제 화면(5)
+class PaymentWindow(QDialog):
+    def __init__(self, parent):
+        super(PaymentWindow, self).__init__(parent)
+        payment_ui = '/home/jmh/mmdetection/GUI/fiveth(payment).ui'
+        loadUi(payment_ui, self)
+        self.show()
+
+
 # 객체 인식 화면(4)
 class ObjectDetection(QDialog):
     def __init__(self, parent):
         super(ObjectDetection, self).__init__(parent)
-        detection_ui = 'GUI/fourth(detection).ui'
-        uic.loadUi(detection_ui, self)
+        detection_ui = '/home/jmh/mmdetection/GUI/fourth(detection).ui'
+        loadUi(detection_ui, self)
         self.image = None
         self.processedImage = None
         self.startButton.clicked.connect(self.start_webcam)
@@ -169,9 +187,14 @@ class ObjectDetection(QDialog):
         self.detectButton.setCheckable(True)
         self.detectButton.toggled.connect(self.detect_webcam_face)
         self.face_Enabled = False
+        self.payButton.clicked.connect(self.goto_payment)
         self.show()
 
-    def detect_webcam_face(self,status):
+    def goto_payment(self):
+        PaymentWindow(self)
+
+
+    def detect_webcam_face(self, status):
         if status:
             self.detectButton.setText('Stop Detection')
             self.face_Enabled = True
@@ -180,7 +203,7 @@ class ObjectDetection(QDialog):
             self.face_Enabled = False
 
     def start_webcam(self):
-        self.capture = cv2.VideoCapture(0)
+        self.capture = cv2.VideoCapture(2)
         self.capture.set(cv2.CAP_PROP_FRAME_HEIGHT,480)
         self.capture.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
 
@@ -231,123 +254,194 @@ class ObjectDetection(QDialog):
         global label_list
         for label in labels:
             if label not in label_list:
-                self.listWidget.addItem(str(CLASSES[label]))
+                # self.listWidget.addItem(str(CLASSES[label]))
                 label_list.append(label)
 
 
 # 얼굴 및 정보 등록 화면(3)
+# class WaitWindow(QWidget):
+#     def __init__(self, parent=None):
+#         super(WaitWindow).__init__()
+#         loadUi('sixth(wait).ui')
+#         self.show()
+
 class RegisterInfo(QDialog):
-    def __init__(self, parent):
+    def __init__(self, parent=None):
         super(RegisterInfo, self).__init__(parent)
-        info_ui = 'GUI/third(info).ui'
-        uic.loadUi(info_ui, self)
+        loadUi('/home/jmh/mmdetection/GUI/third(info).ui', self)
         
-        self.pushButton.setFont(QFont("GUI/12롯데마트드림Bold.ttf", 15))
-        self.label_3.setFont(QFont("GUI/12롯데마트드림Bold.ttf", 10))
-        self.label_4.setFont(QFont("GUI/12롯데마트드림Bold.ttf", 15))
-        self.label_5.setFont(QFont("GUI/12롯데마트드림Bold.ttf", 15))
-        self.label_6.setFont(QFont("GUI/12롯데마트드림Bold.ttf", 15))
-        self.label_7.setFont(QFont("GUI/12롯데마트드림Bold.ttf", 15))
-
-        self.start_webcam()
-        self.pushButton.clicked.connect(self.getInfo)
-
-        self.show()
-
-    # 등록하기 버튼을 눌렀을 경우, 이름/생년월일/성별/거주지/얼굴 정보 -> 데이터베이스에 저장하기
-    def getInfo(self):
-        name = self.textEdit_2.toPlainText()
-        birth = self.textEdit_3.toPlainText()
-        sex = self.textEdit_4.toPlainText()
-        loc = self.textEdit_5.toPlainText()
-
-        return name, birth, sex, loc
-
-    def start_webcam(self):
-        return_layers = {'layer2':1,'layer3':2,'layer4':3}
-        self.RetinaFace = torchvision_model.create_retinaface(return_layers)
-        retina_dict = self.RetinaFace.state_dict()
-
-        pre_state_dict = torch.load(model_path)
-        pretrained_dict = {k[7:]: v for k, v in pre_state_dict.items() if k[7:] in retina_dict}
-        self.RetinaFace.load_state_dict(pretrained_dict)
-
-        self.RetinaFace = self.RetinaFace.cuda()
-        self.RetinaFace.eval()
-
         self.capture = cv2.VideoCapture(-1)
-        self.capture.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)
+        self.capture.set(cv2.CAP_PROP_FRAME_HEIGHT,480)
         self.capture.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
-
+        
         self.timer = QTimer(self)
         self.timer.timeout.connect(self.update_frame)
         self.timer.start(3)
+        
+        self.name = ''
+        self.dialogs = list()
+        
+        self.setWindowTitle('Register Panel')
+        self.show()
 
     def update_frame(self):
-        ret, self.image = self.capture.read()
+        _, self.image = self.capture.read()
         self.image = cv2.flip(self.image, 1)
-        self.displayImage(self.image, 1)
-
-        self.image = torch.from_numpy(self.image)
-        self.image = self.image.permute(2,0,1)
-
-        if not scale == 1.0:
-            size1 = int(self.image.shape[1]/scale)
-            size2 = int(self.image.shape[2]/scale)
-            self.image = resize(self.image.float(),(size1,size2))
-
-        # 얼굴 인식
-        detected_image = self.detect_face(self.image)
-        self.displayImage(detected_image, 1)
-  
-    def detect_face(self, img):
-        input_img = img.unsqueeze(0).float().cuda()
-        picked_boxes, picked_landmarks, picked_scores = eval_widerface.get_detections(input_img, self.RetinaFace, score_threshold=0.5, iou_threshold=0.3)
-
-        np_img = img.cpu().permute(1,2,0).numpy()
-        np_img.astype(int)
-        img = np_img.astype(np.uint8)
-
-        font = cv2.FONT_HERSHEY_SIMPLEX
-
-        for j, boxes in enumerate(picked_boxes):
-            if boxes is not None:
-                for box,landmark,score in zip(boxes,picked_landmarks[j],picked_scores[j]):
-                    cv2.rectangle(img,(box[0],box[1]),(box[2],box[3]),(0,0,255),thickness=2)
-                    cv2.circle(img,(landmark[0],landmark[1]),radius=1,color=(0,0,255),thickness=2)
-                    cv2.circle(img,(landmark[2],landmark[3]),radius=1,color=(0,255,0),thickness=2)
-                    cv2.circle(img,(landmark[4],landmark[5]),radius=1,color=(255,0,0),thickness=2)
-                    cv2.circle(img,(landmark[6],landmark[7]),radius=1,color=(0,255,255),thickness=2)
-                    cv2.circle(img,(landmark[8],landmark[9]),radius=1,color=(255,255,0),thickness=2)
-                    cv2.putText(img, text=str(score.item())[:5], org=(box[0],box[1]), fontFace=font, fontScale=0.5, thickness=1, lineType=cv2.LINE_AA, color=(255, 255, 255))
-
-        return img
-
-    def displayImage(self, img, window=1):
+        self.displayImage(self.image)
+        
+        self.nameButton.clicked.connect(self.get_name)
+        
+        self.front_capture_button.clicked.connect(self.capture_front)
+        self.left_capture_button.clicked.connect(self.capture_left)
+        self.right_capture_button.clicked.connect(self.capture_right)
+        self.up_capture_button.clicked.connect(self.capture_up)
+        self.down_capture_button.clicked.connect(self.capture_down)
+        
+        self.finish_button.clicked.connect(self.next_frame)
+        
+    def get_name(self):
+        self.name = self.nameLabel.toPlainText()
+        if not(os.path.isdir(os.path.join('/home/jmh/mmdetection/GUI/DB/', self.name))):
+            os.makedirs(os.path.join('/home/jmh/mmdetection/GUI/DB/', self.name))
+    
+    def capture_front(self):
+        frame = self.image
         qformat = QImage.Format_Indexed8
-        if len(img.shape)==3:
-            if img.shape[2]==4:
-                qformat=QImage.Format_RGBA8888
+        if len(frame.shape) == 3:
+            if frame.shape[2] == 4:
+                qformat = QImage.Format_RGBA8888
             else:
-                qformat=QImage.Format_RGB888
+                qformat = QImage.Format_RGB888
 
-        outImage = QImage(img,img.shape[1], img.shape[0], img.strides[0], qformat)
+        outImage = QImage(frame, frame.shape[1], frame.shape[0], frame.strides[0], qformat)
+        outImage = outImage.rgbSwapped()
+        outImage.save(os.path.join(os.path.join('/home/jmh/mmdetection/GUI/DB/', self.name), self.name + '_front_img.jpg'))
+        
+        image = Image.open(os.path.join(os.path.join('/home/jmh/mmdetection/GUI/DB/', self.name), self.name + '_front_img.jpg'))
+        qimage = ImageQt(image)
+        pixmap = QtGui.QPixmap.fromImage(qimage)
+        
+        self.front_label.setPixmap(pixmap)
+        self.front_label.setScaledContents(True)
+        
+    def capture_left(self):
+        frame = self.image
+        qformat = QImage.Format_Indexed8
+        if len(frame.shape) == 3:
+            if frame.shape[2] == 4:
+                qformat = QImage.Format_RGBA8888
+            else:
+                qformat = QImage.Format_RGB888
+
+        outImage = QImage(frame, frame.shape[1], frame.shape[0], frame.strides[0], qformat)
+        outImage = outImage.rgbSwapped()
+        outImage.save(os.path.join(os.path.join('/home/jmh/mmdetection/GUI/DB/', self.name), self.name + '_left_img.jpg'))
+        
+        image = Image.open(os.path.join(os.path.join('/home/jmh/mmdetection/GUI/DB/', self.name), self.name + '_left_img.jpg'))
+        qimage = ImageQt(image)
+        pixmap = QtGui.QPixmap.fromImage(qimage)
+        
+        self.left_label.setPixmap(pixmap)
+        self.left_label.setScaledContents(True)
+        
+    def capture_right(self):
+        frame = self.image
+        qformat = QImage.Format_Indexed8
+        if len(frame.shape) == 3:
+            if frame.shape[2] == 4:
+                qformat = QImage.Format_RGBA8888
+            else:
+                qformat = QImage.Format_RGB888
+
+        outImage = QImage(frame, frame.shape[1], frame.shape[0], frame.strides[0], qformat)
+        outImage = outImage.rgbSwapped()
+        outImage.save(os.path.join(os.path.join('/home/jmh/mmdetection/GUI/DB/', self.name), self.name + '_right_img.jpg'))
+        
+        image = Image.open(os.path.join(os.path.join('/home/jmh/mmdetection/GUI/DB/', self.name), self.name + '_right_img.jpg'))
+        qimage = ImageQt(image)
+        pixmap = QtGui.QPixmap.fromImage(qimage)
+        
+        self.right_label.setPixmap(pixmap)
+        self.right_label.setScaledContents(True)
+        
+    def capture_up(self):
+        frame = self.image
+        qformat = QImage.Format_Indexed8
+        if len(frame.shape) == 3:
+            if frame.shape[2] == 4:
+                qformat = QImage.Format_RGBA8888
+            else:
+                qformat = QImage.Format_RGB888
+
+        outImage = QImage(frame, frame.shape[1], frame.shape[0], frame.strides[0], qformat)
+        outImage = outImage.rgbSwapped()
+        outImage.save(os.path.join(os.path.join('/home/jmh/mmdetection/GUI/DB/', self.name), self.name + '_up_img.jpg'))
+        
+        image = Image.open(os.path.join(os.path.join('/home/jmh/mmdetection/GUI/DB/', self.name), self.name + '_up_img.jpg'))
+        qimage = ImageQt(image)
+        pixmap = QtGui.QPixmap.fromImage(qimage)
+        
+        self.up_label.setPixmap(pixmap)
+        self.up_label.setScaledContents(True)
+        
+        
+    def capture_down(self):
+        frame = self.image
+        qformat = QImage.Format_Indexed8
+        if len(frame.shape) == 3:
+            if frame.shape[2] == 4:
+                qformat = QImage.Format_RGBA8888
+            else:
+                qformat = QImage.Format_RGB888
+
+        outImage = QImage(frame, frame.shape[1], frame.shape[0], frame.strides[0], qformat)
+        outImage = outImage.rgbSwapped()
+        outImage.save(os.path.join(os.path.join('/home/jmh/mmdetection/GUI/DB/', self.name), self.name + '_down_img.jpg'))
+        
+        image = Image.open(os.path.join(os.path.join('/home/jmh/mmdetection/GUI/DB/', self.name), self.name + '_down_img.jpg'))
+        qimage = ImageQt(image)
+        pixmap = QtGui.QPixmap.fromImage(qimage)
+        
+        self.down_label.setPixmap(pixmap)
+        self.down_label.setScaledContents(True)
+    
+    def next_frame(self):
+        self.close()
+        
+#         dialog = WaitWindow()
+        
+        os.system("/home/jmh/mmdetection/face-recognition/tasks/train.sh /home/jmh/mmdetection/GUI/DB/")
+        os.system("python /home/jmh/mmdetection/face-recognition/generate_embeddings.py --input-folder /home/jmh/mmdetection/GUI/DB/ --output-folder /home/jmh/mmdetection/GUI/out/")
+        os.system("python /home/jmh/mmdetection/face-recognition/train.py -d /home/jmh/mmdetection/GUI/DB/ -e /home/jmh/mmdetection/GUI/out/embeddings.txt -l /home/jmh/mmdetection/GUI/out/labels.txt -c /home/jmh/mmdetection/GUI/out/class_to_idx.pkl")
+        exit()
+        
+#         if os.path.isfile('./out/class_to_idx.pkl'):
+#             dialog.close()
+        
+    def displayImage(self, img):
+        qformat = QImage.Format_Indexed8
+        if len(img.shape) == 3:
+            if img.shape[2] == 4:
+                qformat = QImage.Format_RGBA8888
+            else:
+                qformat = QImage.Format_RGB888
+
+        outImage = QImage(img,img.shape[1],img.shape[0],img.strides[0],qformat)
         outImage = outImage.rgbSwapped()
 
-        if window==1:
-            self.face_label.setPixmap(QPixmap.fromImage(outImage))
-            self.face_label.setScaledContents(True)
+        self.video_frame.setPixmap(QPixmap.fromImage(outImage))
+        self.video_frame.setScaledContents(True)
 
 
 # 얼굴 등록 or 결제 화면(2)
 class RegisterWindow(QDialog):
     def __init__(self, parent):
         super(RegisterWindow, self).__init__(parent)
-        register_ui = 'GUI/second(register).ui'
-        uic.loadUi(register_ui, self)
+        register_ui = '/home/jmh/mmdetection/GUI/second(register).ui'
+        loadUi(register_ui, self)
 
-        self.register_button.setFont(QFont("GUI/12롯데마트드림Bold.ttf", 15))
-        self.payment_button.setFont(QFont("GUI/12롯데마트드림Bold.ttf", 15))
+        self.register_button.setFont(QFont("/home/jmh/mmdetection/GUI/12롯데마트드림Bold.ttf", 15))
+        self.payment_button.setFont(QFont("/home/jmh/mmdetection/GUI/12롯데마트드림Bold.ttf", 15))
         
         self.register_button.clicked.connect(self.faceRegisterButtonFunction)
         self.payment_button.clicked.connect(self.paymentButtonFunction)
@@ -364,11 +458,11 @@ class RegisterWindow(QDialog):
 class MainWindow(QMainWindow) :
     def __init__(self) :
         super().__init__()
-        main_ui = 'GUI/first(main).ui'
-        uic.loadUi(main_ui, self)
+        main_ui = '/home/jmh/mmdetection/GUI/first(main).ui'
+        loadUi(main_ui, self)
 
-        self.title_label.setFont(QFont("GUI/12롯데마트드림Bold.ttf", 30))
-        self.start_button.setFont(QFont("GUI/12롯데마트드림Bold.ttf", 15))
+        self.title_label.setFont(QFont("/home/jmh/mmdetection/GUI/12롯데마트드림Bold.ttf", 30))
+        self.start_button.setFont(QFont("/home/jmh/mmdetection/GUI/12롯데마트드림Bold.ttf", 15))
 
         # START 버튼 클릭 시 이벤트 발생
         self.start_button.clicked.connect(self.startButtonFunction)
