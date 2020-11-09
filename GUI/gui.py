@@ -277,6 +277,8 @@ class RegisterInfo(QDialog):
         self.timer = QTimer(self)
         self.timer.timeout.connect(self.update_frame)
         self.timer.start(3)
+
+        self.finish_button.clicked.connect(self.next_frame)
         
         self.name = ''
         self.dialogs = list()
@@ -296,8 +298,6 @@ class RegisterInfo(QDialog):
         self.right_capture_button.clicked.connect(self.capture_right)
         self.up_capture_button.clicked.connect(self.capture_up)
         self.down_capture_button.clicked.connect(self.capture_down)
-        
-        self.finish_button.clicked.connect(self.next_frame)
         
     def get_name(self):
         self.name = self.nameLabel.toPlainText()
